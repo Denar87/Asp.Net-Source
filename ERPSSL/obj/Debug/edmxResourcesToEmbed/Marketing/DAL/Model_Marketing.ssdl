@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model_Marketing.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Model_MarketingStoreContainer">
+    <EntitySet Name="HRM_PersonalInformations" EntityType="Model_Marketing.Store.HRM_PersonalInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_InputType" EntityType="Model_Marketing.Store.LC_InputType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_AMC" EntityType="Model_Marketing.Store.MRK_AMC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_MarketingInfo" EntityType="Model_Marketing.Store.MRK_MarketingInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_MarketingPerson" EntityType="Model_Marketing.Store.MRK_MarketingPerson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_Project" EntityType="Model_Marketing.Store.MRK_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_Reference" EntityType="Model_Marketing.Store.MRK_Reference" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_Stage" EntityType="Model_Marketing.Store.MRK_Stage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_Task_Details" EntityType="Model_Marketing.Store.MRK_Task_Details" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_Transaction" EntityType="Model_Marketing.Store.MRK_Transaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MRK_WorkOrder" EntityType="Model_Marketing.Store.MRK_WorkOrder" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionsId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="SubSectionId" Type="int" />
+    <Property Name="DesginationId" Type="int" />
+    <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBrith" Type="date" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar(max)" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+    <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="PresentAddress" Type="nvarchar(max)" />
+    <Property Name="PermanenAddress" Type="nvarchar(max)" />
+    <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+    <Property Name="EffectiveSlary" Type="money" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="GrossRate" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="SalaryUpdateDate" Type="datetime" />
+    <Property Name="OTApplicable" Type="bit" />
+    <Property Name="ProbationPeriodFrom" Type="datetime" />
+    <Property Name="ProbationPeriodTo" Type="datetime" />
+    <Property Name="ConfiramtionDate" Type="datetime" />
+    <Property Name="ConfiramtionDateStatus" Type="bit" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="EmpCategoryId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+    <Property Name="JoiningDate" Type="date" />
+    <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="EMP_Retired_Status" Type="bit" />
+    <Property Name="EMP_Resignation_Status" Type="bit" />
+    <Property Name="EMP_Dismissal_Status" Type="bit" />
+    <Property Name="EMP_Died_Status" Type="bit" />
+    <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+    <Property Name="Seperation_Date" Type="datetime" />
+    <Property Name="EMP_Other" Type="bit" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_Singnature" Type="varbinary(max)" />
+    <Property Name="Nomine_Photo" Type="varbinary(max)" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="A" Type="int" />
+    <Property Name="OT" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="LateHour" Type="time" />
+    <Property Name="WH" Type="int" />
+    <Property Name="GV_H" Type="int" />
+    <Property Name="PV_H" Type="int" />
+    <Property Name="OH" Type="int" />
+    <Property Name="EX" Type="int" />
+    <Property Name="EffectiveSalaryStatus" Type="bit" />
+    <Property Name="Attendance_Bouns" Type="bit" />
+    <Property Name="Late_Applicable" Type="bit" />
+    <Property Name="Absence_Applicable" Type="bit" />
+    <Property Name="Tax_Applicable" Type="bit" />
+    <Property Name="PF_Applicable" Type="bit" />
+    <Property Name="On_Amount" Type="bit" />
+    <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_InputType">
+    <Key>
+      <PropertyRef Name="InputType_Id" />
+    </Key>
+    <Property Name="InputType_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Use_Dept" Type="nvarchar" MaxLength="50" />
+    <Property Name="Input_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sl_No" Type="int" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_AMC">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderId" Type="int" />
+    <Property Name="AMC_Condition" Type="nvarchar(max)" />
+    <Property Name="AMC_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="BillingStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_MarketingInfo">
+    <Key>
+      <PropertyRef Name="MarketingInfoId" />
+    </Key>
+    <Property Name="MarketingInfoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VisitDate" Type="datetime" />
+    <Property Name="Client" Type="nvarchar" MaxLength="150" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectId" Type="int" />
+    <Property Name="Module" Type="nvarchar" MaxLength="50" />
+    <Property Name="StageId" Type="int" />
+    <Property Name="MarketingPersonId" Type="nvarchar" MaxLength="250" />
+    <Property Name="ReferenceId" Type="int" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_MarketingPerson">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionsId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="SubSectionId" Type="int" />
+    <Property Name="DesginationId" Type="int" />
+    <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBrith" Type="date" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar(max)" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+    <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="PresentAddress" Type="nvarchar(max)" />
+    <Property Name="PermanenAddress" Type="nvarchar(max)" />
+    <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+    <Property Name="EffectiveSlary" Type="money" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="GrossRate" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="SalaryUpdateDate" Type="datetime" />
+    <Property Name="OTApplicable" Type="bit" />
+    <Property Name="ProbationPeriodFrom" Type="datetime" />
+    <Property Name="ProbationPeriodTo" Type="datetime" />
+    <Property Name="ConfiramtionDate" Type="datetime" />
+    <Property Name="ConfiramtionDateStatus" Type="bit" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="EmpCategoryId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+    <Property Name="JoiningDate" Type="date" />
+    <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="EMP_Retired_Status" Type="bit" />
+    <Property Name="EMP_Resignation_Status" Type="bit" />
+    <Property Name="EMP_Dismissal_Status" Type="bit" />
+    <Property Name="EMP_Died_Status" Type="bit" />
+    <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+    <Property Name="Seperation_Date" Type="datetime" />
+    <Property Name="EMP_Other" Type="bit" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_Singnature" Type="varbinary(max)" />
+    <Property Name="Nomine_Photo" Type="varbinary(max)" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="A" Type="int" />
+    <Property Name="OT" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="LateHour" Type="time" />
+    <Property Name="WH" Type="int" />
+    <Property Name="GV_H" Type="int" />
+    <Property Name="PV_H" Type="int" />
+    <Property Name="OH" Type="int" />
+    <Property Name="EX" Type="int" />
+    <Property Name="EffectiveSalaryStatus" Type="bit" />
+    <Property Name="Attendance_Bouns" Type="bit" />
+    <Property Name="Late_Applicable" Type="bit" />
+    <Property Name="Absence_Applicable" Type="bit" />
+    <Property Name="Tax_Applicable" Type="bit" />
+    <Property Name="PF_Applicable" Type="bit" />
+    <Property Name="On_Amount" Type="bit" />
+    <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_Reference">
+    <Key>
+      <PropertyRef Name="ReferenceId" />
+    </Key>
+    <Property Name="ReferenceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferenceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_Stage">
+    <Key>
+      <PropertyRef Name="StageId" />
+    </Key>
+    <Property Name="StageId" Type="int" Nullable="false" />
+    <Property Name="StageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_Task_Details">
+    <Key>
+      <PropertyRef Name="TaskDetails_Id" />
+    </Key>
+    <Property Name="TaskDetails_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderId" Type="int" />
+    <Property Name="Task" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="250" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="WorkOrderId" Type="int" />
+    <Property Name="CollectionDate" Type="datetime" />
+    <Property Name="CollectionAmount" Type="money" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MRK_WorkOrder">
+    <Key>
+      <PropertyRef Name="WoID" />
+    </Key>
+    <Property Name="WoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MarketingInfoId" Type="int" />
+    <Property Name="WorkOrderDate" Type="datetime" />
+    <Property Name="CompletionPeriod" Type="nvarchar" MaxLength="150" />
+    <Property Name="ProposedAmount" Type="money" />
+    <Property Name="SigningAmount" Type="money" />
+    <Property Name="RemainingAmount" Type="money" />
+    <Property Name="PaymentCondition" Type="nvarchar" MaxLength="250" />
+    <Property Name="AMC_Condition" Type="nvarchar" MaxLength="150" />
+    <Property Name="DevelopmentDept" Type="nvarchar" MaxLength="50" />
+    <Property Name="WarrantyPeriod" Type="int" />
+    <Property Name="AMCDAte" Type="datetime" />
+    <Property Name="HandoverStatus" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

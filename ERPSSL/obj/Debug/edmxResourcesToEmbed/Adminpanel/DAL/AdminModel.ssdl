@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MASTERModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_MASTERModelStoreContainer">
+    <EntitySet Name="tbl_Category" EntityType="ERPSSL_MASTERModel.Store.tbl_Category" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Module" EntityType="ERPSSL_MASTERModel.Store.tbl_Module" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_Page" EntityType="ERPSSL_MASTERModel.Store.tbl_Page" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_PagePermission" EntityType="ERPSSL_MASTERModel.Store.tbl_PagePermission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_User" EntityType="ERPSSL_MASTERModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserAccess" EntityType="ERPSSL_MASTERModel.Store.tbl_UserAccess" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserPassword" EntityType="ERPSSL_MASTERModel.Store.tbl_UserPassword" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserRole" EntityType="ERPSSL_MASTERModel.Store.tbl_UserRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAC_cmp_Companys" EntityType="ERPSSL_MASTERModel.Store.tblAC_cmp_Companys" store:Type="Tables" store:Schema="dbo" store:Name="tblAC_cmp_Companys">
+      <DefiningQuery>SELECT 
+      [tblAC_cmp_Companys].[Company_ID] AS [Company_ID], 
+      [tblAC_cmp_Companys].[Company_Name] AS [Company_Name], 
+      [tblAC_cmp_Companys].[Street_1] AS [Street_1], 
+      [tblAC_cmp_Companys].[Street_2] AS [Street_2], 
+      [tblAC_cmp_Companys].[City] AS [City], 
+      [tblAC_cmp_Companys].[State/Region] AS [State/Region], 
+      [tblAC_cmp_Companys].[Zip_Code] AS [Zip_Code], 
+      [tblAC_cmp_Companys].[Country] AS [Country], 
+      [tblAC_cmp_Companys].[Phone] AS [Phone], 
+      [tblAC_cmp_Companys].[Fax] AS [Fax], 
+      [tblAC_cmp_Companys].[E_mail] AS [E_mail], 
+      [tblAC_cmp_Companys].[Web_Site] AS [Web_Site], 
+      [tblAC_cmp_Companys].[Company_Description] AS [Company_Description], 
+      [tblAC_cmp_Companys].[Financial_Year] AS [Financial_Year], 
+      [tblAC_cmp_Companys].[Book_Begning] AS [Book_Begning], 
+      [tblAC_cmp_Companys].[Business_Type] AS [Business_Type], 
+      [tblAC_cmp_Companys].[Create_Date] AS [Create_Date], 
+      [tblAC_cmp_Companys].[Company_Code] AS [Company_Code], 
+      [tblAC_cmp_Companys].[OCode] AS [OCode], 
+      [tblAC_cmp_Companys].[Edit_User] AS [Edit_User], 
+      [tblAC_cmp_Companys].[Edit_Date] AS [Edit_Date], 
+      [tblAC_cmp_Companys].[Status] AS [Status]
+      FROM [dbo].[tblAC_cmp_Companys] AS [tblAC_cmp_Companys]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblAC_leg_Ledgers" EntityType="ERPSSL_MASTERModel.Store.tblAC_leg_Ledgers" store:Type="Tables" store:Schema="dbo" store:Name="tblAC_leg_Ledgers">
+      <DefiningQuery>SELECT 
+      [tblAC_leg_Ledgers].[Ledger_ID] AS [Ledger_ID], 
+      [tblAC_leg_Ledgers].[Ledger_Code] AS [Ledger_Code], 
+      [tblAC_leg_Ledgers].[Ledger_Name] AS [Ledger_Name], 
+      [tblAC_leg_Ledgers].[Ledger_Nature] AS [Ledger_Nature], 
+      [tblAC_leg_Ledgers].[Opening_Balance] AS [Opening_Balance], 
+      [tblAC_leg_Ledgers].[Opening_Nature] AS [Opening_Nature], 
+      [tblAC_leg_Ledgers].[Closing_Balance] AS [Closing_Balance], 
+      [tblAC_leg_Ledgers].[Closing_Nature] AS [Closing_Nature], 
+      [tblAC_leg_Ledgers].[Under_ID] AS [Under_ID], 
+      [tblAC_leg_Ledgers].[Super_ID] AS [Super_ID], 
+      [tblAC_leg_Ledgers].[Group_Name] AS [Group_Name], 
+      [tblAC_leg_Ledgers].[Status] AS [Status], 
+      [tblAC_leg_Ledgers].[Create_Date] AS [Create_Date], 
+      [tblAC_leg_Ledgers].[Edit_User] AS [Edit_User], 
+      [tblAC_leg_Ledgers].[Edit_Date] AS [Edit_Date], 
+      [tblAC_leg_Ledgers].[Company_Code] AS [Company_Code], 
+      [tblAC_leg_Ledgers].[OCode] AS [OCode]
+      FROM [dbo].[tblAC_leg_Ledgers] AS [tblAC_leg_Ledgers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblAC_leg_LedgersTransaction_temp" EntityType="ERPSSL_MASTERModel.Store.tblAC_leg_LedgersTransaction_temp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblAC_vch_Voucher_Details" EntityType="ERPSSL_MASTERModel.Store.tblAC_vch_Voucher_Details" store:Type="Tables" store:Schema="dbo" store:Name="tblAC_vch_Voucher_Details">
+      <DefiningQuery>SELECT 
+      [tblAC_vch_Voucher_Details].[Voucher_Details_ID] AS [Voucher_Details_ID], 
+      [tblAC_vch_Voucher_Details].[Ledger_Code] AS [Ledger_Code], 
+      [tblAC_vch_Voucher_Details].[Nature] AS [Nature], 
+      [tblAC_vch_Voucher_Details].[Voucher_No] AS [Voucher_No], 
+      [tblAC_vch_Voucher_Details].[Voucher_Type] AS [Voucher_Type], 
+      [tblAC_vch_Voucher_Details].[ChequeNo] AS [ChequeNo], 
+      [tblAC_vch_Voucher_Details].[Particulars] AS [Particulars], 
+      [tblAC_vch_Voucher_Details].[Debit] AS [Debit], 
+      [tblAC_vch_Voucher_Details].[Credit] AS [Credit], 
+      [tblAC_vch_Voucher_Details].[Voucher_Date] AS [Voucher_Date], 
+      [tblAC_vch_Voucher_Details].[Edit_User] AS [Edit_User], 
+      [tblAC_vch_Voucher_Details].[Edit_Date] AS [Edit_Date], 
+      [tblAC_vch_Voucher_Details].[Company_Code] AS [Company_Code], 
+      [tblAC_vch_Voucher_Details].[OCode] AS [OCode], 
+      [tblAC_vch_Voucher_Details].[Status] AS [Status], 
+      [tblAC_vch_Voucher_Details].[ModuleName] AS [ModuleName], 
+      [tblAC_vch_Voucher_Details].[ModuleType] AS [ModuleType], 
+      [tblAC_vch_Voucher_Details].[IdentificationNo] AS [IdentificationNo]
+      FROM [dbo].[tblAC_vch_Voucher_Details] AS [tblAC_vch_Voucher_Details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblAC_vch_Voucher_Log" EntityType="ERPSSL_MASTERModel.Store.tblAC_vch_Voucher_Log" store:Type="Tables" store:Schema="dbo" store:Name="tblAC_vch_Voucher_Log">
+      <DefiningQuery>SELECT 
+      [tblAC_vch_Voucher_Log].[Voucher_ID] AS [Voucher_ID], 
+      [tblAC_vch_Voucher_Log].[Voucher_No] AS [Voucher_No], 
+      [tblAC_vch_Voucher_Log].[Voucher_Type] AS [Voucher_Type], 
+      [tblAC_vch_Voucher_Log].[Voucher_Date] AS [Voucher_Date], 
+      [tblAC_vch_Voucher_Log].[Edit_User] AS [Edit_User], 
+      [tblAC_vch_Voucher_Log].[Edit_Date] AS [Edit_Date], 
+      [tblAC_vch_Voucher_Log].[Company_Code] AS [Company_Code], 
+      [tblAC_vch_Voucher_Log].[OCode] AS [OCode], 
+      [tblAC_vch_Voucher_Log].[Status] AS [Status], 
+      [tblAC_vch_Voucher_Log].[ModuleName] AS [ModuleName], 
+      [tblAC_vch_Voucher_Log].[ModuleType] AS [ModuleType], 
+      [tblAC_vch_Voucher_Log].[IdentificationNo] AS [IdentificationNo]
+      FROM [dbo].[tblAC_vch_Voucher_Log] AS [tblAC_vch_Voucher_Log]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblConf_Module" EntityType="ERPSSL_MASTERModel.Store.tblConf_Module" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbl_Category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Name="categoryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModuleId" Type="bigint" />
+    <Property Name="CategoryOrder" Type="bigint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Module">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Name="ModuleID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ModuleURL" Type="nvarchar(max)" />
+    <Property Name="ModuleIcon" Type="nvarchar(max)" />
+    <Property Name="ModuleOrder" Type="int" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Page">
+    <Key>
+      <PropertyRef Name="PageID" />
+    </Key>
+    <Property Name="PageID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleID" Type="bigint" Nullable="false" />
+    <Property Name="PageName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="categoryId" Type="bigint" />
+    <Property Name="PageUrl" Type="nvarchar" MaxLength="200" />
+    <Property Name="PageOrder" Type="bigint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_PagePermission">
+    <Key>
+      <PropertyRef Name="PermissionID" />
+    </Key>
+    <Property Name="PermissionID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="PageID" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="bigint" />
+    <Property Name="ModuleId" Type="bigint" />
+    <Property Name="CanVisit" Type="bit" Nullable="false" />
+    <Property Name="CanEdit" Type="bit" Nullable="false" />
+    <Property Name="CanDelete" Type="bit" Nullable="false" />
+    <Property Name="CanExecute" Type="bit" Nullable="false" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="User_Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Use_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="BranchID" Type="nchar" MaxLength="4" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="ParentCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_UserAccess">
+    <Key>
+      <PropertyRef Name="UserAccessId" />
+    </Key>
+    <Property Name="UserAccessId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="uniqueidentifier" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="PageID" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="bigint" />
+    <Property Name="ModuleId" Type="bigint" />
+    <Property Name="CanVisit" Type="bit" Nullable="false" />
+    <Property Name="CanEdit" Type="bit" Nullable="false" />
+    <Property Name="CanDelete" Type="bit" Nullable="false" />
+    <Property Name="CanExecute" Type="bit" Nullable="false" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_UserPassword">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" Nullable="false" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ERPSSL_Azim.dbo.tblAC_cmp_Companys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblAC_cmp_Companys">
+    <Key>
+      <PropertyRef Name="Company_ID" />
+      <PropertyRef Name="Company_Code" />
+      <PropertyRef Name="OCode" />
+    </Key>
+    <Property Name="Company_ID" Type="bigint" Nullable="false" />
+    <Property Name="Company_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Street_1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Street_2" Type="nvarchar" MaxLength="250" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State/Region" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zip_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="E_mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Web_Site" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Financial_Year" Type="date" />
+    <Property Name="Book_Begning" Type="date" />
+    <Property Name="Business_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ERPSSL_Azim.dbo.tblAC_leg_Ledgers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblAC_leg_Ledgers">
+    <Key>
+      <PropertyRef Name="Ledger_ID" />
+    </Key>
+    <Property Name="Ledger_ID" Type="bigint" Nullable="false" />
+    <Property Name="Ledger_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ledger_Name" Type="nvarchar(max)" />
+    <Property Name="Ledger_Nature" Type="nvarchar" MaxLength="50" />
+    <Property Name="Opening_Balance" Type="money" />
+    <Property Name="Opening_Nature" Type="nvarchar" MaxLength="10" />
+    <Property Name="Closing_Balance" Type="money" />
+    <Property Name="Closing_Nature" Type="nvarchar" MaxLength="10" />
+    <Property Name="Under_ID" Type="bigint" />
+    <Property Name="Super_ID" Type="bigint" />
+    <Property Name="Group_Name" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAC_leg_LedgersTransaction_temp">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+    </Key>
+    <Property Name="Transaction_ID" Type="bigint" Nullable="false" />
+    <Property Name="Transaction_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ledger_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Particulars" Type="nvarchar(max)" />
+    <Property Name="Transaction_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Narration" Type="nvarchar(max)" />
+    <Property Name="Nature" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Debit" Type="money" />
+    <Property Name="Credit" Type="money" />
+    <Property Name="Balance" Type="money" />
+    <Property Name="Under_ID" Type="bigint" />
+    <Property Name="Super_ID" Type="bigint" />
+    <Property Name="Transaction_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="IsChangable" Type="bit" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModuleType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentificationNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pay_Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ERPSSL_Azim.dbo.tblAC_vch_Voucher_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblAC_vch_Voucher_Details">
+    <Key>
+      <PropertyRef Name="Voucher_Details_ID" />
+    </Key>
+    <Property Name="Voucher_Details_ID" Type="bigint" Nullable="false" />
+    <Property Name="Ledger_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nature" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChequeNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Particulars" Type="nvarchar(max)" />
+    <Property Name="Debit" Type="money" />
+    <Property Name="Credit" Type="money" />
+    <Property Name="Voucher_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModuleType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentificationNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ERPSSL_Azim.dbo.tblAC_vch_Voucher_Log' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblAC_vch_Voucher_Log">
+    <Key>
+      <PropertyRef Name="Voucher_ID" />
+    </Key>
+    <Property Name="Voucher_ID" Type="bigint" Nullable="false" />
+    <Property Name="Voucher_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModuleType" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdentificationNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblConf_Module">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModuleId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Item" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pay_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ledger_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Particulars" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransactionNature" Type="nvarchar" MaxLength="50" />
+    <Property Name="Voucher_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsChangable" Type="bit" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="ENTER_SERVICE_CONTRACT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EMP_ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CONTRACT" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ENTER_SERVICE_CONTRACT_FILE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_TITLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_PATH" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_SIZE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDIT_USER" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDIT_DATE" Type="datetime" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ERP_LogIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_EMPLOYEE_IMAGE_SP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_HRM_GET_Company_Logo_SP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+    <Parameter Name="CID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Get_Module" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetACDepreciationMathod" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetACDepreciationRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCorporateTaxRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetOrderedQty" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrOrderNo" Type="varchar" Mode="In" />
+    <Parameter Name="BArcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTaxDepreciationMathod" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTaxDepreciationRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTransactionName" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsAcquised" Type="bit" Mode="In" />
+    <Parameter Name="IsRevaliated" Type="bit" Mode="In" />
+    <Parameter Name="IsImpaired" Type="bit" Mode="In" />
+    <Parameter Name="IsDisposed" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="HRM_EmployementListByEID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_EmployesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetAnnualTakenLeaveByEid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetApplyLeaveListForApproveByEmployeeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetAssignToInfoByEmployeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetDeginationNameByDeginationId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetDepartmentNameByDepartmentId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetGradeNameBygradeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetLeaveInfoByEmployeeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetLeaveTypeByTypeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetNameByEId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetOfficeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetOfficeNameByOfficeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetReprotingBossNameByEId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetResionNameByResionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSectionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSectionNameBySectionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSubSctionNameBySubSectionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSubSectionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTakenLeaveByLeaveType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="LeaveType" Type="int" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTimeShiftingBySchedulId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTransfered_Employees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_RPT_Evaluation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_SearchEmployesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="searchText" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_Service_Contract_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CONTRACT" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_Terminitated_Employees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="IsAvailable" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsExist" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="IsZero" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="int" Mode="In" />
+    <Parameter Name="ReturnValue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TotalDayOfYear" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+  </Function>
+</Schema>

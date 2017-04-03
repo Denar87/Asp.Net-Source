@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="ERPSSL.FA.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Fixed Asset</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="../css/sb-admin-2.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet'
+        type='text/css'>
+    <!-- Main Styleshet -->
+    <link rel="stylesheet" href="../content/css/styles.css">
+    <!-- Responsive StyleSheet -->
+    <link href="../css/TabStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ContentStyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <link href="../css/responsive.css" rel="stylesheet" />
+    <link href="../css/ContentStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../css/GridStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery.js"></script>
+    <link href="../sidenav/SideNav.css" rel="stylesheet" type="text/css" />
+    <link href="../content/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/charisma-app.css" rel="stylesheet" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/metisMenu.min.js"></script>
+    <script src="../js/sb-admin-2.js"></script>
+
+    <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script>
+        (function ($) {
+            $(window).load(function () {
+
+                $("#content-1").mCustomScrollbar({
+                    autoHideScrollbar: true,
+                    theme: "light"
+                });
+
+            });
+        })(jQuery);
+    </script>
+    <script>
+        (function ($) {
+            $(window).load(function () {
+
+                $("#content-2").mCustomScrollbar({
+                    autoHideScrollbar: true,
+                    theme: "light"
+                });
+
+            });
+        })(jQuery);
+    </script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <style type="text/css">
+        div#content-2 {
+            /*margin-top: 80px;*/
+            margin-top: 49px;
+        }
+
+        a:hover {
+            background-color: #ff6666;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar1 {
+            /*height:35px;
+        min-height:40px;*/
+            height: 30px;
+            min-height: 30px;
+        }
+
+        .hm_sec_2_content {
+            background: #fff none repeat scroll 0 0;
+            border: 0 solid #eee;
+            display: block;
+            margin-bottom: 5px;
+            /*margin-top: 120px;*/
+            margin-top: 89px;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inner navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../Default.aspx"><img id="Img3" runat="server" src="~/content/image/Logo.png"    /></a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links user-panel navbar-right">
+                 <li>
+                    <i class="fa fa-bell fa-fw"></i>
+                    <span style="margin-right: 10px; font-weight: normal;">Notification
+                    </span>
+                </li>
+                <li>
+                   
+                   <i class="fa fa-user fa-fw"></i>
+                        <span style="margin-right: 10px; font-weight: normal;">
+                            <asp:Label ID="lblUser" runat="server" CssClass=""></asp:Label>
+                        </span>
+                </li>
+                <li>
+                    <asp:LinkButton ID="lbtnLogout" runat="server" Style="background: none;" CssClass=""
+                            OnClick="lbtnLogout_Click">
+                            <i class="fa fa-sign-out fa-fw"></i>
+                            Logout
+                        </asp:LinkButton>
+                </li>
+                <!-- /.dropdown -->
+               
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="container sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                   <div class="col-sm-3 col-lg-2 sidebar content" id="content-2">
+                    <ul class="nav" id="side-menu">
+                        
+                       
+                      <asp:Repeater ID="reptManuList" runat="server">
+                                    <ItemTemplate>
+
+                                        <li>
+
+                                            <asp:HiddenField ID="hiddenCategoryID" runat="server" Value='<%#DataBinder.Eval(Container.DataItem, "categoryid") %>' />
+
+                                            <asp:HyperLink ID="url1" runat="server"><i class="fa fa-edit fa-fw"></i><span> 
+                                  <%# Eval("CategoryName")%>
+                                            </span></asp:HyperLink>
+
+                                            <ul class="nav nav-second-level">
+                                                <asp:Repeater ID="reptPageList" runat="server">
+                                                    <ItemTemplate>
+                                                        <li>
+                                                            <asp:HyperLink ID="ur" runat="server" NavigateUrl='<%# Eval("PageUrl") %>'>
+                                  <%# Eval("PageName")%>
+                                                            </asp:HyperLink>
+
+                                                        </li>
+
+                                                    </ItemTemplate>
+                                                </asp:Repeater>
+                                            </ul>
+
+                                        </li>
+
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                      
+                    </ul>
+                    </div>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- /.Strt navbar-top---Menu -->
+
+        <nav class=" col-lg-12   navbar navbar-default navbar-static-top navbar1" style="margin-top: 55px; background-color: white; text-align: right; border-bottom: none">
+                   
+                     <ul  class="">
+                      <asp:Repeater ID="reptModule" runat="server">
+                                <ItemTemplate>                               
+                                     
+                                            <li class="nav navbar-nav">
+                                                <asp:HyperLink CssClass="hover"  NavigateUrl='<%# Eval("ModuleURL") %>' ID="lButtonModule"
+                                                    runat="server" Target="_blank" ><i class="glyphicon glyphicon-leaf"></i><span><b> <%# Eval("ModuleName")%></b></span></asp:HyperLink>&nbsp;&nbsp;
+
+                                            </li>
+                                        
+                                   
+                                </ItemTemplate>
+                               
+                            </asp:Repeater>
+                      </ul>
+                       
+                </nav>
+        <!-- /.End navbar-top---Menu -->
+        <div class="row">
+
+            <div class="col-md-10 col-sm-9" id="page-wrapper">
+                <div class="row">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <br />
+                    <br />
+                </div>
+                <!-- END BODY TABLE CONTENT-->
+            </div>
+        </div>
+
+        <!-- GO TO TOP-->
+        <div class="footer">
+            <div style="float: left;">
+                <p>
+                    &copy Subra Systems Ltd.
+                    <asp:Label ID="lblCurrentDate" runat="server"></asp:Label>
+                </p>
+            </div>
+            <div style="float: right">
+                <p>
+                    <span style="float: right; margin-top: -10px; margin-left: -14px;"><a
+                        href="http://www.subrasystems.com/">
+                        <img src="img/subra.png" height="33" alt="Subra System Limited" id="Img1" /></a></span>
+                </p>
+            </div>
+        </div>
+    </form>
+</body>
+<!-- external javascript -->
+
+
+<!-- library for cookie management -->
+<!-- data table plugin -->
+<%--<script src='../js/jquery.dataTables.min.js'></script>--%>
+<!-- library for making tables responsive -->
+<%--<script src="../js/responsive-tables.js"></script>--%>
+<script src="../js/bootstrap.min.js"></script>
+</html>

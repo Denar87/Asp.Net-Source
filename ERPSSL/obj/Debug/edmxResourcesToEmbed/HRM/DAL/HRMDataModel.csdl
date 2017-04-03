@@ -1,0 +1,2278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MASTERModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ERPSSLHBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HRM_Academics" EntityType="ERPSSL_MASTERModel.HRM_Academics" />
+    <EntitySet Name="HRM_DrivingLicencs" EntityType="ERPSSL_MASTERModel.HRM_DrivingLicencs" />
+    <EntitySet Name="HRM_EDUCATION" EntityType="ERPSSL_MASTERModel.HRM_EDUCATION" />
+    <EntitySet Name="HRM_EMPLOYEE_DOCUMENTS" EntityType="ERPSSL_MASTERModel.HRM_EMPLOYEE_DOCUMENTS" />
+    <EntitySet Name="HRM_EMPLOYEES" EntityType="ERPSSL_MASTERModel.HRM_EMPLOYEES" />
+    <EntitySet Name="HRM_Experiences" EntityType="ERPSSL_MASTERModel.HRM_Experiences" />
+    <EntitySet Name="HRM_GRADE" EntityType="ERPSSL_MASTERModel.HRM_GRADE" />
+    <EntitySet Name="HRM_HOLIDAY_TYPE" EntityType="ERPSSL_MASTERModel.HRM_HOLIDAY_TYPE" />
+    <EntitySet Name="HRM_HOLIDAYS" EntityType="ERPSSL_MASTERModel.HRM_HOLIDAYS" />
+    <EntitySet Name="HRM_HR_DEMAND" EntityType="ERPSSL_MASTERModel.HRM_HR_DEMAND" />
+    <EntitySet Name="HRM_LanguageProficiency" EntityType="ERPSSL_MASTERModel.HRM_LanguageProficiency" />
+    <EntitySet Name="HRM_LEAVE_DETAILS" EntityType="ERPSSL_MASTERModel.HRM_LEAVE_DETAILS" />
+    <EntitySet Name="HRM_LEAVE_EMPLOYEE" EntityType="ERPSSL_MASTERModel.HRM_LEAVE_EMPLOYEE" />
+    <EntitySet Name="HRM_LEAVE_TYPE" EntityType="ERPSSL_MASTERModel.HRM_LEAVE_TYPE" />
+    <EntitySet Name="HRM_Regions" EntityType="ERPSSL_MASTERModel.HRM_Regions" />
+    <EntitySet Name="HRM_SECTIONS" EntityType="ERPSSL_MASTERModel.HRM_SECTIONS" />
+    <EntitySet Name="HRM_SERVICE_CONTRACT" EntityType="ERPSSL_MASTERModel.HRM_SERVICE_CONTRACT" />
+    <EntitySet Name="HRM_Skills" EntityType="ERPSSL_MASTERModel.HRM_Skills" />
+    <EntitySet Name="HRM_SUB_SECTIONS" EntityType="ERPSSL_MASTERModel.HRM_SUB_SECTIONS" />
+    <EntitySet Name="HRM_Trainings" EntityType="ERPSSL_MASTERModel.HRM_Trainings" />
+    <AssociationSet Name="FK_HRM_EDUCATION_HRM_EMPLOYEES" Association="ERPSSL_MASTERModel.FK_HRM_EDUCATION_HRM_EMPLOYEES">
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+      <End Role="HRM_EDUCATION" EntitySet="HRM_EDUCATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_EMPLOYEES_HRM_GRADE" Association="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_GRADE">
+      <End Role="HRM_GRADE" EntitySet="HRM_GRADE" />
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_EMPLOYEES_HRM_SECTIONS" Association="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SECTIONS">
+      <End Role="HRM_SECTIONS" EntitySet="HRM_SECTIONS" />
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_EMPLOYEES_HRM_SUB_SECTIONS" Association="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SUB_SECTIONS">
+      <End Role="HRM_SUB_SECTIONS" EntitySet="HRM_SUB_SECTIONS" />
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_LEAVE_EMPLOYEE_HRM_EMPLOYEES" Association="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_EMPLOYEES">
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+      <End Role="HRM_LEAVE_EMPLOYEE" EntitySet="HRM_LEAVE_EMPLOYEE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_HOLIDAYS_HRM_HOLIDAY_TYPE" Association="ERPSSL_MASTERModel.FK_HRM_HOLIDAYS_HRM_HOLIDAY_TYPE">
+      <End Role="HRM_HOLIDAY_TYPE" EntitySet="HRM_HOLIDAY_TYPE" />
+      <End Role="HRM_HOLIDAYS" EntitySet="HRM_HOLIDAYS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_HR_DEMAND_HRM_SECTIONS" Association="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SECTIONS">
+      <End Role="HRM_SECTIONS" EntitySet="HRM_SECTIONS" />
+      <End Role="HRM_HR_DEMAND" EntitySet="HRM_HR_DEMAND" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_HR_DEMAND_HRM_SUB_SECTIONS" Association="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SUB_SECTIONS">
+      <End Role="HRM_SUB_SECTIONS" EntitySet="HRM_SUB_SECTIONS" />
+      <End Role="HRM_HR_DEMAND" EntitySet="HRM_HR_DEMAND" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_LEAVE_DETAILS_HRM_LEAVE_EMPLOYEE" Association="ERPSSL_MASTERModel.FK_HRM_LEAVE_DETAILS_HRM_LEAVE_EMPLOYEE">
+      <End Role="HRM_LEAVE_EMPLOYEE" EntitySet="HRM_LEAVE_EMPLOYEE" />
+      <End Role="HRM_LEAVE_DETAILS" EntitySet="HRM_LEAVE_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_LEAVE_EMPLOYEE_HRM_LEAVE_TYPE" Association="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_LEAVE_TYPE">
+      <End Role="HRM_LEAVE_TYPE" EntitySet="HRM_LEAVE_TYPE" />
+      <End Role="HRM_LEAVE_EMPLOYEE" EntitySet="HRM_LEAVE_EMPLOYEE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_SUB_SECTIONS_HRM_SECTIONS" Association="ERPSSL_MASTERModel.FK_HRM_SUB_SECTIONS_HRM_SECTIONS">
+      <End Role="HRM_SECTIONS" EntitySet="HRM_SECTIONS" />
+      <End Role="HRM_SUB_SECTIONS" EntitySet="HRM_SUB_SECTIONS" />
+    </AssociationSet>
+    <EntitySet Name="HRM_LetterType" EntityType="ERPSSL_MASTERModel.HRM_LetterType" />
+    <EntitySet Name="HRM_LETTER_FORMAT" EntityType="ERPSSL_MASTERModel.HRM_LETTER_FORMAT" />
+    <EntitySet Name="HRM_StoreLetter" EntityType="ERPSSL_MASTERModel.HRM_StoreLetter" />
+    <EntitySet Name="HRM_EmployeeType" EntityType="ERPSSL_MASTERModel.HRM_EmployeeType" />
+    <EntitySet Name="HRM_BankInfo" EntityType="ERPSSL_MASTERModel.HRM_BankInfo" />
+    <EntitySet Name="HRM_EmployeeStatement" EntityType="ERPSSL_MASTERModel.HRM_EmployeeStatement" />
+    <EntitySet Name="HRM_JobAllocationtemporary" EntityType="ERPSSL_MASTERModel.HRM_JobAllocationtemporary" />
+    <EntitySet Name="HRM_Attendance_Manual_Status" EntityType="ERPSSL_MASTERModel.HRM_Attendance_Manual_Status" />
+    <EntitySet Name="HRPAY_SALARY" EntityType="ERPSSL_MASTERModel.HRPAY_SALARY" />
+    <AssociationSet Name="FK_HRPAY_SALARY_HRM_EMPLOYEES" Association="ERPSSL_MASTERModel.FK_HRPAY_SALARY_HRM_EMPLOYEES">
+      <End Role="HRM_EMPLOYEES" EntitySet="HRM_EMPLOYEES" />
+      <End Role="HRPAY_SALARY" EntitySet="HRPAY_SALARY" />
+    </AssociationSet>
+    <EntitySet Name="HRM_DESIGNATIONS" EntityType="ERPSSL_MASTERModel.HRM_DESIGNATIONS" />
+    <EntitySet Name="HRM_JOB_TERMINATE" EntityType="ERPSSL_MASTERModel.HRM_JOB_TERMINATE" />
+    <EntitySet Name="HRM_EVALUATION" EntityType="ERPSSL_MASTERModel.HRM_EVALUATION" />
+    <EntitySet Name="HRM_MachineReadableProblem" EntityType="ERPSSL_MASTERModel.HRM_MachineReadableProblem" />
+    <EntitySet Name="HRM_OfficialDay" EntityType="ERPSSL_MASTERModel.HRM_OfficialDay" />
+    <EntitySet Name="HRM_TimeScheduleByReligion" EntityType="ERPSSL_MASTERModel.HRM_TimeScheduleByReligion" />
+    <EntitySet Name="HRM_Office" EntityType="ERPSSL_MASTERModel.HRM_Office" />
+    <AssociationSet Name="FK_HRM_Office_HRM_Regions" Association="ERPSSL_MASTERModel.FK_HRM_Office_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+    </AssociationSet>
+    <EntitySet Name="HRM_DEPARTMENTS" EntityType="ERPSSL_MASTERModel.HRM_DEPARTMENTS" />
+    <AssociationSet Name="FK_HRM_DEPARTMENTS_HRM_Office" Association="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Office">
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_DEPARTMENTS_HRM_Regions" Association="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_SECTIONS_HRM_DEPARTMENTS" Association="ERPSSL_MASTERModel.FK_HRM_SECTIONS_HRM_DEPARTMENTS">
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+      <End Role="HRM_SECTIONS" EntitySet="HRM_SECTIONS" />
+    </AssociationSet>
+    <EntitySet Name="HRM_TemporySalaryIncrement" EntityType="ERPSSL_MASTERModel.HRM_TemporySalaryIncrement" />
+    <EntitySet Name="HRM_ChildInfo" EntityType="ERPSSL_MASTERModel.HRM_ChildInfo" />
+    <EntitySet Name="HRM_JobAllocation" EntityType="ERPSSL_MASTERModel.HRM_JobAllocation" />
+    <EntitySet Name="HRM_MaternityLeave" EntityType="ERPSSL_MASTERModel.HRM_MaternityLeave" />
+    <EntitySet Name="HRM_TimeInoutOTCalculation" EntityType="ERPSSL_MASTERModel.HRM_TimeInoutOTCalculation" />
+    <EntitySet Name="HRM_Pay_Salary_Adjustment" EntityType="ERPSSL_MASTERModel.HRM_Pay_Salary_Adjustment" />
+    <EntitySet Name="HRM_AdvanceSalarySummary" EntityType="ERPSSL_MASTERModel.HRM_AdvanceSalarySummary" />
+    <EntitySet Name="HRM_EmployeeBenefitSetup" EntityType="ERPSSL_MASTERModel.HRM_EmployeeBenefitSetup" />
+    <EntitySet Name="HRM_EmployeeWiseBenefit" EntityType="ERPSSL_MASTERModel.HRM_EmployeeWiseBenefit" />
+    <EntitySet Name="HRM_EmployeeCategory" EntityType="ERPSSL_MASTERModel.HRM_EmployeeCategory" />
+    <EntitySet Name="HRM_AttendanceBouns" EntityType="ERPSSL_MASTERModel.HRM_AttendanceBouns" />
+    <EntitySet Name="HRM_ReasonType" EntityType="ERPSSL_MASTERModel.HRM_ReasonType" />
+    <EntitySet Name="HRM_AttendanceReason" EntityType="ERPSSL_MASTERModel.HRM_AttendanceReason" />
+    <AssociationSet Name="FK_HRM_AttendanceReason_HRM_Office" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Office">
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+      <End Role="HRM_AttendanceReason" EntitySet="HRM_AttendanceReason" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_HRM_ReasonType" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_ReasonType">
+      <End Role="HRM_ReasonType" EntitySet="HRM_ReasonType" />
+      <End Role="HRM_AttendanceReason" EntitySet="HRM_AttendanceReason" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_HRM_Regions" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_AttendanceReason" EntitySet="HRM_AttendanceReason" />
+    </AssociationSet>
+    <EntitySet Name="HRM_TIMESCHEDULE" EntityType="ERPSSL_MASTERModel.HRM_TIMESCHEDULE" />
+    <EntitySet Name="HRM_DepartmentWiseShift" EntityType="ERPSSL_MASTERModel.HRM_DepartmentWiseShift" />
+    <AssociationSet Name="FK_HRM_DepartmentWiseShift_HRM_DEPARTMENTS" Association="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_DEPARTMENTS">
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+      <End Role="HRM_DepartmentWiseShift" EntitySet="HRM_DepartmentWiseShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_DepartmentWiseShift_HRM_Office" Association="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Office">
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+      <End Role="HRM_DepartmentWiseShift" EntitySet="HRM_DepartmentWiseShift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_DepartmentWiseShift_HRM_Regions" Association="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_DepartmentWiseShift" EntitySet="HRM_DepartmentWiseShift" />
+    </AssociationSet>
+    <EntitySet Name="HRM_AttendanceReason_Individual" EntityType="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual" />
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS">
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_Office" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Office">
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_ReasonType" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_ReasonType">
+      <End Role="HRM_ReasonType" EntitySet="HRM_ReasonType" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_Regions" Association="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <EntitySet Name="HRM_EducationType" EntityType="ERPSSL_MASTERModel.HRM_EducationType" />
+    <EntitySet Name="HRM_CounteryNationality" EntityType="ERPSSL_MASTERModel.HRM_CounteryNationality" />
+    <EntitySet Name="Hrm_PersonalInfoTemp" EntityType="ERPSSL_MASTERModel.Hrm_PersonalInfoTemp" />
+    <EntitySet Name="HRM_AttendancePunishment" EntityType="ERPSSL_MASTERModel.HRM_AttendancePunishment" />
+    <EntitySet Name="HRM_AdvanceSalaryDetails" EntityType="ERPSSL_MASTERModel.HRM_AdvanceSalaryDetails" />
+    <EntitySet Name="HRM_LiabilityType" EntityType="ERPSSL_MASTERModel.HRM_LiabilityType" />
+    <EntitySet Name="HRM_TAXLiabilityConfig" EntityType="ERPSSL_MASTERModel.HRM_TAXLiabilityConfig" />
+    <EntitySet Name="HRM_PFConfiguration" EntityType="ERPSSL_MASTERModel.HRM_PFConfiguration" />
+    <EntitySet Name="HRM_IncomeHeader" EntityType="ERPSSL_MASTERModel.HRM_IncomeHeader" />
+    <EntitySet Name="HRM_IncomeHeaderDetails" EntityType="ERPSSL_MASTERModel.HRM_IncomeHeaderDetails" />
+    <EntitySet Name="HRM_TAXPFApplicable" EntityType="ERPSSL_MASTERModel.HRM_TAXPFApplicable" />
+    <EntitySet Name="HRM_LeaveApply" EntityType="ERPSSL_MASTERModel.HRM_LeaveApply" />
+    <EntitySet Name="HRM_Re_Active_LeaveApply" EntityType="ERPSSL_MASTERModel.HRM_Re_Active_LeaveApply" />
+    <EntitySet Name="HRM_OfficialDay_Individual" EntityType="ERPSSL_MASTERModel.HRM_OfficialDay_Individual" />
+    <EntitySet Name="HRM_Salary_Deduction" EntityType="ERPSSL_MASTERModel.HRM_Salary_Deduction" />
+    <EntitySet Name="HRM_Attendance_Manual_Log" EntityType="ERPSSL_MASTERModel.HRM_Attendance_Manual_Log" />
+    <EntitySet Name="HRM_AttendanceTemp" EntityType="ERPSSL_MASTERModel.HRM_AttendanceTemp" />
+    <EntitySet Name="HRM_SalaryIncrement" EntityType="ERPSSL_MASTERModel.HRM_SalaryIncrement" />
+    <EntitySet Name="HRM_EMP_TRANSFER" EntityType="ERPSSL_MASTERModel.HRM_EMP_TRANSFER" />
+    <EntitySet Name="HRM_SalaryIncrementSLog" EntityType="ERPSSL_MASTERModel.HRM_SalaryIncrementSLog" />
+    <EntitySet Name="HRM_AdvanceSalaryDetailPrevious_Log" EntityType="ERPSSL_MASTERModel.HRM_AdvanceSalaryDetailPrevious_Log" />
+    <EntitySet Name="HRM_Salary_Punishment" EntityType="ERPSSL_MASTERModel.HRM_Salary_Punishment" />
+    <EntitySet Name="HRM_SalaryUpdate" EntityType="ERPSSL_MASTERModel.HRM_SalaryUpdate" />
+    <EntitySet Name="HRM_Applicable_PersonalStatus" EntityType="ERPSSL_MASTERModel.HRM_Applicable_PersonalStatus" />
+    <EntitySet Name="HRM_ATTENDANCE" EntityType="ERPSSL_MASTERModel.HRM_ATTENDANCE" />
+    <EntitySet Name="HRM_Pay_Salary" EntityType="ERPSSL_MASTERModel.HRM_Pay_Salary" />
+    <EntitySet Name="HRM_Company" EntityType="ERPSSL_MASTERModel.HRM_Company" />
+    <EntitySet Name="HRM_BankInfo_Delete_Log" EntityType="ERPSSL_MASTERModel.HRM_BankInfo_Delete_Log" />
+    <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MASTERModel.HRM_PersonalInformations" />
+    <EntitySet Name="HRM_Pay_Salary_Tax" EntityType="ERPSSL_MASTERModel.HRM_Pay_Salary_Tax" />
+    <EntitySet Name="HRM_SubCompany" EntityType="ERPSSL_MASTERModel.HRM_SubCompany" />
+    <EntitySet Name="HRM_PaySalary_Temp" EntityType="ERPSSL_MASTERModel.HRM_PaySalary_Temp" />
+    <EntitySet Name="HRM_Pay_Salary_Deduction" EntityType="ERPSSL_MASTERModel.HRM_Pay_Salary_Deduction" />
+  </EntityContainer>
+  <EntityType Name="HRM_Academics">
+    <Key>
+      <PropertyRef Name="AcademicId" />
+    </Key>
+    <Property Type="Int64" Name="AcademicId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LevelOfEducation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PassingYear" />
+    <Property Type="String" Name="Major" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Duration" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InstituteName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Result" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Achievement" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_DrivingLicencs">
+    <Key>
+      <PropertyRef Name="DrivingId" />
+    </Key>
+    <Property Type="Int32" Name="DrivingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LicenceNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IssuedDate" Precision="0" />
+    <Property Type="DateTime" Name="ExperiredDate" Precision="0" />
+    <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EDUCATION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EMP_ID" />
+    <Property Type="String" Name="level_of_Education" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="exam" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="major" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="institute_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="result" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="passing_year" />
+    <Property Type="String" Name="duration" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="achievement" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRM_EDUCATION_HRM_EMPLOYEES" FromRole="HRM_EDUCATION" ToRole="HRM_EMPLOYEES" />
+  </EntityType>
+  <EntityType Name="HRM_EMPLOYEE_DOCUMENTS">
+    <Key>
+      <PropertyRef Name="FILE_ID" />
+    </Key>
+    <Property Type="Int64" Name="FILE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EMP_ID" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FILE_TITLE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FILE_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FILE_PATH" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FILE_SIZE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EMPLOYEES">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Type="Int64" Name="EMP_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Region_ID" />
+    <Property Type="Int32" Name="Office_ID" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DPT_ID" />
+    <Property Type="Int32" Name="SEC_ID" />
+    <Property Type="Int32" Name="SUB_SEC_ID" />
+    <Property Type="Int32" Name="DEG_ID" />
+    <Property Type="Int32" Name="GRADE_ID" />
+    <Property Type="Int32" Name="SCHEDULE_ID" />
+    <Property Type="String" Name="EMP_TITLE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_FIRSTNAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_LASTNAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_SEX" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_FATHERS_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_MOTHERS_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EMP_DOB" Precision="0" />
+    <Property Type="String" Name="EMP_MARITUAL_STATUS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_RELIGION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NATIONALITY" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_BLOOD_GRP" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_EMAIL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_ALT_EMAIL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_COMPANY_EMAIL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_CONTACT_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_EMG_CONTACT_NO" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_PRE_ADDRESS" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_PER_ADDRESS" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_EDUCATION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_INSTITUTE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_DEGREE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_RESULT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NOMINEE_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NOMINEE_CONTACT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NOMINEE_ADDRESS" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NOMINEE_AGE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMP_NOMINEE_RELATION" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DATE_JOINED" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Binary" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="true" />
+    <Property Type="String" Name="ReportingBossName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RptBossDSG" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EDUCATION" Relationship="ERPSSL_MASTERModel.FK_HRM_EDUCATION_HRM_EMPLOYEES" FromRole="HRM_EMPLOYEES" ToRole="HRM_EDUCATION" />
+    <NavigationProperty Name="HRM_GRADE" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_GRADE" FromRole="HRM_EMPLOYEES" ToRole="HRM_GRADE" />
+    <NavigationProperty Name="HRM_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SECTIONS" FromRole="HRM_EMPLOYEES" ToRole="HRM_SECTIONS" />
+    <NavigationProperty Name="HRM_SUB_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SUB_SECTIONS" FromRole="HRM_EMPLOYEES" ToRole="HRM_SUB_SECTIONS" />
+    <NavigationProperty Name="HRM_LEAVE_EMPLOYEE" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_EMPLOYEES" FromRole="HRM_EMPLOYEES" ToRole="HRM_LEAVE_EMPLOYEE" />
+    <NavigationProperty Name="HRPAY_SALARY" Relationship="ERPSSL_MASTERModel.FK_HRPAY_SALARY_HRM_EMPLOYEES" FromRole="HRM_EMPLOYEES" ToRole="HRPAY_SALARY" />
+  </EntityType>
+  <EntityType Name="HRM_Experiences">
+    <Key>
+      <PropertyRef Name="ExperienceId" />
+    </Key>
+    <Property Type="Int64" Name="ExperienceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_Company" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_CompanyBussiness" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_CompanyLocation" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_CompanyDepartment" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_PositionHeld" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_AreaOfExperience" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EExperience_Responsibilites" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Experience_Duration" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_GRADE">
+    <Key>
+      <PropertyRef Name="GRADE_ID" />
+    </Key>
+    <Property Type="Int32" Name="GRADE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GRADE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="STEP" />
+    <Property Type="Decimal" Name="GROSS_SAL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="HOUSE_RENT" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="BASIC" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="MEDICAL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CONVEYANCE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="FOOD_ALLOW" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OTHERS" Precision="19" Scale="4" />
+    <Property Type="String" Name="REMARKS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_GRADE" FromRole="HRM_GRADE" ToRole="HRM_EMPLOYEES" />
+  </EntityType>
+  <EntityType Name="HRM_HOLIDAY_TYPE">
+    <Key>
+      <PropertyRef Name="HOLIDAY_TYPE_ID" />
+    </Key>
+    <Property Type="Int32" Name="HOLIDAY_TYPE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="HOLIDAY_TYPE_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_HOLIDAYS" Relationship="ERPSSL_MASTERModel.FK_HRM_HOLIDAYS_HRM_HOLIDAY_TYPE" FromRole="HRM_HOLIDAY_TYPE" ToRole="HRM_HOLIDAYS" />
+  </EntityType>
+  <EntityType Name="HRM_HOLIDAYS">
+    <Key>
+      <PropertyRef Name="HOLIDAY_ID" />
+    </Key>
+    <Property Type="Int32" Name="HOLIDAY_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HOLIDAY_TYPE_ID" />
+    <Property Type="String" Name="HOLIDAY_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="HOLIDAY_DATE" Precision="3" />
+    <Property Type="String" Name="REMARKS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_HOLIDAY_TYPE" Relationship="ERPSSL_MASTERModel.FK_HRM_HOLIDAYS_HRM_HOLIDAY_TYPE" FromRole="HRM_HOLIDAYS" ToRole="HRM_HOLIDAY_TYPE" />
+    <Property Name="HolidayCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_HR_DEMAND">
+    <Key>
+      <PropertyRef Name="HR_DEMAND_ID" />
+    </Key>
+    <Property Type="Int32" Name="HR_DEMAND_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DPT_ID" />
+    <Property Type="Int32" Name="SEC_ID" />
+    <Property Type="Int32" Name="SUB_SEC_ID" />
+    <Property Type="Int32" Name="HR_DEMAND_NUM" />
+    <Property Type="DateTime" Name="HR_DEMAND_DATE" Precision="0" />
+    <Property Type="Int32" Name="HR_DEMAND_INCRASE" />
+    <Property Type="Int32" Name="HR_DEMAND_DECRASE" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SECTIONS" FromRole="HRM_HR_DEMAND" ToRole="HRM_SECTIONS" />
+    <NavigationProperty Name="HRM_SUB_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SUB_SECTIONS" FromRole="HRM_HR_DEMAND" ToRole="HRM_SUB_SECTIONS" />
+  </EntityType>
+  <EntityType Name="HRM_LanguageProficiency">
+    <Key>
+      <PropertyRef Name="LanguageProficiencyId" />
+    </Key>
+    <Property Type="Int64" Name="LanguageProficiencyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Language" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reading" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Writting" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Speaking" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_DETAILS">
+    <Key>
+      <PropertyRef Name="LEV_DETAILS_ID" />
+    </Key>
+    <Property Type="Int32" Name="LEV_DETAILS_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="LEV_APP_ID" />
+    <Property Type="DateTime" Name="LEV_DATES" Precision="0" />
+    <NavigationProperty Name="HRM_LEAVE_EMPLOYEE" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_DETAILS_HRM_LEAVE_EMPLOYEE" FromRole="HRM_LEAVE_DETAILS" ToRole="HRM_LEAVE_EMPLOYEE" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="LEV_APP_ID" />
+    </Key>
+    <Property Type="Int32" Name="LEV_APP_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EMP_ID" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LEV_TYPE_ID" />
+    <Property Type="Int32" Name="TOTAL_REM_DAY" />
+    <Property Type="Int32" Name="TOTAL_LEV_DAYS" />
+    <Property Type="String" Name="REMARKS" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_EMPLOYEES" FromRole="HRM_LEAVE_EMPLOYEE" ToRole="HRM_EMPLOYEES" />
+    <NavigationProperty Name="HRM_LEAVE_DETAILS" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_DETAILS_HRM_LEAVE_EMPLOYEE" FromRole="HRM_LEAVE_EMPLOYEE" ToRole="HRM_LEAVE_DETAILS" />
+    <NavigationProperty Name="HRM_LEAVE_TYPE" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_LEAVE_TYPE" FromRole="HRM_LEAVE_EMPLOYEE" ToRole="HRM_LEAVE_TYPE" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_TYPE">
+    <Key>
+      <PropertyRef Name="LEV_ID" />
+    </Key>
+    <Property Type="Int32" Name="LEV_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LEV_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LEV_DAYS" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_LEAVE_EMPLOYEE" Relationship="ERPSSL_MASTERModel.FK_HRM_LEAVE_EMPLOYEE_HRM_LEAVE_TYPE" FromRole="HRM_LEAVE_TYPE" ToRole="HRM_LEAVE_EMPLOYEE" />
+  </EntityType>
+  <EntityType Name="HRM_Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Type="Int32" Name="RegionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RegionCode" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegionName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_Office" Relationship="ERPSSL_MASTERModel.FK_HRM_Office_HRM_Regions" FromRole="HRM_Regions" ToRole="HRM_Office" />
+    <NavigationProperty Name="HRM_DEPARTMENTS" Relationship="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Regions" FromRole="HRM_Regions" ToRole="HRM_DEPARTMENTS" />
+    <NavigationProperty Name="HRM_AttendanceReason" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Regions" FromRole="HRM_Regions" ToRole="HRM_AttendanceReason" />
+    <NavigationProperty Name="HRM_DepartmentWiseShift" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Regions" FromRole="HRM_Regions" ToRole="HRM_DepartmentWiseShift" />
+    <NavigationProperty Name="HRM_AttendanceReason_Individual" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Regions" FromRole="HRM_Regions" ToRole="HRM_AttendanceReason_Individual" />
+  </EntityType>
+  <EntityType Name="HRM_SECTIONS">
+    <Key>
+      <PropertyRef Name="SEC_ID" />
+    </Key>
+    <Property Type="Int32" Name="SEC_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SEC_NAME" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DPT_ID" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SECTIONS" FromRole="HRM_SECTIONS" ToRole="HRM_EMPLOYEES" />
+    <NavigationProperty Name="HRM_HR_DEMAND" Relationship="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SECTIONS" FromRole="HRM_SECTIONS" ToRole="HRM_HR_DEMAND" />
+    <NavigationProperty Name="HRM_SUB_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_SUB_SECTIONS_HRM_SECTIONS" FromRole="HRM_SECTIONS" ToRole="HRM_SUB_SECTIONS" />
+    <NavigationProperty Name="HRM_DEPARTMENTS" Relationship="ERPSSL_MASTERModel.FK_HRM_SECTIONS_HRM_DEPARTMENTS" FromRole="HRM_SECTIONS" ToRole="HRM_DEPARTMENTS" />
+    <Property Type="Int32" Name="RegionID" />
+    <Property Type="Int32" Name="OfficeID" />
+  </EntityType>
+  <EntityType Name="HRM_SERVICE_CONTRACT">
+    <Key>
+      <PropertyRef Name="CONT_ID" />
+    </Key>
+    <Property Type="Int64" Name="CONT_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CONTRACT" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Skills">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Type="Int64" Name="SkillId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Skill_Specialization" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Skill_Description" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Skill_ExtraActivities" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_SUB_SECTIONS">
+    <Key>
+      <PropertyRef Name="SUB_SEC_ID" />
+    </Key>
+    <Property Type="Int32" Name="SUB_SEC_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SUB_SEC_NAME" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SEC_ID" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRM_EMPLOYEES_HRM_SUB_SECTIONS" FromRole="HRM_SUB_SECTIONS" ToRole="HRM_EMPLOYEES" />
+    <NavigationProperty Name="HRM_HR_DEMAND" Relationship="ERPSSL_MASTERModel.FK_HRM_HR_DEMAND_HRM_SUB_SECTIONS" FromRole="HRM_SUB_SECTIONS" ToRole="HRM_HR_DEMAND" />
+    <NavigationProperty Name="HRM_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_SUB_SECTIONS_HRM_SECTIONS" FromRole="HRM_SUB_SECTIONS" ToRole="HRM_SECTIONS" />
+    <Property Type="Int32" Name="DepartmentID" />
+    <Property Type="Int32" Name="RegionID" />
+    <Property Type="Int32" Name="OfficeID" />
+  </EntityType>
+  <EntityType Name="HRM_Trainings">
+    <Key>
+      <PropertyRef Name="TrainingId" />
+    </Key>
+    <Property Type="Int64" Name="TrainingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TraningTitle" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TraningTopicsCovered" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Institue" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Countery" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TraningYear" />
+    <Property Type="String" Name="Duration" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_HRM_EDUCATION_HRM_EMPLOYEES">
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_EDUCATION" Role="HRM_EDUCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_EMPLOYEES">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="HRM_EDUCATION">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_EMPLOYEES_HRM_GRADE">
+    <End Type="ERPSSL_MASTERModel.HRM_GRADE" Role="HRM_GRADE" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_GRADE">
+        <PropertyRef Name="GRADE_ID" />
+      </Principal>
+      <Dependent Role="HRM_EMPLOYEES">
+        <PropertyRef Name="GRADE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_EMPLOYEES_HRM_SECTIONS">
+    <End Type="ERPSSL_MASTERModel.HRM_SECTIONS" Role="HRM_SECTIONS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_SECTIONS">
+        <PropertyRef Name="SEC_ID" />
+      </Principal>
+      <Dependent Role="HRM_EMPLOYEES">
+        <PropertyRef Name="SEC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_EMPLOYEES_HRM_SUB_SECTIONS">
+    <End Type="ERPSSL_MASTERModel.HRM_SUB_SECTIONS" Role="HRM_SUB_SECTIONS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_SUB_SECTIONS">
+        <PropertyRef Name="SUB_SEC_ID" />
+      </Principal>
+      <Dependent Role="HRM_EMPLOYEES">
+        <PropertyRef Name="SUB_SEC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_LEAVE_EMPLOYEE_HRM_EMPLOYEES">
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_LEAVE_EMPLOYEE" Role="HRM_LEAVE_EMPLOYEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_EMPLOYEES">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="HRM_LEAVE_EMPLOYEE">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_HOLIDAYS_HRM_HOLIDAY_TYPE">
+    <End Type="ERPSSL_MASTERModel.HRM_HOLIDAY_TYPE" Role="HRM_HOLIDAY_TYPE" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_HOLIDAYS" Role="HRM_HOLIDAYS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_HOLIDAY_TYPE">
+        <PropertyRef Name="HOLIDAY_TYPE_ID" />
+      </Principal>
+      <Dependent Role="HRM_HOLIDAYS">
+        <PropertyRef Name="HOLIDAY_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_HR_DEMAND_HRM_SECTIONS">
+    <End Type="ERPSSL_MASTERModel.HRM_SECTIONS" Role="HRM_SECTIONS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_HR_DEMAND" Role="HRM_HR_DEMAND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_SECTIONS">
+        <PropertyRef Name="SEC_ID" />
+      </Principal>
+      <Dependent Role="HRM_HR_DEMAND">
+        <PropertyRef Name="SEC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_HR_DEMAND_HRM_SUB_SECTIONS">
+    <End Type="ERPSSL_MASTERModel.HRM_SUB_SECTIONS" Role="HRM_SUB_SECTIONS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_HR_DEMAND" Role="HRM_HR_DEMAND" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_SUB_SECTIONS">
+        <PropertyRef Name="SUB_SEC_ID" />
+      </Principal>
+      <Dependent Role="HRM_HR_DEMAND">
+        <PropertyRef Name="SUB_SEC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_LEAVE_DETAILS_HRM_LEAVE_EMPLOYEE">
+    <End Type="ERPSSL_MASTERModel.HRM_LEAVE_EMPLOYEE" Role="HRM_LEAVE_EMPLOYEE" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_LEAVE_DETAILS" Role="HRM_LEAVE_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_LEAVE_EMPLOYEE">
+        <PropertyRef Name="LEV_APP_ID" />
+      </Principal>
+      <Dependent Role="HRM_LEAVE_DETAILS">
+        <PropertyRef Name="LEV_APP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_LEAVE_EMPLOYEE_HRM_LEAVE_TYPE">
+    <End Type="ERPSSL_MASTERModel.HRM_LEAVE_TYPE" Role="HRM_LEAVE_TYPE" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_LEAVE_EMPLOYEE" Role="HRM_LEAVE_EMPLOYEE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_LEAVE_TYPE">
+        <PropertyRef Name="LEV_ID" />
+      </Principal>
+      <Dependent Role="HRM_LEAVE_EMPLOYEE">
+        <PropertyRef Name="LEV_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_SUB_SECTIONS_HRM_SECTIONS">
+    <End Type="ERPSSL_MASTERModel.HRM_SECTIONS" Role="HRM_SECTIONS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_SUB_SECTIONS" Role="HRM_SUB_SECTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_SECTIONS">
+        <PropertyRef Name="SEC_ID" />
+      </Principal>
+      <Dependent Role="HRM_SUB_SECTIONS">
+        <PropertyRef Name="SEC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_LetterType">
+    <Key>
+      <PropertyRef Name="LatterTypeId" />
+    </Key>
+    <Property Type="Int32" Name="LatterTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LatterType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_LETTER_FORMAT">
+    <Key>
+      <PropertyRef Name="LTR_ID" />
+    </Key>
+    <Property Type="Int32" Name="LTR_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LTR_Details" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LTR_Type" Nullable="false" />
+    <Property Type="String" Name="LTR_Title" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_StoreLetter">
+    <Key>
+      <PropertyRef Name="StoreLetterId" />
+    </Key>
+    <Property Type="Int32" Name="StoreLetterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeType">
+    <Key>
+      <PropertyRef Name="EmployeeTypeId" />
+    </Key>
+    <Property Type="Int32" Name="EmployeeTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmployeeTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_BankInfo">
+    <Key>
+      <PropertyRef Name="BankInfoId" />
+    </Key>
+    <Property Type="Int64" Name="BankInfoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BankName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Branch" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileBankName" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeStatement">
+    <Key>
+      <PropertyRef Name="EmployeeStatmentId" />
+    </Key>
+    <Property Type="Int32" Name="EmployeeStatmentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NameOfRelative" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RelativeEID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Relation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_JobAllocationtemporary">
+    <Key>
+      <PropertyRef Name="JoBAllocationTemID" />
+    </Key>
+    <Property Type="Int64" Name="JoBAllocationTemID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Attendance_Manual_Status">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Type="Int32" Name="ATTE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="IN_TIME" Precision="7" />
+    <Property Type="Time" Name="OUT_TIME" Precision="7" />
+    <Property Type="Time" Name="WORKED_TIME" Precision="7" />
+    <Property Type="Boolean" Name="OT_STATUS" />
+    <Property Type="Time" Name="OVER_TIME" Precision="7" />
+    <Property Type="String" Name="STATUS" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="REMARKS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ATT_DATE" Precision="0" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRPAY_SALARY">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Type="Int32" Name="PROCESS_ID" Nullable="false" />
+    <Property Type="Int64" Name="EMP_ID" />
+    <Property Type="Int32" Name="WORKED_DAYS" />
+    <Property Type="Time" Name="OVER_TIME" Precision="7" />
+    <Property Type="Int32" Name="WORK_HOLIDAYS" />
+    <Property Type="Int32" Name="OTHER_HOLIDAYS" />
+    <Property Type="Int32" Name="TOTAL_LEAVE" />
+    <Property Type="DateTime" Name="SALARY_MONTH" Precision="0" />
+    <Property Type="DateTime" Name="DATE_PROCESSED" Precision="3" />
+    <Property Type="Decimal" Name="TOTAL_BASIC_NEW" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TOTAL_GROSS_SAL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TOTAL_TAX" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TOTAL_BONUS" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TOTAL_LEAVE_COST" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TOTAL_ABSENT_COST" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="PAY_STATUS" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_EMPLOYEES" Relationship="ERPSSL_MASTERModel.FK_HRPAY_SALARY_HRM_EMPLOYEES" FromRole="HRPAY_SALARY" ToRole="HRM_EMPLOYEES" />
+  </EntityType>
+  <Association Name="FK_HRPAY_SALARY_HRM_EMPLOYEES">
+    <End Type="ERPSSL_MASTERModel.HRM_EMPLOYEES" Role="HRM_EMPLOYEES" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRPAY_SALARY" Role="HRPAY_SALARY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_EMPLOYEES">
+        <PropertyRef Name="EMP_ID" />
+      </Principal>
+      <Dependent Role="HRPAY_SALARY">
+        <PropertyRef Name="EMP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_DESIGNATIONS">
+    <Key>
+      <PropertyRef Name="DEG_ID" />
+    </Key>
+    <Property Type="Int32" Name="DEG_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="DEG_NAME" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GRADE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="GROSS_SAL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="HOUSE_RENT" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="BASIC" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="MEDICAL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CONVEYANCE" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="FOOD_ALLOW" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="FixedAllowance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OTHERS" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="AttendanceBonus" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Holiday_Allowance" Precision="19" Scale="4" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_JOB_TERMINATE">
+    <Key>
+      <PropertyRef Name="TERMINATE_ID" />
+    </Key>
+    <Property Type="Int32" Name="TERMINATE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="TERMINATE_DATE" Precision="3" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="REMARKS" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Termination_Status" />
+  </EntityType>
+  <EntityType Name="HRM_EVALUATION">
+    <Key>
+      <PropertyRef Name="EVAL_ID" />
+    </Key>
+    <Property Type="Int64" Name="EVAL_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ABSENCERROR" />
+    <Property Type="Int32" Name="ACCURACY" />
+    <Property Type="Int32" Name="HABBIT" />
+    <Property Type="Int32" Name="INNOVATION" />
+    <Property Type="Int32" Name="ORDERLINES" />
+    <Property Type="Int32" Name="ATTENDANCE" />
+    <Property Type="Int32" Name="CO_OPERATION" />
+    <Property Type="Int32" Name="INITIATIVE" />
+    <Property Type="Int32" Name="KNOWLEDGE" />
+    <Property Type="Int32" Name="RELIABILITY" />
+    <Property Type="Int32" Name="OUT_OF" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_MachineReadableProblem">
+    <Key>
+      <PropertyRef Name="MachineProblem_Id" />
+    </Key>
+    <Property Type="Int32" Name="MachineProblem_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RegionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Att_Date" Precision="3" />
+    <Property Type="String" Name="Att_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="String" Name="Working_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_OfficialDay">
+    <Key>
+      <PropertyRef Name="OfficialDay_Id" />
+    </Key>
+    <Property Type="Int32" Name="OfficialDay_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Official_Date" Precision="3" />
+    <Property Type="String" Name="Working_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="OT_Applicable" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_TimeScheduleByReligion">
+    <Key>
+      <PropertyRef Name="ReligionSechedule_Id" />
+    </Key>
+    <Property Type="Int32" Name="ReligionSechedule_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RegionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="String" Name="ReasonType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Type="Int32" Name="OfficeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OfficeCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OfficeAddress" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RegionId" Nullable="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_Regions" Relationship="ERPSSL_MASTERModel.FK_HRM_Office_HRM_Regions" FromRole="HRM_Office" ToRole="HRM_Regions" />
+    <NavigationProperty Name="HRM_DEPARTMENTS" Relationship="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Office" FromRole="HRM_Office" ToRole="HRM_DEPARTMENTS" />
+    <NavigationProperty Name="HRM_AttendanceReason" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Office" FromRole="HRM_Office" ToRole="HRM_AttendanceReason" />
+    <NavigationProperty Name="HRM_DepartmentWiseShift" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Office" FromRole="HRM_Office" ToRole="HRM_DepartmentWiseShift" />
+    <NavigationProperty Name="HRM_AttendanceReason_Individual" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Office" FromRole="HRM_Office" ToRole="HRM_AttendanceReason_Individual" />
+  </EntityType>
+  <Association Name="FK_HRM_Office_HRM_Regions">
+    <End Type="ERPSSL_MASTERModel.HRM_Regions" Role="HRM_Regions" Multiplicity="1" />
+    <End Type="ERPSSL_MASTERModel.HRM_Office" Role="HRM_Office" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_Office">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="DPT_ID" />
+    </Key>
+    <Property Type="Int32" Name="DPT_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Office_ID" />
+    <Property Type="String" Name="DPT_NAME" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DPT_CODE" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ResionId" Nullable="false" />
+    <NavigationProperty Name="HRM_Office" Relationship="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Office" FromRole="HRM_DEPARTMENTS" ToRole="HRM_Office" />
+    <NavigationProperty Name="HRM_Regions" Relationship="ERPSSL_MASTERModel.FK_HRM_DEPARTMENTS_HRM_Regions" FromRole="HRM_DEPARTMENTS" ToRole="HRM_Regions" />
+    <NavigationProperty Name="HRM_SECTIONS" Relationship="ERPSSL_MASTERModel.FK_HRM_SECTIONS_HRM_DEPARTMENTS" FromRole="HRM_DEPARTMENTS" ToRole="HRM_SECTIONS" />
+    <NavigationProperty Name="HRM_DepartmentWiseShift" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_DEPARTMENTS" FromRole="HRM_DEPARTMENTS" ToRole="HRM_DepartmentWiseShift" />
+    <NavigationProperty Name="HRM_AttendanceReason_Individual" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS" FromRole="HRM_DEPARTMENTS" ToRole="HRM_AttendanceReason_Individual" />
+  </EntityType>
+  <Association Name="FK_HRM_DEPARTMENTS_HRM_Office">
+    <End Type="ERPSSL_MASTERModel.HRM_Office" Role="HRM_Office" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_DEPARTMENTS" Role="HRM_DEPARTMENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="Office_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_DEPARTMENTS_HRM_Regions">
+    <End Type="ERPSSL_MASTERModel.HRM_Regions" Role="HRM_Regions" Multiplicity="1" />
+    <End Type="ERPSSL_MASTERModel.HRM_DEPARTMENTS" Role="HRM_DEPARTMENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="ResionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_SECTIONS_HRM_DEPARTMENTS">
+    <End Type="ERPSSL_MASTERModel.HRM_DEPARTMENTS" Role="HRM_DEPARTMENTS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_SECTIONS" Role="HRM_SECTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="DPT_ID" />
+      </Principal>
+      <Dependent Role="HRM_SECTIONS">
+        <PropertyRef Name="DPT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_TemporySalaryIncrement">
+    <Key>
+      <PropertyRef Name="TIncrimetId" />
+    </Key>
+    <Property Type="Int64" Name="TIncrimetId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="CurrentSalary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="IncrementRate" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="IncrementDate" Precision="3" />
+    <Property Type="String" Name="UpdateBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_ChildInfo">
+    <Key>
+      <PropertyRef Name="ChildId" />
+    </Key>
+    <Property Type="Int64" Name="ChildId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DOB" Precision="0" />
+    <Property Type="Int32" Name="Age" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_JobAllocation">
+    <Key>
+      <PropertyRef Name="JobAllocationId" />
+    </Key>
+    <Property Type="Int64" Name="JobAllocationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="JobAllocationCode" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="RegionID" />
+    <Property Type="Int64" Name="OfficeID" />
+    <Property Type="Int64" Name="DepartmentID" />
+    <Property Type="String" Name="Region" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RequestFrom" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="SuccessStatus" />
+    <Property Type="Boolean" Name="PendingStatus" />
+    <Property Type="Boolean" Name="CancelStatus" />
+    <Property Type="String" Name="UpdateRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="JobAllocationTime" Precision="7" />
+    <Property Type="DateTime" Name="JobAllocatonDate" Precision="0" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_MaternityLeave">
+    <Key>
+      <PropertyRef Name="MaternityLeaveId" />
+    </Key>
+    <Property Type="Int64" Name="MaternityLeaveId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AppliedDate" Precision="3" />
+    <Property Type="DateTime" Name="LeaveDateFrom" Precision="3" />
+    <Property Type="DateTime" Name="LeaveDateTo" Precision="3" />
+    <Property Type="Int32" Name="TotalDay" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ApproveStatus" />
+    <Property Type="Boolean" Name="DisApproveStatus" />
+    <Property Type="DateTime" Name="StatusDate" Precision="3" />
+    <Property Type="String" Name="HrmReportinBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_TimeInoutOTCalculation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EMPID" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DPT_NAME" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SectionName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Esection" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="d1" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d2" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d3" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d4" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d5" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d6" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d7" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d8" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d9" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d10" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d11" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d12" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d13" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d14" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d15" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d16" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d17" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d18" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d19" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d20" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d21" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d22" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d23" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d24" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d25" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d26" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d27" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d28" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d29" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d30" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="d31" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="DateFrom" Precision="0" />
+    <Property Type="DateTime" Name="DateTo" Precision="0" />
+    <Property Type="Decimal" Name="TotalOT" Precision="18" Scale="0" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegionName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OfficeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionsId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="SectionId" />
+    <Property Type="Int32" Name="SubSectionId" />
+    <Property Type="Int32" Name="DesginationId" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Adjustment">
+    <Key>
+      <PropertyRef Name="SalaryAdjust_ID" />
+    </Key>
+    <Property Type="Int32" Name="SalaryAdjust_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Adjust_Purpose" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Adjust_Amount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="Adjust_Month" Precision="0" />
+    <Property Type="DateTime" Name="Date_Proccessed" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalarySummary">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryId" />
+    </Key>
+    <Property Type="Int64" Name="AdvanceSalaryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ASCode" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="ResionId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Decimal" Name="InstalmentAmount" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="NoOfInstalment" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeBenefitSetup">
+    <Key>
+      <PropertyRef Name="BenefittypeId" />
+    </Key>
+    <Property Type="Int32" Name="BenefittypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Benefittype" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeWiseBenefit">
+    <Key>
+      <PropertyRef Name="employeeWiseBenefitId" />
+    </Key>
+    <Property Type="Int64" Name="employeeWiseBenefitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="BenefitTypeId" />
+    <Property Type="Int32" Name="ResionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeCategory">
+    <Key>
+      <PropertyRef Name="EmployeeCategory" />
+    </Key>
+    <Property Type="Int32" Name="EmployeeCategory" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmployeeTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceBouns">
+    <Key>
+      <PropertyRef Name="attendanceBounsId" />
+    </Key>
+    <Property Type="Int32" Name="attendanceBounsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="AttendanceDays1" />
+    <Property Type="Int32" Name="AttendanceDays2" />
+    <Property Type="String" Name="Desgination" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount1" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Amount2" Precision="19" Scale="4" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_ReasonType">
+    <Key>
+      <PropertyRef Name="ReasonTypeId" />
+    </Key>
+    <Property Type="Int32" Name="ReasonTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReasonType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_AttendanceReason" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_ReasonType" FromRole="HRM_ReasonType" ToRole="HRM_AttendanceReason" />
+    <NavigationProperty Name="HRM_AttendanceReason_Individual" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_ReasonType" FromRole="HRM_ReasonType" ToRole="HRM_AttendanceReason_Individual" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceReason">
+    <Key>
+      <PropertyRef Name="ReasonId" />
+    </Key>
+    <Property Type="Int32" Name="ReasonId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RegionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ReasonDate" Precision="3" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="Time" Name="LateAllowed" Precision="7" />
+    <Property Type="Int32" Name="ReasonTypeId" />
+    <Property Type="String" Name="ReasonType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="TotalHour" Precision="7" />
+    <NavigationProperty Name="HRM_Office" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Office" FromRole="HRM_AttendanceReason" ToRole="HRM_Office" />
+    <NavigationProperty Name="HRM_ReasonType" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_ReasonType" FromRole="HRM_AttendanceReason" ToRole="HRM_ReasonType" />
+    <NavigationProperty Name="HRM_Regions" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_HRM_Regions" FromRole="HRM_AttendanceReason" ToRole="HRM_Regions" />
+  </EntityType>
+  <Association Name="FK_HRM_AttendanceReason_HRM_Office">
+    <End Type="ERPSSL_MASTERModel.HRM_Office" Role="HRM_Office" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason" Role="HRM_AttendanceReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason">
+        <PropertyRef Name="OfficeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_HRM_ReasonType">
+    <End Type="ERPSSL_MASTERModel.HRM_ReasonType" Role="HRM_ReasonType" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason" Role="HRM_AttendanceReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_ReasonType">
+        <PropertyRef Name="ReasonTypeId" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason">
+        <PropertyRef Name="ReasonTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_HRM_Regions">
+    <End Type="ERPSSL_MASTERModel.HRM_Regions" Role="HRM_Regions" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason" Role="HRM_AttendanceReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_TIMESCHEDULE">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Type="Int32" Name="ScheduleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Weekend1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Weekend2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="StartTime" Precision="7" />
+    <Property Type="Time" Name="EndTime" Precision="7" />
+    <Property Type="Time" Name="LateAllowed" Precision="7" />
+    <Property Type="Time" Name="TotalHour" Precision="7" />
+    <Property Type="Boolean" Name="Weekend1_Duty" />
+    <Property Type="String" Name="Weekend1Duty_Hour" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Weekend2_Duty" />
+    <Property Type="String" Name="Weekend2Duty_Hour" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_DepartmentWiseShift">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Type="Int32" Name="ScheduleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RegionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Weekend1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Weekend2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="StartTime" Precision="7" />
+    <Property Type="Time" Name="EndTime" Precision="7" />
+    <Property Type="Time" Name="LateAllowed" Precision="7" />
+    <Property Type="Time" Name="TotalHour" Precision="7" />
+    <Property Type="Boolean" Name="Weekend1_Duty" />
+    <Property Type="String" Name="Weekend1Duty_Hour" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Weekend2_Duty" />
+    <Property Type="String" Name="Weekend2Duty_Hour" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HRM_DEPARTMENTS" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_DEPARTMENTS" FromRole="HRM_DepartmentWiseShift" ToRole="HRM_DEPARTMENTS" />
+    <NavigationProperty Name="HRM_Office" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Office" FromRole="HRM_DepartmentWiseShift" ToRole="HRM_Office" />
+    <NavigationProperty Name="HRM_Regions" Relationship="ERPSSL_MASTERModel.FK_HRM_DepartmentWiseShift_HRM_Regions" FromRole="HRM_DepartmentWiseShift" ToRole="HRM_Regions" />
+  </EntityType>
+  <Association Name="FK_HRM_DepartmentWiseShift_HRM_DEPARTMENTS">
+    <End Type="ERPSSL_MASTERModel.HRM_DEPARTMENTS" Role="HRM_DEPARTMENTS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_DepartmentWiseShift" Role="HRM_DepartmentWiseShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="DPT_ID" />
+      </Principal>
+      <Dependent Role="HRM_DepartmentWiseShift">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_DepartmentWiseShift_HRM_Office">
+    <End Type="ERPSSL_MASTERModel.HRM_Office" Role="HRM_Office" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_DepartmentWiseShift" Role="HRM_DepartmentWiseShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="HRM_DepartmentWiseShift">
+        <PropertyRef Name="OfficeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_DepartmentWiseShift_HRM_Regions">
+    <End Type="ERPSSL_MASTERModel.HRM_Regions" Role="HRM_Regions" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_DepartmentWiseShift" Role="HRM_DepartmentWiseShift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_DepartmentWiseShift">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_AttendanceReason_Individual">
+    <Key>
+      <PropertyRef Name="Ind_ReasonId" />
+    </Key>
+    <Property Type="Int32" Name="Ind_ReasonId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Bio_MatrixId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ReasonDate" Precision="3" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="Int32" Name="ReasonTypeId" />
+    <Property Type="String" Name="ReasonType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="Shift_TotalHour" Precision="7" />
+    <NavigationProperty Name="HRM_DEPARTMENTS" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS" FromRole="HRM_AttendanceReason_Individual" ToRole="HRM_DEPARTMENTS" />
+    <NavigationProperty Name="HRM_Office" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Office" FromRole="HRM_AttendanceReason_Individual" ToRole="HRM_Office" />
+    <NavigationProperty Name="HRM_ReasonType" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_ReasonType" FromRole="HRM_AttendanceReason_Individual" ToRole="HRM_ReasonType" />
+    <NavigationProperty Name="HRM_Regions" Relationship="ERPSSL_MASTERModel.FK_HRM_AttendanceReason_Individual_HRM_Regions" FromRole="HRM_AttendanceReason_Individual" ToRole="HRM_Regions" />
+    <Property Type="Time" Name="LateAllowed" Precision="7" />
+  </EntityType>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS">
+    <End Type="ERPSSL_MASTERModel.HRM_DEPARTMENTS" Role="HRM_DEPARTMENTS" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual" Role="HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="DPT_ID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_Office">
+    <End Type="ERPSSL_MASTERModel.HRM_Office" Role="HRM_Office" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual" Role="HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="OfficeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_ReasonType">
+    <End Type="ERPSSL_MASTERModel.HRM_ReasonType" Role="HRM_ReasonType" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual" Role="HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_ReasonType">
+        <PropertyRef Name="ReasonTypeId" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="ReasonTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_Regions">
+    <End Type="ERPSSL_MASTERModel.HRM_Regions" Role="HRM_Regions" Multiplicity="0..1" />
+    <End Type="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual" Role="HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HRM_EducationType">
+    <Key>
+      <PropertyRef Name="EducationTypeID" />
+    </Key>
+    <Property Type="Int32" Name="EducationTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EducationTypeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_CounteryNationality">
+    <Key>
+      <PropertyRef Name="NID" />
+    </Key>
+    <Property Type="Int32" Name="NID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ConteryName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConteryNationality" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hrm_PersonalInfoTemp">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Regions" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Office" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Department" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Section" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SubSection" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Desgination" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DateOfBrith" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BloodGroup" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NationalID" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Step" />
+    <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+    <Property Type="Boolean" Name="OTApplicable" />
+    <Property Type="String" Name="OTApplicableFU" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProbationPeriodFrom" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProbationPeriodTo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConfiramtionDate" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="EmployeeType" />
+    <Property Type="Int32" Name="EmpCategoryId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JoiningDate" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JoiningDateFromU" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_AttendancePunishment">
+    <Key>
+      <PropertyRef Name="AttenAdjID" />
+    </Key>
+    <Property Type="Int32" Name="AttenAdjID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AdjDate" Precision="3" />
+    <Property Type="String" Name="PunishedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalaryDetails">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetailsId" />
+    </Key>
+    <Property Type="Int64" Name="AdvanceSalaryDetailsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ASCode" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="ResionId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Decimal" Name="InstalmentAmount" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="NoOfInstalment" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="Int32" Name="Month" />
+    <Property Type="Int32" Name="Year" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="AdvanceDeduction" />
+    <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_LiabilityType">
+    <Key>
+      <PropertyRef Name="TAXTypeAutoID" />
+    </Key>
+    <Property Type="Int32" Name="TAXTypeAutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_TAXLiabilityConfig">
+    <Key>
+      <PropertyRef Name="TAXLiabilityConfigID" />
+    </Key>
+    <Property Type="Int32" Name="TAXLiabilityConfigID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="TAXTypeAutoID" />
+    <Property Type="Decimal" Name="IncomeFrom" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="IncomeTo" Precision="19" Scale="4" />
+    <Property Type="String" Name="OfTax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_PFConfiguration">
+    <Key>
+      <PropertyRef Name="PFContributionID" />
+    </Key>
+    <Property Type="Int32" Name="PFContributionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Double" Name="OwnerContribution" />
+    <Property Type="Double" Name="PFEmployee" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_IncomeHeader">
+    <Key>
+      <PropertyRef Name="IncomeHeaderID" />
+    </Key>
+    <Property Type="Int32" Name="IncomeHeaderID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="IncomeHeader" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_IncomeHeaderDetails">
+    <Key>
+      <PropertyRef Name="IncomeHeaderDetailsID" />
+    </Key>
+    <Property Type="Int32" Name="IncomeHeaderDetailsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="IncomeHeaderDetils" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IncomeHeaderID" />
+    <Property Type="Double" Name="ChargeablePar" />
+    <Property Type="Int32" Name="ChargeableDeatils" />
+    <Property Type="String" Name="PlussORLess" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_TAXPFApplicable">
+    <Key>
+      <PropertyRef Name="TAXPFApplicableID" />
+    </Key>
+    <Property Type="Int32" Name="TAXPFApplicableID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="TAXStatus" />
+    <Property Type="Boolean" Name="PFStatus" />
+    <Property Type="Boolean" Name="MaleStatus" />
+    <Property Type="Boolean" Name="FemaleStatus" />
+    <Property Type="Boolean" Name="SeniorCitizen" />
+    <Property Type="Boolean" Name="Disabled" />
+    <Property Type="Boolean" Name="DisabledFreedomFighter" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_LeaveApply">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Type="Int32" Name="LeaveId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LeaveCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Eid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LeaveAppliedDate" Precision="3" />
+    <Property Type="DateTime" Name="LeaveDates" Precision="3" />
+    <Property Type="Int32" Name="LeaveTypeId" />
+    <Property Type="Int32" Name="TotalDay" />
+    <Property Type="String" Name="LeaveResion" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LeaveToDate" Precision="3" />
+    <Property Type="Int32" Name="LeaveCurrentYear" />
+    <Property Type="String" Name="ReprotingBoss1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReprotingBoss2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReprotingBossHRM" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ReprotingBoss1ApproveStatus" />
+    <Property Type="Boolean" Name="ReportingBoss2ApporveStatus" />
+    <Property Type="Boolean" Name="ReprotingBossHRmApporveStatus" />
+    <Property Type="DateTime" Name="ReprotingBoss1ApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBoss2ApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBossHRMApproveDate" Precision="0" />
+    <Property Type="Boolean" Name="ReprotingBoss1DisApproveStatus" />
+    <Property Type="Boolean" Name="ReportingBoss2DisApporveStatus" />
+    <Property Type="Boolean" Name="ReprotingBossHRmDisApporveStatus" />
+    <Property Type="DateTime" Name="ReprotingBoss1DisApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBoss2DisApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBossHRMDisApproveDate" Precision="0" />
+    <Property Type="String" Name="ReportingBoss" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Boolean" Name="LeaveStatusHRM" />
+    <Property Type="Boolean" Name="LeaveStatusForReportingBoss" />
+    <Property Type="String" Name="ApporveBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsPandingStatus" />
+    <Property Type="DateTime" Name="ApproveDate" Precision="0" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Re_Active_LeaveApply">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Type="Int32" Name="LeaveId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LeaveCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Eid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LeaveAppliedDate" Precision="3" />
+    <Property Type="DateTime" Name="LeaveDates" Precision="3" />
+    <Property Type="Int32" Name="LeaveTypeId" />
+    <Property Type="Int32" Name="TotalDay" />
+    <Property Type="String" Name="LeaveResion" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LeaveToDate" Precision="3" />
+    <Property Type="Int32" Name="LeaveCurrentYear" />
+    <Property Type="String" Name="ReprotingBoss1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReprotingBoss2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReprotingBossHRM" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="ReprotingBoss1ApproveStatus" />
+    <Property Type="Boolean" Name="ReportingBoss2ApporveStatus" />
+    <Property Type="Boolean" Name="ReprotingBossHRmApporveStatus" />
+    <Property Type="DateTime" Name="ReprotingBoss1ApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBoss2ApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBossHRMApproveDate" Precision="0" />
+    <Property Type="Boolean" Name="ReprotingBoss1DisApproveStatus" />
+    <Property Type="Boolean" Name="ReportingBoss2DisApporveStatus" />
+    <Property Type="Boolean" Name="ReprotingBossHRmDisApporveStatus" />
+    <Property Type="DateTime" Name="ReprotingBoss1DisApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBoss2DisApproveDate" Precision="3" />
+    <Property Type="DateTime" Name="ReportingBossHRMDisApproveDate" Precision="0" />
+    <Property Type="String" Name="ReportingBoss" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Boolean" Name="LeaveStatusHRM" />
+    <Property Type="Boolean" Name="LeaveStatusForReportingBoss" />
+    <Property Type="String" Name="ApporveBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsPandingStatus" />
+    <Property Type="DateTime" Name="ApproveDate" Precision="0" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_OfficialDay_Individual">
+    <Key>
+      <PropertyRef Name="OfficialDay_Id" />
+    </Key>
+    <Property Type="Int32" Name="OfficialDay_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Official_Date" Precision="3" />
+    <Property Type="String" Name="Working_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="OT_Applicable" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Salary_Deduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Salary_DeductType" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Salary_DeductDay" />
+    <Property Type="DateTime" Name="Salary_DeductDate" Precision="3" />
+    <Property Type="String" Name="ApprovedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Attendance_Manual_Log">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Type="Int32" Name="ATTE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="In_Time" Precision="7" />
+    <Property Type="Time" Name="Out_Time" Precision="7" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="Time" Name="Late_Time" Precision="7" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Boolean" Name="OT_Status" />
+    <Property Type="Time" Name="Worked_Time" Precision="7" />
+    <Property Type="Time" Name="Shift_TotalHour" Precision="7" />
+    <Property Type="Time" Name="Over_Time" Precision="7" />
+    <Property Type="Double" Name="OT_Hour" />
+    <Property Type="Double" Name="OT_Minute" />
+    <Property Type="Double" Name="OT_Total" />
+    <Property Type="Boolean" Name="OT_Applicable" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Attendance_Date" Precision="3" />
+    <Property Type="String" Name="Attendance_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Working_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="OT_ExtraAdd" />
+    <Property Type="Double" Name="OT_Deduction" />
+    <Property Type="Int32" Name="Update_Status" />
+    <Property Type="Boolean" Name="Attendance_Process_Status" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceTemp">
+    <Key>
+      <PropertyRef Name="ATID" />
+    </Key>
+    <Property Type="Int64" Name="ATID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AttendanceDate" Precision="3" />
+    <Property Type="Time" Name="IOTIME" Precision="7" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryIncrement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IncrementDate" Precision="3" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="Decimal" Name="IncrementSalary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="previousSalary" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="ApprovedStatus" />
+    <Property Type="String" Name="OCODE" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+  </EntityType>
+  <EntityType Name="HRM_EMP_TRANSFER">
+    <Key>
+      <PropertyRef Name="TRANSFER_ID" />
+    </Key>
+    <Property Type="Int32" Name="TRANSFER_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="TRANSFER_DATE" Precision="3" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Regions_ID_FROM" />
+    <Property Type="Int32" Name="Regions_ID_TO" />
+    <Property Type="Int32" Name="Office_ID_FROM" />
+    <Property Type="Int32" Name="Office_ID_TO" />
+    <Property Type="Int32" Name="DPT_ID_FROM" />
+    <Property Type="Int32" Name="SEC_ID_FROM" />
+    <Property Type="Int32" Name="SUB_SEC_ID_FROM" />
+    <Property Type="Int32" Name="DEG_ID_FROM" />
+    <Property Type="Int32" Name="STEP_FROM" />
+    <Property Type="Int32" Name="GRADE_ID_FROM" />
+    <Property Type="String" Name="GradeFrom" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DPT_ID_TO" />
+    <Property Type="Int32" Name="SEC_ID_TO" />
+    <Property Type="Int32" Name="SUB_SEC_ID_TO" />
+    <Property Type="Int32" Name="DEG_ID_TO" />
+    <Property Type="Int32" Name="STEP_TO" />
+    <Property Type="String" Name="GradeTo" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="GorssSalaryTo" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossSalaryFrom" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="GRADE_ID_TO" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryIncrementSLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="IncrementDate" Precision="3" />
+    <Property Type="DateTime" Name="EffectiveDate" Precision="3" />
+    <Property Type="Decimal" Name="IncrementSalary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="previousSalary" Precision="19" Scale="4" />
+    <Property Type="String" Name="SalaryIncrementStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCODE" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalaryDetailPrevious_Log">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetailsLogId" />
+    </Key>
+    <Property Type="Int32" Name="AdvanceSalaryDetailsLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AdvanceSalaryDetailsId" />
+    <Property Type="String" Name="ASCode" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="ResionId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Decimal" Name="InstalmentAmount" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="NoOfInstalment" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="StartDate" Precision="3" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="Int32" Name="Month" />
+    <Property Type="Int32" Name="Year" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="AdvanceDeduction" />
+    <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Salary_Punishment">
+    <Key>
+      <PropertyRef Name="SalryPunishmentId" />
+    </Key>
+    <Property Type="Int32" Name="SalryPunishmentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="TotalDeductDay" />
+    <Property Type="String" Name="Salary_Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Salary_Year" />
+    <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryUpdate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Previoussalary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CurrendSalary" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="DegID" />
+    <Property Type="String" Name="Grade" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Applicable_PersonalStatus">
+    <Key>
+      <PropertyRef Name="AppliAutoID" />
+    </Key>
+    <Property Type="Int32" Name="AppliAutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Attendance_Bouns" />
+    <Property Type="Boolean" Name="Late_Applicable" />
+    <Property Type="Boolean" Name="Absence_Applicable" />
+    <Property Type="Boolean" Name="Tax_Applicable" />
+    <Property Type="Boolean" Name="OT_Applicable" />
+    <Property Type="Boolean" Name="PF_Applicable" />
+    <Property Type="Boolean" Name="On_Amount" />
+    <Property Type="DateTime" Name="Approved_Attendance_Bouns_Date" Precision="3" />
+    <Property Type="DateTime" Name="Approved_Late_Applicable_Date" Precision="3" />
+    <Property Type="DateTime" Name="Approved_Absence_Applicable_Date" Precision="3" />
+    <Property Type="DateTime" Name="Approved_Tax_Applicable_Date" Precision="3" />
+    <Property Type="DateTime" Name="Approved_PF_Applicable_Date" Precision="3" />
+    <Property Type="DateTime" Name="Approved_OnAmount_Date" Precision="3" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_ATTENDANCE">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Type="Int32" Name="ATTE_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Time" Name="In_Time" Precision="7" />
+    <Property Type="Time" Name="Out_Time" Precision="7" />
+    <Property Type="Time" Name="InTime" Precision="7" />
+    <Property Type="Time" Name="OutTime" Precision="7" />
+    <Property Type="Time" Name="Late_Time" Precision="7" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Boolean" Name="OT_Status" />
+    <Property Type="Time" Name="Worked_Time" Precision="7" />
+    <Property Type="Time" Name="Shift_TotalHour" Precision="7" />
+    <Property Type="Time" Name="Over_Time" Precision="7" />
+    <Property Type="Double" Name="OT_Hour" />
+    <Property Type="Double" Name="OT_Minute" />
+    <Property Type="Double" Name="OT" />
+    <Property Type="Double" Name="OT_Total" />
+    <Property Type="Boolean" Name="OT_Applicable" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Attendance_Date" Precision="3" />
+    <Property Type="String" Name="Attendance_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Working_Day" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="OT_ExtraAdd" />
+    <Property Type="Double" Name="OT_Deduction" />
+    <Property Type="Int32" Name="Update_Status" />
+    <Property Type="Boolean" Name="Attendance_Process_Status" />
+    <Property Type="String" Name="Leave_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary">
+    <Key>
+      <PropertyRef Name="PaySalary_ID" />
+    </Key>
+    <Property Type="Int32" Name="PaySalary_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Worked_Day" />
+    <Property Type="Int32" Name="Over_Time" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="Total_Day_Of_Month" />
+    <Property Type="Int32" Name="Work_Holiday" />
+    <Property Type="Int32" Name="Other_Holiday" />
+    <Property Type="Int32" Name="Total_Leave" />
+    <Property Type="DateTime" Name="Salary_Month" Precision="3" />
+    <Property Type="DateTime" Name="Date_Processed" Precision="3" />
+    <Property Type="Decimal" Name="Total_Basic_New" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Gross_Sal_Compliance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Net_Payable_Compliance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Gross_Sal" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Net_Payable" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total_Tax" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Bonus" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_LateDeduction_Cost" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Leave_Cost" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Absent_Cost" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="Pay_Status" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="OT_Rate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OT_Taka" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Attendance_Bonus" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="SL" />
+    <Property Type="Int32" Name="CL" />
+    <Property Type="Int32" Name="ML" />
+    <Property Type="Int32" Name="AL" />
+    <Property Type="Int32" Name="LWP" />
+    <Property Type="Int32" Name="Absent_Day" />
+    <Property Type="Decimal" Name="Absent_Deduction" Precision="19" Scale="4" />
+    <Property Type="Double" Name="TotalDeductDay" />
+    <Property Type="Decimal" Name="Other_Deduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Benifit" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Stamp" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="AdvanceDeduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Deduction" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="IsSalaryHeldup" />
+    <Property Type="Boolean" Name="IsSalaryCancel" />
+    <Property Type="Boolean" Name="IsSalaryRelease" />
+    <Property Type="Decimal" Name="Payable_Salary" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Decimal" Name="OT_Compliance_Amount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OT_Extra_Amount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Night_Bill" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Holiday_Bill" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Compliance_Deduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Salary_Punishment" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="HRM_Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Type="Int32" Name="CompanyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Web" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ERCNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ERCDate" Precision="3" />
+    <Property Type="String" Name="REGNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="REGDate" Precision="3" />
+    <Property Type="String" Name="AreaCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Logo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_BankInfo_Delete_Log">
+    <Key>
+      <PropertyRef Name="BankInfo_Delete_Id" />
+    </Key>
+    <Property Type="Int32" Name="BankInfo_Delete_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionsId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="SectionId" />
+    <Property Type="Int32" Name="SubSectionId" />
+    <Property Type="Int32" Name="DesginationId" />
+    <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+    <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Step" />
+    <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+    <Property Type="Boolean" Name="OTApplicable" />
+    <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+    <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+    <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+    <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+    <Property Type="Int32" Name="EmployeeType" />
+    <Property Type="Int32" Name="EmpCategoryId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+    <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Boolean" Name="EMP_Retired_Status" />
+    <Property Type="Boolean" Name="EMP_Resignation_Status" />
+    <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+    <Property Type="Boolean" Name="EMP_Died_Status" />
+    <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+    <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+    <Property Type="Boolean" Name="EMP_Other" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="A" />
+    <Property Type="Int32" Name="OT" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Time" Name="LateHour" Precision="7" />
+    <Property Type="Int32" Name="WH" />
+    <Property Type="Int32" Name="GV_H" />
+    <Property Type="Int32" Name="PV_H" />
+    <Property Type="Int32" Name="OH" />
+    <Property Type="Int32" Name="EX" />
+    <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+    <Property Type="Boolean" Name="Attendance_Bouns" />
+    <Property Type="Boolean" Name="Late_Applicable" />
+    <Property Type="Boolean" Name="Absence_Applicable" />
+    <Property Type="Boolean" Name="Tax_Applicable" />
+    <Property Type="Boolean" Name="PF_Applicable" />
+    <Property Type="Boolean" Name="On_Amount" />
+    <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Tax">
+    <Key>
+      <PropertyRef Name="SalaryTax_ID" />
+    </Key>
+    <Property Type="Int64" Name="SalaryTax_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Tax_Amount" Precision="19" Scale="4" />
+    <Property Type="String" Name="Tax_Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Tax_Year" />
+    <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_SubCompany">
+    <Key>
+      <PropertyRef Name="SubCompany_Id" />
+    </Key>
+    <Property Type="Int32" Name="SubCompany_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SubCompanyName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SubCompanyAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SubCompanyCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompanyId" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_PaySalary_Temp">
+    <Key>
+      <PropertyRef Name="PaySalary_Temp_ID" />
+    </Key>
+    <Property Type="Int32" Name="PaySalary_Temp_ID" Nullable="false" />
+    <Property Type="Int64" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Worked_Day" />
+    <Property Type="Int32" Name="Over_Time" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Int32" Name="Total_Day_Of_Month" />
+    <Property Type="Int32" Name="Work_Holiday" />
+    <Property Type="Int32" Name="Other_Holiday" />
+    <Property Type="Int32" Name="Total_Leave" />
+    <Property Type="DateTime" Name="Salary_Month" Precision="3" />
+    <Property Type="DateTime" Name="Date_Processed" Precision="3" />
+    <Property Type="Decimal" Name="Total_Basic_New" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Payable_Salary" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total_Gross_Sal_Compliance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Net_Payable_Compliance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Gross_Sal" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Net_Payable" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Total_Tax" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Bonus" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_LateDeduction_Cost" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Leave_Cost" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Absent_Cost" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="Pay_Status" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="OT_Rate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OT_Compliance_Amount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OT_Extra_Amount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OT_Taka" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Attendance_Bonus" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="SL" />
+    <Property Type="Int32" Name="CL" />
+    <Property Type="Int32" Name="ML" />
+    <Property Type="Int32" Name="AL" />
+    <Property Type="Int32" Name="LWP" />
+    <Property Type="Int32" Name="Absent_Day" />
+    <Property Type="Decimal" Name="Absent_Deduction" Precision="19" Scale="4" />
+    <Property Type="Double" Name="TotalDeductDay" />
+    <Property Type="Decimal" Name="Other_Deduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Night_Bill" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Holiday_Bill" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Benifit" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Stamp" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="AdvanceDeduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Compliance_Deduction" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Total_Deduction" Precision="19" Scale="4" />
+    <Property Type="Boolean" Name="IsSalaryHeldup" />
+    <Property Type="Boolean" Name="IsSalaryCancel" />
+    <Property Type="Boolean" Name="IsSalaryRelease" />
+    <Property Type="Decimal" Name="Salary_Punishment" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Deduction">
+    <Key>
+      <PropertyRef Name="SalaryDeduct_ID" />
+    </Key>
+    <Property Type="Int32" Name="SalaryDeduct_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="EmpId" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Deduct_Purpose" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Salary_Deduct_Amount" Precision="19" Scale="4" />
+    <Property Type="String" Name="Deduct_Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Deduct_Year" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

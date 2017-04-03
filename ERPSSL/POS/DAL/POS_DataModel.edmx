@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="POS_DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="POS_DataModelStoreContainer">
+          <EntitySet Name="Inv_Product" EntityType="POS_DataModel.Store.Inv_Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LU_Tbl_Item" EntityType="POS_DataModel.Store.LU_Tbl_Item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Food" EntityType="POS_DataModel.Store.Tbl_Food" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_PackageItemInfo" EntityType="POS_DataModel.Store.Tbl_PackageItemInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Sales" EntityType="POS_DataModel.Store.Tbl_Sales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Ticket" EntityType="POS_DataModel.Store.Tbl_Ticket" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_User" EntityType="POS_DataModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Tbl_CashReturn" EntityType="POS_DataModel.Store.TR_Tbl_CashReturn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Tbl_FoodSales" EntityType="POS_DataModel.Store.TR_Tbl_FoodSales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Tbl_Invoice" EntityType="POS_DataModel.Store.TR_Tbl_Invoice" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Tbl_Recharge" EntityType="POS_DataModel.Store.TR_Tbl_Recharge" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Tbl_TicketSales" EntityType="POS_DataModel.Store.TR_Tbl_TicketSales" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TR_Transaction_Master" EntityType="POS_DataModel.Store.TR_Transaction_Master" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_TR_Tbl_FoodSales_LU_Tbl_Item" Association="POS_DataModel.Store.FK_TR_Tbl_FoodSales_LU_Tbl_Item">
+            <End Role="LU_Tbl_Item" EntitySet="LU_Tbl_Item" />
+            <End Role="TR_Tbl_FoodSales" EntitySet="TR_Tbl_FoodSales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TR_Tbl_TicketSales_LU_Tbl_Item" Association="POS_DataModel.Store.FK_TR_Tbl_TicketSales_LU_Tbl_Item">
+            <End Role="LU_Tbl_Item" EntitySet="LU_Tbl_Item" />
+            <End Role="TR_Tbl_TicketSales" EntitySet="TR_Tbl_TicketSales" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Inv_Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+          <Property Name="StyleAndSize" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FloorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReOrderQty" Type="int" />
+          <Property Name="ProductType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LU_Tbl_Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="300" />
+          <Property Name="Price" Type="numeric" Scale="2" />
+          <Property Name="DiscountAmount" Type="numeric" Scale="2" />
+          <Property Name="VAT" Type="numeric" Scale="2" />
+          <Property Name="ItemGroupName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FreeOffer" Type="int" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="InventoryItemID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Tbl_Food">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="FoodName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TicketDateTime" Type="datetime" Nullable="false" />
+          <Property Name="TicketImage" Type="image" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCODE" Type="varchar" MaxLength="50" />
+          <Property Name="TotalQty" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="InventoryItemID" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_PackageItemInfo">
+          <Key>
+            <PropertyRef Name="PackageItemInfo_ID" />
+          </Key>
+          <Property Name="PackageItemInfo_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PackageID" Type="int" />
+          <Property Name="PackageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PackageItemID" Type="int" />
+          <Property Name="PackageItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tbl_Sales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvoiceNo" Type="int" />
+          <Property Name="TicketName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TicketDateTime" Type="datetime" />
+          <Property Name="TicketImage" Type="image" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCODE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="TicketName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="TicketDateTime" Type="datetime" Nullable="false" />
+          <Property Name="TicketImage" Type="image" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCODE" Type="varchar" MaxLength="50" />
+          <Property Name="TotalQty" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EID" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="User_Level" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFullName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Use_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="BranchID" Type="nchar" MaxLength="4" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="ParentCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_CashReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="CastReturnAmount" Type="numeric" Scale="2" />
+          <Property Name="StateBalance" Type="numeric" Scale="2" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_FoodSales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvoiceNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="ItemId" Type="int" Nullable="false" />
+          <Property Name="ItemQuantity" Type="int" Nullable="false" />
+          <Property Name="ItemTotal" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="numeric" Scale="2" />
+          <Property Name="InventoryItemID" Type="int" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceNo" />
+          </Key>
+          <Property Name="InvoiceNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NetAmount" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="VatAmount" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="DiscountAmount" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="InvoiceTotal" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_Recharge">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="RechargeAmount" Type="numeric" Scale="2" />
+          <Property Name="StateBalance" Type="numeric" Scale="2" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_TicketSales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="InvoiceNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="ItemId" Type="int" Nullable="false" />
+          <Property Name="ItemQuantity" Type="int" Nullable="false" />
+          <Property Name="ItemTotal" Type="numeric" Nullable="false" Scale="2" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="numeric" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="TR_Transaction_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="CustomerId" Type="int" />
+          <Property Name="CustomerAccNo" Type="bigint" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="TransactionName" Type="nvarchar" MaxLength="100" />
+          <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CashIn" Type="numeric" Scale="2" />
+          <Property Name="CashOut" Type="numeric" Scale="2" />
+          <Property Name="CurrentBalance" Type="numeric" Scale="2" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_TR_Tbl_FoodSales_LU_Tbl_Item">
+          <End Role="LU_Tbl_Item" Type="POS_DataModel.Store.LU_Tbl_Item" Multiplicity="1" />
+          <End Role="TR_Tbl_FoodSales" Type="POS_DataModel.Store.TR_Tbl_FoodSales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LU_Tbl_Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TR_Tbl_FoodSales">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TR_Tbl_TicketSales_LU_Tbl_Item">
+          <End Role="LU_Tbl_Item" Type="POS_DataModel.Store.LU_Tbl_Item" Multiplicity="1" />
+          <End Role="TR_Tbl_TicketSales" Type="POS_DataModel.Store.TR_Tbl_TicketSales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LU_Tbl_Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TR_Tbl_TicketSales">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POS_DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="POS_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_Sales" EntityType="POS_DataModel.Tbl_Sales" />
+          <EntitySet Name="Tbl_Ticket" EntityType="POS_DataModel.Tbl_Ticket" />
+          <EntitySet Name="TR_Tbl_CashReturn" EntityType="POS_DataModel.TR_Tbl_CashReturn" />
+          <EntitySet Name="TR_Tbl_FoodSales" EntityType="POS_DataModel.TR_Tbl_FoodSales" />
+          <EntitySet Name="TR_Tbl_Invoice" EntityType="POS_DataModel.TR_Tbl_Invoice" />
+          <EntitySet Name="TR_Tbl_Recharge" EntityType="POS_DataModel.TR_Tbl_Recharge" />
+          <EntitySet Name="TR_Tbl_TicketSales" EntityType="POS_DataModel.TR_Tbl_TicketSales" />
+          <EntitySet Name="TR_Transaction_Master" EntityType="POS_DataModel.TR_Transaction_Master" />
+          <EntitySet Name="Tbl_Food" EntityType="POS_DataModel.Tbl_Food" />
+          <EntitySet Name="tbl_User" EntityType="POS_DataModel.tbl_User" />
+          <EntitySet Name="Tbl_PackageItemInfo" EntityType="POS_DataModel.Tbl_PackageItemInfo" />
+          <EntitySet Name="Inv_Product" EntityType="POS_DataModel.Inv_Product" />
+          <EntitySet Name="LU_Tbl_Item" EntityType="POS_DataModel.LU_Tbl_Item" />
+          <AssociationSet Name="FK_TR_Tbl_FoodSales_LU_Tbl_Item" Association="POS_DataModel.FK_TR_Tbl_FoodSales_LU_Tbl_Item">
+            <End Role="LU_Tbl_Item" EntitySet="LU_Tbl_Item" />
+            <End Role="TR_Tbl_FoodSales" EntitySet="TR_Tbl_FoodSales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TR_Tbl_TicketSales_LU_Tbl_Item" Association="POS_DataModel.FK_TR_Tbl_TicketSales_LU_Tbl_Item">
+            <End Role="LU_Tbl_Item" EntitySet="LU_Tbl_Item" />
+            <End Role="TR_Tbl_TicketSales" EntitySet="TR_Tbl_TicketSales" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Tbl_Sales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceNo" Type="Int32" />
+          <Property Name="TicketName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TicketDateTime" Type="DateTime" Precision="3" />
+          <Property Name="TicketImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="OCODE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TicketName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TicketDateTime" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="TicketImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="OCODE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="TotalQty" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="ItemID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_CashReturn">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="CastReturnAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="StateBalance" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_FoodSales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="ItemId" Type="Int32" Nullable="false" />
+          <Property Name="ItemQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ItemTotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+          <Property Name="OCODE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="InventoryItemID" />
+          <NavigationProperty Name="LU_Tbl_Item" Relationship="POS_DataModel.FK_TR_Tbl_FoodSales_LU_Tbl_Item" FromRole="TR_Tbl_FoodSales" ToRole="LU_Tbl_Item" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceNo" />
+          </Key>
+          <Property Name="InvoiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NetAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="VatAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="DiscountAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="InvoiceTotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_Recharge">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="RechargeAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="StateBalance" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TR_Tbl_TicketSales">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceNo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="ItemId" Type="Int32" Nullable="false" />
+          <Property Name="ItemQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ItemTotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="EDIT_USER" Type="Guid" />
+          <Property Name="EDIT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="OCODE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="LU_Tbl_Item" Relationship="POS_DataModel.FK_TR_Tbl_TicketSales_LU_Tbl_Item" FromRole="TR_Tbl_TicketSales" ToRole="LU_Tbl_Item" />
+        </EntityType>
+        <EntityType Name="TR_Transaction_Master">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="CustomerId" Type="Int32" />
+          <Property Name="CustomerAccNo" Type="Int64" />
+          <Property Name="CustomerName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TransactionName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="InvoiceNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CashIn" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CashOut" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CurrentBalance" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EditUser" Type="Guid" />
+          <Property Name="EditDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Tbl_Food">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="InvoiceNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FoodName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="TicketDateTime" Precision="3" Nullable="false" />
+          <Property Type="Binary" Name="TicketImage" MaxLength="Max" FixedLength="false" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TotalQty" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Precision="18" Scale="2" Nullable="false" />
+          <Property Type="Int32" Name="InventoryItemID" />
+        </EntityType>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Guid" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoginName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="User_Level" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserFullName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Use_Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="String" Name="BranchID" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="ParentCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_PackageItemInfo">
+          <Key>
+            <PropertyRef Name="PackageItemInfo_ID" />
+          </Key>
+          <Property Type="Int32" Name="PackageItemInfo_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PackageID" />
+          <Property Type="String" Name="PackageName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PackageItemID" />
+          <Property Type="String" Name="PackageItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Quantity" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Status" />
+        </EntityType>
+        <EntityType Name="Inv_Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Type="Int32" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="GroupId" />
+          <Property Type="String" Name="GroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Brand" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StyleAndSize" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UnitId" />
+          <Property Type="String" Name="UnitName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FloorName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ReOrderQty" />
+          <Property Type="String" Name="ProductType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LU_Tbl_Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ItemName" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="DiscountAmount" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="VAT" Precision="18" Scale="2" />
+          <Property Type="String" Name="ItemGroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FreeOffer" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="Boolean" Name="Status" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="InventoryItemID" />
+          <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TR_Tbl_FoodSales" Relationship="POS_DataModel.FK_TR_Tbl_FoodSales_LU_Tbl_Item" FromRole="LU_Tbl_Item" ToRole="TR_Tbl_FoodSales" />
+          <NavigationProperty Name="TR_Tbl_TicketSales" Relationship="POS_DataModel.FK_TR_Tbl_TicketSales_LU_Tbl_Item" FromRole="LU_Tbl_Item" ToRole="TR_Tbl_TicketSales" />
+        </EntityType>
+        <Association Name="FK_TR_Tbl_FoodSales_LU_Tbl_Item">
+          <End Type="POS_DataModel.LU_Tbl_Item" Role="LU_Tbl_Item" Multiplicity="1" />
+          <End Type="POS_DataModel.TR_Tbl_FoodSales" Role="TR_Tbl_FoodSales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LU_Tbl_Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TR_Tbl_FoodSales">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TR_Tbl_TicketSales_LU_Tbl_Item">
+          <End Type="POS_DataModel.LU_Tbl_Item" Role="LU_Tbl_Item" Multiplicity="1" />
+          <End Type="POS_DataModel.TR_Tbl_TicketSales" Role="TR_Tbl_TicketSales" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LU_Tbl_Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TR_Tbl_TicketSales">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="POS_DataModelStoreContainer" CdmEntityContainer="POS_Entities">
+          <EntitySetMapping Name="Tbl_Sales">
+            <EntityTypeMapping TypeName="POS_DataModel.Tbl_Sales">
+              <MappingFragment StoreEntitySet="Tbl_Sales">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="TicketName" ColumnName="TicketName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+                <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Ticket">
+            <EntityTypeMapping TypeName="POS_DataModel.Tbl_Ticket">
+              <MappingFragment StoreEntitySet="Tbl_Ticket">
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="TicketName" ColumnName="TicketName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+                <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Tbl_CashReturn">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_CashReturn">
+              <MappingFragment StoreEntitySet="TR_Tbl_CashReturn">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CastReturnAmount" ColumnName="CastReturnAmount" />
+                <ScalarProperty Name="StateBalance" ColumnName="StateBalance" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Tbl_FoodSales">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_FoodSales">
+              <MappingFragment StoreEntitySet="TR_Tbl_FoodSales">
+                <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemQuantity" ColumnName="ItemQuantity" />
+                <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Tbl_Invoice">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_Invoice">
+              <MappingFragment StoreEntitySet="TR_Tbl_Invoice">
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+                <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Tbl_Recharge">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_Recharge">
+              <MappingFragment StoreEntitySet="TR_Tbl_Recharge">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="RechargeAmount" ColumnName="RechargeAmount" />
+                <ScalarProperty Name="StateBalance" ColumnName="StateBalance" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Tbl_TicketSales">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_TicketSales">
+              <MappingFragment StoreEntitySet="TR_Tbl_TicketSales">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemQuantity" ColumnName="ItemQuantity" />
+                <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TR_Transaction_Master">
+            <EntityTypeMapping TypeName="POS_DataModel.TR_Transaction_Master">
+              <MappingFragment StoreEntitySet="TR_Transaction_Master">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerAccNo" ColumnName="CustomerAccNo" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="CashIn" ColumnName="CashIn" />
+                <ScalarProperty Name="CashOut" ColumnName="CashOut" />
+                <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Food">
+            <EntityTypeMapping TypeName="POS_DataModel.Tbl_Food">
+              <MappingFragment StoreEntitySet="Tbl_Food">
+                <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+                <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_User">
+            <EntityTypeMapping TypeName="POS_DataModel.tbl_User">
+              <MappingFragment StoreEntitySet="tbl_User">
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Use_Email" ColumnName="Use_Email" />
+                <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+                <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_PackageItemInfo">
+            <EntityTypeMapping TypeName="POS_DataModel.Tbl_PackageItemInfo">
+              <MappingFragment StoreEntitySet="Tbl_PackageItemInfo">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PackageItemName" ColumnName="PackageItemName" />
+                <ScalarProperty Name="PackageItemID" ColumnName="PackageItemID" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+                <ScalarProperty Name="PackageItemInfo_ID" ColumnName="PackageItemInfo_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inv_Product">
+            <EntityTypeMapping TypeName="POS_DataModel.Inv_Product">
+              <MappingFragment StoreEntitySet="Inv_Product">
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ReOrderQty" ColumnName="ReOrderQty" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="FloorName" ColumnName="FloorName" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="StyleAndSize" ColumnName="StyleAndSize" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LU_Tbl_Item">
+            <EntityTypeMapping TypeName="POS_DataModel.LU_Tbl_Item">
+              <MappingFragment StoreEntitySet="LU_Tbl_Item">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="FreeOffer" ColumnName="FreeOffer" />
+                <ScalarProperty Name="ItemGroupName" ColumnName="ItemGroupName" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="POS_DataModel">
+        <EntityTypeShape EntityType="POS_DataModel.Tbl_Sales" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.Tbl_Ticket" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Tbl_CashReturn" Width="1.5" PointX="4.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Tbl_FoodSales" Width="1.5" PointX="0.75" PointY="4.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Tbl_Invoice" Width="1.5" PointX="2.75" PointY="4.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Tbl_Recharge" Width="1.5" PointX="4.75" PointY="3.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Tbl_TicketSales" Width="1.5" PointX="6.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.TR_Transaction_Master" Width="1.5" PointX="6.75" PointY="4.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="POS_DataModel.Tbl_Food" Width="1.5" PointX="5.375" PointY="8.125" Height="2.5571907552083353" />
+        <EntityTypeShape EntityType="POS_DataModel.tbl_User" Width="1.5" PointX="2.125" PointY="8.125" />
+        <EntityTypeShape EntityType="POS_DataModel.Tbl_PackageItemInfo" Width="1.5" PointX="3.75" PointY="8.125" />
+        <EntityTypeShape EntityType="POS_DataModel.Inv_Product" Width="1.5" PointX="7" PointY="8.125" />
+        <EntityTypeShape EntityType="POS_DataModel.LU_Tbl_Item" Width="1.5" PointX="0.5" PointY="8.25" />
+        <AssociationConnector Association="POS_DataModel.FK_TR_Tbl_FoodSales_LU_Tbl_Item" />
+        <AssociationConnector Association="POS_DataModel.FK_TR_Tbl_TicketSales_LU_Tbl_Item" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

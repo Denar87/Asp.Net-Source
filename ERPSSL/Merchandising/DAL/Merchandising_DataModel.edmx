@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ERPSSL_MerchandisingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ERPSSL_MerchandisingModelStoreContainer">
+          <EntitySet Name="Com_Accessories_Requirement" EntityType="ERPSSL_MerchandisingModel.Store.Com_Accessories_Requirement" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Com_Buyer_Setup" EntityType="ERPSSL_MerchandisingModel.Store.Com_Buyer_Setup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HRM_Office" EntityType="ERPSSL_MerchandisingModel.Store.HRM_Office" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MerchandisingModel.Store.HRM_PersonalInformations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inv_Product" EntityType="ERPSSL_MerchandisingModel.Store.Inv_Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inv_ProductGroup" EntityType="ERPSSL_MerchandisingModel.Store.Inv_ProductGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inv_ProductType" EntityType="ERPSSL_MerchandisingModel.Store.Inv_ProductType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Inv_Unit" EntityType="ERPSSL_MerchandisingModel.Store.Inv_Unit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_BodyPart" EntityType="ERPSSL_MerchandisingModel.Store.LC_BodyPart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_BuyerDepartment" EntityType="ERPSSL_MerchandisingModel.Store.LC_BuyerDepartment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Color" EntityType="ERPSSL_MerchandisingModel.Store.LC_Color" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Composition" EntityType="ERPSSL_MerchandisingModel.Store.LC_Composition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_ConstructionType" EntityType="ERPSSL_MerchandisingModel.Store.LC_ConstructionType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_DeterminationCost" EntityType="ERPSSL_MerchandisingModel.Store.LC_DeterminationCost" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_FabricNature" EntityType="ERPSSL_MerchandisingModel.Store.LC_FabricNature" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_GmtItem" EntityType="ERPSSL_MerchandisingModel.Store.LC_GmtItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_OrderEntry" EntityType="ERPSSL_MerchandisingModel.Store.LC_OrderEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Season" EntityType="ERPSSL_MerchandisingModel.Store.LC_Season" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Size" EntityType="ERPSSL_MerchandisingModel.Store.LC_Size" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Size_Temp" EntityType="ERPSSL_MerchandisingModel.Store.LC_Size_Temp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Style" EntityType="ERPSSL_MerchandisingModel.Store.LC_Style" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_StyleCategor" EntityType="ERPSSL_MerchandisingModel.Store.LC_StyleCategor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_tbl_DateTemp" EntityType="ERPSSL_MerchandisingModel.Store.LC_tbl_DateTemp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_Yarn_Count" EntityType="ERPSSL_MerchandisingModel.Store.LC_Yarn_Count" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_YarnCountType" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnCountType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_YarnDetermination" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnDetermination" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_YarnDeterminationTemp" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnDeterminationTemp" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Com_Accessories_Requirement">
+          <Key>
+            <PropertyRef Name="Acc_Req_ID" />
+          </Key>
+          <Property Name="Acc_Req_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LC" Type="nvarchar" MaxLength="50" />
+          <Property Name="BatchNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="StyleID" Type="int" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="USDRate" Type="money" />
+          <Property Name="BDTRate" Type="money" />
+          <Property Name="USDValue" Type="money" />
+          <Property Name="BDTValue" Type="money" />
+          <Property Name="Item_Group" Type="int" />
+          <Property Name="Item" Type="int" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Com_Buyer_Setup">
+          <Key>
+            <PropertyRef Name="Buyer_ID" />
+          </Key>
+          <Property Name="Buyer_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Buyer_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="BuyingDepartment" Type="nvarchar" MaxLength="50" />
+          <Property Name="BuyingDepartmentId" Type="int" />
+          <Property Name="Contact_Person" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrincipalName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Counter" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Delivery_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Destination_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Buyer_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Land_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Sea_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Type" Type="nvarchar" MaxLength="30" />
+          <Property Name="Consignee" Type="nvarchar" MaxLength="50" />
+          <Property Name="NotifyParty" Type="nvarchar" MaxLength="50" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HRM_Office">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+          </Key>
+          <Property Name="OfficeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OfficeCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OfficeName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="OfficeAddress" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="RegionId" Type="int" Nullable="false" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HRM_PersonalInformations">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionsId" Type="int" />
+          <Property Name="OfficeId" Type="int" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="SectionId" Type="int" />
+          <Property Name="SubSectionId" Type="int" />
+          <Property Name="DesginationId" Type="int" />
+          <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBrith" Type="date" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+          <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar(max)" />
+          <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+          <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="PresentAddress" Type="nvarchar(max)" />
+          <Property Name="PermanenAddress" Type="nvarchar(max)" />
+          <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Step" Type="int" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+          <Property Name="EffectiveSlary" Type="money" />
+          <Property Name="Salary" Type="money" />
+          <Property Name="GrossRate" Type="money" />
+          <Property Name="OldSalary" Type="money" />
+          <Property Name="SalaryUpdateDate" Type="datetime" />
+          <Property Name="OTApplicable" Type="bit" />
+          <Property Name="ProbationPeriodFrom" Type="datetime" />
+          <Property Name="ProbationPeriodTo" Type="datetime" />
+          <Property Name="ConfiramtionDate" Type="datetime" />
+          <Property Name="ConfiramtionDateStatus" Type="bit" />
+          <Property Name="EmployeeType" Type="int" />
+          <Property Name="EmpCategoryId" Type="int" />
+          <Property Name="ShiftId" Type="int" />
+          <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+          <Property Name="JoiningDate" Type="date" />
+          <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+          <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+          <Property Name="EMP_Retired_Status" Type="bit" />
+          <Property Name="EMP_Resignation_Status" Type="bit" />
+          <Property Name="EMP_Dismissal_Status" Type="bit" />
+          <Property Name="EMP_Died_Status" Type="bit" />
+          <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+          <Property Name="Seperation_Date" Type="datetime" />
+          <Property Name="EMP_Other" Type="bit" />
+          <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+          <Property Name="EMP_Singnature" Type="varbinary(max)" />
+          <Property Name="Nomine_Photo" Type="varbinary(max)" />
+          <Property Name="P" Type="int" />
+          <Property Name="L" Type="int" />
+          <Property Name="A" Type="int" />
+          <Property Name="OT" Type="int" />
+          <Property Name="OT_Compliance" Type="int" />
+          <Property Name="OT_Extra" Type="int" />
+          <Property Name="LateHour" Type="time" />
+          <Property Name="WH" Type="int" />
+          <Property Name="GV_H" Type="int" />
+          <Property Name="PV_H" Type="int" />
+          <Property Name="OH" Type="int" />
+          <Property Name="EX" Type="int" />
+          <Property Name="EffectiveSalaryStatus" Type="bit" />
+          <Property Name="Attendance_Bouns" Type="bit" />
+          <Property Name="Late_Applicable" Type="bit" />
+          <Property Name="Absence_Applicable" Type="bit" />
+          <Property Name="Tax_Applicable" Type="bit" />
+          <Property Name="PF_Applicable" Type="bit" />
+          <Property Name="On_Amount" Type="bit" />
+          <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Inv_Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+          <Property Name="StyleAndSize" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FloorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReOrderQty" Type="float" />
+          <Property Name="ProductTypeId" Type="int" />
+          <Property Name="ProductType" Type="varchar" MaxLength="50" />
+          <Property Name="Price" Type="money" />
+          <Property Name="ProjectCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StoreID" Type="int" />
+          <Property Name="StoreUnitID" Type="int" />
+        </EntityType>
+        <EntityType Name="Inv_ProductGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Name="GroupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Inv_ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Name="ProductTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductType" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Inv_Unit">
+          <Key>
+            <PropertyRef Name="UnitId" />
+          </Key>
+          <Property Name="UnitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="100" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="LC_BodyPart">
+          <Key>
+            <PropertyRef Name="BPartId" />
+          </Key>
+          <Property Name="BPartId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BodyPart" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_BuyerDepartment">
+          <Key>
+            <PropertyRef Name="BuyerDepartment_Id" />
+          </Key>
+          <Property Name="BuyerDepartment_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BuyerDepartment_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Color">
+          <Key>
+            <PropertyRef Name="ColorId" />
+          </Key>
+          <Property Name="ColorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ColorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Composition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Composition" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_ConstructionType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ConstructionType" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_DeterminationCost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DeterminationId" Type="int" />
+          <Property Name="ConstructionFinishFebric" Type="money" />
+          <Property Name="KnitingCost" Type="int" />
+          <Property Name="DryingCostOption" Type="nvarchar" MaxLength="50" />
+          <Property Name="DryingCost" Type="int" />
+          <Property Name="TotalCost" Type="money" />
+          <Property Name="UniqueId" Type="int" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_FabricNature">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FabricNature" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_GmtItem">
+          <Key>
+            <PropertyRef Name="GmtItem_Id" />
+          </Key>
+          <Property Name="GmtItem_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Gmt_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_OrderEntry">
+          <Key>
+            <PropertyRef Name="OrderEntryID" />
+          </Key>
+          <Property Name="OrderEntryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LCNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pre_OrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderQuantity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Article" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorSpecification" Type="nvarchar" MaxLength="50" />
+          <Property Name="FobQty" Type="float" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="TotalQty" Type="float" />
+          <Property Name="ShipmentDate" Type="datetime" />
+          <Property Name="ExtendShipmentDate" Type="datetime" />
+          <Property Name="CompShipmentDate" Type="datetime" />
+          <Property Name="ShipmentStatus" Type="bit" />
+          <Property Name="ShipmentCompStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="Season" Type="nvarchar" MaxLength="50" />
+          <Property Name="SeasonId" Type="int" />
+          <Property Name="Buyer_Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Buyer_DepartmentId" Type="int" />
+          <Property Name="Supplier_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderReceiveDate" Type="datetime" />
+          <Property Name="StyleId" Type="int" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="250" />
+          <Property Name="Delivery_Date" Type="datetime" />
+          <Property Name="Yarn_Fabrication" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOB_Port" Type="nvarchar" MaxLength="50" />
+          <Property Name="LC_Reveived_Date" Type="datetime" />
+          <Property Name="Schedule_Date" Type="datetime" />
+          <Property Name="Shipment_Mode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Merch_Dept_Id" Type="int" />
+          <Property Name="FactoryId" Type="int" />
+          <Property Name="Gender_Id" Type="int" />
+          <Property Name="Principal_Id" Type="int" />
+          <Property Name="Style_Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Trading" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quotation_Terms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Freight" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment_Terms" Type="nvarchar" MaxLength="50" />
+          <Property Name="Merchandiser_Id" Type="int" />
+          <Property Name="Countryof_Production" Type="nvarchar" MaxLength="50" />
+          <Property Name="Garments_Maker" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style_Category_Id" Type="int" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit_Id" Type="int" />
+          <Property Name="Total_Amount" Type="float" />
+          <Property Name="TimeOf_Delevery" Type="nvarchar" MaxLength="50" />
+          <Property Name="CommissionPersent" Type="money" />
+          <Property Name="TotalCommission" Type="money" />
+          <Property Name="PlaceOf_DisPatchFrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="PlaceOf_DisPatchTo" Type="nvarchar" MaxLength="50" />
+          <Property Name="FiberContent1" Type="nvarchar" MaxLength="50" />
+          <Property Name="FiberContent2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Office_ID" Type="int" />
+          <Property Name="Buyer_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Buyer_ID" Type="int" />
+          <Property Name="EID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SMV" Type="nvarchar" MaxLength="150" />
+          <Property Name="Efficiency" Type="nvarchar" MaxLength="150" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Season">
+          <Key>
+            <PropertyRef Name="Season_Id" />
+          </Key>
+          <Property Name="Season_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Season_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Size">
+          <Key>
+            <PropertyRef Name="Size_Id" />
+          </Key>
+          <Property Name="Size_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Order_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_From" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_To" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="int" />
+          <Property Name="StyleNo" Type="int" />
+          <Property Name="GMTItem" Type="int" />
+          <Property Name="Articale" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorID" Type="int" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="TotalAmount" Type="money" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Size_Temp">
+          <Key>
+            <PropertyRef Name="Size_Id" />
+          </Key>
+          <Property Name="Size_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Order_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_From" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_To" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderNo" Type="int" />
+          <Property Name="StyleNo" Type="int" />
+          <Property Name="GMTItem" Type="int" />
+          <Property Name="Articale" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorID" Type="int" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="TotalAmount" Type="money" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Style">
+          <Key>
+            <PropertyRef Name="StyleId" />
+          </Key>
+          <Property Name="StyleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StyleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Specification" Type="nvarchar" MaxLength="50" />
+          <Property Name="HS_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style_Photo" Type="varbinary(max)" />
+          <Property Name="MenLadies" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopBottom" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fabrics" Type="nvarchar" MaxLength="50" />
+          <Property Name="Accessories" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryOfProduction" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="float" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_StyleCategor">
+          <Key>
+            <PropertyRef Name="Style_Category_Id" />
+          </Key>
+          <Property Name="Style_Category_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Style_Category_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_tbl_DateTemp">
+          <Key>
+            <PropertyRef Name="tbl_ID" />
+          </Key>
+          <Property Name="tbl_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Datetime" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_Yarn_Count">
+          <Key>
+            <PropertyRef Name="YarnCount_ID" />
+          </Key>
+          <Property Name="YarnCount_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Yarn_Count" Type="nvarchar" MaxLength="150" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_YarnCountType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="YarnCountType" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_YarnDetermination">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FebricNatureId" Type="int" />
+          <Property Name="ColorRangeId" Type="int" />
+          <Property Name="ConstructionId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="GSM" Type="nvarchar" MaxLength="150" />
+          <Property Name="CompositionId" Type="int" />
+          <Property Name="Percentage" Type="nvarchar" MaxLength="150" />
+          <Property Name="YarnCountId" Type="int" />
+          <Property Name="YarnCountTypeId" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="StichLength" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProcessLoss" Type="nvarchar" MaxLength="150" />
+          <Property Name="UniqueId" Type="int" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_YarnDeterminationTemp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FebricNatureId" Type="int" />
+          <Property Name="ColorRangeId" Type="int" />
+          <Property Name="ConstructionId" Type="int" />
+          <Property Name="ProductId" Type="int" />
+          <Property Name="GSM" Type="nvarchar" MaxLength="150" />
+          <Property Name="CompositionId" Type="int" />
+          <Property Name="Percentage" Type="nvarchar" MaxLength="150" />
+          <Property Name="YarnCountId" Type="int" />
+          <Property Name="YarnCountTypeId" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="UnitId" Type="int" />
+          <Property Name="StichLength" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProcessLoss" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERPSSL_MerchandisingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ERPSSL_MerchandisingEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Com_Accessories_Requirement" EntityType="ERPSSL_MerchandisingModel.Com_Accessories_Requirement" />
+          <EntitySet Name="LC_Color" EntityType="ERPSSL_MerchandisingModel.LC_Color" />
+          <EntitySet Name="LC_tbl_DateTemp" EntityType="ERPSSL_MerchandisingModel.LC_tbl_DateTemp" />
+          <EntitySet Name="Inv_Unit" EntityType="ERPSSL_MerchandisingModel.Inv_Unit" />
+          <EntitySet Name="LC_Season" EntityType="ERPSSL_MerchandisingModel.LC_Season" />
+          <EntitySet Name="LC_Style" EntityType="ERPSSL_MerchandisingModel.LC_Style" />
+          <EntitySet Name="LC_Yarn_Count" EntityType="ERPSSL_MerchandisingModel.LC_Yarn_Count" />
+          <EntitySet Name="LC_GmtItem" EntityType="ERPSSL_MerchandisingModel.LC_GmtItem" />
+          <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MerchandisingModel.HRM_PersonalInformations" />
+          <EntitySet Name="Inv_ProductType" EntityType="ERPSSL_MerchandisingModel.Inv_ProductType" />
+          <EntitySet Name="Inv_Product" EntityType="ERPSSL_MerchandisingModel.Inv_Product" />
+          <EntitySet Name="Inv_ProductGroup" EntityType="ERPSSL_MerchandisingModel.Inv_ProductGroup" />
+          <EntitySet Name="HRM_Office" EntityType="ERPSSL_MerchandisingModel.HRM_Office" />
+          <EntitySet Name="LC_BuyerDepartment" EntityType="ERPSSL_MerchandisingModel.LC_BuyerDepartment" />
+          <EntitySet Name="LC_StyleCategor" EntityType="ERPSSL_MerchandisingModel.LC_StyleCategor" />
+          <EntitySet Name="Com_Buyer_Setup" EntityType="ERPSSL_MerchandisingModel.Com_Buyer_Setup" />
+          <EntitySet Name="LC_Composition" EntityType="ERPSSL_MerchandisingModel.LC_Composition" />
+          <EntitySet Name="LC_ConstructionType" EntityType="ERPSSL_MerchandisingModel.LC_ConstructionType" />
+          <EntitySet Name="LC_YarnCountType" EntityType="ERPSSL_MerchandisingModel.LC_YarnCountType" />
+          <EntitySet Name="LC_YarnDetermination" EntityType="ERPSSL_MerchandisingModel.LC_YarnDetermination" />
+          <EntitySet Name="LC_FabricNature" EntityType="ERPSSL_MerchandisingModel.LC_FabricNature" />
+          <EntitySet Name="LC_DeterminationCost" EntityType="ERPSSL_MerchandisingModel.LC_DeterminationCost" />
+          <EntitySet Name="LC_YarnDeterminationTemp" EntityType="ERPSSL_MerchandisingModel.LC_YarnDeterminationTemp" />
+          <EntitySet Name="LC_OrderEntry" EntityType="ERPSSL_MerchandisingModel.LC_OrderEntry" />
+          <EntitySet Name="LC_BodyPart" EntityType="ERPSSL_MerchandisingModel.LC_BodyPart" />
+          <EntitySet Name="LC_Size" EntityType="ERPSSL_MerchandisingModel.LC_Size" />
+          <EntitySet Name="LC_Size_Temp" EntityType="ERPSSL_MerchandisingModel.LC_Size_Temp" />
+        </EntityContainer>
+        <EntityType Name="Com_Accessories_Requirement">
+          <Key>
+            <PropertyRef Name="Acc_Req_ID" />
+          </Key>
+          <Property Type="Int32" Name="Acc_Req_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="LC" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BatchNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="StyleID" />
+          <Property Type="Double" Name="Qty" />
+          <Property Type="Decimal" Name="USDRate" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="BDTRate" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="USDValue" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="BDTValue" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="Item_Group" />
+          <Property Type="Int32" Name="Item" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Color">
+          <Key>
+            <PropertyRef Name="ColorId" />
+          </Key>
+          <Property Type="Int32" Name="ColorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ColorName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_tbl_DateTemp">
+          <Key>
+            <PropertyRef Name="tbl_ID" />
+          </Key>
+          <Property Type="Int32" Name="tbl_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Datetime" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Inv_Unit">
+          <Key>
+            <PropertyRef Name="UnitId" />
+          </Key>
+          <Property Type="Int32" Name="UnitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UnitName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" />
+        </EntityType>
+        <EntityType Name="LC_Season">
+          <Key>
+            <PropertyRef Name="Season_Id" />
+          </Key>
+          <Property Type="Int32" Name="Season_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Season_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Style">
+          <Key>
+            <PropertyRef Name="StyleId" />
+          </Key>
+          <Property Type="Int32" Name="StyleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="StyleName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Specification" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HS_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="Style_Photo" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="MenLadies" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TopBottom" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductDescription" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fabrics" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Accessories" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CountryOfProduction" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Price" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Yarn_Count">
+          <Key>
+            <PropertyRef Name="YarnCount_ID" />
+          </Key>
+          <Property Type="Int32" Name="YarnCount_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Yarn_Count" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_GmtItem">
+          <Key>
+            <PropertyRef Name="GmtItem_Id" />
+          </Key>
+          <Property Type="Int32" Name="GmtItem_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Gmt_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HRM_PersonalInformations">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RegionsId" />
+          <Property Type="Int32" Name="OfficeId" />
+          <Property Type="Int32" Name="DepartmentId" />
+          <Property Type="Int32" Name="SectionId" />
+          <Property Type="Int32" Name="SubSectionId" />
+          <Property Type="Int32" Name="DesginationId" />
+          <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+          <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Step" />
+          <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+          <Property Type="Boolean" Name="OTApplicable" />
+          <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+          <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+          <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+          <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+          <Property Type="Int32" Name="EmployeeType" />
+          <Property Type="Int32" Name="EmpCategoryId" />
+          <Property Type="Int32" Name="ShiftId" />
+          <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+          <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+          <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+          <Property Type="Boolean" Name="EMP_Retired_Status" />
+          <Property Type="Boolean" Name="EMP_Resignation_Status" />
+          <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+          <Property Type="Boolean" Name="EMP_Died_Status" />
+          <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+          <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+          <Property Type="Boolean" Name="EMP_Other" />
+          <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="P" />
+          <Property Type="Int32" Name="L" />
+          <Property Type="Int32" Name="A" />
+          <Property Type="Int32" Name="OT" />
+          <Property Type="Int32" Name="OT_Compliance" />
+          <Property Type="Int32" Name="OT_Extra" />
+          <Property Type="Time" Name="LateHour" Precision="7" />
+          <Property Type="Int32" Name="WH" />
+          <Property Type="Int32" Name="GV_H" />
+          <Property Type="Int32" Name="PV_H" />
+          <Property Type="Int32" Name="OH" />
+          <Property Type="Int32" Name="EX" />
+          <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+          <Property Type="Boolean" Name="Attendance_Bouns" />
+          <Property Type="Boolean" Name="Late_Applicable" />
+          <Property Type="Boolean" Name="Absence_Applicable" />
+          <Property Type="Boolean" Name="Tax_Applicable" />
+          <Property Type="Boolean" Name="PF_Applicable" />
+          <Property Type="Boolean" Name="On_Amount" />
+          <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Inv_ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Type="Int32" Name="ProductTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProductType" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Inv_Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Type="Int32" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="GroupId" />
+          <Property Type="String" Name="GroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Brand" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StyleAndSize" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UnitId" />
+          <Property Type="String" Name="UnitName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FloorName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="ReOrderQty" />
+          <Property Type="Int32" Name="ProductTypeId" />
+          <Property Type="String" Name="ProductType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="StoreID" />
+          <Property Type="Int32" Name="StoreUnitID" />
+        </EntityType>
+        <EntityType Name="Inv_ProductGroup">
+          <Key>
+            <PropertyRef Name="GroupId" />
+          </Key>
+          <Property Type="Int32" Name="GroupId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" />
+        </EntityType>
+        <EntityType Name="HRM_Office">
+          <Key>
+            <PropertyRef Name="OfficeID" />
+          </Key>
+          <Property Type="Int32" Name="OfficeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="OfficeCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OfficeAddress" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="RegionId" Nullable="false" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_BuyerDepartment">
+          <Key>
+            <PropertyRef Name="BuyerDepartment_Id" />
+          </Key>
+          <Property Type="Int32" Name="BuyerDepartment_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BuyerDepartment_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_StyleCategor">
+          <Key>
+            <PropertyRef Name="Style_Category_Id" />
+          </Key>
+          <Property Type="Int32" Name="Style_Category_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Style_Category_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Com_Buyer_Setup">
+          <Key>
+            <PropertyRef Name="Buyer_ID" />
+          </Key>
+          <Property Type="Int32" Name="Buyer_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Buyer_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyingDepartment" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BuyingDepartmentId" />
+          <Property Type="String" Name="Contact_Person" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrincipalName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Counter" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Delivery_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Destination_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Buyer_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Land_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sea_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Status" />
+          <Property Type="String" Name="Type" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Consignee" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NotifyParty" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Composition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Composition" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_ConstructionType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ConstructionType" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_YarnCountType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="YarnCountType" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_YarnDetermination">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FebricNatureId" />
+          <Property Type="Int32" Name="ColorRangeId" />
+          <Property Type="Int32" Name="ConstructionId" />
+          <Property Type="String" Name="GSM" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CompositionId" />
+          <Property Type="String" Name="Percentage" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="YarnCountId" />
+          <Property Type="Int32" Name="YarnCountTypeId" />
+          <Property Type="String" Name="StichLength" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProcessLoss" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProductId" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="UnitId" />
+          <Property Type="Int32" Name="UniqueId" />
+        </EntityType>
+        <EntityType Name="LC_FabricNature">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FabricNature" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_DeterminationCost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DeterminationId" />
+          <Property Type="Decimal" Name="ConstructionFinishFebric" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="KnitingCost" />
+          <Property Type="String" Name="DryingCostOption" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DryingCost" />
+          <Property Type="Decimal" Name="TotalCost" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="UniqueId" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_YarnDeterminationTemp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FebricNatureId" />
+          <Property Type="Int32" Name="ColorRangeId" />
+          <Property Type="Int32" Name="ConstructionId" />
+          <Property Type="Int32" Name="ProductId" />
+          <Property Type="String" Name="GSM" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CompositionId" />
+          <Property Type="String" Name="Percentage" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="YarnCountId" />
+          <Property Type="Int32" Name="YarnCountTypeId" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="UnitId" />
+          <Property Type="String" Name="StichLength" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProcessLoss" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_OrderEntry">
+          <Key>
+            <PropertyRef Name="OrderEntryID" />
+          </Key>
+          <Property Type="Int32" Name="OrderEntryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="LCNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pre_OrderNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OrderQuantity" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Style" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Article" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ColorSpecification" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="FobQty" />
+          <Property Type="Decimal" Name="UnitPrice" Precision="19" Scale="4" />
+          <Property Type="Double" Name="TotalQty" />
+          <Property Type="DateTime" Name="ShipmentDate" Precision="3" />
+          <Property Type="DateTime" Name="ExtendShipmentDate" Precision="3" />
+          <Property Type="DateTime" Name="CompShipmentDate" Precision="3" />
+          <Property Type="Boolean" Name="ShipmentStatus" />
+          <Property Type="String" Name="ShipmentCompStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Season" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SeasonId" />
+          <Property Type="String" Name="Buyer_Department" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Buyer_DepartmentId" />
+          <Property Type="String" Name="Supplier_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OrderReceiveDate" Precision="3" />
+          <Property Type="Int32" Name="StyleId" />
+          <Property Type="String" Name="Comments" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Delivery_Date" Precision="3" />
+          <Property Type="String" Name="Yarn_Fabrication" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FOB_Port" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LC_Reveived_Date" Precision="3" />
+          <Property Type="DateTime" Name="Schedule_Date" Precision="3" />
+          <Property Type="String" Name="Shipment_Mode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Merch_Dept_Id" />
+          <Property Type="Int32" Name="FactoryId" />
+          <Property Type="Int32" Name="Gender_Id" />
+          <Property Type="Int32" Name="Principal_Id" />
+          <Property Type="String" Name="Style_Description" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Trading" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quotation_Terms" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Freight" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Payment_Terms" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Merchandiser_Id" />
+          <Property Type="String" Name="Countryof_Production" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Garments_Maker" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Style_Category_Id" />
+          <Property Type="String" Name="Currency" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Unit_Id" />
+          <Property Type="Double" Name="Total_Amount" />
+          <Property Type="String" Name="TimeOf_Delevery" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="CommissionPersent" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="TotalCommission" Precision="19" Scale="4" />
+          <Property Type="String" Name="PlaceOf_DisPatchFrom" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PlaceOf_DisPatchTo" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FiberContent1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FiberContent2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Office_ID" />
+          <Property Type="String" Name="Buyer_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Buyer_ID" />
+          <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SMV" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Efficiency" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_BodyPart">
+          <Key>
+            <PropertyRef Name="BPartId" />
+          </Key>
+          <Property Type="Int32" Name="BPartId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BodyPart" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Size">
+          <Key>
+            <PropertyRef Name="Size_Id" />
+          </Key>
+          <Property Type="Int32" Name="Size_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Order_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Style_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_From" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_To" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OrderNo" />
+          <Property Type="Int32" Name="StyleNo" />
+          <Property Type="Int32" Name="GMTItem" />
+          <Property Type="String" Name="Articale" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ColorID" />
+          <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Qty" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_Size_Temp">
+          <Key>
+            <PropertyRef Name="Size_Id" />
+          </Key>
+          <Property Type="Int32" Name="Size_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Order_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Style_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_From" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_To" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Size_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OrderNo" />
+          <Property Type="Int32" Name="StyleNo" />
+          <Property Type="Int32" Name="GMTItem" />
+          <Property Type="String" Name="Articale" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ColorID" />
+          <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Qty" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERPSSL_MerchandisingModelStoreContainer" CdmEntityContainer="ERPSSL_MerchandisingEntities" >
+          <EntitySetMapping Name="Com_Accessories_Requirement">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Com_Accessories_Requirement">
+              <MappingFragment StoreEntitySet="Com_Accessories_Requirement">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Item_Group" ColumnName="Item_Group" />
+                <ScalarProperty Name="BDTValue" ColumnName="BDTValue" />
+                <ScalarProperty Name="USDValue" ColumnName="USDValue" />
+                <ScalarProperty Name="BDTRate" ColumnName="BDTRate" />
+                <ScalarProperty Name="USDRate" ColumnName="USDRate" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+                <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+                <ScalarProperty Name="LC" ColumnName="LC" />
+                <ScalarProperty Name="Acc_Req_ID" ColumnName="Acc_Req_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Color">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Color">
+              <MappingFragment StoreEntitySet="LC_Color">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+                <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_tbl_DateTemp">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_tbl_DateTemp">
+              <MappingFragment StoreEntitySet="LC_tbl_DateTemp">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+                <ScalarProperty Name="tbl_ID" ColumnName="tbl_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inv_Unit">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_Unit">
+              <MappingFragment StoreEntitySet="Inv_Unit">
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Season">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Season">
+              <MappingFragment StoreEntitySet="LC_Season">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Season_Name" ColumnName="Season_Name" />
+                <ScalarProperty Name="Season_Id" ColumnName="Season_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Style">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Style">
+              <MappingFragment StoreEntitySet="LC_Style">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CountryOfProduction" ColumnName="CountryOfProduction" />
+                <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+                <ScalarProperty Name="Fabrics" ColumnName="Fabrics" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="TopBottom" ColumnName="TopBottom" />
+                <ScalarProperty Name="MenLadies" ColumnName="MenLadies" />
+                <ScalarProperty Name="Style_Photo" ColumnName="Style_Photo" />
+                <ScalarProperty Name="CAT" ColumnName="CAT" />
+                <ScalarProperty Name="HS_Code" ColumnName="HS_Code" />
+                <ScalarProperty Name="Specification" ColumnName="Specification" />
+                <ScalarProperty Name="StyleName" ColumnName="StyleName" />
+                <ScalarProperty Name="StyleId" ColumnName="StyleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Yarn_Count">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Yarn_Count">
+              <MappingFragment StoreEntitySet="LC_Yarn_Count">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Yarn_Count" ColumnName="Yarn_Count" />
+                <ScalarProperty Name="YarnCount_ID" ColumnName="YarnCount_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_GmtItem">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_GmtItem">
+              <MappingFragment StoreEntitySet="LC_GmtItem">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Gmt_Name" ColumnName="Gmt_Name" />
+                <ScalarProperty Name="GmtItem_Id" ColumnName="GmtItem_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRM_PersonalInformations">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.HRM_PersonalInformations">
+              <MappingFragment StoreEntitySet="HRM_PersonalInformations">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+                <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+                <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+                <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+                <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+                <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+                <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+                <ScalarProperty Name="EffectiveSalaryStatus" ColumnName="EffectiveSalaryStatus" />
+                <ScalarProperty Name="EX" ColumnName="EX" />
+                <ScalarProperty Name="OH" ColumnName="OH" />
+                <ScalarProperty Name="PV_H" ColumnName="PV_H" />
+                <ScalarProperty Name="GV_H" ColumnName="GV_H" />
+                <ScalarProperty Name="WH" ColumnName="WH" />
+                <ScalarProperty Name="LateHour" ColumnName="LateHour" />
+                <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+                <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="P" ColumnName="P" />
+                <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+                <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+                <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+                <ScalarProperty Name="EMP_Other" ColumnName="EMP_Other" />
+                <ScalarProperty Name="Seperation_Date" ColumnName="Seperation_Date" />
+                <ScalarProperty Name="EMP_Dis_Continution_Status" ColumnName="EMP_Dis_Continution_Status" />
+                <ScalarProperty Name="EMP_Died_Status" ColumnName="EMP_Died_Status" />
+                <ScalarProperty Name="EMP_Dismissal_Status" ColumnName="EMP_Dismissal_Status" />
+                <ScalarProperty Name="EMP_Resignation_Status" ColumnName="EMP_Resignation_Status" />
+                <ScalarProperty Name="EMP_Retired_Status" ColumnName="EMP_Retired_Status" />
+                <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+                <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+                <ScalarProperty Name="ContactPersonRelationName" ColumnName="ContactPersonRelationName" />
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+                <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+                <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+                <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+                <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+                <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="ConfiramtionDateStatus" ColumnName="ConfiramtionDateStatus" />
+                <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+                <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+                <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+                <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+                <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+                <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+                <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="EffectiveSlary" ColumnName="EffectiveSlary" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Step" ColumnName="Step" />
+                <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+                <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+                <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+                <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+                <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+                <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+                <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+                <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+                <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+                <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+                <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+                <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+                <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+                <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+                <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+                <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+                <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+                <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inv_ProductType">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_ProductType">
+              <MappingFragment StoreEntitySet="Inv_ProductType">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inv_Product">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_Product">
+              <MappingFragment StoreEntitySet="Inv_Product">
+                <ScalarProperty Name="StoreUnitID" ColumnName="StoreUnitID" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="ReOrderQty" ColumnName="ReOrderQty" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="FloorName" ColumnName="FloorName" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="StyleAndSize" ColumnName="StyleAndSize" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inv_ProductGroup">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_ProductGroup">
+              <MappingFragment StoreEntitySet="Inv_ProductGroup">
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRM_Office">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.HRM_Office">
+              <MappingFragment StoreEntitySet="HRM_Office">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+                <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+                <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+                <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_BuyerDepartment">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_BuyerDepartment">
+              <MappingFragment StoreEntitySet="LC_BuyerDepartment">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="BuyerDepartment_Name" ColumnName="BuyerDepartment_Name" />
+                <ScalarProperty Name="BuyerDepartment_Id" ColumnName="BuyerDepartment_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_StyleCategor">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_StyleCategor">
+              <MappingFragment StoreEntitySet="LC_StyleCategor">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Style_Category_Name" ColumnName="Style_Category_Name" />
+                <ScalarProperty Name="Style_Category_Id" ColumnName="Style_Category_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Com_Buyer_Setup">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Com_Buyer_Setup">
+              <MappingFragment StoreEntitySet="Com_Buyer_Setup">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="NotifyParty" ColumnName="NotifyParty" />
+                <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Sea_Address" ColumnName="Sea_Address" />
+                <ScalarProperty Name="Land_Address" ColumnName="Land_Address" />
+                <ScalarProperty Name="Buyer_Address" ColumnName="Buyer_Address" />
+                <ScalarProperty Name="Destination_Address" ColumnName="Destination_Address" />
+                <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="PrincipalName" ColumnName="PrincipalName" />
+                <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+                <ScalarProperty Name="BuyingDepartmentId" ColumnName="BuyingDepartmentId" />
+                <ScalarProperty Name="BuyingDepartment" ColumnName="BuyingDepartment" />
+                <ScalarProperty Name="Buyer_Name" ColumnName="Buyer_Name" />
+                <ScalarProperty Name="Buyer_ID" ColumnName="Buyer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Composition">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Composition">
+              <MappingFragment StoreEntitySet="LC_Composition">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Composition" ColumnName="Composition" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_ConstructionType">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_ConstructionType">
+              <MappingFragment StoreEntitySet="LC_ConstructionType">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ConstructionType" ColumnName="ConstructionType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_YarnCountType">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnCountType">
+              <MappingFragment StoreEntitySet="LC_YarnCountType">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="YarnCountType" ColumnName="YarnCountType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_YarnDetermination">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnDetermination">
+              <MappingFragment StoreEntitySet="LC_YarnDetermination">
+                <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ProcessLoss" ColumnName="ProcessLoss" />
+                <ScalarProperty Name="StichLength" ColumnName="StichLength" />
+                <ScalarProperty Name="YarnCountTypeId" ColumnName="YarnCountTypeId" />
+                <ScalarProperty Name="YarnCountId" ColumnName="YarnCountId" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="CompositionId" ColumnName="CompositionId" />
+                <ScalarProperty Name="GSM" ColumnName="GSM" />
+                <ScalarProperty Name="ConstructionId" ColumnName="ConstructionId" />
+                <ScalarProperty Name="ColorRangeId" ColumnName="ColorRangeId" />
+                <ScalarProperty Name="FebricNatureId" ColumnName="FebricNatureId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_FabricNature">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_FabricNature">
+              <MappingFragment StoreEntitySet="LC_FabricNature">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="FabricNature" ColumnName="FabricNature" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_DeterminationCost">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_DeterminationCost">
+              <MappingFragment StoreEntitySet="LC_DeterminationCost">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="DryingCost" ColumnName="DryingCost" />
+                <ScalarProperty Name="DryingCostOption" ColumnName="DryingCostOption" />
+                <ScalarProperty Name="KnitingCost" ColumnName="KnitingCost" />
+                <ScalarProperty Name="ConstructionFinishFebric" ColumnName="ConstructionFinishFebric" />
+                <ScalarProperty Name="DeterminationId" ColumnName="DeterminationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_YarnDeterminationTemp">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnDeterminationTemp">
+              <MappingFragment StoreEntitySet="LC_YarnDeterminationTemp">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="ProcessLoss" ColumnName="ProcessLoss" />
+                <ScalarProperty Name="StichLength" ColumnName="StichLength" />
+                <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="YarnCountTypeId" ColumnName="YarnCountTypeId" />
+                <ScalarProperty Name="YarnCountId" ColumnName="YarnCountId" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="CompositionId" ColumnName="CompositionId" />
+                <ScalarProperty Name="GSM" ColumnName="GSM" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="ConstructionId" ColumnName="ConstructionId" />
+                <ScalarProperty Name="ColorRangeId" ColumnName="ColorRangeId" />
+                <ScalarProperty Name="FebricNatureId" ColumnName="FebricNatureId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_OrderEntry">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_OrderEntry">
+              <MappingFragment StoreEntitySet="LC_OrderEntry">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Efficiency" ColumnName="Efficiency" />
+                <ScalarProperty Name="SMV" ColumnName="SMV" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="Buyer_ID" ColumnName="Buyer_ID" />
+                <ScalarProperty Name="Buyer_Name" ColumnName="Buyer_Name" />
+                <ScalarProperty Name="Office_ID" ColumnName="Office_ID" />
+                <ScalarProperty Name="FiberContent2" ColumnName="FiberContent2" />
+                <ScalarProperty Name="FiberContent1" ColumnName="FiberContent1" />
+                <ScalarProperty Name="PlaceOf_DisPatchTo" ColumnName="PlaceOf_DisPatchTo" />
+                <ScalarProperty Name="PlaceOf_DisPatchFrom" ColumnName="PlaceOf_DisPatchFrom" />
+                <ScalarProperty Name="TotalCommission" ColumnName="TotalCommission" />
+                <ScalarProperty Name="CommissionPersent" ColumnName="CommissionPersent" />
+                <ScalarProperty Name="TimeOf_Delevery" ColumnName="TimeOf_Delevery" />
+                <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+                <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Style_Category_Id" ColumnName="Style_Category_Id" />
+                <ScalarProperty Name="Garments_Maker" ColumnName="Garments_Maker" />
+                <ScalarProperty Name="Countryof_Production" ColumnName="Countryof_Production" />
+                <ScalarProperty Name="Merchandiser_Id" ColumnName="Merchandiser_Id" />
+                <ScalarProperty Name="Payment_Terms" ColumnName="Payment_Terms" />
+                <ScalarProperty Name="Freight" ColumnName="Freight" />
+                <ScalarProperty Name="Quotation_Terms" ColumnName="Quotation_Terms" />
+                <ScalarProperty Name="Trading" ColumnName="Trading" />
+                <ScalarProperty Name="Style_Description" ColumnName="Style_Description" />
+                <ScalarProperty Name="Principal_Id" ColumnName="Principal_Id" />
+                <ScalarProperty Name="Gender_Id" ColumnName="Gender_Id" />
+                <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+                <ScalarProperty Name="Merch_Dept_Id" ColumnName="Merch_Dept_Id" />
+                <ScalarProperty Name="Shipment_Mode" ColumnName="Shipment_Mode" />
+                <ScalarProperty Name="Schedule_Date" ColumnName="Schedule_Date" />
+                <ScalarProperty Name="LC_Reveived_Date" ColumnName="LC_Reveived_Date" />
+                <ScalarProperty Name="FOB_Port" ColumnName="FOB_Port" />
+                <ScalarProperty Name="Yarn_Fabrication" ColumnName="Yarn_Fabrication" />
+                <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="StyleId" ColumnName="StyleId" />
+                <ScalarProperty Name="OrderReceiveDate" ColumnName="OrderReceiveDate" />
+                <ScalarProperty Name="Supplier_No" ColumnName="Supplier_No" />
+                <ScalarProperty Name="Buyer_DepartmentId" ColumnName="Buyer_DepartmentId" />
+                <ScalarProperty Name="Buyer_Department" ColumnName="Buyer_Department" />
+                <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="ShipmentCompStatus" ColumnName="ShipmentCompStatus" />
+                <ScalarProperty Name="ShipmentStatus" ColumnName="ShipmentStatus" />
+                <ScalarProperty Name="CompShipmentDate" ColumnName="CompShipmentDate" />
+                <ScalarProperty Name="ExtendShipmentDate" ColumnName="ExtendShipmentDate" />
+                <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
+                <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="FobQty" ColumnName="FobQty" />
+                <ScalarProperty Name="ColorSpecification" ColumnName="ColorSpecification" />
+                <ScalarProperty Name="Article" ColumnName="Article" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
+                <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Pre_OrderNo" ColumnName="Pre_OrderNo" />
+                <ScalarProperty Name="LCNo" ColumnName="LCNo" />
+                <ScalarProperty Name="OrderEntryID" ColumnName="OrderEntryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_BodyPart">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_BodyPart">
+              <MappingFragment StoreEntitySet="LC_BodyPart">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="BodyPart" ColumnName="BodyPart" />
+                <ScalarProperty Name="BPartId" ColumnName="BPartId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Size">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Size">
+              <MappingFragment StoreEntitySet="LC_Size">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="Articale" ColumnName="Articale" />
+                <ScalarProperty Name="GMTItem" ColumnName="GMTItem" />
+                <ScalarProperty Name="StyleNo" ColumnName="StyleNo" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Size_Type" ColumnName="Size_Type" />
+                <ScalarProperty Name="Size_To" ColumnName="Size_To" />
+                <ScalarProperty Name="Size_From" ColumnName="Size_From" />
+                <ScalarProperty Name="Style_No" ColumnName="Style_No" />
+                <ScalarProperty Name="Order_No" ColumnName="Order_No" />
+                <ScalarProperty Name="Size_Id" ColumnName="Size_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_Size_Temp">
+            <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Size_Temp">
+              <MappingFragment StoreEntitySet="LC_Size_Temp">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="Articale" ColumnName="Articale" />
+                <ScalarProperty Name="GMTItem" ColumnName="GMTItem" />
+                <ScalarProperty Name="StyleNo" ColumnName="StyleNo" />
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+                <ScalarProperty Name="Size_Type" ColumnName="Size_Type" />
+                <ScalarProperty Name="Size_To" ColumnName="Size_To" />
+                <ScalarProperty Name="Size_From" ColumnName="Size_From" />
+                <ScalarProperty Name="Style_No" ColumnName="Style_No" />
+                <ScalarProperty Name="Order_No" ColumnName="Order_No" />
+                <ScalarProperty Name="Size_Id" ColumnName="Size_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Merchandising_DataModel" ZoomLevel="45" >
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Com_Accessories_Requirement" Width="1.5" PointX="0.5" PointY="0.5" Height="3.7109993489583326" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Color" Width="1.5" PointX="2.125" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_tbl_DateTemp" Width="1.5" PointX="3.75" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Inv_Unit" Width="1.5" PointX="10.25" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Season" Width="1.5" PointX="3.75" PointY="4.25" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Style" Width="1.5" PointX="8.625" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Yarn_Count" Width="1.5" PointX="2.125" PointY="3.125" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_GmtItem" Width="1.5" PointX="10.25" PointY="2.25" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.HRM_PersonalInformations" Width="1.5" PointX="13.625" PointY="3.125" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Inv_ProductType" Width="1.5" PointX="3.75" PointY="2.125" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Inv_Product" Width="1.5" PointX="7" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Inv_ProductGroup" Width="1.5" PointX="11.875" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.HRM_Office" Width="1.5" PointX="13.625" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_BuyerDepartment" Width="1.5" PointX="5.375" PointY="5.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_StyleCategor" Width="1.5" PointX="12" PointY="2.25" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.Com_Buyer_Setup" Width="1.5" PointX="15.25" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Composition" Width="1.5" PointX="9.2329926105369786" PointY="30.774434789444523" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_ConstructionType" Width="1.5" PointX="7.197141619025329" PointY="27.244004128148781" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_YarnCountType" Width="1.5" PointX="12" PointY="4.75" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_YarnDetermination" Width="1.5" PointX="6.2960066675655577" PointY="26.230235469634753" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_FabricNature" Width="1.5" PointX="7.3672846422378377" PointY="29.461317210207376" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_DeterminationCost" Width="1.5" PointX="0.93469942218377233" PointY="30.386940314614652" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_YarnDeterminationTemp" Width="1.5" PointX="0.5" PointY="4.375" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_OrderEntry" Width="1.5" PointX="11.735424164559424" PointY="14.401818952710283" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_BodyPart" Width="1.5" PointX="6.6465743252293086" PointY="20.252378532780511" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Size" Width="1.5" PointX="5.0147713557885822" PointY="15.551806159108788" />
+        <EntityTypeShape EntityType="ERPSSL_MerchandisingModel.LC_Size_Temp" Width="1.5" PointX="2.2032548087664203" PointY="5.6346368666899558" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

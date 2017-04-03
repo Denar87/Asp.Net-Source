@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MerchandisingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_MerchandisingModelStoreContainer">
+    <EntitySet Name="Com_Accessories_Requirement" EntityType="ERPSSL_MerchandisingModel.Store.Com_Accessories_Requirement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Com_Buyer_Setup" EntityType="ERPSSL_MerchandisingModel.Store.Com_Buyer_Setup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Office" EntityType="ERPSSL_MerchandisingModel.Store.HRM_Office" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MerchandisingModel.Store.HRM_PersonalInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inv_Product" EntityType="ERPSSL_MerchandisingModel.Store.Inv_Product" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inv_ProductGroup" EntityType="ERPSSL_MerchandisingModel.Store.Inv_ProductGroup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inv_ProductType" EntityType="ERPSSL_MerchandisingModel.Store.Inv_ProductType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Inv_Unit" EntityType="ERPSSL_MerchandisingModel.Store.Inv_Unit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_BodyPart" EntityType="ERPSSL_MerchandisingModel.Store.LC_BodyPart" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_BuyerDepartment" EntityType="ERPSSL_MerchandisingModel.Store.LC_BuyerDepartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Color" EntityType="ERPSSL_MerchandisingModel.Store.LC_Color" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Composition" EntityType="ERPSSL_MerchandisingModel.Store.LC_Composition" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_ConstructionType" EntityType="ERPSSL_MerchandisingModel.Store.LC_ConstructionType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_DeterminationCost" EntityType="ERPSSL_MerchandisingModel.Store.LC_DeterminationCost" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_FabricNature" EntityType="ERPSSL_MerchandisingModel.Store.LC_FabricNature" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_GmtItem" EntityType="ERPSSL_MerchandisingModel.Store.LC_GmtItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_OrderEntry" EntityType="ERPSSL_MerchandisingModel.Store.LC_OrderEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Season" EntityType="ERPSSL_MerchandisingModel.Store.LC_Season" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Size" EntityType="ERPSSL_MerchandisingModel.Store.LC_Size" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Size_Temp" EntityType="ERPSSL_MerchandisingModel.Store.LC_Size_Temp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Style" EntityType="ERPSSL_MerchandisingModel.Store.LC_Style" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_StyleCategor" EntityType="ERPSSL_MerchandisingModel.Store.LC_StyleCategor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_tbl_DateTemp" EntityType="ERPSSL_MerchandisingModel.Store.LC_tbl_DateTemp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_Yarn_Count" EntityType="ERPSSL_MerchandisingModel.Store.LC_Yarn_Count" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_YarnCountType" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnCountType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_YarnDetermination" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnDetermination" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LC_YarnDeterminationTemp" EntityType="ERPSSL_MerchandisingModel.Store.LC_YarnDeterminationTemp" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Com_Accessories_Requirement">
+    <Key>
+      <PropertyRef Name="Acc_Req_ID" />
+    </Key>
+    <Property Name="Acc_Req_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LC" Type="nvarchar" MaxLength="50" />
+    <Property Name="BatchNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="StyleID" Type="int" />
+    <Property Name="Qty" Type="float" />
+    <Property Name="USDRate" Type="money" />
+    <Property Name="BDTRate" Type="money" />
+    <Property Name="USDValue" Type="money" />
+    <Property Name="BDTValue" Type="money" />
+    <Property Name="Item_Group" Type="int" />
+    <Property Name="Item" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Com_Buyer_Setup">
+    <Key>
+      <PropertyRef Name="Buyer_ID" />
+    </Key>
+    <Property Name="Buyer_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Buyer_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="BuyingDepartment" Type="nvarchar" MaxLength="50" />
+    <Property Name="BuyingDepartmentId" Type="int" />
+    <Property Name="Contact_Person" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrincipalName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Counter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Delivery_Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Destination_Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Buyer_Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Land_Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Sea_Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Type" Type="nvarchar" MaxLength="30" />
+    <Property Name="Consignee" Type="nvarchar" MaxLength="50" />
+    <Property Name="NotifyParty" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Name="OfficeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OfficeCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="OfficeName" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="OfficeAddress" Type="varchar" Nullable="false" MaxLength="4000" />
+    <Property Name="RegionId" Type="int" Nullable="false" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionsId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="SubSectionId" Type="int" />
+    <Property Name="DesginationId" Type="int" />
+    <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBrith" Type="date" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar(max)" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+    <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="PresentAddress" Type="nvarchar(max)" />
+    <Property Name="PermanenAddress" Type="nvarchar(max)" />
+    <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+    <Property Name="EffectiveSlary" Type="money" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="GrossRate" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="SalaryUpdateDate" Type="datetime" />
+    <Property Name="OTApplicable" Type="bit" />
+    <Property Name="ProbationPeriodFrom" Type="datetime" />
+    <Property Name="ProbationPeriodTo" Type="datetime" />
+    <Property Name="ConfiramtionDate" Type="datetime" />
+    <Property Name="ConfiramtionDateStatus" Type="bit" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="EmpCategoryId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+    <Property Name="JoiningDate" Type="date" />
+    <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="EMP_Retired_Status" Type="bit" />
+    <Property Name="EMP_Resignation_Status" Type="bit" />
+    <Property Name="EMP_Dismissal_Status" Type="bit" />
+    <Property Name="EMP_Died_Status" Type="bit" />
+    <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+    <Property Name="Seperation_Date" Type="datetime" />
+    <Property Name="EMP_Other" Type="bit" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_Singnature" Type="varbinary(max)" />
+    <Property Name="Nomine_Photo" Type="varbinary(max)" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="A" Type="int" />
+    <Property Name="OT" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="LateHour" Type="time" />
+    <Property Name="WH" Type="int" />
+    <Property Name="GV_H" Type="int" />
+    <Property Name="PV_H" Type="int" />
+    <Property Name="OH" Type="int" />
+    <Property Name="EX" Type="int" />
+    <Property Name="EffectiveSalaryStatus" Type="bit" />
+    <Property Name="Attendance_Bouns" Type="bit" />
+    <Property Name="Late_Applicable" Type="bit" />
+    <Property Name="Absence_Applicable" Type="bit" />
+    <Property Name="Tax_Applicable" Type="bit" />
+    <Property Name="PF_Applicable" Type="bit" />
+    <Property Name="On_Amount" Type="bit" />
+    <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Inv_Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="int" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="StyleAndSize" Type="nvarchar" MaxLength="100" />
+    <Property Name="UnitId" Type="int" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FloorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReOrderQty" Type="float" />
+    <Property Name="ProductTypeId" Type="int" />
+    <Property Name="ProductType" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="money" />
+    <Property Name="ProjectCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="StoreUnitID" Type="int" />
+  </EntityType>
+  <EntityType Name="Inv_ProductGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Name="GroupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Inv_ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeId" />
+    </Key>
+    <Property Name="ProductTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductType" Type="nvarchar" MaxLength="100" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Inv_Unit">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Name="UnitId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="LC_BodyPart">
+    <Key>
+      <PropertyRef Name="BPartId" />
+    </Key>
+    <Property Name="BPartId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BodyPart" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_BuyerDepartment">
+    <Key>
+      <PropertyRef Name="BuyerDepartment_Id" />
+    </Key>
+    <Property Name="BuyerDepartment_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BuyerDepartment_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Color">
+    <Key>
+      <PropertyRef Name="ColorId" />
+    </Key>
+    <Property Name="ColorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ColorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Composition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Composition" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_ConstructionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ConstructionType" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_DeterminationCost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeterminationId" Type="int" />
+    <Property Name="ConstructionFinishFebric" Type="money" />
+    <Property Name="KnitingCost" Type="int" />
+    <Property Name="DryingCostOption" Type="nvarchar" MaxLength="50" />
+    <Property Name="DryingCost" Type="int" />
+    <Property Name="TotalCost" Type="money" />
+    <Property Name="UniqueId" Type="int" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_FabricNature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FabricNature" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_GmtItem">
+    <Key>
+      <PropertyRef Name="GmtItem_Id" />
+    </Key>
+    <Property Name="GmtItem_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Gmt_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_OrderEntry">
+    <Key>
+      <PropertyRef Name="OrderEntryID" />
+    </Key>
+    <Property Name="OrderEntryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LCNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pre_OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderQuantity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="Article" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColorSpecification" Type="nvarchar" MaxLength="50" />
+    <Property Name="FobQty" Type="float" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="TotalQty" Type="float" />
+    <Property Name="ShipmentDate" Type="datetime" />
+    <Property Name="ExtendShipmentDate" Type="datetime" />
+    <Property Name="CompShipmentDate" Type="datetime" />
+    <Property Name="ShipmentStatus" Type="bit" />
+    <Property Name="ShipmentCompStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Season" Type="nvarchar" MaxLength="50" />
+    <Property Name="SeasonId" Type="int" />
+    <Property Name="Buyer_Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="Buyer_DepartmentId" Type="int" />
+    <Property Name="Supplier_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderReceiveDate" Type="datetime" />
+    <Property Name="StyleId" Type="int" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="250" />
+    <Property Name="Delivery_Date" Type="datetime" />
+    <Property Name="Yarn_Fabrication" Type="nvarchar" MaxLength="50" />
+    <Property Name="FOB_Port" Type="nvarchar" MaxLength="50" />
+    <Property Name="LC_Reveived_Date" Type="datetime" />
+    <Property Name="Schedule_Date" Type="datetime" />
+    <Property Name="Shipment_Mode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Merch_Dept_Id" Type="int" />
+    <Property Name="FactoryId" Type="int" />
+    <Property Name="Gender_Id" Type="int" />
+    <Property Name="Principal_Id" Type="int" />
+    <Property Name="Style_Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Trading" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quotation_Terms" Type="nvarchar" MaxLength="50" />
+    <Property Name="Freight" Type="nvarchar" MaxLength="50" />
+    <Property Name="Payment_Terms" Type="nvarchar" MaxLength="50" />
+    <Property Name="Merchandiser_Id" Type="int" />
+    <Property Name="Countryof_Production" Type="nvarchar" MaxLength="50" />
+    <Property Name="Garments_Maker" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style_Category_Id" Type="int" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit_Id" Type="int" />
+    <Property Name="Total_Amount" Type="float" />
+    <Property Name="TimeOf_Delevery" Type="nvarchar" MaxLength="50" />
+    <Property Name="CommissionPersent" Type="money" />
+    <Property Name="TotalCommission" Type="money" />
+    <Property Name="PlaceOf_DisPatchFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaceOf_DisPatchTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FiberContent1" Type="nvarchar" MaxLength="50" />
+    <Property Name="FiberContent2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Office_ID" Type="int" />
+    <Property Name="Buyer_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Buyer_ID" Type="int" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SMV" Type="nvarchar" MaxLength="150" />
+    <Property Name="Efficiency" Type="nvarchar" MaxLength="150" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Season">
+    <Key>
+      <PropertyRef Name="Season_Id" />
+    </Key>
+    <Property Name="Season_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Season_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Size">
+    <Key>
+      <PropertyRef Name="Size_Id" />
+    </Key>
+    <Property Name="Size_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_From" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_To" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="StyleNo" Type="int" />
+    <Property Name="GMTItem" Type="int" />
+    <Property Name="Articale" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColorID" Type="int" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Size_Temp">
+    <Key>
+      <PropertyRef Name="Size_Id" />
+    </Key>
+    <Property Name="Size_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_From" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_To" Type="nvarchar" MaxLength="50" />
+    <Property Name="Size_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderNo" Type="int" />
+    <Property Name="StyleNo" Type="int" />
+    <Property Name="GMTItem" Type="int" />
+    <Property Name="Articale" Type="nvarchar" MaxLength="50" />
+    <Property Name="ColorID" Type="int" />
+    <Property Name="Size" Type="nvarchar" MaxLength="50" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Style">
+    <Key>
+      <PropertyRef Name="StyleId" />
+    </Key>
+    <Property Name="StyleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StyleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specification" Type="nvarchar" MaxLength="50" />
+    <Property Name="HS_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CAT" Type="nvarchar" MaxLength="50" />
+    <Property Name="Style_Photo" Type="varbinary(max)" />
+    <Property Name="MenLadies" Type="nvarchar" MaxLength="50" />
+    <Property Name="TopBottom" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fabrics" Type="nvarchar" MaxLength="50" />
+    <Property Name="Accessories" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryOfProduction" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="float" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_StyleCategor">
+    <Key>
+      <PropertyRef Name="Style_Category_Id" />
+    </Key>
+    <Property Name="Style_Category_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Style_Category_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_tbl_DateTemp">
+    <Key>
+      <PropertyRef Name="tbl_ID" />
+    </Key>
+    <Property Name="tbl_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_Yarn_Count">
+    <Key>
+      <PropertyRef Name="YarnCount_ID" />
+    </Key>
+    <Property Name="YarnCount_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Yarn_Count" Type="nvarchar" MaxLength="150" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_YarnCountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="YarnCountType" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_YarnDetermination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FebricNatureId" Type="int" />
+    <Property Name="ColorRangeId" Type="int" />
+    <Property Name="ConstructionId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="GSM" Type="nvarchar" MaxLength="150" />
+    <Property Name="CompositionId" Type="int" />
+    <Property Name="Percentage" Type="nvarchar" MaxLength="150" />
+    <Property Name="YarnCountId" Type="int" />
+    <Property Name="YarnCountTypeId" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="UnitId" Type="int" />
+    <Property Name="StichLength" Type="nvarchar" MaxLength="150" />
+    <Property Name="ProcessLoss" Type="nvarchar" MaxLength="150" />
+    <Property Name="UniqueId" Type="int" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LC_YarnDeterminationTemp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FebricNatureId" Type="int" />
+    <Property Name="ColorRangeId" Type="int" />
+    <Property Name="ConstructionId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="GSM" Type="nvarchar" MaxLength="150" />
+    <Property Name="CompositionId" Type="int" />
+    <Property Name="Percentage" Type="nvarchar" MaxLength="150" />
+    <Property Name="YarnCountId" Type="int" />
+    <Property Name="YarnCountTypeId" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="UnitId" Type="int" />
+    <Property Name="StichLength" Type="nvarchar" MaxLength="150" />
+    <Property Name="ProcessLoss" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateUser" Type="uniqueidentifier" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

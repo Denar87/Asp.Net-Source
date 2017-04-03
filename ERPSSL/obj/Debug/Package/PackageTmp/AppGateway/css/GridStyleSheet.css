@@ -1,0 +1,60 @@
+﻿/*....................................*/
+
+.Grid_Border
+{
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    
+}
+.Grid_Header
+{
+    border: 1px solid #ccc;
+    font-size: 12px;
+    height: 24px;
+    padding-left: 5px;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #428bca;
+     /*background: -webkit-linear-gradient(left, red , black);
+  background: -o-linear-gradient(right, red, black); 
+  background: -moz-linear-gradient(right, red, black);*/ 
+}
+.Grid_Footer
+{
+    border: 1px solid #ccc;
+    font-size: 11px;
+    height: 17px;
+    padding-left: 5px;
+    color: #545454;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*background: #6393c1;*/
+      background: #C0C0C0;
+}
+
+.Grid_RowStyle
+{
+    border: 1px solid #ddd;
+    font-size: 11px;
+    height: 17px;
+    padding-left: 5px;
+    color: #153F67;
+    vertical-align: middle;
+    background: #F7F6F3;
+}
+
+/*..............................................*/
+
+
+.Grid_AltRowStyle
+{
+   border: 1px solid #ddd;
+    font-size: 11px;
+    height: 17px;
+    padding-left: 5px;
+    color: #153F67;
+    vertical-align: middle;
+    background: #fff;
+}

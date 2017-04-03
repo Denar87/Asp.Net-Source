@@ -1,0 +1,1810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERPSSL_MASTERModelStoreContainer" CdmEntityContainer="ERPSSLHBEntities">
+    <EntitySetMapping Name="HRM_Academics">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Academics">
+        <MappingFragment StoreEntitySet="HRM_Academics">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="InstituteName" ColumnName="InstituteName" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Major" ColumnName="Major" />
+          <ScalarProperty Name="PassingYear" ColumnName="PassingYear" />
+          <ScalarProperty Name="LevelOfEducation" ColumnName="LevelOfEducation" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="AcademicId" ColumnName="AcademicId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_DrivingLicencs">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_DrivingLicencs">
+        <MappingFragment StoreEntitySet="HRM_DrivingLicencs">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ExperiredDate" ColumnName="ExperiredDate" />
+          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="LicenceNo" ColumnName="LicenceNo" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="DrivingId" ColumnName="DrivingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EDUCATION">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EDUCATION">
+        <MappingFragment StoreEntitySet="HRM_EDUCATION">
+          <ScalarProperty Name="achievement" ColumnName="achievement" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="passing_year" ColumnName="passing_year" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="institute_name" ColumnName="institute_name" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="exam" ColumnName="exam" />
+          <ScalarProperty Name="level_of_Education" ColumnName="level_of_Education" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EMPLOYEE_DOCUMENTS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EMPLOYEE_DOCUMENTS">
+        <MappingFragment StoreEntitySet="HRM_EMPLOYEE_DOCUMENTS">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="FILE_SIZE" ColumnName="FILE_SIZE" />
+          <ScalarProperty Name="FILE_PATH" ColumnName="FILE_PATH" />
+          <ScalarProperty Name="FILE_TYPE" ColumnName="FILE_TYPE" />
+          <ScalarProperty Name="FILE_TITLE" ColumnName="FILE_TITLE" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="FILE_ID" ColumnName="FILE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EMPLOYEES">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EMPLOYEES">
+        <MappingFragment StoreEntitySet="HRM_EMPLOYEES">
+          <ScalarProperty Name="RptBossDSG" ColumnName="RptBossDSG" />
+          <ScalarProperty Name="ReportingBossName" ColumnName="ReportingBossName" />
+          <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+          <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+          <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+          <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="DATE_JOINED" ColumnName="DATE_JOINED" />
+          <ScalarProperty Name="EMP_NOMINEE_RELATION" ColumnName="EMP_NOMINEE_RELATION" />
+          <ScalarProperty Name="EMP_NOMINEE_AGE" ColumnName="EMP_NOMINEE_AGE" />
+          <ScalarProperty Name="EMP_NOMINEE_ADDRESS" ColumnName="EMP_NOMINEE_ADDRESS" />
+          <ScalarProperty Name="EMP_NOMINEE_CONTACT" ColumnName="EMP_NOMINEE_CONTACT" />
+          <ScalarProperty Name="EMP_NOMINEE_NAME" ColumnName="EMP_NOMINEE_NAME" />
+          <ScalarProperty Name="EMP_RESULT" ColumnName="EMP_RESULT" />
+          <ScalarProperty Name="EMP_DEGREE" ColumnName="EMP_DEGREE" />
+          <ScalarProperty Name="EMP_INSTITUTE" ColumnName="EMP_INSTITUTE" />
+          <ScalarProperty Name="EMP_EDUCATION" ColumnName="EMP_EDUCATION" />
+          <ScalarProperty Name="EMP_PER_ADDRESS" ColumnName="EMP_PER_ADDRESS" />
+          <ScalarProperty Name="EMP_PRE_ADDRESS" ColumnName="EMP_PRE_ADDRESS" />
+          <ScalarProperty Name="EMP_EMG_CONTACT_NO" ColumnName="EMP_EMG_CONTACT_NO" />
+          <ScalarProperty Name="EMP_CONTACT_NO" ColumnName="EMP_CONTACT_NO" />
+          <ScalarProperty Name="EMP_COMPANY_EMAIL" ColumnName="EMP_COMPANY_EMAIL" />
+          <ScalarProperty Name="EMP_ALT_EMAIL" ColumnName="EMP_ALT_EMAIL" />
+          <ScalarProperty Name="EMP_EMAIL" ColumnName="EMP_EMAIL" />
+          <ScalarProperty Name="EMP_BLOOD_GRP" ColumnName="EMP_BLOOD_GRP" />
+          <ScalarProperty Name="EMP_NATIONALITY" ColumnName="EMP_NATIONALITY" />
+          <ScalarProperty Name="EMP_RELIGION" ColumnName="EMP_RELIGION" />
+          <ScalarProperty Name="EMP_MARITUAL_STATUS" ColumnName="EMP_MARITUAL_STATUS" />
+          <ScalarProperty Name="EMP_DOB" ColumnName="EMP_DOB" />
+          <ScalarProperty Name="EMP_MOTHERS_NAME" ColumnName="EMP_MOTHERS_NAME" />
+          <ScalarProperty Name="EMP_FATHERS_NAME" ColumnName="EMP_FATHERS_NAME" />
+          <ScalarProperty Name="EMP_SEX" ColumnName="EMP_SEX" />
+          <ScalarProperty Name="EMP_LASTNAME" ColumnName="EMP_LASTNAME" />
+          <ScalarProperty Name="EMP_FIRSTNAME" ColumnName="EMP_FIRSTNAME" />
+          <ScalarProperty Name="EMP_TITLE" ColumnName="EMP_TITLE" />
+          <ScalarProperty Name="SCHEDULE_ID" ColumnName="SCHEDULE_ID" />
+          <ScalarProperty Name="GRADE_ID" ColumnName="GRADE_ID" />
+          <ScalarProperty Name="DEG_ID" ColumnName="DEG_ID" />
+          <ScalarProperty Name="SUB_SEC_ID" ColumnName="SUB_SEC_ID" />
+          <ScalarProperty Name="SEC_ID" ColumnName="SEC_ID" />
+          <ScalarProperty Name="DPT_ID" ColumnName="DPT_ID" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Office_ID" ColumnName="Office_ID" />
+          <ScalarProperty Name="Region_ID" ColumnName="Region_ID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Experiences">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Experiences">
+        <MappingFragment StoreEntitySet="HRM_Experiences">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Experience_Duration" ColumnName="Experience_Duration" />
+          <ScalarProperty Name="EExperience_Responsibilites" ColumnName="EExperience_Responsibilites" />
+          <ScalarProperty Name="Experience_AreaOfExperience" ColumnName="Experience_AreaOfExperience" />
+          <ScalarProperty Name="Experience_PositionHeld" ColumnName="Experience_PositionHeld" />
+          <ScalarProperty Name="Experience_CompanyDepartment" ColumnName="Experience_CompanyDepartment" />
+          <ScalarProperty Name="Experience_CompanyLocation" ColumnName="Experience_CompanyLocation" />
+          <ScalarProperty Name="Experience_CompanyBussiness" ColumnName="Experience_CompanyBussiness" />
+          <ScalarProperty Name="Experience_Company" ColumnName="Experience_Company" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ExperienceId" ColumnName="ExperienceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_GRADE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_GRADE">
+        <MappingFragment StoreEntitySet="HRM_GRADE">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="OTHERS" ColumnName="OTHERS" />
+          <ScalarProperty Name="FOOD_ALLOW" ColumnName="FOOD_ALLOW" />
+          <ScalarProperty Name="CONVEYANCE" ColumnName="CONVEYANCE" />
+          <ScalarProperty Name="MEDICAL" ColumnName="MEDICAL" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="HOUSE_RENT" ColumnName="HOUSE_RENT" />
+          <ScalarProperty Name="GROSS_SAL" ColumnName="GROSS_SAL" />
+          <ScalarProperty Name="STEP" ColumnName="STEP" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="GRADE_ID" ColumnName="GRADE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_HOLIDAY_TYPE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_HOLIDAY_TYPE">
+        <MappingFragment StoreEntitySet="HRM_HOLIDAY_TYPE">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="HOLIDAY_TYPE_NAME" ColumnName="HOLIDAY_TYPE_NAME" />
+          <ScalarProperty Name="HOLIDAY_TYPE_ID" ColumnName="HOLIDAY_TYPE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_HOLIDAYS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_HOLIDAYS">
+        <MappingFragment StoreEntitySet="HRM_HOLIDAYS">
+          <ScalarProperty Name="HolidayCode" ColumnName="HolidayCode" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="HOLIDAY_DATE" ColumnName="HOLIDAY_DATE" />
+          <ScalarProperty Name="HOLIDAY_NAME" ColumnName="HOLIDAY_NAME" />
+          <ScalarProperty Name="HOLIDAY_TYPE_ID" ColumnName="HOLIDAY_TYPE_ID" />
+          <ScalarProperty Name="HOLIDAY_ID" ColumnName="HOLIDAY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_HR_DEMAND">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_HR_DEMAND">
+        <MappingFragment StoreEntitySet="HRM_HR_DEMAND">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="HR_DEMAND_DECRASE" ColumnName="HR_DEMAND_DECRASE" />
+          <ScalarProperty Name="HR_DEMAND_INCRASE" ColumnName="HR_DEMAND_INCRASE" />
+          <ScalarProperty Name="HR_DEMAND_DATE" ColumnName="HR_DEMAND_DATE" />
+          <ScalarProperty Name="HR_DEMAND_NUM" ColumnName="HR_DEMAND_NUM" />
+          <ScalarProperty Name="SUB_SEC_ID" ColumnName="SUB_SEC_ID" />
+          <ScalarProperty Name="SEC_ID" ColumnName="SEC_ID" />
+          <ScalarProperty Name="DPT_ID" ColumnName="DPT_ID" />
+          <ScalarProperty Name="HR_DEMAND_ID" ColumnName="HR_DEMAND_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LanguageProficiency">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LanguageProficiency">
+        <MappingFragment StoreEntitySet="HRM_LanguageProficiency">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Speaking" ColumnName="Speaking" />
+          <ScalarProperty Name="Writting" ColumnName="Writting" />
+          <ScalarProperty Name="Reading" ColumnName="Reading" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="LanguageProficiencyId" ColumnName="LanguageProficiencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LEAVE_DETAILS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LEAVE_DETAILS">
+        <MappingFragment StoreEntitySet="HRM_LEAVE_DETAILS">
+          <ScalarProperty Name="LEV_DATES" ColumnName="LEV_DATES" />
+          <ScalarProperty Name="LEV_APP_ID" ColumnName="LEV_APP_ID" />
+          <ScalarProperty Name="LEV_DETAILS_ID" ColumnName="LEV_DETAILS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LEAVE_EMPLOYEE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LEAVE_EMPLOYEE">
+        <MappingFragment StoreEntitySet="HRM_LEAVE_EMPLOYEE">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="TOTAL_LEV_DAYS" ColumnName="TOTAL_LEV_DAYS" />
+          <ScalarProperty Name="TOTAL_REM_DAY" ColumnName="TOTAL_REM_DAY" />
+          <ScalarProperty Name="LEV_TYPE_ID" ColumnName="LEV_TYPE_ID" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="LEV_APP_ID" ColumnName="LEV_APP_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LEAVE_TYPE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LEAVE_TYPE">
+        <MappingFragment StoreEntitySet="HRM_LEAVE_TYPE">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="LEV_DAYS" ColumnName="LEV_DAYS" />
+          <ScalarProperty Name="LEV_TYPE" ColumnName="LEV_TYPE" />
+          <ScalarProperty Name="LEV_ID" ColumnName="LEV_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Regions">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Regions">
+        <MappingFragment StoreEntitySet="HRM_Regions">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="RegionCode" ColumnName="RegionCode" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SECTIONS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SECTIONS">
+        <MappingFragment StoreEntitySet="HRM_SECTIONS">
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="DPT_ID" ColumnName="DPT_ID" />
+          <ScalarProperty Name="SEC_NAME" ColumnName="SEC_NAME" />
+          <ScalarProperty Name="SEC_ID" ColumnName="SEC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SERVICE_CONTRACT">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SERVICE_CONTRACT">
+        <MappingFragment StoreEntitySet="HRM_SERVICE_CONTRACT">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="CONTRACT" ColumnName="CONTRACT" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="CONT_ID" ColumnName="CONT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Skills">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Skills">
+        <MappingFragment StoreEntitySet="HRM_Skills">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Skill_ExtraActivities" ColumnName="Skill_ExtraActivities" />
+          <ScalarProperty Name="Skill_Description" ColumnName="Skill_Description" />
+          <ScalarProperty Name="Skill_Specialization" ColumnName="Skill_Specialization" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SUB_SECTIONS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SUB_SECTIONS">
+        <MappingFragment StoreEntitySet="HRM_SUB_SECTIONS">
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="SEC_ID" ColumnName="SEC_ID" />
+          <ScalarProperty Name="SUB_SEC_NAME" ColumnName="SUB_SEC_NAME" />
+          <ScalarProperty Name="SUB_SEC_ID" ColumnName="SUB_SEC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Trainings">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Trainings">
+        <MappingFragment StoreEntitySet="HRM_Trainings">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="TraningYear" ColumnName="TraningYear" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Countery" ColumnName="Countery" />
+          <ScalarProperty Name="Institue" ColumnName="Institue" />
+          <ScalarProperty Name="TraningTopicsCovered" ColumnName="TraningTopicsCovered" />
+          <ScalarProperty Name="TraningTitle" ColumnName="TraningTitle" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TrainingId" ColumnName="TrainingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LetterType">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LetterType">
+        <MappingFragment StoreEntitySet="HRM_LetterType">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="LatterType" ColumnName="LatterType" />
+          <ScalarProperty Name="LatterTypeId" ColumnName="LatterTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LETTER_FORMAT">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LETTER_FORMAT">
+        <MappingFragment StoreEntitySet="HRM_LETTER_FORMAT">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="LTR_Title" ColumnName="LTR_Title" />
+          <ScalarProperty Name="LTR_Type" ColumnName="LTR_Type" />
+          <ScalarProperty Name="LTR_Details" ColumnName="LTR_Details" />
+          <ScalarProperty Name="LTR_ID" ColumnName="LTR_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_StoreLetter">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_StoreLetter">
+        <MappingFragment StoreEntitySet="HRM_StoreLetter">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="StoreLetterId" ColumnName="StoreLetterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EmployeeType">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EmployeeType">
+        <MappingFragment StoreEntitySet="HRM_EmployeeType">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+          <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_BankInfo">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_BankInfo">
+        <MappingFragment StoreEntitySet="HRM_BankInfo">
+          <ScalarProperty Name="MobileBankName" ColumnName="MobileBankName" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="BankInfoId" ColumnName="BankInfoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EmployeeStatement">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EmployeeStatement">
+        <MappingFragment StoreEntitySet="HRM_EmployeeStatement">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="RelativeEID" ColumnName="RelativeEID" />
+          <ScalarProperty Name="NameOfRelative" ColumnName="NameOfRelative" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmployeeStatmentId" ColumnName="EmployeeStatmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_JobAllocationtemporary">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_JobAllocationtemporary">
+        <MappingFragment StoreEntitySet="HRM_JobAllocationtemporary">
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="JoBAllocationTemID" ColumnName="JoBAllocationTemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Attendance_Manual_Status">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Attendance_Manual_Status">
+        <MappingFragment StoreEntitySet="HRM_Attendance_Manual_Status">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="ATT_DATE" ColumnName="ATT_DATE" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="OVER_TIME" ColumnName="OVER_TIME" />
+          <ScalarProperty Name="OT_STATUS" ColumnName="OT_STATUS" />
+          <ScalarProperty Name="WORKED_TIME" ColumnName="WORKED_TIME" />
+          <ScalarProperty Name="OUT_TIME" ColumnName="OUT_TIME" />
+          <ScalarProperty Name="IN_TIME" ColumnName="IN_TIME" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="ATTE_ID" ColumnName="ATTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRPAY_SALARY">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRPAY_SALARY">
+        <MappingFragment StoreEntitySet="HRPAY_SALARY">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="PAY_STATUS" ColumnName="PAY_STATUS" />
+          <ScalarProperty Name="TOTAL_ABSENT_COST" ColumnName="TOTAL_ABSENT_COST" />
+          <ScalarProperty Name="TOTAL_LEAVE_COST" ColumnName="TOTAL_LEAVE_COST" />
+          <ScalarProperty Name="TOTAL_BONUS" ColumnName="TOTAL_BONUS" />
+          <ScalarProperty Name="TOTAL_TAX" ColumnName="TOTAL_TAX" />
+          <ScalarProperty Name="TOTAL_GROSS_SAL" ColumnName="TOTAL_GROSS_SAL" />
+          <ScalarProperty Name="TOTAL_BASIC_NEW" ColumnName="TOTAL_BASIC_NEW" />
+          <ScalarProperty Name="DATE_PROCESSED" ColumnName="DATE_PROCESSED" />
+          <ScalarProperty Name="SALARY_MONTH" ColumnName="SALARY_MONTH" />
+          <ScalarProperty Name="TOTAL_LEAVE" ColumnName="TOTAL_LEAVE" />
+          <ScalarProperty Name="OTHER_HOLIDAYS" ColumnName="OTHER_HOLIDAYS" />
+          <ScalarProperty Name="WORK_HOLIDAYS" ColumnName="WORK_HOLIDAYS" />
+          <ScalarProperty Name="OVER_TIME" ColumnName="OVER_TIME" />
+          <ScalarProperty Name="WORKED_DAYS" ColumnName="WORKED_DAYS" />
+          <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+          <ScalarProperty Name="PROCESS_ID" ColumnName="PROCESS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_DESIGNATIONS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_DESIGNATIONS">
+        <MappingFragment StoreEntitySet="HRM_DESIGNATIONS">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Holiday_Allowance" ColumnName="Holiday_Allowance" />
+          <ScalarProperty Name="AttendanceBonus" ColumnName="AttendanceBonus" />
+          <ScalarProperty Name="OTHERS" ColumnName="OTHERS" />
+          <ScalarProperty Name="FixedAllowance" ColumnName="FixedAllowance" />
+          <ScalarProperty Name="FOOD_ALLOW" ColumnName="FOOD_ALLOW" />
+          <ScalarProperty Name="CONVEYANCE" ColumnName="CONVEYANCE" />
+          <ScalarProperty Name="MEDICAL" ColumnName="MEDICAL" />
+          <ScalarProperty Name="BASIC" ColumnName="BASIC" />
+          <ScalarProperty Name="HOUSE_RENT" ColumnName="HOUSE_RENT" />
+          <ScalarProperty Name="GROSS_SAL" ColumnName="GROSS_SAL" />
+          <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+          <ScalarProperty Name="DEG_NAME" ColumnName="DEG_NAME" />
+          <ScalarProperty Name="DEG_ID" ColumnName="DEG_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_JOB_TERMINATE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_JOB_TERMINATE">
+        <MappingFragment StoreEntitySet="HRM_JOB_TERMINATE">
+          <ScalarProperty Name="Termination_Status" ColumnName="Termination_Status" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="TERMINATE_DATE" ColumnName="TERMINATE_DATE" />
+          <ScalarProperty Name="TERMINATE_ID" ColumnName="TERMINATE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EVALUATION">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EVALUATION">
+        <MappingFragment StoreEntitySet="HRM_EVALUATION">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="OUT_OF" ColumnName="OUT_OF" />
+          <ScalarProperty Name="RELIABILITY" ColumnName="RELIABILITY" />
+          <ScalarProperty Name="KNOWLEDGE" ColumnName="KNOWLEDGE" />
+          <ScalarProperty Name="INITIATIVE" ColumnName="INITIATIVE" />
+          <ScalarProperty Name="CO_OPERATION" ColumnName="CO_OPERATION" />
+          <ScalarProperty Name="ATTENDANCE" ColumnName="ATTENDANCE" />
+          <ScalarProperty Name="ORDERLINES" ColumnName="ORDERLINES" />
+          <ScalarProperty Name="INNOVATION" ColumnName="INNOVATION" />
+          <ScalarProperty Name="HABBIT" ColumnName="HABBIT" />
+          <ScalarProperty Name="ACCURACY" ColumnName="ACCURACY" />
+          <ScalarProperty Name="ABSENCERROR" ColumnName="ABSENCERROR" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EVAL_ID" ColumnName="EVAL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_MachineReadableProblem">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_MachineReadableProblem">
+        <MappingFragment StoreEntitySet="HRM_MachineReadableProblem">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Working_Day" ColumnName="Working_Day" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="Att_Day" ColumnName="Att_Day" />
+          <ScalarProperty Name="Att_Date" ColumnName="Att_Date" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="MachineProblem_Id" ColumnName="MachineProblem_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_OfficialDay">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_OfficialDay">
+        <MappingFragment StoreEntitySet="HRM_OfficialDay">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="Working_Day" ColumnName="Working_Day" />
+          <ScalarProperty Name="Official_Date" ColumnName="Official_Date" />
+          <ScalarProperty Name="OfficialDay_Id" ColumnName="OfficialDay_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TimeScheduleByReligion">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TimeScheduleByReligion">
+        <MappingFragment StoreEntitySet="HRM_TimeScheduleByReligion">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ReasonType" ColumnName="ReasonType" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="ReligionSechedule_Id" ColumnName="ReligionSechedule_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Office">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Office">
+        <MappingFragment StoreEntitySet="HRM_Office">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_DEPARTMENTS">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_DEPARTMENTS">
+        <MappingFragment StoreEntitySet="HRM_DEPARTMENTS">
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="DPT_CODE" ColumnName="DPT_CODE" />
+          <ScalarProperty Name="DPT_NAME" ColumnName="DPT_NAME" />
+          <ScalarProperty Name="Office_ID" ColumnName="Office_ID" />
+          <ScalarProperty Name="DPT_ID" ColumnName="DPT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TemporySalaryIncrement">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TemporySalaryIncrement">
+        <MappingFragment StoreEntitySet="HRM_TemporySalaryIncrement">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="IncrementDate" ColumnName="IncrementDate" />
+          <ScalarProperty Name="IncrementRate" ColumnName="IncrementRate" />
+          <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+          <ScalarProperty Name="CurrentSalary" ColumnName="CurrentSalary" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TIncrimetId" ColumnName="TIncrimetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_ChildInfo">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_ChildInfo">
+        <MappingFragment StoreEntitySet="HRM_ChildInfo">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_JobAllocation">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_JobAllocation">
+        <MappingFragment StoreEntitySet="HRM_JobAllocation">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="JobAllocatonDate" ColumnName="JobAllocatonDate" />
+          <ScalarProperty Name="JobAllocationTime" ColumnName="JobAllocationTime" />
+          <ScalarProperty Name="UpdateRemark" ColumnName="UpdateRemark" />
+          <ScalarProperty Name="CancelStatus" ColumnName="CancelStatus" />
+          <ScalarProperty Name="PendingStatus" ColumnName="PendingStatus" />
+          <ScalarProperty Name="SuccessStatus" ColumnName="SuccessStatus" />
+          <ScalarProperty Name="RequestFrom" ColumnName="RequestFrom" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="JobAllocationCode" ColumnName="JobAllocationCode" />
+          <ScalarProperty Name="JobAllocationId" ColumnName="JobAllocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_MaternityLeave">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_MaternityLeave">
+        <MappingFragment StoreEntitySet="HRM_MaternityLeave">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="HrmReportinBossId" ColumnName="HrmReportinBossId" />
+          <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+          <ScalarProperty Name="DisApproveStatus" ColumnName="DisApproveStatus" />
+          <ScalarProperty Name="ApproveStatus" ColumnName="ApproveStatus" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TotalDay" ColumnName="TotalDay" />
+          <ScalarProperty Name="LeaveDateTo" ColumnName="LeaveDateTo" />
+          <ScalarProperty Name="LeaveDateFrom" ColumnName="LeaveDateFrom" />
+          <ScalarProperty Name="AppliedDate" ColumnName="AppliedDate" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="MaternityLeaveId" ColumnName="MaternityLeaveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TimeInoutOTCalculation">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TimeInoutOTCalculation">
+        <MappingFragment StoreEntitySet="HRM_TimeInoutOTCalculation">
+          <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+          <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="TotalOT" ColumnName="TotalOT" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="d31" ColumnName="d31" />
+          <ScalarProperty Name="d30" ColumnName="d30" />
+          <ScalarProperty Name="d29" ColumnName="d29" />
+          <ScalarProperty Name="d28" ColumnName="d28" />
+          <ScalarProperty Name="d27" ColumnName="d27" />
+          <ScalarProperty Name="d26" ColumnName="d26" />
+          <ScalarProperty Name="d25" ColumnName="d25" />
+          <ScalarProperty Name="d24" ColumnName="d24" />
+          <ScalarProperty Name="d23" ColumnName="d23" />
+          <ScalarProperty Name="d22" ColumnName="d22" />
+          <ScalarProperty Name="d21" ColumnName="d21" />
+          <ScalarProperty Name="d20" ColumnName="d20" />
+          <ScalarProperty Name="d19" ColumnName="d19" />
+          <ScalarProperty Name="d18" ColumnName="d18" />
+          <ScalarProperty Name="d17" ColumnName="d17" />
+          <ScalarProperty Name="d16" ColumnName="d16" />
+          <ScalarProperty Name="d15" ColumnName="d15" />
+          <ScalarProperty Name="d14" ColumnName="d14" />
+          <ScalarProperty Name="d13" ColumnName="d13" />
+          <ScalarProperty Name="d12" ColumnName="d12" />
+          <ScalarProperty Name="d11" ColumnName="d11" />
+          <ScalarProperty Name="d10" ColumnName="d10" />
+          <ScalarProperty Name="d9" ColumnName="d9" />
+          <ScalarProperty Name="d8" ColumnName="d8" />
+          <ScalarProperty Name="d7" ColumnName="d7" />
+          <ScalarProperty Name="d6" ColumnName="d6" />
+          <ScalarProperty Name="d5" ColumnName="d5" />
+          <ScalarProperty Name="d4" ColumnName="d4" />
+          <ScalarProperty Name="d3" ColumnName="d3" />
+          <ScalarProperty Name="d2" ColumnName="d2" />
+          <ScalarProperty Name="d1" ColumnName="d1" />
+          <ScalarProperty Name="Esection" ColumnName="Esection" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="DPT_NAME" ColumnName="DPT_NAME" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EMPID" ColumnName="EMPID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Pay_Salary_Adjustment">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Pay_Salary_Adjustment">
+        <MappingFragment StoreEntitySet="HRM_Pay_Salary_Adjustment">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Date_Proccessed" ColumnName="Date_Proccessed" />
+          <ScalarProperty Name="Adjust_Month" ColumnName="Adjust_Month" />
+          <ScalarProperty Name="Adjust_Amount" ColumnName="Adjust_Amount" />
+          <ScalarProperty Name="Adjust_Purpose" ColumnName="Adjust_Purpose" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="SalaryAdjust_ID" ColumnName="SalaryAdjust_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AdvanceSalarySummary">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AdvanceSalarySummary">
+        <MappingFragment StoreEntitySet="HRM_AdvanceSalarySummary">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NoOfInstalment" ColumnName="NoOfInstalment" />
+          <ScalarProperty Name="InstalmentAmount" ColumnName="InstalmentAmount" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ASCode" ColumnName="ASCode" />
+          <ScalarProperty Name="AdvanceSalaryId" ColumnName="AdvanceSalaryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EmployeeBenefitSetup">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EmployeeBenefitSetup">
+        <MappingFragment StoreEntitySet="HRM_EmployeeBenefitSetup">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Benefittype" ColumnName="Benefittype" />
+          <ScalarProperty Name="BenefittypeId" ColumnName="BenefittypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EmployeeWiseBenefit">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EmployeeWiseBenefit">
+        <MappingFragment StoreEntitySet="HRM_EmployeeWiseBenefit">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="BenefitTypeId" ColumnName="BenefitTypeId" />
+          <ScalarProperty Name="employeeWiseBenefitId" ColumnName="employeeWiseBenefitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EmployeeCategory">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EmployeeCategory">
+        <MappingFragment StoreEntitySet="HRM_EmployeeCategory">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+          <ScalarProperty Name="EmployeeCategory" ColumnName="EmployeeCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AttendanceBouns">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AttendanceBouns">
+        <MappingFragment StoreEntitySet="HRM_AttendanceBouns">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Amount2" ColumnName="Amount2" />
+          <ScalarProperty Name="Amount1" ColumnName="Amount1" />
+          <ScalarProperty Name="Desgination" ColumnName="Desgination" />
+          <ScalarProperty Name="AttendanceDays2" ColumnName="AttendanceDays2" />
+          <ScalarProperty Name="AttendanceDays1" ColumnName="AttendanceDays1" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="attendanceBounsId" ColumnName="attendanceBounsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_ReasonType">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_ReasonType">
+        <MappingFragment StoreEntitySet="HRM_ReasonType">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="ReasonType" ColumnName="ReasonType" />
+          <ScalarProperty Name="ReasonTypeId" ColumnName="ReasonTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AttendanceReason">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AttendanceReason">
+        <MappingFragment StoreEntitySet="HRM_AttendanceReason">
+          <ScalarProperty Name="TotalHour" ColumnName="TotalHour" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ReasonType" ColumnName="ReasonType" />
+          <ScalarProperty Name="ReasonTypeId" ColumnName="ReasonTypeId" />
+          <ScalarProperty Name="LateAllowed" ColumnName="LateAllowed" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="ReasonDate" ColumnName="ReasonDate" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="ReasonId" ColumnName="ReasonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TIMESCHEDULE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TIMESCHEDULE">
+        <MappingFragment StoreEntitySet="HRM_TIMESCHEDULE">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Weekend2Duty_Hour" ColumnName="Weekend2Duty_Hour" />
+          <ScalarProperty Name="Weekend2_Duty" ColumnName="Weekend2_Duty" />
+          <ScalarProperty Name="Weekend1Duty_Hour" ColumnName="Weekend1Duty_Hour" />
+          <ScalarProperty Name="Weekend1_Duty" ColumnName="Weekend1_Duty" />
+          <ScalarProperty Name="TotalHour" ColumnName="TotalHour" />
+          <ScalarProperty Name="LateAllowed" ColumnName="LateAllowed" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Weekend2" ColumnName="Weekend2" />
+          <ScalarProperty Name="Weekend1" ColumnName="Weekend1" />
+          <ScalarProperty Name="ShiftType" ColumnName="ShiftType" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_DepartmentWiseShift">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_DepartmentWiseShift">
+        <MappingFragment StoreEntitySet="HRM_DepartmentWiseShift">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Weekend2Duty_Hour" ColumnName="Weekend2Duty_Hour" />
+          <ScalarProperty Name="Weekend2_Duty" ColumnName="Weekend2_Duty" />
+          <ScalarProperty Name="Weekend1Duty_Hour" ColumnName="Weekend1Duty_Hour" />
+          <ScalarProperty Name="Weekend1_Duty" ColumnName="Weekend1_Duty" />
+          <ScalarProperty Name="TotalHour" ColumnName="TotalHour" />
+          <ScalarProperty Name="LateAllowed" ColumnName="LateAllowed" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Weekend2" ColumnName="Weekend2" />
+          <ScalarProperty Name="Weekend1" ColumnName="Weekend1" />
+          <ScalarProperty Name="ShiftType" ColumnName="ShiftType" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AttendanceReason_Individual">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AttendanceReason_Individual">
+        <MappingFragment StoreEntitySet="HRM_AttendanceReason_Individual">
+          <ScalarProperty Name="LateAllowed" ColumnName="LateAllowed" />
+          <ScalarProperty Name="Shift_TotalHour" ColumnName="Shift_TotalHour" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ReasonType" ColumnName="ReasonType" />
+          <ScalarProperty Name="ReasonTypeId" ColumnName="ReasonTypeId" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="ReasonDate" ColumnName="ReasonDate" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="Bio_MatrixId" ColumnName="Bio_MatrixId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Ind_ReasonId" ColumnName="Ind_ReasonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EducationType">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EducationType">
+        <MappingFragment StoreEntitySet="HRM_EducationType">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="EducationTypeName" ColumnName="EducationTypeName" />
+          <ScalarProperty Name="EducationTypeID" ColumnName="EducationTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_CounteryNationality">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_CounteryNationality">
+        <MappingFragment StoreEntitySet="HRM_CounteryNationality">
+          <ScalarProperty Name="ConteryNationality" ColumnName="ConteryNationality" />
+          <ScalarProperty Name="ConteryName" ColumnName="ConteryName" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hrm_PersonalInfoTemp">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.Hrm_PersonalInfoTemp">
+        <MappingFragment StoreEntitySet="Hrm_PersonalInfoTemp">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+          <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+          <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+          <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+          <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+          <ScalarProperty Name="JoiningDateFromU" ColumnName="JoiningDateFromU" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+          <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+          <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+          <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+          <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+          <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+          <ScalarProperty Name="OTApplicableFU" ColumnName="OTApplicableFU" />
+          <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+          <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+          <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+          <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+          <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+          <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+          <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+          <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+          <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+          <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+          <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+          <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+          <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+          <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+          <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+          <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+          <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+          <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+          <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+          <ScalarProperty Name="Desgination" ColumnName="Desgination" />
+          <ScalarProperty Name="SubSection" ColumnName="SubSection" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Regions" ColumnName="Regions" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AttendancePunishment">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AttendancePunishment">
+        <MappingFragment StoreEntitySet="HRM_AttendancePunishment">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="PunishedBy" ColumnName="PunishedBy" />
+          <ScalarProperty Name="AdjDate" ColumnName="AdjDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="AttenAdjID" ColumnName="AttenAdjID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AdvanceSalaryDetails">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AdvanceSalaryDetails">
+        <MappingFragment StoreEntitySet="HRM_AdvanceSalaryDetails">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AdvanceDeduction" ColumnName="AdvanceDeduction" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NoOfInstalment" ColumnName="NoOfInstalment" />
+          <ScalarProperty Name="InstalmentAmount" ColumnName="InstalmentAmount" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ASCode" ColumnName="ASCode" />
+          <ScalarProperty Name="AdvanceSalaryDetailsId" ColumnName="AdvanceSalaryDetailsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LiabilityType">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LiabilityType">
+        <MappingFragment StoreEntitySet="HRM_LiabilityType">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TAXTypeAutoID" ColumnName="TAXTypeAutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TAXLiabilityConfig">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TAXLiabilityConfig">
+        <MappingFragment StoreEntitySet="HRM_TAXLiabilityConfig">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="OfTax" ColumnName="OfTax" />
+          <ScalarProperty Name="IncomeTo" ColumnName="IncomeTo" />
+          <ScalarProperty Name="IncomeFrom" ColumnName="IncomeFrom" />
+          <ScalarProperty Name="TAXTypeAutoID" ColumnName="TAXTypeAutoID" />
+          <ScalarProperty Name="TAXLiabilityConfigID" ColumnName="TAXLiabilityConfigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_PFConfiguration">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_PFConfiguration">
+        <MappingFragment StoreEntitySet="HRM_PFConfiguration">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="PFEmployee" ColumnName="PFEmployee" />
+          <ScalarProperty Name="OwnerContribution" ColumnName="OwnerContribution" />
+          <ScalarProperty Name="PFContributionID" ColumnName="PFContributionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_IncomeHeader">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_IncomeHeader">
+        <MappingFragment StoreEntitySet="HRM_IncomeHeader">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="IncomeHeader" ColumnName="IncomeHeader" />
+          <ScalarProperty Name="IncomeHeaderID" ColumnName="IncomeHeaderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_IncomeHeaderDetails">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_IncomeHeaderDetails">
+        <MappingFragment StoreEntitySet="HRM_IncomeHeaderDetails">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="PlussORLess" ColumnName="PlussORLess" />
+          <ScalarProperty Name="ChargeableDeatils" ColumnName="ChargeableDeatils" />
+          <ScalarProperty Name="ChargeablePar" ColumnName="ChargeablePar" />
+          <ScalarProperty Name="IncomeHeaderID" ColumnName="IncomeHeaderID" />
+          <ScalarProperty Name="IncomeHeaderDetils" ColumnName="IncomeHeaderDetils" />
+          <ScalarProperty Name="IncomeHeaderDetailsID" ColumnName="IncomeHeaderDetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_TAXPFApplicable">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_TAXPFApplicable">
+        <MappingFragment StoreEntitySet="HRM_TAXPFApplicable">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="DisabledFreedomFighter" ColumnName="DisabledFreedomFighter" />
+          <ScalarProperty Name="Disabled" ColumnName="Disabled" />
+          <ScalarProperty Name="SeniorCitizen" ColumnName="SeniorCitizen" />
+          <ScalarProperty Name="FemaleStatus" ColumnName="FemaleStatus" />
+          <ScalarProperty Name="MaleStatus" ColumnName="MaleStatus" />
+          <ScalarProperty Name="PFStatus" ColumnName="PFStatus" />
+          <ScalarProperty Name="TAXStatus" ColumnName="TAXStatus" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TAXPFApplicableID" ColumnName="TAXPFApplicableID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_LeaveApply">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_LeaveApply">
+        <MappingFragment StoreEntitySet="HRM_LeaveApply">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="IsPandingStatus" ColumnName="IsPandingStatus" />
+          <ScalarProperty Name="ApporveBy" ColumnName="ApporveBy" />
+          <ScalarProperty Name="LeaveStatusForReportingBoss" ColumnName="LeaveStatusForReportingBoss" />
+          <ScalarProperty Name="LeaveStatusHRM" ColumnName="LeaveStatusHRM" />
+          <ScalarProperty Name="ReportingBoss" ColumnName="ReportingBoss" />
+          <ScalarProperty Name="ReportingBossHRMDisApproveDate" ColumnName="ReportingBossHRMDisApproveDate" />
+          <ScalarProperty Name="ReportingBoss2DisApproveDate" ColumnName="ReportingBoss2DisApproveDate" />
+          <ScalarProperty Name="ReprotingBoss1DisApproveDate" ColumnName="ReprotingBoss1DisApproveDate" />
+          <ScalarProperty Name="ReprotingBossHRmDisApporveStatus" ColumnName="ReprotingBossHRmDisApporveStatus" />
+          <ScalarProperty Name="ReportingBoss2DisApporveStatus" ColumnName="ReportingBoss2DisApporveStatus" />
+          <ScalarProperty Name="ReprotingBoss1DisApproveStatus" ColumnName="ReprotingBoss1DisApproveStatus" />
+          <ScalarProperty Name="ReportingBossHRMApproveDate" ColumnName="ReportingBossHRMApproveDate" />
+          <ScalarProperty Name="ReportingBoss2ApproveDate" ColumnName="ReportingBoss2ApproveDate" />
+          <ScalarProperty Name="ReprotingBoss1ApproveDate" ColumnName="ReprotingBoss1ApproveDate" />
+          <ScalarProperty Name="ReprotingBossHRmApporveStatus" ColumnName="ReprotingBossHRmApporveStatus" />
+          <ScalarProperty Name="ReportingBoss2ApporveStatus" ColumnName="ReportingBoss2ApporveStatus" />
+          <ScalarProperty Name="ReprotingBoss1ApproveStatus" ColumnName="ReprotingBoss1ApproveStatus" />
+          <ScalarProperty Name="ReprotingBossHRM" ColumnName="ReprotingBossHRM" />
+          <ScalarProperty Name="ReprotingBoss2" ColumnName="ReprotingBoss2" />
+          <ScalarProperty Name="ReprotingBoss1" ColumnName="ReprotingBoss1" />
+          <ScalarProperty Name="LeaveCurrentYear" ColumnName="LeaveCurrentYear" />
+          <ScalarProperty Name="LeaveToDate" ColumnName="LeaveToDate" />
+          <ScalarProperty Name="LeaveResion" ColumnName="LeaveResion" />
+          <ScalarProperty Name="TotalDay" ColumnName="TotalDay" />
+          <ScalarProperty Name="LeaveTypeId" ColumnName="LeaveTypeId" />
+          <ScalarProperty Name="LeaveDates" ColumnName="LeaveDates" />
+          <ScalarProperty Name="LeaveAppliedDate" ColumnName="LeaveAppliedDate" />
+          <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+          <ScalarProperty Name="Eid" ColumnName="Eid" />
+          <ScalarProperty Name="LeaveCode" ColumnName="LeaveCode" />
+          <ScalarProperty Name="LeaveId" ColumnName="LeaveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Re_Active_LeaveApply">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Re_Active_LeaveApply">
+        <MappingFragment StoreEntitySet="HRM_Re_Active_LeaveApply">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="ApproveDate" ColumnName="ApproveDate" />
+          <ScalarProperty Name="IsPandingStatus" ColumnName="IsPandingStatus" />
+          <ScalarProperty Name="ApporveBy" ColumnName="ApporveBy" />
+          <ScalarProperty Name="LeaveStatusForReportingBoss" ColumnName="LeaveStatusForReportingBoss" />
+          <ScalarProperty Name="LeaveStatusHRM" ColumnName="LeaveStatusHRM" />
+          <ScalarProperty Name="ReportingBoss" ColumnName="ReportingBoss" />
+          <ScalarProperty Name="ReportingBossHRMDisApproveDate" ColumnName="ReportingBossHRMDisApproveDate" />
+          <ScalarProperty Name="ReportingBoss2DisApproveDate" ColumnName="ReportingBoss2DisApproveDate" />
+          <ScalarProperty Name="ReprotingBoss1DisApproveDate" ColumnName="ReprotingBoss1DisApproveDate" />
+          <ScalarProperty Name="ReprotingBossHRmDisApporveStatus" ColumnName="ReprotingBossHRmDisApporveStatus" />
+          <ScalarProperty Name="ReportingBoss2DisApporveStatus" ColumnName="ReportingBoss2DisApporveStatus" />
+          <ScalarProperty Name="ReprotingBoss1DisApproveStatus" ColumnName="ReprotingBoss1DisApproveStatus" />
+          <ScalarProperty Name="ReportingBossHRMApproveDate" ColumnName="ReportingBossHRMApproveDate" />
+          <ScalarProperty Name="ReportingBoss2ApproveDate" ColumnName="ReportingBoss2ApproveDate" />
+          <ScalarProperty Name="ReprotingBoss1ApproveDate" ColumnName="ReprotingBoss1ApproveDate" />
+          <ScalarProperty Name="ReprotingBossHRmApporveStatus" ColumnName="ReprotingBossHRmApporveStatus" />
+          <ScalarProperty Name="ReportingBoss2ApporveStatus" ColumnName="ReportingBoss2ApporveStatus" />
+          <ScalarProperty Name="ReprotingBoss1ApproveStatus" ColumnName="ReprotingBoss1ApproveStatus" />
+          <ScalarProperty Name="ReprotingBossHRM" ColumnName="ReprotingBossHRM" />
+          <ScalarProperty Name="ReprotingBoss2" ColumnName="ReprotingBoss2" />
+          <ScalarProperty Name="ReprotingBoss1" ColumnName="ReprotingBoss1" />
+          <ScalarProperty Name="LeaveCurrentYear" ColumnName="LeaveCurrentYear" />
+          <ScalarProperty Name="LeaveToDate" ColumnName="LeaveToDate" />
+          <ScalarProperty Name="LeaveResion" ColumnName="LeaveResion" />
+          <ScalarProperty Name="TotalDay" ColumnName="TotalDay" />
+          <ScalarProperty Name="LeaveTypeId" ColumnName="LeaveTypeId" />
+          <ScalarProperty Name="LeaveDates" ColumnName="LeaveDates" />
+          <ScalarProperty Name="LeaveAppliedDate" ColumnName="LeaveAppliedDate" />
+          <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+          <ScalarProperty Name="Eid" ColumnName="Eid" />
+          <ScalarProperty Name="LeaveCode" ColumnName="LeaveCode" />
+          <ScalarProperty Name="LeaveId" ColumnName="LeaveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_OfficialDay_Individual">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_OfficialDay_Individual">
+        <MappingFragment StoreEntitySet="HRM_OfficialDay_Individual">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="Working_Day" ColumnName="Working_Day" />
+          <ScalarProperty Name="Official_Date" ColumnName="Official_Date" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="OfficialDay_Id" ColumnName="OfficialDay_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Salary_Deduction">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Salary_Deduction">
+        <MappingFragment StoreEntitySet="HRM_Salary_Deduction">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="Salary_DeductDate" ColumnName="Salary_DeductDate" />
+          <ScalarProperty Name="Salary_DeductDay" ColumnName="Salary_DeductDay" />
+          <ScalarProperty Name="Salary_DeductType" ColumnName="Salary_DeductType" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Attendance_Manual_Log">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Attendance_Manual_Log">
+        <MappingFragment StoreEntitySet="HRM_Attendance_Manual_Log">
+          <ScalarProperty Name="Attendance_Process_Status" ColumnName="Attendance_Process_Status" />
+          <ScalarProperty Name="Update_Status" ColumnName="Update_Status" />
+          <ScalarProperty Name="OT_Deduction" ColumnName="OT_Deduction" />
+          <ScalarProperty Name="OT_ExtraAdd" ColumnName="OT_ExtraAdd" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Working_Day" ColumnName="Working_Day" />
+          <ScalarProperty Name="Attendance_Day" ColumnName="Attendance_Day" />
+          <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="OT_Total" ColumnName="OT_Total" />
+          <ScalarProperty Name="OT_Minute" ColumnName="OT_Minute" />
+          <ScalarProperty Name="OT_Hour" ColumnName="OT_Hour" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="Shift_TotalHour" ColumnName="Shift_TotalHour" />
+          <ScalarProperty Name="Worked_Time" ColumnName="Worked_Time" />
+          <ScalarProperty Name="OT_Status" ColumnName="OT_Status" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="Late_Time" ColumnName="Late_Time" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="Out_Time" ColumnName="Out_Time" />
+          <ScalarProperty Name="In_Time" ColumnName="In_Time" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="ATTE_ID" ColumnName="ATTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AttendanceTemp">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AttendanceTemp">
+        <MappingFragment StoreEntitySet="HRM_AttendanceTemp">
+          <ScalarProperty Name="IOTIME" ColumnName="IOTIME" />
+          <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ATID" ColumnName="ATID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SalaryIncrement">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SalaryIncrement">
+        <MappingFragment StoreEntitySet="HRM_SalaryIncrement">
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+          <ScalarProperty Name="previousSalary" ColumnName="previousSalary" />
+          <ScalarProperty Name="IncrementSalary" ColumnName="IncrementSalary" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="IncrementDate" ColumnName="IncrementDate" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_EMP_TRANSFER">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_EMP_TRANSFER">
+        <MappingFragment StoreEntitySet="HRM_EMP_TRANSFER">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="GRADE_ID_TO" ColumnName="GRADE_ID_TO" />
+          <ScalarProperty Name="GrossSalaryFrom" ColumnName="GrossSalaryFrom" />
+          <ScalarProperty Name="GorssSalaryTo" ColumnName="GorssSalaryTo" />
+          <ScalarProperty Name="GradeTo" ColumnName="GradeTo" />
+          <ScalarProperty Name="STEP_TO" ColumnName="STEP_TO" />
+          <ScalarProperty Name="DEG_ID_TO" ColumnName="DEG_ID_TO" />
+          <ScalarProperty Name="SUB_SEC_ID_TO" ColumnName="SUB_SEC_ID_TO" />
+          <ScalarProperty Name="SEC_ID_TO" ColumnName="SEC_ID_TO" />
+          <ScalarProperty Name="DPT_ID_TO" ColumnName="DPT_ID_TO" />
+          <ScalarProperty Name="GradeFrom" ColumnName="GradeFrom" />
+          <ScalarProperty Name="GRADE_ID_FROM" ColumnName="GRADE_ID_FROM" />
+          <ScalarProperty Name="STEP_FROM" ColumnName="STEP_FROM" />
+          <ScalarProperty Name="DEG_ID_FROM" ColumnName="DEG_ID_FROM" />
+          <ScalarProperty Name="SUB_SEC_ID_FROM" ColumnName="SUB_SEC_ID_FROM" />
+          <ScalarProperty Name="SEC_ID_FROM" ColumnName="SEC_ID_FROM" />
+          <ScalarProperty Name="DPT_ID_FROM" ColumnName="DPT_ID_FROM" />
+          <ScalarProperty Name="Office_ID_TO" ColumnName="Office_ID_TO" />
+          <ScalarProperty Name="Office_ID_FROM" ColumnName="Office_ID_FROM" />
+          <ScalarProperty Name="Regions_ID_TO" ColumnName="Regions_ID_TO" />
+          <ScalarProperty Name="Regions_ID_FROM" ColumnName="Regions_ID_FROM" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER_DATE" />
+          <ScalarProperty Name="TRANSFER_ID" ColumnName="TRANSFER_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SalaryIncrementSLog">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SalaryIncrementSLog">
+        <MappingFragment StoreEntitySet="HRM_SalaryIncrementSLog">
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="SalaryIncrementStatus" ColumnName="SalaryIncrementStatus" />
+          <ScalarProperty Name="previousSalary" ColumnName="previousSalary" />
+          <ScalarProperty Name="IncrementSalary" ColumnName="IncrementSalary" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="IncrementDate" ColumnName="IncrementDate" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_AdvanceSalaryDetailPrevious_Log">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_AdvanceSalaryDetailPrevious_Log">
+        <MappingFragment StoreEntitySet="HRM_AdvanceSalaryDetailPrevious_Log">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="AdvanceDeduction" ColumnName="AdvanceDeduction" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="NoOfInstalment" ColumnName="NoOfInstalment" />
+          <ScalarProperty Name="InstalmentAmount" ColumnName="InstalmentAmount" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="ResionId" ColumnName="ResionId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ASCode" ColumnName="ASCode" />
+          <ScalarProperty Name="AdvanceSalaryDetailsId" ColumnName="AdvanceSalaryDetailsId" />
+          <ScalarProperty Name="AdvanceSalaryDetailsLogId" ColumnName="AdvanceSalaryDetailsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Salary_Punishment">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Salary_Punishment">
+        <MappingFragment StoreEntitySet="HRM_Salary_Punishment">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Salary_Year" ColumnName="Salary_Year" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="TotalDeductDay" ColumnName="TotalDeductDay" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="SalryPunishmentId" ColumnName="SalryPunishmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SalaryUpdate">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SalaryUpdate">
+        <MappingFragment StoreEntitySet="HRM_SalaryUpdate">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="DegID" ColumnName="DegID" />
+          <ScalarProperty Name="CurrendSalary" ColumnName="CurrendSalary" />
+          <ScalarProperty Name="Previoussalary" ColumnName="Previoussalary" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Applicable_PersonalStatus">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Applicable_PersonalStatus">
+        <MappingFragment StoreEntitySet="HRM_Applicable_PersonalStatus">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Approved_OnAmount_Date" ColumnName="Approved_OnAmount_Date" />
+          <ScalarProperty Name="Approved_PF_Applicable_Date" ColumnName="Approved_PF_Applicable_Date" />
+          <ScalarProperty Name="Approved_Tax_Applicable_Date" ColumnName="Approved_Tax_Applicable_Date" />
+          <ScalarProperty Name="Approved_Absence_Applicable_Date" ColumnName="Approved_Absence_Applicable_Date" />
+          <ScalarProperty Name="Approved_Late_Applicable_Date" ColumnName="Approved_Late_Applicable_Date" />
+          <ScalarProperty Name="Approved_Attendance_Bouns_Date" ColumnName="Approved_Attendance_Bouns_Date" />
+          <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+          <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+          <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+          <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+          <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="AppliAutoID" ColumnName="AppliAutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_ATTENDANCE">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_ATTENDANCE">
+        <MappingFragment StoreEntitySet="HRM_ATTENDANCE">
+          <ScalarProperty Name="Leave_Code" ColumnName="Leave_Code" />
+          <ScalarProperty Name="Attendance_Process_Status" ColumnName="Attendance_Process_Status" />
+          <ScalarProperty Name="Update_Status" ColumnName="Update_Status" />
+          <ScalarProperty Name="OT_Deduction" ColumnName="OT_Deduction" />
+          <ScalarProperty Name="OT_ExtraAdd" ColumnName="OT_ExtraAdd" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Working_Day" ColumnName="Working_Day" />
+          <ScalarProperty Name="Attendance_Day" ColumnName="Attendance_Day" />
+          <ScalarProperty Name="Attendance_Date" ColumnName="Attendance_Date" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OT_Applicable" ColumnName="OT_Applicable" />
+          <ScalarProperty Name="OT_Total" ColumnName="OT_Total" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="OT_Minute" ColumnName="OT_Minute" />
+          <ScalarProperty Name="OT_Hour" ColumnName="OT_Hour" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="Shift_TotalHour" ColumnName="Shift_TotalHour" />
+          <ScalarProperty Name="Worked_Time" ColumnName="Worked_Time" />
+          <ScalarProperty Name="OT_Status" ColumnName="OT_Status" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="Late_Time" ColumnName="Late_Time" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="Out_Time" ColumnName="Out_Time" />
+          <ScalarProperty Name="In_Time" ColumnName="In_Time" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="ATTE_ID" ColumnName="ATTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Pay_Salary">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Pay_Salary">
+        <MappingFragment StoreEntitySet="HRM_Pay_Salary">
+          <ScalarProperty Name="Salary_Punishment" ColumnName="Salary_Punishment" />
+          <ScalarProperty Name="Total_Compliance_Deduction" ColumnName="Total_Compliance_Deduction" />
+          <ScalarProperty Name="Holiday_Bill" ColumnName="Holiday_Bill" />
+          <ScalarProperty Name="Night_Bill" ColumnName="Night_Bill" />
+          <ScalarProperty Name="OT_Extra_Amount" ColumnName="OT_Extra_Amount" />
+          <ScalarProperty Name="OT_Compliance_Amount" ColumnName="OT_Compliance_Amount" />
+          <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+          <ScalarProperty Name="Payable_Salary" ColumnName="Payable_Salary" />
+          <ScalarProperty Name="IsSalaryRelease" ColumnName="IsSalaryRelease" />
+          <ScalarProperty Name="IsSalaryCancel" ColumnName="IsSalaryCancel" />
+          <ScalarProperty Name="IsSalaryHeldup" ColumnName="IsSalaryHeldup" />
+          <ScalarProperty Name="Total_Deduction" ColumnName="Total_Deduction" />
+          <ScalarProperty Name="AdvanceDeduction" ColumnName="AdvanceDeduction" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="Total_Benifit" ColumnName="Total_Benifit" />
+          <ScalarProperty Name="Other_Deduction" ColumnName="Other_Deduction" />
+          <ScalarProperty Name="TotalDeductDay" ColumnName="TotalDeductDay" />
+          <ScalarProperty Name="Absent_Deduction" ColumnName="Absent_Deduction" />
+          <ScalarProperty Name="Absent_Day" ColumnName="Absent_Day" />
+          <ScalarProperty Name="LWP" ColumnName="LWP" />
+          <ScalarProperty Name="AL" ColumnName="AL" />
+          <ScalarProperty Name="ML" ColumnName="ML" />
+          <ScalarProperty Name="CL" ColumnName="CL" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Attendance_Bonus" ColumnName="Attendance_Bonus" />
+          <ScalarProperty Name="OT_Taka" ColumnName="OT_Taka" />
+          <ScalarProperty Name="OT_Rate" ColumnName="OT_Rate" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Pay_Status" ColumnName="Pay_Status" />
+          <ScalarProperty Name="Total_Absent_Cost" ColumnName="Total_Absent_Cost" />
+          <ScalarProperty Name="Total_Leave_Cost" ColumnName="Total_Leave_Cost" />
+          <ScalarProperty Name="Total_LateDeduction_Cost" ColumnName="Total_LateDeduction_Cost" />
+          <ScalarProperty Name="Total_Bonus" ColumnName="Total_Bonus" />
+          <ScalarProperty Name="Total_Tax" ColumnName="Total_Tax" />
+          <ScalarProperty Name="Net_Payable" ColumnName="Net_Payable" />
+          <ScalarProperty Name="Total_Gross_Sal" ColumnName="Total_Gross_Sal" />
+          <ScalarProperty Name="Net_Payable_Compliance" ColumnName="Net_Payable_Compliance" />
+          <ScalarProperty Name="Total_Gross_Sal_Compliance" ColumnName="Total_Gross_Sal_Compliance" />
+          <ScalarProperty Name="Total_Basic_New" ColumnName="Total_Basic_New" />
+          <ScalarProperty Name="Date_Processed" ColumnName="Date_Processed" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Total_Leave" ColumnName="Total_Leave" />
+          <ScalarProperty Name="Other_Holiday" ColumnName="Other_Holiday" />
+          <ScalarProperty Name="Work_Holiday" ColumnName="Work_Holiday" />
+          <ScalarProperty Name="Total_Day_Of_Month" ColumnName="Total_Day_Of_Month" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="Worked_Day" ColumnName="Worked_Day" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="PaySalary_ID" ColumnName="PaySalary_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Company">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Company">
+        <MappingFragment StoreEntitySet="HRM_Company">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="REGDate" ColumnName="REGDate" />
+          <ScalarProperty Name="REGNo" ColumnName="REGNo" />
+          <ScalarProperty Name="ERCDate" ColumnName="ERCDate" />
+          <ScalarProperty Name="ERCNo" ColumnName="ERCNo" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_BankInfo_Delete_Log">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_BankInfo_Delete_Log">
+        <MappingFragment StoreEntitySet="HRM_BankInfo_Delete_Log">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="BankInfo_Delete_Id" ColumnName="BankInfo_Delete_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_PersonalInformations">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_PersonalInformations">
+        <MappingFragment StoreEntitySet="HRM_PersonalInformations">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+          <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+          <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+          <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+          <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+          <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+          <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+          <ScalarProperty Name="EffectiveSalaryStatus" ColumnName="EffectiveSalaryStatus" />
+          <ScalarProperty Name="EX" ColumnName="EX" />
+          <ScalarProperty Name="OH" ColumnName="OH" />
+          <ScalarProperty Name="PV_H" ColumnName="PV_H" />
+          <ScalarProperty Name="GV_H" ColumnName="GV_H" />
+          <ScalarProperty Name="WH" ColumnName="WH" />
+          <ScalarProperty Name="LateHour" ColumnName="LateHour" />
+          <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+          <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+          <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+          <ScalarProperty Name="EMP_Other" ColumnName="EMP_Other" />
+          <ScalarProperty Name="Seperation_Date" ColumnName="Seperation_Date" />
+          <ScalarProperty Name="EMP_Dis_Continution_Status" ColumnName="EMP_Dis_Continution_Status" />
+          <ScalarProperty Name="EMP_Died_Status" ColumnName="EMP_Died_Status" />
+          <ScalarProperty Name="EMP_Dismissal_Status" ColumnName="EMP_Dismissal_Status" />
+          <ScalarProperty Name="EMP_Resignation_Status" ColumnName="EMP_Resignation_Status" />
+          <ScalarProperty Name="EMP_Retired_Status" ColumnName="EMP_Retired_Status" />
+          <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+          <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+          <ScalarProperty Name="ContactPersonRelationName" ColumnName="ContactPersonRelationName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+          <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+          <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+          <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="ConfiramtionDateStatus" ColumnName="ConfiramtionDateStatus" />
+          <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+          <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+          <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+          <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+          <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+          <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+          <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="EffectiveSlary" ColumnName="EffectiveSlary" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+          <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+          <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+          <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+          <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+          <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+          <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+          <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+          <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+          <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+          <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+          <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+          <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+          <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+          <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+          <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+          <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+          <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Pay_Salary_Tax">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Pay_Salary_Tax">
+        <MappingFragment StoreEntitySet="HRM_Pay_Salary_Tax">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tax_Year" ColumnName="Tax_Year" />
+          <ScalarProperty Name="Tax_Month" ColumnName="Tax_Month" />
+          <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="SalaryTax_ID" ColumnName="SalaryTax_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_SubCompany">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_SubCompany">
+        <MappingFragment StoreEntitySet="HRM_SubCompany">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="SubCompanyCode" ColumnName="SubCompanyCode" />
+          <ScalarProperty Name="SubCompanyAddress" ColumnName="SubCompanyAddress" />
+          <ScalarProperty Name="SubCompanyName" ColumnName="SubCompanyName" />
+          <ScalarProperty Name="SubCompany_Id" ColumnName="SubCompany_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_PaySalary_Temp">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_PaySalary_Temp">
+        <MappingFragment StoreEntitySet="HRM_PaySalary_Temp">
+          <ScalarProperty Name="Salary_Punishment" ColumnName="Salary_Punishment" />
+          <ScalarProperty Name="IsSalaryRelease" ColumnName="IsSalaryRelease" />
+          <ScalarProperty Name="IsSalaryCancel" ColumnName="IsSalaryCancel" />
+          <ScalarProperty Name="IsSalaryHeldup" ColumnName="IsSalaryHeldup" />
+          <ScalarProperty Name="Total_Deduction" ColumnName="Total_Deduction" />
+          <ScalarProperty Name="Total_Compliance_Deduction" ColumnName="Total_Compliance_Deduction" />
+          <ScalarProperty Name="AdvanceDeduction" ColumnName="AdvanceDeduction" />
+          <ScalarProperty Name="Stamp" ColumnName="Stamp" />
+          <ScalarProperty Name="Total_Benifit" ColumnName="Total_Benifit" />
+          <ScalarProperty Name="Holiday_Bill" ColumnName="Holiday_Bill" />
+          <ScalarProperty Name="Night_Bill" ColumnName="Night_Bill" />
+          <ScalarProperty Name="Other_Deduction" ColumnName="Other_Deduction" />
+          <ScalarProperty Name="TotalDeductDay" ColumnName="TotalDeductDay" />
+          <ScalarProperty Name="Absent_Deduction" ColumnName="Absent_Deduction" />
+          <ScalarProperty Name="Absent_Day" ColumnName="Absent_Day" />
+          <ScalarProperty Name="LWP" ColumnName="LWP" />
+          <ScalarProperty Name="AL" ColumnName="AL" />
+          <ScalarProperty Name="ML" ColumnName="ML" />
+          <ScalarProperty Name="CL" ColumnName="CL" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Attendance_Bonus" ColumnName="Attendance_Bonus" />
+          <ScalarProperty Name="OT_Taka" ColumnName="OT_Taka" />
+          <ScalarProperty Name="OT_Extra_Amount" ColumnName="OT_Extra_Amount" />
+          <ScalarProperty Name="OT_Compliance_Amount" ColumnName="OT_Compliance_Amount" />
+          <ScalarProperty Name="OT_Rate" ColumnName="OT_Rate" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Pay_Status" ColumnName="Pay_Status" />
+          <ScalarProperty Name="Total_Absent_Cost" ColumnName="Total_Absent_Cost" />
+          <ScalarProperty Name="Total_Leave_Cost" ColumnName="Total_Leave_Cost" />
+          <ScalarProperty Name="Total_LateDeduction_Cost" ColumnName="Total_LateDeduction_Cost" />
+          <ScalarProperty Name="Total_Bonus" ColumnName="Total_Bonus" />
+          <ScalarProperty Name="Total_Tax" ColumnName="Total_Tax" />
+          <ScalarProperty Name="Net_Payable" ColumnName="Net_Payable" />
+          <ScalarProperty Name="Total_Gross_Sal" ColumnName="Total_Gross_Sal" />
+          <ScalarProperty Name="Net_Payable_Compliance" ColumnName="Net_Payable_Compliance" />
+          <ScalarProperty Name="Total_Gross_Sal_Compliance" ColumnName="Total_Gross_Sal_Compliance" />
+          <ScalarProperty Name="Payable_Salary" ColumnName="Payable_Salary" />
+          <ScalarProperty Name="Total_Basic_New" ColumnName="Total_Basic_New" />
+          <ScalarProperty Name="Date_Processed" ColumnName="Date_Processed" />
+          <ScalarProperty Name="Salary_Month" ColumnName="Salary_Month" />
+          <ScalarProperty Name="Total_Leave" ColumnName="Total_Leave" />
+          <ScalarProperty Name="Other_Holiday" ColumnName="Other_Holiday" />
+          <ScalarProperty Name="Work_Holiday" ColumnName="Work_Holiday" />
+          <ScalarProperty Name="Total_Day_Of_Month" ColumnName="Total_Day_Of_Month" />
+          <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="Over_Time" ColumnName="Over_Time" />
+          <ScalarProperty Name="Worked_Day" ColumnName="Worked_Day" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="PaySalary_Temp_ID" ColumnName="PaySalary_Temp_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Pay_Salary_Deduction">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.HRM_Pay_Salary_Deduction">
+        <MappingFragment StoreEntitySet="HRM_Pay_Salary_Deduction">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="Deduct_Year" ColumnName="Deduct_Year" />
+          <ScalarProperty Name="Deduct_Month" ColumnName="Deduct_Month" />
+          <ScalarProperty Name="Salary_Deduct_Amount" ColumnName="Salary_Deduct_Amount" />
+          <ScalarProperty Name="Deduct_Purpose" ColumnName="Deduct_Purpose" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="SalaryDeduct_ID" ColumnName="SalaryDeduct_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERPSSL", "ERPSSL\ERPSSL.csproj", "{554578B7-7369-4EB0-893E-777FA82F0FAC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.0.9:8080/tfs/erp
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ERPSSL\\ERPSSL.csproj
+		SccProjectName1 = ERPSSL
+		SccLocalPath1 = ERPSSL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{554578B7-7369-4EB0-893E-777FA82F0FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554578B7-7369-4EB0-893E-777FA82F0FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554578B7-7369-4EB0-893E-777FA82F0FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554578B7-7369-4EB0-893E-777FA82F0FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

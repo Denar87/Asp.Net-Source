@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MASTERModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ERPSSL_AdminEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Module" EntityType="ERPSSL_MASTERModel.tbl_Module" />
+    <EntitySet Name="tbl_UserRole" EntityType="ERPSSL_MASTERModel.tbl_UserRole" />
+    <EntitySet Name="tbl_PagePermission" EntityType="ERPSSL_MASTERModel.tbl_PagePermission" />
+    <EntitySet Name="tbl_User" EntityType="ERPSSL_MASTERModel.tbl_User" />
+    <AssociationSet Name="FK_tbl_UserRole_tbl_User" Association="ERPSSL_MASTERModel.FK_tbl_UserRole_tbl_User">
+      <End Role="tbl_User" EntitySet="tbl_User" />
+      <End Role="tbl_UserRole" EntitySet="tbl_UserRole" />
+    </AssociationSet>
+    <EntitySet Name="tbl_UserAccess" EntityType="ERPSSL_MASTERModel.tbl_UserAccess" />
+    <EntitySet Name="tbl_Page" EntityType="ERPSSL_MASTERModel.tbl_Page" />
+    <EntitySet Name="tblAC_leg_Ledgers" EntityType="ERPSSL_MASTERModel.tblAC_leg_Ledgers" />
+    <EntitySet Name="tblAC_leg_LedgersTransaction_temp" EntityType="ERPSSL_MASTERModel.tblAC_leg_LedgersTransaction_temp" />
+    <EntitySet Name="tblAC_vch_Voucher_Details" EntityType="ERPSSL_MASTERModel.tblAC_vch_Voucher_Details" />
+    <EntitySet Name="tblAC_vch_Voucher_Log" EntityType="ERPSSL_MASTERModel.tblAC_vch_Voucher_Log" />
+    <EntitySet Name="tblConf_Module" EntityType="ERPSSL_MASTERModel.tblConf_Module" />
+    <EntitySet Name="tbl_Category" EntityType="ERPSSL_MASTERModel.tbl_Category" />
+    <EntitySet Name="tbl_UserPassword" EntityType="ERPSSL_MASTERModel.tbl_UserPassword" />
+    <EntitySet Name="tblAC_cmp_Companys" EntityType="ERPSSL_MASTERModel.tblAC_cmp_Companys" />
+  </EntityContainer>
+  <EntityType Name="tbl_Module">
+    <Key>
+      <PropertyRef Name="ModuleID" />
+    </Key>
+    <Property Type="Int64" Name="ModuleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ModuleName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleIcon" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Status" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_UserRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Type="Int32" Name="RoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EditUser" Nullable="false" />
+    <Property Type="DateTime" Name="EditDate" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tbl_User" Relationship="ERPSSL_MASTERModel.FK_tbl_UserRole_tbl_User" FromRole="tbl_UserRole" ToRole="tbl_User" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_PagePermission">
+    <Key>
+      <PropertyRef Name="PermissionID" />
+    </Key>
+    <Property Type="Int64" Name="PermissionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RoleID" Nullable="false" />
+    <Property Type="Int32" Name="PageID" Nullable="false" />
+    <Property Type="Int64" Name="CategoryId" />
+    <Property Type="Int64" Name="ModuleId" />
+    <Property Type="Boolean" Name="CanVisit" Nullable="false" />
+    <Property Type="Boolean" Name="CanEdit" Nullable="false" />
+    <Property Type="Boolean" Name="CanDelete" Nullable="false" />
+    <Property Type="Boolean" Name="CanExecute" Nullable="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="LoginName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Level" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserFullName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Use_Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RoleID" />
+    <Property Type="String" Name="BranchID" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="ParentCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_UserRole" Relationship="ERPSSL_MASTERModel.FK_tbl_UserRole_tbl_User" FromRole="tbl_User" ToRole="tbl_UserRole" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbl_UserRole_tbl_User">
+    <End Type="ERPSSL_MASTERModel.tbl_User" Role="tbl_User" Multiplicity="1" />
+    <End Type="ERPSSL_MASTERModel.tbl_UserRole" Role="tbl_UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="tbl_UserRole">
+        <PropertyRef Name="EditUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tbl_UserAccess">
+    <Key>
+      <PropertyRef Name="UserAccessId" />
+    </Key>
+    <Property Type="Int64" Name="UserAccessId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Guid" Name="UserID" />
+    <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RoleID" Nullable="false" />
+    <Property Type="Int32" Name="PageID" Nullable="false" />
+    <Property Type="Int64" Name="CategoryId" />
+    <Property Type="Int64" Name="ModuleId" />
+    <Property Type="Boolean" Name="CanVisit" Nullable="false" />
+    <Property Type="Boolean" Name="CanEdit" Nullable="false" />
+    <Property Type="Boolean" Name="CanDelete" Nullable="false" />
+    <Property Type="Boolean" Name="CanExecute" Nullable="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Page">
+    <Key>
+      <PropertyRef Name="PageID" />
+    </Key>
+    <Property Type="Int64" Name="PageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="ModuleID" Nullable="false" />
+    <Property Type="String" Name="PageName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="categoryId" />
+    <Property Type="String" Name="PageUrl" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="PageOrder" />
+    <Property Type="Boolean" Name="Status" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAC_leg_Ledgers">
+    <Key>
+      <PropertyRef Name="Ledger_ID" />
+    </Key>
+    <Property Type="Int64" Name="Ledger_ID" Nullable="false" />
+    <Property Type="String" Name="Ledger_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ledger_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ledger_Nature" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Opening_Balance" Precision="19" Scale="4" />
+    <Property Type="String" Name="Opening_Nature" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Closing_Balance" Precision="19" Scale="4" />
+    <Property Type="String" Name="Closing_Nature" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="Under_ID" />
+    <Property Type="Int64" Name="Super_ID" />
+    <Property Type="String" Name="Group_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="String" Name="Edit_User" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAC_leg_LedgersTransaction_temp">
+    <Key>
+      <PropertyRef Name="Transaction_ID" />
+    </Key>
+    <Property Type="Int64" Name="Transaction_ID" Nullable="false" />
+    <Property Type="String" Name="Transaction_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ledger_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Particulars" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Transaction_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Narration" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nature" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChequeNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Debit" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Credit" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Balance" Precision="19" Scale="4" />
+    <Property Type="Int64" Name="Under_ID" />
+    <Property Type="Int64" Name="Super_ID" />
+    <Property Type="DateTime" Name="Transaction_Date" Precision="3" />
+    <Property Type="String" Name="Edit_User" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="Boolean" Name="IsChangable" />
+    <Property Type="String" Name="ModuleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IdentificationNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pay_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAC_vch_Voucher_Details">
+    <Key>
+      <PropertyRef Name="Voucher_Details_ID" />
+    </Key>
+    <Property Type="Int64" Name="Voucher_Details_ID" Nullable="false" />
+    <Property Type="String" Name="Ledger_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nature" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChequeNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Particulars" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Debit" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Credit" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="Voucher_Date" Precision="3" />
+    <Property Type="String" Name="Edit_User" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" />
+    <Property Type="String" Name="ModuleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IdentificationNo" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblAC_vch_Voucher_Log">
+    <Key>
+      <PropertyRef Name="Voucher_ID" />
+    </Key>
+    <Property Type="Int64" Name="Voucher_ID" Nullable="false" />
+    <Property Type="String" Name="Voucher_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Voucher_Date" Precision="3" />
+    <Property Type="String" Name="Edit_User" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IdentificationNo" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblConf_Module">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ModuleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModuleId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Item" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ledger_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Particulars" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TransactionNature" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Voucher_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsChangable" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pay_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Category">
+    <Key>
+      <PropertyRef Name="categoryId" />
+    </Key>
+    <Property Type="Int64" Name="categoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ModuleId" />
+    <Property Type="Int64" Name="CategoryOrder" />
+    <Property Type="Boolean" Name="Status" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_UserPassword">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EditUser" Nullable="false" />
+    <Property Type="DateTime" Name="EditDate" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblAC_cmp_Companys">
+    <Key>
+      <PropertyRef Name="Company_ID" />
+      <PropertyRef Name="Company_Code" />
+      <PropertyRef Name="OCode" />
+    </Key>
+    <Property Type="Int64" Name="Company_ID" Nullable="false" />
+    <Property Type="String" Name="Company_Name" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Street_1" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Street_2" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State_Region" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Zip_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="E_mail" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Web_Site" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Company_Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Financial_Year" Precision="0" />
+    <Property Type="DateTime" Name="Book_Begning" Precision="0" />
+    <Property Type="String" Name="Business_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="String" Name="Company_Code" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="Boolean" Name="Status" />
+  </EntityType>
+</Schema>

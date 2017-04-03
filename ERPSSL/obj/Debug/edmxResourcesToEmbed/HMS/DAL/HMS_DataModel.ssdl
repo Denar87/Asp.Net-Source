@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_HMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_HMSDataModelStoreContainer">
+    <EntitySet Name="HMS_BillCategory" EntityType="ERPSSL_HMSDataModel.Store.HMS_BillCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HMS_BillHead" EntityType="ERPSSL_HMSDataModel.Store.HMS_BillHead" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HMS_PatientBillInfo" EntityType="ERPSSL_HMSDataModel.Store.HMS_PatientBillInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HMS_PatientCollectionSummary" EntityType="ERPSSL_HMSDataModel.Store.HMS_PatientCollectionSummary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HMS_PatientInfo" EntityType="ERPSSL_HMSDataModel.Store.HMS_PatientInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_HMS_BillHead_HMS_BillCategory" Association="ERPSSL_HMSDataModel.Store.FK_HMS_BillHead_HMS_BillCategory">
+      <End Role="HMS_BillCategory" EntitySet="HMS_BillCategory" />
+      <End Role="HMS_BillHead" EntitySet="HMS_BillHead" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientBillInfo_HMS_BillCategory" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientBillInfo_HMS_BillCategory">
+      <End Role="HMS_BillCategory" EntitySet="HMS_BillCategory" />
+      <End Role="HMS_PatientBillInfo" EntitySet="HMS_PatientBillInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientBillInfo_HMS_BillHead" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientBillInfo_HMS_BillHead">
+      <End Role="HMS_BillHead" EntitySet="HMS_BillHead" />
+      <End Role="HMS_PatientBillInfo" EntitySet="HMS_PatientBillInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientBillInfo_HMS_PatientInfo" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientBillInfo_HMS_PatientInfo">
+      <End Role="HMS_PatientInfo" EntitySet="HMS_PatientInfo" />
+      <End Role="HMS_PatientBillInfo" EntitySet="HMS_PatientBillInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientCollectionSummary_HMS_PatientInfo" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientCollectionSummary_HMS_PatientInfo">
+      <End Role="HMS_PatientInfo" EntitySet="HMS_PatientInfo" />
+      <End Role="HMS_PatientCollectionSummary" EntitySet="HMS_PatientCollectionSummary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientInfo_HMS_BillCategory" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientInfo_HMS_BillCategory">
+      <End Role="HMS_BillCategory" EntitySet="HMS_BillCategory" />
+      <End Role="HMS_PatientInfo" EntitySet="HMS_PatientInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HMS_PatientInfo_HMS_BillHead" Association="ERPSSL_HMSDataModel.Store.FK_HMS_PatientInfo_HMS_BillHead">
+      <End Role="HMS_BillHead" EntitySet="HMS_BillHead" />
+      <End Role="HMS_PatientInfo" EntitySet="HMS_PatientInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HMS_BillCategory">
+    <Key>
+      <PropertyRef Name="HMS_CategoryId" />
+    </Key>
+    <Property Name="HMS_CategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HMS_BillHead">
+    <Key>
+      <PropertyRef Name="HMS_Bill_Head_Id" />
+    </Key>
+    <Property Name="HMS_Bill_Head_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HMS_CategoryId" Type="int" />
+    <Property Name="Bill_Head_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HMS_PatientBillInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="int" />
+    <Property Name="Bill_Category_Id" Type="int" />
+    <Property Name="Bill_Head_Id" Type="int" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CollectionDate" Type="datetime" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HMS_PatientCollectionSummary">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PatientID" Type="int" />
+    <Property Name="CollectionDate" Type="datetime" />
+    <Property Name="CollectionAmount" Type="money" />
+    <Property Name="AdvanceAmount" Type="money" />
+    <Property Name="ServiceCharge_Percent" Type="money" />
+    <Property Name="Discount_Percent" Type="money" />
+    <Property Name="DisChargeDate" Type="datetime" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HMS_PatientInfo">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PatientName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Age" Type="nvarchar" MaxLength="50" />
+    <Property Name="M_Y_D" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="GuardianName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GuardianContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="VisitDate" Type="datetime" />
+    <Property Name="BillCategoryId" Type="int" />
+    <Property Name="BillHeadId" Type="int" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Bed_CabinNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RefdBy" Type="nvarchar" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_HMS_BillHead_HMS_BillCategory">
+    <End Role="HMS_BillCategory" Type="ERPSSL_HMSDataModel.Store.HMS_BillCategory" Multiplicity="0..1" />
+    <End Role="HMS_BillHead" Type="ERPSSL_HMSDataModel.Store.HMS_BillHead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_BillCategory">
+        <PropertyRef Name="HMS_CategoryId" />
+      </Principal>
+      <Dependent Role="HMS_BillHead">
+        <PropertyRef Name="HMS_CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientBillInfo_HMS_BillCategory">
+    <End Role="HMS_BillCategory" Type="ERPSSL_HMSDataModel.Store.HMS_BillCategory" Multiplicity="0..1" />
+    <End Role="HMS_PatientBillInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientBillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_BillCategory">
+        <PropertyRef Name="HMS_CategoryId" />
+      </Principal>
+      <Dependent Role="HMS_PatientBillInfo">
+        <PropertyRef Name="Bill_Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientBillInfo_HMS_BillHead">
+    <End Role="HMS_BillHead" Type="ERPSSL_HMSDataModel.Store.HMS_BillHead" Multiplicity="0..1" />
+    <End Role="HMS_PatientBillInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientBillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_BillHead">
+        <PropertyRef Name="HMS_Bill_Head_Id" />
+      </Principal>
+      <Dependent Role="HMS_PatientBillInfo">
+        <PropertyRef Name="Bill_Head_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientBillInfo_HMS_PatientInfo">
+    <End Role="HMS_PatientInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientInfo" Multiplicity="0..1" />
+    <End Role="HMS_PatientBillInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientBillInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_PatientInfo">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="HMS_PatientBillInfo">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientCollectionSummary_HMS_PatientInfo">
+    <End Role="HMS_PatientInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientInfo" Multiplicity="0..1" />
+    <End Role="HMS_PatientCollectionSummary" Type="ERPSSL_HMSDataModel.Store.HMS_PatientCollectionSummary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_PatientInfo">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="HMS_PatientCollectionSummary">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientInfo_HMS_BillCategory">
+    <End Role="HMS_BillCategory" Type="ERPSSL_HMSDataModel.Store.HMS_BillCategory" Multiplicity="0..1" />
+    <End Role="HMS_PatientInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_BillCategory">
+        <PropertyRef Name="HMS_CategoryId" />
+      </Principal>
+      <Dependent Role="HMS_PatientInfo">
+        <PropertyRef Name="BillCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HMS_PatientInfo_HMS_BillHead">
+    <End Role="HMS_BillHead" Type="ERPSSL_HMSDataModel.Store.HMS_BillHead" Multiplicity="0..1" />
+    <End Role="HMS_PatientInfo" Type="ERPSSL_HMSDataModel.Store.HMS_PatientInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HMS_BillHead">
+        <PropertyRef Name="HMS_Bill_Head_Id" />
+      </Principal>
+      <Dependent Role="HMS_PatientInfo">
+        <PropertyRef Name="BillHeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="HMS_GetBillHeadList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HMS_GetCategoryNameByCategoryId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

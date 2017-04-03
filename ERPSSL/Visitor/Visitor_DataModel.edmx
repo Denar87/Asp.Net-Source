@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ERPSSL_VisitorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ERPSSL_VisitorModelStoreContainer">
+          <EntitySet Name="Visitor_VisitorInfo" EntityType="ERPSSL_VisitorModel.Store.Visitor_VisitorInfo" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Visitor_VisitorInfo">
+          <Key>
+            <PropertyRef Name="V_ID" />
+          </Key>
+          <Property Name="V_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VDate" Type="datetime" />
+          <Property Name="VisitorName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FromAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToWhom" Type="nvarchar" MaxLength="100" />
+          <Property Name="Purpose" Type="nvarchar" MaxLength="150" />
+          <Property Name="CardNo" Type="int" />
+          <Property Name="InTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="OutTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERPSSL_VisitorModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ERPSSL_Visitor_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Visitor_VisitorInfo" EntityType="ERPSSL_VisitorModel.Visitor_VisitorInfo" />
+        </EntityContainer>
+        <EntityType Name="Visitor_VisitorInfo">
+          <Key>
+            <PropertyRef Name="V_ID" />
+          </Key>
+          <Property Type="Int32" Name="V_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="VDate" Precision="3" />
+          <Property Type="String" Name="VisitorName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FromAddress" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ToWhom" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Purpose" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CardNo" />
+          <Property Type="String" Name="InTime" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OutTime" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERPSSL_VisitorModelStoreContainer" CdmEntityContainer="ERPSSL_Visitor_Entities">
+          <EntitySetMapping Name="Visitor_VisitorInfo">
+            <EntityTypeMapping TypeName="ERPSSL_VisitorModel.Visitor_VisitorInfo">
+              <MappingFragment StoreEntitySet="Visitor_VisitorInfo">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+                <ScalarProperty Name="InTime" ColumnName="InTime" />
+                <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="ToWhom" ColumnName="ToWhom" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="FromAddress" ColumnName="FromAddress" />
+                <ScalarProperty Name="VisitorName" ColumnName="VisitorName" />
+                <ScalarProperty Name="VDate" ColumnName="VDate" />
+                <ScalarProperty Name="V_ID" ColumnName="V_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Visitor_DataModel" ZoomLevel="99">
+        <EntityTypeShape EntityType="ERPSSL_VisitorModel.Visitor_VisitorInfo" Width="1.5" PointX="2.9913167799782552" PointY="31.004185646308674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,2118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MASTERModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_MASTERModelStoreContainer">
+    <EntitySet Name="HRM_Academics" EntityType="ERPSSL_MASTERModel.Store.HRM_Academics" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AdvanceSalaryDetailPrevious_Log" EntityType="ERPSSL_MASTERModel.Store.HRM_AdvanceSalaryDetailPrevious_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AdvanceSalaryDetails" EntityType="ERPSSL_MASTERModel.Store.HRM_AdvanceSalaryDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AdvanceSalarySummary" EntityType="ERPSSL_MASTERModel.Store.HRM_AdvanceSalarySummary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Applicable_PersonalStatus" EntityType="ERPSSL_MASTERModel.Store.HRM_Applicable_PersonalStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_ATTENDANCE" EntityType="ERPSSL_MASTERModel.Store.HRM_ATTENDANCE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Attendance_Manual_Log" EntityType="ERPSSL_MASTERModel.Store.HRM_Attendance_Manual_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Attendance_Manual_Status" EntityType="ERPSSL_MASTERModel.Store.HRM_Attendance_Manual_Status" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AttendanceBouns" EntityType="ERPSSL_MASTERModel.Store.HRM_AttendanceBouns" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AttendancePunishment" EntityType="ERPSSL_MASTERModel.Store.HRM_AttendancePunishment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AttendanceReason" EntityType="ERPSSL_MASTERModel.Store.HRM_AttendanceReason" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AttendanceReason_Individual" EntityType="ERPSSL_MASTERModel.Store.HRM_AttendanceReason_Individual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_AttendanceTemp" EntityType="ERPSSL_MASTERModel.Store.HRM_AttendanceTemp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_BankInfo" EntityType="ERPSSL_MASTERModel.Store.HRM_BankInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_BankInfo_Delete_Log" EntityType="ERPSSL_MASTERModel.Store.HRM_BankInfo_Delete_Log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_ChildInfo" EntityType="ERPSSL_MASTERModel.Store.HRM_ChildInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Company" EntityType="ERPSSL_MASTERModel.Store.HRM_Company" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_CounteryNationality" EntityType="ERPSSL_MASTERModel.Store.HRM_CounteryNationality" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_DEPARTMENTS" EntityType="ERPSSL_MASTERModel.Store.HRM_DEPARTMENTS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_DepartmentWiseShift" EntityType="ERPSSL_MASTERModel.Store.HRM_DepartmentWiseShift" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_DESIGNATIONS" EntityType="ERPSSL_MASTERModel.Store.HRM_DESIGNATIONS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_DrivingLicencs" EntityType="ERPSSL_MASTERModel.Store.HRM_DrivingLicencs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EDUCATION" EntityType="ERPSSL_MASTERModel.Store.HRM_EDUCATION" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EducationType" EntityType="ERPSSL_MASTERModel.Store.HRM_EducationType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EMP_TRANSFER" EntityType="ERPSSL_MASTERModel.Store.HRM_EMP_TRANSFER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EMPLOYEE_DOCUMENTS" EntityType="ERPSSL_MASTERModel.Store.HRM_EMPLOYEE_DOCUMENTS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EmployeeBenefitSetup" EntityType="ERPSSL_MASTERModel.Store.HRM_EmployeeBenefitSetup" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EmployeeCategory" EntityType="ERPSSL_MASTERModel.Store.HRM_EmployeeCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EMPLOYEES" EntityType="ERPSSL_MASTERModel.Store.HRM_EMPLOYEES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EmployeeStatement" EntityType="ERPSSL_MASTERModel.Store.HRM_EmployeeStatement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EmployeeType" EntityType="ERPSSL_MASTERModel.Store.HRM_EmployeeType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EmployeeWiseBenefit" EntityType="ERPSSL_MASTERModel.Store.HRM_EmployeeWiseBenefit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_EVALUATION" EntityType="ERPSSL_MASTERModel.Store.HRM_EVALUATION" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Experiences" EntityType="ERPSSL_MASTERModel.Store.HRM_Experiences" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_GRADE" EntityType="ERPSSL_MASTERModel.Store.HRM_GRADE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_HOLIDAY_TYPE" EntityType="ERPSSL_MASTERModel.Store.HRM_HOLIDAY_TYPE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_HOLIDAYS" EntityType="ERPSSL_MASTERModel.Store.HRM_HOLIDAYS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_HR_DEMAND" EntityType="ERPSSL_MASTERModel.Store.HRM_HR_DEMAND" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_IncomeHeader" EntityType="ERPSSL_MASTERModel.Store.HRM_IncomeHeader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_IncomeHeaderDetails" EntityType="ERPSSL_MASTERModel.Store.HRM_IncomeHeaderDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_JOB_TERMINATE" EntityType="ERPSSL_MASTERModel.Store.HRM_JOB_TERMINATE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_JobAllocation" EntityType="ERPSSL_MASTERModel.Store.HRM_JobAllocation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_JobAllocationtemporary" EntityType="ERPSSL_MASTERModel.Store.HRM_JobAllocationtemporary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LanguageProficiency" EntityType="ERPSSL_MASTERModel.Store.HRM_LanguageProficiency" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LEAVE_DETAILS" EntityType="ERPSSL_MASTERModel.Store.HRM_LEAVE_DETAILS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LEAVE_EMPLOYEE" EntityType="ERPSSL_MASTERModel.Store.HRM_LEAVE_EMPLOYEE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LEAVE_TYPE" EntityType="ERPSSL_MASTERModel.Store.HRM_LEAVE_TYPE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LeaveApply" EntityType="ERPSSL_MASTERModel.Store.HRM_LeaveApply" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LETTER_FORMAT" EntityType="ERPSSL_MASTERModel.Store.HRM_LETTER_FORMAT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LetterType" EntityType="ERPSSL_MASTERModel.Store.HRM_LetterType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_LiabilityType" EntityType="ERPSSL_MASTERModel.Store.HRM_LiabilityType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_MachineReadableProblem" EntityType="ERPSSL_MASTERModel.Store.HRM_MachineReadableProblem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_MaternityLeave" EntityType="ERPSSL_MASTERModel.Store.HRM_MaternityLeave" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Office" EntityType="ERPSSL_MASTERModel.Store.HRM_Office" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_OfficialDay" EntityType="ERPSSL_MASTERModel.Store.HRM_OfficialDay" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_OfficialDay_Individual" EntityType="ERPSSL_MASTERModel.Store.HRM_OfficialDay_Individual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Pay_Salary" EntityType="ERPSSL_MASTERModel.Store.HRM_Pay_Salary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Pay_Salary_Adjustment" EntityType="ERPSSL_MASTERModel.Store.HRM_Pay_Salary_Adjustment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Pay_Salary_Deduction" EntityType="ERPSSL_MASTERModel.Store.HRM_Pay_Salary_Deduction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Pay_Salary_Tax" EntityType="ERPSSL_MASTERModel.Store.HRM_Pay_Salary_Tax" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_PaySalary_Temp" EntityType="ERPSSL_MASTERModel.Store.HRM_PaySalary_Temp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MASTERModel.Store.HRM_PersonalInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Hrm_PersonalInfoTemp" EntityType="ERPSSL_MASTERModel.Store.Hrm_PersonalInfoTemp" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_PFConfiguration" EntityType="ERPSSL_MASTERModel.Store.HRM_PFConfiguration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Re_Active_LeaveApply" EntityType="ERPSSL_MASTERModel.Store.HRM_Re_Active_LeaveApply" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_ReasonType" EntityType="ERPSSL_MASTERModel.Store.HRM_ReasonType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Regions" EntityType="ERPSSL_MASTERModel.Store.HRM_Regions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Salary_Deduction" EntityType="ERPSSL_MASTERModel.Store.HRM_Salary_Deduction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Salary_Punishment" EntityType="ERPSSL_MASTERModel.Store.HRM_Salary_Punishment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SalaryIncrement" EntityType="ERPSSL_MASTERModel.Store.HRM_SalaryIncrement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SalaryIncrementSLog" EntityType="ERPSSL_MASTERModel.Store.HRM_SalaryIncrementSLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SalaryUpdate" EntityType="ERPSSL_MASTERModel.Store.HRM_SalaryUpdate" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SECTIONS" EntityType="ERPSSL_MASTERModel.Store.HRM_SECTIONS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SERVICE_CONTRACT" EntityType="ERPSSL_MASTERModel.Store.HRM_SERVICE_CONTRACT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Skills" EntityType="ERPSSL_MASTERModel.Store.HRM_Skills" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_StoreLetter" EntityType="ERPSSL_MASTERModel.Store.HRM_StoreLetter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SUB_SECTIONS" EntityType="ERPSSL_MASTERModel.Store.HRM_SUB_SECTIONS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_SubCompany" EntityType="ERPSSL_MASTERModel.Store.HRM_SubCompany" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_TAXLiabilityConfig" EntityType="ERPSSL_MASTERModel.Store.HRM_TAXLiabilityConfig" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_TAXPFApplicable" EntityType="ERPSSL_MASTERModel.Store.HRM_TAXPFApplicable" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_TemporySalaryIncrement" EntityType="ERPSSL_MASTERModel.Store.HRM_TemporySalaryIncrement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_TimeInoutOTCalculation" EntityType="ERPSSL_MASTERModel.Store.HRM_TimeInoutOTCalculation" store:Type="Tables" store:Schema="dbo" store:Name="HRM_TimeInoutOTCalculation">
+      <DefiningQuery>SELECT 
+      [HRM_TimeInoutOTCalculation].[ID] AS [ID], 
+      [HRM_TimeInoutOTCalculation].[EMPID] AS [EMPID], 
+      [HRM_TimeInoutOTCalculation].[Name] AS [Name], 
+      [HRM_TimeInoutOTCalculation].[Mobile] AS [Mobile], 
+      [HRM_TimeInoutOTCalculation].[Designation] AS [Designation], 
+      [HRM_TimeInoutOTCalculation].[EID] AS [EID], 
+      [HRM_TimeInoutOTCalculation].[DPT_NAME] AS [DPT_NAME], 
+      [HRM_TimeInoutOTCalculation].[SectionName] AS [SectionName], 
+      [HRM_TimeInoutOTCalculation].[Esection] AS [Esection], 
+      [HRM_TimeInoutOTCalculation].[d1] AS [d1], 
+      [HRM_TimeInoutOTCalculation].[d2] AS [d2], 
+      [HRM_TimeInoutOTCalculation].[d3] AS [d3], 
+      [HRM_TimeInoutOTCalculation].[d4] AS [d4], 
+      [HRM_TimeInoutOTCalculation].[d5] AS [d5], 
+      [HRM_TimeInoutOTCalculation].[d6] AS [d6], 
+      [HRM_TimeInoutOTCalculation].[d7] AS [d7], 
+      [HRM_TimeInoutOTCalculation].[d8] AS [d8], 
+      [HRM_TimeInoutOTCalculation].[d9] AS [d9], 
+      [HRM_TimeInoutOTCalculation].[d10] AS [d10], 
+      [HRM_TimeInoutOTCalculation].[d11] AS [d11], 
+      [HRM_TimeInoutOTCalculation].[d12] AS [d12], 
+      [HRM_TimeInoutOTCalculation].[d13] AS [d13], 
+      [HRM_TimeInoutOTCalculation].[d14] AS [d14], 
+      [HRM_TimeInoutOTCalculation].[d15] AS [d15], 
+      [HRM_TimeInoutOTCalculation].[d16] AS [d16], 
+      [HRM_TimeInoutOTCalculation].[d17] AS [d17], 
+      [HRM_TimeInoutOTCalculation].[d18] AS [d18], 
+      [HRM_TimeInoutOTCalculation].[d19] AS [d19], 
+      [HRM_TimeInoutOTCalculation].[d20] AS [d20], 
+      [HRM_TimeInoutOTCalculation].[d21] AS [d21], 
+      [HRM_TimeInoutOTCalculation].[d22] AS [d22], 
+      [HRM_TimeInoutOTCalculation].[d23] AS [d23], 
+      [HRM_TimeInoutOTCalculation].[d24] AS [d24], 
+      [HRM_TimeInoutOTCalculation].[d25] AS [d25], 
+      [HRM_TimeInoutOTCalculation].[d26] AS [d26], 
+      [HRM_TimeInoutOTCalculation].[d27] AS [d27], 
+      [HRM_TimeInoutOTCalculation].[d28] AS [d28], 
+      [HRM_TimeInoutOTCalculation].[d29] AS [d29], 
+      [HRM_TimeInoutOTCalculation].[d30] AS [d30], 
+      [HRM_TimeInoutOTCalculation].[d31] AS [d31], 
+      [HRM_TimeInoutOTCalculation].[DateFrom] AS [DateFrom], 
+      [HRM_TimeInoutOTCalculation].[DateTo] AS [DateTo], 
+      [HRM_TimeInoutOTCalculation].[TotalOT] AS [TotalOT], 
+      [HRM_TimeInoutOTCalculation].[OCODE] AS [OCODE], 
+      [HRM_TimeInoutOTCalculation].[UserID] AS [UserID], 
+      [HRM_TimeInoutOTCalculation].[RegionName] AS [RegionName], 
+      [HRM_TimeInoutOTCalculation].[OfficeName] AS [OfficeName], 
+      [HRM_TimeInoutOTCalculation].[ShiftCode] AS [ShiftCode], 
+      [HRM_TimeInoutOTCalculation].[RegionsId] AS [RegionsId], 
+      [HRM_TimeInoutOTCalculation].[OfficeId] AS [OfficeId], 
+      [HRM_TimeInoutOTCalculation].[DepartmentId] AS [DepartmentId], 
+      [HRM_TimeInoutOTCalculation].[SectionId] AS [SectionId], 
+      [HRM_TimeInoutOTCalculation].[SubSectionId] AS [SubSectionId], 
+      [HRM_TimeInoutOTCalculation].[DesginationId] AS [DesginationId]
+      FROM [dbo].[HRM_TimeInoutOTCalculation] AS [HRM_TimeInoutOTCalculation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HRM_TIMESCHEDULE" EntityType="ERPSSL_MASTERModel.Store.HRM_TIMESCHEDULE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_TimeScheduleByReligion" EntityType="ERPSSL_MASTERModel.Store.HRM_TimeScheduleByReligion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRM_Trainings" EntityType="ERPSSL_MASTERModel.Store.HRM_Trainings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HRPAY_SALARY" EntityType="ERPSSL_MASTERModel.Store.HRPAY_SALARY" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_HRM_AttendanceReason_HRM_ReasonType" Association="ERPSSL_MASTERModel.Store.FK_HRM_AttendanceReason_HRM_ReasonType">
+      <End Role="HRM_ReasonType" EntitySet="HRM_ReasonType" />
+      <End Role="HRM_AttendanceReason" EntitySet="HRM_AttendanceReason" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS" Association="ERPSSL_MASTERModel.Store.FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS">
+      <End Role="HRM_DEPARTMENTS" EntitySet="HRM_DEPARTMENTS" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_Office" Association="ERPSSL_MASTERModel.Store.FK_HRM_AttendanceReason_Individual_HRM_Office">
+      <End Role="HRM_Office" EntitySet="HRM_Office" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_ReasonType" Association="ERPSSL_MASTERModel.Store.FK_HRM_AttendanceReason_Individual_HRM_ReasonType">
+      <End Role="HRM_ReasonType" EntitySet="HRM_ReasonType" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HRM_AttendanceReason_Individual_HRM_Regions" Association="ERPSSL_MASTERModel.Store.FK_HRM_AttendanceReason_Individual_HRM_Regions">
+      <End Role="HRM_Regions" EntitySet="HRM_Regions" />
+      <End Role="HRM_AttendanceReason_Individual" EntitySet="HRM_AttendanceReason_Individual" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HRM_Academics">
+    <Key>
+      <PropertyRef Name="AcademicId" />
+    </Key>
+    <Property Name="AcademicId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LevelOfEducation" Type="nvarchar" MaxLength="50" />
+    <Property Name="PassingYear" Type="int" />
+    <Property Name="Major" Type="nvarchar" MaxLength="50" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="InstituteName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Result" Type="nvarchar" MaxLength="50" />
+    <Property Name="Achievement" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalaryDetailPrevious_Log">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetailsLogId" />
+    </Key>
+    <Property Name="AdvanceSalaryDetailsLogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AdvanceSalaryDetailsId" Type="bigint" />
+    <Property Name="ASCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ResionId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="InstalmentAmount" Type="money" />
+    <Property Name="NoOfInstalment" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Month" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdvanceDeduction" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalaryDetails">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryDetailsId" />
+    </Key>
+    <Property Name="AdvanceSalaryDetailsId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ResionId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="InstalmentAmount" Type="money" />
+    <Property Name="NoOfInstalment" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Month" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdvanceDeduction" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HRM_AdvanceSalarySummary">
+    <Key>
+      <PropertyRef Name="AdvanceSalaryId" />
+    </Key>
+    <Property Name="AdvanceSalaryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ASCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ResionId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="InstalmentAmount" Type="money" />
+    <Property Name="NoOfInstalment" Type="int" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="HRM_Applicable_PersonalStatus">
+    <Key>
+      <PropertyRef Name="AppliAutoID" />
+    </Key>
+    <Property Name="AppliAutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Attendance_Bouns" Type="bit" />
+    <Property Name="Late_Applicable" Type="bit" />
+    <Property Name="Absence_Applicable" Type="bit" />
+    <Property Name="Tax_Applicable" Type="bit" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="PF_Applicable" Type="bit" />
+    <Property Name="On_Amount" Type="bit" />
+    <Property Name="Approved_Attendance_Bouns_Date" Type="datetime" />
+    <Property Name="Approved_Late_Applicable_Date" Type="datetime" />
+    <Property Name="Approved_Absence_Applicable_Date" Type="datetime" />
+    <Property Name="Approved_Tax_Applicable_Date" Type="datetime" />
+    <Property Name="Approved_PF_Applicable_Date" Type="datetime" />
+    <Property Name="Approved_OnAmount_Date" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_ATTENDANCE">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Name="ATTE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="In_Time" Type="time" />
+    <Property Name="Out_Time" Type="time" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="Late_Time" Type="time" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Status" Type="bit" />
+    <Property Name="Worked_Time" Type="time" />
+    <Property Name="Shift_TotalHour" Type="time" />
+    <Property Name="Over_Time" Type="time" />
+    <Property Name="OT_Hour" Type="float" />
+    <Property Name="OT_Minute" Type="float" />
+    <Property Name="OT" Type="float" />
+    <Property Name="OT_Total" Type="float" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Attendance_Date" Type="datetime" />
+    <Property Name="Attendance_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Working_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_ExtraAdd" Type="float" />
+    <Property Name="OT_Deduction" Type="float" />
+    <Property Name="Update_Status" Type="int" />
+    <Property Name="Attendance_Process_Status" Type="bit" />
+    <Property Name="Leave_Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Attendance_Manual_Log">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Name="ATTE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="In_Time" Type="time" />
+    <Property Name="Out_Time" Type="time" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="Late_Time" Type="time" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Status" Type="bit" />
+    <Property Name="Worked_Time" Type="time" />
+    <Property Name="Shift_TotalHour" Type="time" />
+    <Property Name="Over_Time" Type="time" />
+    <Property Name="OT_Hour" Type="float" />
+    <Property Name="OT_Minute" Type="float" />
+    <Property Name="OT_Total" Type="float" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Attendance_Date" Type="datetime" />
+    <Property Name="Attendance_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Working_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_ExtraAdd" Type="float" />
+    <Property Name="OT_Deduction" Type="float" />
+    <Property Name="Update_Status" Type="int" />
+    <Property Name="Attendance_Process_Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="HRM_Attendance_Manual_Status">
+    <Key>
+      <PropertyRef Name="ATTE_ID" />
+    </Key>
+    <Property Name="ATTE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IN_TIME" Type="time" />
+    <Property Name="OUT_TIME" Type="time" />
+    <Property Name="WORKED_TIME" Type="time" />
+    <Property Name="OT_STATUS" Type="bit" />
+    <Property Name="OVER_TIME" Type="time" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="5" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="ATT_DATE" Type="date" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceBouns">
+    <Key>
+      <PropertyRef Name="attendanceBounsId" />
+    </Key>
+    <Property Name="attendanceBounsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="AttendanceDays1" Type="int" />
+    <Property Name="AttendanceDays2" Type="int" />
+    <Property Name="Desgination" Type="nvarchar" MaxLength="150" />
+    <Property Name="Amount1" Type="money" />
+    <Property Name="Amount2" Type="money" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_AttendancePunishment">
+    <Key>
+      <PropertyRef Name="AttenAdjID" />
+    </Key>
+    <Property Name="AttenAdjID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="AdjDate" Type="datetime" />
+    <Property Name="PunishedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceReason">
+    <Key>
+      <PropertyRef Name="ReasonId" />
+    </Key>
+    <Property Name="ReasonId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReasonDate" Type="datetime" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="LateAllowed" Type="time" />
+    <Property Name="ReasonTypeId" Type="int" />
+    <Property Name="ReasonType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalHour" Type="time" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceReason_Individual">
+    <Key>
+      <PropertyRef Name="Ind_ReasonId" />
+    </Key>
+    <Property Name="Ind_ReasonId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bio_MatrixId" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReasonDate" Type="datetime" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="LateAllowed" Type="time" />
+    <Property Name="ReasonTypeId" Type="int" />
+    <Property Name="ReasonType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Status" Type="nvarchar" MaxLength="5" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Shift_TotalHour" Type="time" />
+  </EntityType>
+  <EntityType Name="HRM_AttendanceTemp">
+    <Key>
+      <PropertyRef Name="ATID" />
+    </Key>
+    <Property Name="ATID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttendanceDate" Type="datetime" />
+    <Property Name="IOTIME" Type="time" />
+  </EntityType>
+  <EntityType Name="HRM_BankInfo">
+    <Key>
+      <PropertyRef Name="BankInfoId" />
+    </Key>
+    <Property Name="BankInfoId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="MobileBankName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_BankInfo_Delete_Log">
+    <Key>
+      <PropertyRef Name="BankInfo_Delete_Id" />
+    </Key>
+    <Property Name="BankInfo_Delete_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_ChildInfo">
+    <Key>
+      <PropertyRef Name="ChildId" />
+    </Key>
+    <Property Name="ChildId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="Web" Type="nvarchar" MaxLength="100" />
+    <Property Name="ERCNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ERCDate" Type="datetime" />
+    <Property Name="REGNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGDate" Type="datetime" />
+    <Property Name="AreaCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_CounteryNationality">
+    <Key>
+      <PropertyRef Name="NID" />
+    </Key>
+    <Property Name="NID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ConteryName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ConteryNationality" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="HRM_DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="DPT_ID" />
+    </Key>
+    <Property Name="DPT_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Office_ID" Type="int" />
+    <Property Name="DPT_NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="DPT_CODE" Type="nvarchar" MaxLength="150" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ResionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HRM_DepartmentWiseShift">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weekend1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weekend2" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="time" />
+    <Property Name="EndTime" Type="time" />
+    <Property Name="LateAllowed" Type="time" />
+    <Property Name="TotalHour" Type="time" />
+    <Property Name="Weekend1_Duty" Type="bit" />
+    <Property Name="Weekend1Duty_Hour" Type="nvarchar" MaxLength="10" />
+    <Property Name="Weekend2_Duty" Type="bit" />
+    <Property Name="Weekend2Duty_Hour" Type="nvarchar" MaxLength="10" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_DESIGNATIONS">
+    <Key>
+      <PropertyRef Name="DEG_ID" />
+    </Key>
+    <Property Name="DEG_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DEG_NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="GRADE" Type="nvarchar" MaxLength="50" />
+    <Property Name="GROSS_SAL" Type="money" />
+    <Property Name="HOUSE_RENT" Type="money" />
+    <Property Name="BASIC" Type="money" />
+    <Property Name="MEDICAL" Type="money" />
+    <Property Name="CONVEYANCE" Type="money" />
+    <Property Name="FOOD_ALLOW" Type="money" />
+    <Property Name="FixedAllowance" Type="money" />
+    <Property Name="OTHERS" Type="money" />
+    <Property Name="AttendanceBonus" Type="money" />
+    <Property Name="Holiday_Allowance" Type="money" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_DrivingLicencs">
+    <Key>
+      <PropertyRef Name="DrivingId" />
+    </Key>
+    <Property Name="DrivingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicenceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="IssuedDate" Type="date" />
+    <Property Name="ExperiredDate" Type="date" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EDUCATION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EMP_ID" Type="bigint" />
+    <Property Name="level_of_Education" Type="nvarchar" MaxLength="50" />
+    <Property Name="exam" Type="nvarchar" MaxLength="50" />
+    <Property Name="major" Type="nvarchar" MaxLength="50" />
+    <Property Name="institute_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="result" Type="nvarchar" MaxLength="50" />
+    <Property Name="passing_year" Type="int" />
+    <Property Name="duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="achievement" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EducationType">
+    <Key>
+      <PropertyRef Name="EducationTypeID" />
+    </Key>
+    <Property Name="EducationTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EducationTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EMP_TRANSFER">
+    <Key>
+      <PropertyRef Name="TRANSFER_ID" />
+    </Key>
+    <Property Name="TRANSFER_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRANSFER_DATE" Type="datetime" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Regions_ID_FROM" Type="int" />
+    <Property Name="Regions_ID_TO" Type="int" />
+    <Property Name="Office_ID_FROM" Type="int" />
+    <Property Name="Office_ID_TO" Type="int" />
+    <Property Name="DPT_ID_FROM" Type="int" />
+    <Property Name="SEC_ID_FROM" Type="int" />
+    <Property Name="SUB_SEC_ID_FROM" Type="int" />
+    <Property Name="DEG_ID_FROM" Type="int" />
+    <Property Name="STEP_FROM" Type="int" />
+    <Property Name="GRADE_ID_FROM" Type="int" />
+    <Property Name="GradeFrom" Type="nvarchar" MaxLength="5" />
+    <Property Name="DPT_ID_TO" Type="int" />
+    <Property Name="SEC_ID_TO" Type="int" />
+    <Property Name="SUB_SEC_ID_TO" Type="int" />
+    <Property Name="DEG_ID_TO" Type="int" />
+    <Property Name="STEP_TO" Type="int" />
+    <Property Name="GradeTo" Type="nvarchar" MaxLength="5" />
+    <Property Name="GorssSalaryTo" Type="money" />
+    <Property Name="GrossSalaryFrom" Type="money" />
+    <Property Name="GRADE_ID_TO" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EMPLOYEE_DOCUMENTS">
+    <Key>
+      <PropertyRef Name="FILE_ID" />
+    </Key>
+    <Property Name="FILE_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EMP_ID" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="FILE_TITLE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FILE_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="FILE_PATH" Type="nvarchar" MaxLength="250" />
+    <Property Name="FILE_SIZE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeBenefitSetup">
+    <Key>
+      <PropertyRef Name="BenefittypeId" />
+    </Key>
+    <Property Name="BenefittypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Benefittype" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeCategory">
+    <Key>
+      <PropertyRef Name="EmployeeCategory" />
+    </Key>
+    <Property Name="EmployeeCategory" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EMPLOYEES">
+    <Key>
+      <PropertyRef Name="EMP_ID" />
+    </Key>
+    <Property Name="EMP_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Region_ID" Type="int" />
+    <Property Name="Office_ID" Type="int" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DPT_ID" Type="int" />
+    <Property Name="SEC_ID" Type="int" />
+    <Property Name="SUB_SEC_ID" Type="int" />
+    <Property Name="DEG_ID" Type="int" />
+    <Property Name="GRADE_ID" Type="int" />
+    <Property Name="SCHEDULE_ID" Type="int" />
+    <Property Name="EMP_TITLE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_FIRSTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_LASTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_SEX" Type="nvarchar" MaxLength="10" />
+    <Property Name="EMP_FATHERS_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_MOTHERS_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_DOB" Type="date" />
+    <Property Name="EMP_MARITUAL_STATUS" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_RELIGION" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_NATIONALITY" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_BLOOD_GRP" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_ALT_EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_COMPANY_EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_CONTACT_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_EMG_CONTACT_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_PRE_ADDRESS" Type="nvarchar" MaxLength="250" />
+    <Property Name="EMP_PER_ADDRESS" Type="nvarchar" MaxLength="250" />
+    <Property Name="EMP_EDUCATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_INSTITUTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_DEGREE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_RESULT" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_NOMINEE_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_NOMINEE_CONTACT" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_NOMINEE_ADDRESS" Type="nvarchar" MaxLength="250" />
+    <Property Name="EMP_NOMINEE_AGE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_NOMINEE_RELATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="DATE_JOINED" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="BIO_MATRIX_ID" Type="binary" MaxLength="50" />
+    <Property Name="ReportingBossName" Type="nvarchar(max)" />
+    <Property Name="RptBossDSG" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeStatement">
+    <Key>
+      <PropertyRef Name="EmployeeStatmentId" />
+    </Key>
+    <Property Name="EmployeeStatmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameOfRelative" Type="nvarchar" MaxLength="50" />
+    <Property Name="RelativeEID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Relation" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeType">
+    <Key>
+      <PropertyRef Name="EmployeeTypeId" />
+    </Key>
+    <Property Name="EmployeeTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EmployeeWiseBenefit">
+    <Key>
+      <PropertyRef Name="employeeWiseBenefitId" />
+    </Key>
+    <Property Name="employeeWiseBenefitId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BenefitTypeId" Type="int" />
+    <Property Name="ResionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="EffectiveDate" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_EVALUATION">
+    <Key>
+      <PropertyRef Name="EVAL_ID" />
+    </Key>
+    <Property Name="EVAL_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="ABSENCERROR" Type="int" />
+    <Property Name="ACCURACY" Type="int" />
+    <Property Name="HABBIT" Type="int" />
+    <Property Name="INNOVATION" Type="int" />
+    <Property Name="ORDERLINES" Type="int" />
+    <Property Name="ATTENDANCE" Type="int" />
+    <Property Name="CO_OPERATION" Type="int" />
+    <Property Name="INITIATIVE" Type="int" />
+    <Property Name="KNOWLEDGE" Type="int" />
+    <Property Name="RELIABILITY" Type="int" />
+    <Property Name="OUT_OF" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Experiences">
+    <Key>
+      <PropertyRef Name="ExperienceId" />
+    </Key>
+    <Property Name="ExperienceId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience_Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience_CompanyBussiness" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience_CompanyLocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="Experience_CompanyDepartment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience_PositionHeld" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience_AreaOfExperience" Type="nvarchar" MaxLength="100" />
+    <Property Name="EExperience_Responsibilites" Type="nvarchar" MaxLength="100" />
+    <Property Name="Experience_Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_GRADE">
+    <Key>
+      <PropertyRef Name="GRADE_ID" />
+    </Key>
+    <Property Name="GRADE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRADE" Type="nvarchar" MaxLength="50" />
+    <Property Name="STEP" Type="int" />
+    <Property Name="GROSS_SAL" Type="money" />
+    <Property Name="HOUSE_RENT" Type="money" />
+    <Property Name="BASIC" Type="money" />
+    <Property Name="MEDICAL" Type="money" />
+    <Property Name="CONVEYANCE" Type="money" />
+    <Property Name="FOOD_ALLOW" Type="money" />
+    <Property Name="OTHERS" Type="money" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_HOLIDAY_TYPE">
+    <Key>
+      <PropertyRef Name="HOLIDAY_TYPE_ID" />
+    </Key>
+    <Property Name="HOLIDAY_TYPE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HOLIDAY_TYPE_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_HOLIDAYS">
+    <Key>
+      <PropertyRef Name="HOLIDAY_ID" />
+    </Key>
+    <Property Name="HOLIDAY_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HolidayCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="HOLIDAY_TYPE_ID" Type="int" />
+    <Property Name="HOLIDAY_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="HOLIDAY_DATE" Type="datetime" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_HR_DEMAND">
+    <Key>
+      <PropertyRef Name="HR_DEMAND_ID" />
+    </Key>
+    <Property Name="HR_DEMAND_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DPT_ID" Type="int" />
+    <Property Name="SEC_ID" Type="int" />
+    <Property Name="SUB_SEC_ID" Type="int" />
+    <Property Name="HR_DEMAND_NUM" Type="int" />
+    <Property Name="HR_DEMAND_DATE" Type="date" />
+    <Property Name="HR_DEMAND_INCRASE" Type="int" />
+    <Property Name="HR_DEMAND_DECRASE" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_IncomeHeader">
+    <Key>
+      <PropertyRef Name="IncomeHeaderID" />
+    </Key>
+    <Property Name="IncomeHeaderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IncomeHeader" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_IncomeHeaderDetails">
+    <Key>
+      <PropertyRef Name="IncomeHeaderDetailsID" />
+    </Key>
+    <Property Name="IncomeHeaderDetailsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IncomeHeaderDetils" Type="nvarchar" MaxLength="150" />
+    <Property Name="IncomeHeaderID" Type="int" />
+    <Property Name="ChargeablePar" Type="float" />
+    <Property Name="ChargeableDeatils" Type="int" />
+    <Property Name="PlussORLess" Type="nvarchar" MaxLength="10" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_JOB_TERMINATE">
+    <Key>
+      <PropertyRef Name="TERMINATE_ID" />
+    </Key>
+    <Property Name="TERMINATE_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TERMINATE_DATE" Type="datetime" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Termination_Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="HRM_JobAllocation">
+    <Key>
+      <PropertyRef Name="JobAllocationId" />
+    </Key>
+    <Property Name="JobAllocationId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobAllocationCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionID" Type="bigint" />
+    <Property Name="OfficeID" Type="bigint" />
+    <Property Name="DepartmentID" Type="bigint" />
+    <Property Name="Region" Type="nvarchar" MaxLength="250" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="RequestFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="SuccessStatus" Type="bit" />
+    <Property Name="PendingStatus" Type="bit" />
+    <Property Name="CancelStatus" Type="bit" />
+    <Property Name="UpdateRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="JobAllocationTime" Type="time" />
+    <Property Name="JobAllocatonDate" Type="date" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_JobAllocationtemporary">
+    <Key>
+      <PropertyRef Name="JoBAllocationTemID" />
+    </Key>
+    <Property Name="JoBAllocationTemID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LanguageProficiency">
+    <Key>
+      <PropertyRef Name="LanguageProficiencyId" />
+    </Key>
+    <Property Name="LanguageProficiencyId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reading" Type="nvarchar" MaxLength="50" />
+    <Property Name="Writting" Type="nvarchar" MaxLength="50" />
+    <Property Name="Speaking" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_DETAILS">
+    <Key>
+      <PropertyRef Name="LEV_DETAILS_ID" />
+    </Key>
+    <Property Name="LEV_DETAILS_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LEV_APP_ID" Type="int" />
+    <Property Name="LEV_DATES" Type="date" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="LEV_APP_ID" />
+    </Key>
+    <Property Name="LEV_APP_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EMP_ID" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LEV_TYPE_ID" Type="int" />
+    <Property Name="TOTAL_REM_DAY" Type="int" />
+    <Property Name="TOTAL_LEV_DAYS" Type="int" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="250" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LEAVE_TYPE">
+    <Key>
+      <PropertyRef Name="LEV_ID" />
+    </Key>
+    <Property Name="LEV_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LEV_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LEV_DAYS" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LeaveApply">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Name="LeaveId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eid" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveAppliedDate" Type="datetime" />
+    <Property Name="LeaveDates" Type="datetime" />
+    <Property Name="LeaveTypeId" Type="int" />
+    <Property Name="TotalDay" Type="int" />
+    <Property Name="LeaveResion" Type="nvarchar" MaxLength="250" />
+    <Property Name="LeaveToDate" Type="datetime" />
+    <Property Name="LeaveCurrentYear" Type="int" />
+    <Property Name="ReprotingBoss1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBoss2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBossHRM" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBoss1ApproveStatus" Type="bit" />
+    <Property Name="ReportingBoss2ApporveStatus" Type="bit" />
+    <Property Name="ReprotingBossHRmApporveStatus" Type="bit" />
+    <Property Name="ReprotingBoss1ApproveDate" Type="datetime" />
+    <Property Name="ReportingBoss2ApproveDate" Type="datetime" />
+    <Property Name="ReportingBossHRMApproveDate" Type="date" />
+    <Property Name="ReprotingBoss1DisApproveStatus" Type="bit" />
+    <Property Name="ReportingBoss2DisApporveStatus" Type="bit" />
+    <Property Name="ReprotingBossHRmDisApporveStatus" Type="bit" />
+    <Property Name="ReprotingBoss1DisApproveDate" Type="datetime" />
+    <Property Name="ReportingBoss2DisApproveDate" Type="datetime" />
+    <Property Name="ReportingBossHRMDisApproveDate" Type="date" />
+    <Property Name="ReportingBoss" Type="nchar" MaxLength="10" />
+    <Property Name="LeaveStatusHRM" Type="bit" />
+    <Property Name="LeaveStatusForReportingBoss" Type="bit" />
+    <Property Name="ApporveBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPandingStatus" Type="bit" />
+    <Property Name="ApproveDate" Type="date" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LETTER_FORMAT">
+    <Key>
+      <PropertyRef Name="LTR_ID" />
+    </Key>
+    <Property Name="LTR_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LTR_Details" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LTR_Type" Type="int" Nullable="false" />
+    <Property Name="LTR_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LetterType">
+    <Key>
+      <PropertyRef Name="LatterTypeId" />
+    </Key>
+    <Property Name="LatterTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LatterType" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_LiabilityType">
+    <Key>
+      <PropertyRef Name="TAXTypeAutoID" />
+    </Key>
+    <Property Name="TAXTypeAutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_MachineReadableProblem">
+    <Key>
+      <PropertyRef Name="MachineProblem_Id" />
+    </Key>
+    <Property Name="MachineProblem_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Att_Date" Type="datetime" />
+    <Property Name="Att_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="Working_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_MaternityLeave">
+    <Key>
+      <PropertyRef Name="MaternityLeaveId" />
+    </Key>
+    <Property Name="MaternityLeaveId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="AppliedDate" Type="datetime" />
+    <Property Name="LeaveDateFrom" Type="datetime" />
+    <Property Name="LeaveDateTo" Type="datetime" />
+    <Property Name="TotalDay" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="ApproveStatus" Type="bit" />
+    <Property Name="DisApproveStatus" Type="bit" />
+    <Property Name="StatusDate" Type="datetime" />
+    <Property Name="HrmReportinBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Name="OfficeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OfficeCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="OfficeName" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="OfficeAddress" Type="varchar" Nullable="false" MaxLength="4000" />
+    <Property Name="RegionId" Type="int" Nullable="false" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_OfficialDay">
+    <Key>
+      <PropertyRef Name="OfficialDay_Id" />
+    </Key>
+    <Property Name="OfficialDay_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Official_Date" Type="datetime" />
+    <Property Name="Working_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_OfficialDay_Individual">
+    <Key>
+      <PropertyRef Name="OfficialDay_Id" />
+    </Key>
+    <Property Name="OfficialDay_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Official_Date" Type="datetime" />
+    <Property Name="Working_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_Applicable" Type="bit" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary">
+    <Key>
+      <PropertyRef Name="PaySalary_ID" />
+    </Key>
+    <Property Name="PaySalary_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worked_Day" Type="int" />
+    <Property Name="Over_Time" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="Total_Day_Of_Month" Type="int" />
+    <Property Name="Work_Holiday" Type="int" />
+    <Property Name="Other_Holiday" Type="int" />
+    <Property Name="Total_Leave" Type="int" />
+    <Property Name="Salary_Month" Type="datetime" />
+    <Property Name="Date_Processed" Type="datetime" />
+    <Property Name="Total_Basic_New" Type="money" />
+    <Property Name="Payable_Salary" Type="decimal" Scale="2" />
+    <Property Name="Total_Gross_Sal_Compliance" Type="money" />
+    <Property Name="Net_Payable_Compliance" Type="money" />
+    <Property Name="Total_Gross_Sal" Type="money" />
+    <Property Name="Net_Payable" Type="decimal" Scale="2" />
+    <Property Name="Total_Tax" Type="money" />
+    <Property Name="Total_Bonus" Type="money" />
+    <Property Name="Total_LateDeduction_Cost" Type="money" />
+    <Property Name="Total_Leave_Cost" Type="money" />
+    <Property Name="Total_Absent_Cost" Type="money" />
+    <Property Name="Pay_Status" Type="bit" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_Rate" Type="money" />
+    <Property Name="OT_Compliance_Amount" Type="money" />
+    <Property Name="OT_Extra_Amount" Type="money" />
+    <Property Name="OT_Taka" Type="money" />
+    <Property Name="Attendance_Bonus" Type="money" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="SL" Type="int" />
+    <Property Name="CL" Type="int" />
+    <Property Name="ML" Type="int" />
+    <Property Name="AL" Type="int" />
+    <Property Name="LWP" Type="int" />
+    <Property Name="Absent_Day" Type="int" />
+    <Property Name="Absent_Deduction" Type="money" />
+    <Property Name="TotalDeductDay" Type="float" />
+    <Property Name="Other_Deduction" Type="money" />
+    <Property Name="Salary_Punishment" Type="money" />
+    <Property Name="Night_Bill" Type="money" />
+    <Property Name="Holiday_Bill" Type="money" />
+    <Property Name="Total_Benifit" Type="money" />
+    <Property Name="Stamp" Type="money" />
+    <Property Name="AdvanceDeduction" Type="money" />
+    <Property Name="Total_Compliance_Deduction" Type="money" />
+    <Property Name="Total_Deduction" Type="money" />
+    <Property Name="IsSalaryHeldup" Type="bit" />
+    <Property Name="IsSalaryCancel" Type="bit" />
+    <Property Name="IsSalaryRelease" Type="bit" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Adjustment">
+    <Key>
+      <PropertyRef Name="SalaryAdjust_ID" />
+    </Key>
+    <Property Name="SalaryAdjust_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adjust_Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adjust_Amount" Type="money" />
+    <Property Name="Adjust_Month" Type="date" />
+    <Property Name="Date_Proccessed" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Deduction">
+    <Key>
+      <PropertyRef Name="SalaryDeduct_ID" />
+    </Key>
+    <Property Name="SalaryDeduct_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Deduct_Purpose" Type="nvarchar" MaxLength="300" />
+    <Property Name="Salary_Deduct_Amount" Type="money" />
+    <Property Name="Deduct_Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="Deduct_Year" Type="int" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Pay_Salary_Tax">
+    <Key>
+      <PropertyRef Name="SalaryTax_ID" />
+    </Key>
+    <Property Name="SalaryTax_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tax_Amount" Type="money" />
+    <Property Name="Tax_Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tax_Year" Type="int" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_PaySalary_Temp">
+    <Key>
+      <PropertyRef Name="PaySalary_Temp_ID" />
+    </Key>
+    <Property Name="PaySalary_Temp_ID" Type="int" Nullable="false" />
+    <Property Name="EmpId" Type="bigint" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Worked_Day" Type="int" />
+    <Property Name="Over_Time" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="Total_Day_Of_Month" Type="int" />
+    <Property Name="Work_Holiday" Type="int" />
+    <Property Name="Other_Holiday" Type="int" />
+    <Property Name="Total_Leave" Type="int" />
+    <Property Name="Salary_Month" Type="datetime" />
+    <Property Name="Date_Processed" Type="datetime" />
+    <Property Name="Total_Basic_New" Type="money" />
+    <Property Name="Payable_Salary" Type="decimal" Scale="2" />
+    <Property Name="Total_Gross_Sal_Compliance" Type="money" />
+    <Property Name="Net_Payable_Compliance" Type="money" />
+    <Property Name="Total_Gross_Sal" Type="money" />
+    <Property Name="Net_Payable" Type="decimal" Scale="2" />
+    <Property Name="Total_Tax" Type="money" />
+    <Property Name="Total_Bonus" Type="money" />
+    <Property Name="Total_LateDeduction_Cost" Type="money" />
+    <Property Name="Total_Leave_Cost" Type="money" />
+    <Property Name="Total_Absent_Cost" Type="money" />
+    <Property Name="Pay_Status" Type="bit" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="OT_Rate" Type="money" />
+    <Property Name="OT_Compliance_Amount" Type="money" />
+    <Property Name="OT_Extra_Amount" Type="money" />
+    <Property Name="OT_Taka" Type="money" />
+    <Property Name="Attendance_Bonus" Type="money" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="SL" Type="int" />
+    <Property Name="CL" Type="int" />
+    <Property Name="ML" Type="int" />
+    <Property Name="AL" Type="int" />
+    <Property Name="LWP" Type="int" />
+    <Property Name="Absent_Day" Type="int" />
+    <Property Name="Absent_Deduction" Type="money" />
+    <Property Name="TotalDeductDay" Type="float" />
+    <Property Name="Other_Deduction" Type="money" />
+    <Property Name="Salary_Punishment" Type="money" />
+    <Property Name="Night_Bill" Type="money" />
+    <Property Name="Holiday_Bill" Type="money" />
+    <Property Name="Total_Benifit" Type="money" />
+    <Property Name="Stamp" Type="money" />
+    <Property Name="AdvanceDeduction" Type="money" />
+    <Property Name="Total_Compliance_Deduction" Type="money" />
+    <Property Name="Total_Deduction" Type="money" />
+    <Property Name="IsSalaryHeldup" Type="bit" />
+    <Property Name="IsSalaryCancel" Type="bit" />
+    <Property Name="IsSalaryRelease" Type="bit" />
+  </EntityType>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionsId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="SubSectionId" Type="int" />
+    <Property Name="DesginationId" Type="int" />
+    <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBrith" Type="date" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar(max)" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+    <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="PresentAddress" Type="nvarchar(max)" />
+    <Property Name="PermanenAddress" Type="nvarchar(max)" />
+    <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+    <Property Name="EffectiveSlary" Type="money" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="GrossRate" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="SalaryUpdateDate" Type="datetime" />
+    <Property Name="OTApplicable" Type="bit" />
+    <Property Name="ProbationPeriodFrom" Type="datetime" />
+    <Property Name="ProbationPeriodTo" Type="datetime" />
+    <Property Name="ConfiramtionDate" Type="datetime" />
+    <Property Name="ConfiramtionDateStatus" Type="bit" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="EmpCategoryId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+    <Property Name="JoiningDate" Type="date" />
+    <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="EMP_Retired_Status" Type="bit" />
+    <Property Name="EMP_Resignation_Status" Type="bit" />
+    <Property Name="EMP_Dismissal_Status" Type="bit" />
+    <Property Name="EMP_Died_Status" Type="bit" />
+    <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+    <Property Name="Seperation_Date" Type="datetime" />
+    <Property Name="EMP_Other" Type="bit" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_Singnature" Type="varbinary(max)" />
+    <Property Name="Nomine_Photo" Type="varbinary(max)" />
+    <Property Name="P" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="A" Type="int" />
+    <Property Name="OT" Type="int" />
+    <Property Name="OT_Compliance" Type="int" />
+    <Property Name="OT_Extra" Type="int" />
+    <Property Name="LateHour" Type="time" />
+    <Property Name="WH" Type="int" />
+    <Property Name="GV_H" Type="int" />
+    <Property Name="PV_H" Type="int" />
+    <Property Name="OH" Type="int" />
+    <Property Name="EX" Type="int" />
+    <Property Name="EffectiveSalaryStatus" Type="bit" />
+    <Property Name="Attendance_Bouns" Type="bit" />
+    <Property Name="Late_Applicable" Type="bit" />
+    <Property Name="Absence_Applicable" Type="bit" />
+    <Property Name="Tax_Applicable" Type="bit" />
+    <Property Name="PF_Applicable" Type="bit" />
+    <Property Name="On_Amount" Type="bit" />
+    <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hrm_PersonalInfoTemp">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Regions" Type="nvarchar" MaxLength="50" />
+    <Property Name="Office" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" />
+    <Property Name="Section" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubSection" Type="nvarchar" MaxLength="50" />
+    <Property Name="Desgination" Type="nvarchar" MaxLength="100" />
+    <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateOfBrith" Type="nvarchar" MaxLength="50" />
+    <Property Name="BloodGroup" Type="nvarchar" MaxLength="5" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="NationalID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar(max)" />
+    <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+    <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="30" />
+    <Property Name="PresentAddress" Type="nvarchar(max)" />
+    <Property Name="PermanenAddress" Type="nvarchar(max)" />
+    <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+    <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Step" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+    <Property Name="Salary" Type="money" />
+    <Property Name="GrossRate" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="SalaryUpdateDate" Type="datetime" />
+    <Property Name="OTApplicable" Type="bit" />
+    <Property Name="OTApplicableFU" Type="nvarchar" MaxLength="10" />
+    <Property Name="ProbationPeriodFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProbationPeriodTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConfiramtionDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="EmpCategoryId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+    <Property Name="JoiningDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="JoiningDateFromU" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+    <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+    <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+    <Property Name="EMP_Singnature" Type="varbinary(max)" />
+    <Property Name="Nomine_Photo" Type="varbinary(max)" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_PFConfiguration">
+    <Key>
+      <PropertyRef Name="PFContributionID" />
+    </Key>
+    <Property Name="PFContributionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerContribution" Type="float" />
+    <Property Name="PFEmployee" Type="float" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Re_Active_LeaveApply">
+    <Key>
+      <PropertyRef Name="LeaveId" />
+    </Key>
+    <Property Name="LeaveId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LeaveCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eid" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaveAppliedDate" Type="datetime" />
+    <Property Name="LeaveDates" Type="datetime" />
+    <Property Name="LeaveTypeId" Type="int" />
+    <Property Name="TotalDay" Type="int" />
+    <Property Name="LeaveResion" Type="nvarchar" MaxLength="250" />
+    <Property Name="LeaveToDate" Type="datetime" />
+    <Property Name="LeaveCurrentYear" Type="int" />
+    <Property Name="ReprotingBoss1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBoss2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBossHRM" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReprotingBoss1ApproveStatus" Type="bit" />
+    <Property Name="ReportingBoss2ApporveStatus" Type="bit" />
+    <Property Name="ReprotingBossHRmApporveStatus" Type="bit" />
+    <Property Name="ReprotingBoss1ApproveDate" Type="datetime" />
+    <Property Name="ReportingBoss2ApproveDate" Type="datetime" />
+    <Property Name="ReportingBossHRMApproveDate" Type="date" />
+    <Property Name="ReprotingBoss1DisApproveStatus" Type="bit" />
+    <Property Name="ReportingBoss2DisApporveStatus" Type="bit" />
+    <Property Name="ReprotingBossHRmDisApporveStatus" Type="bit" />
+    <Property Name="ReprotingBoss1DisApproveDate" Type="datetime" />
+    <Property Name="ReportingBoss2DisApproveDate" Type="datetime" />
+    <Property Name="ReportingBossHRMDisApproveDate" Type="date" />
+    <Property Name="ReportingBoss" Type="nchar" MaxLength="10" />
+    <Property Name="LeaveStatusHRM" Type="bit" />
+    <Property Name="LeaveStatusForReportingBoss" Type="bit" />
+    <Property Name="ApporveBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPandingStatus" Type="bit" />
+    <Property Name="ApproveDate" Type="date" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_ReasonType">
+    <Key>
+      <PropertyRef Name="ReasonTypeId" />
+    </Key>
+    <Property Name="ReasonTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReasonType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionCode" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="RegionName" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Salary_Deduction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary_DeductType" Type="nvarchar" MaxLength="10" />
+    <Property Name="Salary_DeductDay" Type="float" />
+    <Property Name="Salary_DeductDate" Type="datetime" />
+    <Property Name="ApprovedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Salary_Punishment">
+    <Key>
+      <PropertyRef Name="SalryPunishmentId" />
+    </Key>
+    <Property Name="SalryPunishmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalDeductDay" Type="float" />
+    <Property Name="Salary_Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="Salary_Year" Type="int" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryIncrement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncrementDate" Type="datetime" />
+    <Property Name="EffectiveDate" Type="datetime" />
+    <Property Name="IncrementSalary" Type="money" />
+    <Property Name="previousSalary" Type="money" />
+    <Property Name="ApprovedStatus" Type="bit" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="10" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryIncrementSLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncrementDate" Type="datetime" />
+    <Property Name="EffectiveDate" Type="datetime" />
+    <Property Name="IncrementSalary" Type="money" />
+    <Property Name="previousSalary" Type="money" />
+    <Property Name="SalaryIncrementStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="10" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="HRM_SalaryUpdate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Previoussalary" Type="money" />
+    <Property Name="CurrendSalary" Type="money" />
+    <Property Name="DegID" Type="int" />
+    <Property Name="Grade" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_SECTIONS">
+    <Key>
+      <PropertyRef Name="SEC_ID" />
+    </Key>
+    <Property Name="SEC_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SEC_NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="DPT_ID" Type="int" />
+    <Property Name="RegionID" Type="int" />
+    <Property Name="OfficeID" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_SERVICE_CONTRACT">
+    <Key>
+      <PropertyRef Name="CONT_ID" />
+    </Key>
+    <Property Name="CONT_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CONTRACT" Type="nvarchar(max)" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Skills">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Skill_Specialization" Type="nvarchar" MaxLength="50" />
+    <Property Name="Skill_Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Skill_ExtraActivities" Type="nvarchar" MaxLength="100" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_StoreLetter">
+    <Key>
+      <PropertyRef Name="StoreLetterId" />
+    </Key>
+    <Property Name="StoreLetterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_SUB_SECTIONS">
+    <Key>
+      <PropertyRef Name="SUB_SEC_ID" />
+    </Key>
+    <Property Name="SUB_SEC_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SUB_SEC_NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="SEC_ID" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="RegionID" Type="int" />
+    <Property Name="OfficeID" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_SubCompany">
+    <Key>
+      <PropertyRef Name="SubCompany_Id" />
+    </Key>
+    <Property Name="SubCompany_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubCompanyName" Type="nvarchar" MaxLength="150" />
+    <Property Name="SubCompanyAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubCompanyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_TAXLiabilityConfig">
+    <Key>
+      <PropertyRef Name="TAXLiabilityConfigID" />
+    </Key>
+    <Property Name="TAXLiabilityConfigID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TAXTypeAutoID" Type="int" />
+    <Property Name="IncomeFrom" Type="money" />
+    <Property Name="IncomeTo" Type="money" />
+    <Property Name="OfTax" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_TAXPFApplicable">
+    <Key>
+      <PropertyRef Name="TAXPFApplicableID" />
+    </Key>
+    <Property Name="TAXPFApplicableID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TAXStatus" Type="bit" />
+    <Property Name="PFStatus" Type="bit" />
+    <Property Name="MaleStatus" Type="bit" />
+    <Property Name="FemaleStatus" Type="bit" />
+    <Property Name="SeniorCitizen" Type="bit" />
+    <Property Name="Disabled" Type="bit" />
+    <Property Name="DisabledFreedomFighter" Type="bit" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_TemporySalaryIncrement">
+    <Key>
+      <PropertyRef Name="TIncrimetId" />
+    </Key>
+    <Property Name="TIncrimetId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentSalary" Type="money" />
+    <Property Name="OldSalary" Type="money" />
+    <Property Name="IncrementRate" Type="money" />
+    <Property Name="IncrementDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ERPSSL_Azim.dbo.HRM_TimeInoutOTCalculation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="HRM_TimeInoutOTCalculation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EMPID" Type="bigint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="255" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="255" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DPT_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SectionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Esection" Type="nvarchar" MaxLength="50" />
+    <Property Name="d1" Type="numeric" />
+    <Property Name="d2" Type="numeric" />
+    <Property Name="d3" Type="numeric" />
+    <Property Name="d4" Type="numeric" />
+    <Property Name="d5" Type="numeric" />
+    <Property Name="d6" Type="numeric" />
+    <Property Name="d7" Type="numeric" />
+    <Property Name="d8" Type="numeric" />
+    <Property Name="d9" Type="numeric" />
+    <Property Name="d10" Type="numeric" />
+    <Property Name="d11" Type="numeric" />
+    <Property Name="d12" Type="numeric" />
+    <Property Name="d13" Type="numeric" />
+    <Property Name="d14" Type="numeric" />
+    <Property Name="d15" Type="numeric" />
+    <Property Name="d16" Type="numeric" />
+    <Property Name="d17" Type="numeric" />
+    <Property Name="d18" Type="numeric" />
+    <Property Name="d19" Type="numeric" />
+    <Property Name="d20" Type="numeric" />
+    <Property Name="d21" Type="numeric" />
+    <Property Name="d22" Type="numeric" />
+    <Property Name="d23" Type="numeric" />
+    <Property Name="d24" Type="numeric" />
+    <Property Name="d25" Type="numeric" />
+    <Property Name="d26" Type="numeric" />
+    <Property Name="d27" Type="numeric" />
+    <Property Name="d28" Type="numeric" />
+    <Property Name="d29" Type="numeric" />
+    <Property Name="d30" Type="numeric" />
+    <Property Name="d31" Type="numeric" />
+    <Property Name="DateFrom" Type="smalldatetime" />
+    <Property Name="DateTo" Type="smalldatetime" />
+    <Property Name="TotalOT" Type="numeric" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionName" Type="nvarchar" MaxLength="150" />
+    <Property Name="OfficeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionsId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="SubSectionId" Type="int" />
+    <Property Name="DesginationId" Type="int" />
+  </EntityType>
+  <EntityType Name="HRM_TIMESCHEDULE">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShiftType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weekend1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Weekend2" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="time" />
+    <Property Name="EndTime" Type="time" />
+    <Property Name="LateAllowed" Type="time" />
+    <Property Name="TotalHour" Type="time" />
+    <Property Name="Weekend1_Duty" Type="bit" />
+    <Property Name="Weekend1Duty_Hour" Type="nvarchar" MaxLength="10" />
+    <Property Name="Weekend2_Duty" Type="bit" />
+    <Property Name="Weekend2Duty_Hour" Type="nvarchar" MaxLength="10" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_TimeScheduleByReligion">
+    <Key>
+      <PropertyRef Name="ReligionSechedule_Id" />
+    </Key>
+    <Property Name="ReligionSechedule_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegionId" Type="int" />
+    <Property Name="OfficeId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="InTime" Type="time" />
+    <Property Name="OutTime" Type="time" />
+    <Property Name="ReasonType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRM_Trainings">
+    <Key>
+      <PropertyRef Name="TrainingId" />
+    </Key>
+    <Property Name="TrainingId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="TraningTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="TraningTopicsCovered" Type="nvarchar" MaxLength="150" />
+    <Property Name="Institue" Type="nvarchar" MaxLength="50" />
+    <Property Name="Countery" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="TraningYear" Type="int" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HRPAY_SALARY">
+    <Key>
+      <PropertyRef Name="PROCESS_ID" />
+    </Key>
+    <Property Name="PROCESS_ID" Type="int" Nullable="false" />
+    <Property Name="EMP_ID" Type="bigint" />
+    <Property Name="WORKED_DAYS" Type="int" />
+    <Property Name="OVER_TIME" Type="time" />
+    <Property Name="WORK_HOLIDAYS" Type="int" />
+    <Property Name="OTHER_HOLIDAYS" Type="int" />
+    <Property Name="TOTAL_LEAVE" Type="int" />
+    <Property Name="SALARY_MONTH" Type="date" />
+    <Property Name="DATE_PROCESSED" Type="datetime" />
+    <Property Name="TOTAL_BASIC_NEW" Type="money" />
+    <Property Name="TOTAL_GROSS_SAL" Type="money" />
+    <Property Name="TOTAL_TAX" Type="money" />
+    <Property Name="TOTAL_BONUS" Type="money" />
+    <Property Name="TOTAL_LEAVE_COST" Type="money" />
+    <Property Name="TOTAL_ABSENT_COST" Type="money" />
+    <Property Name="PAY_STATUS" Type="bit" />
+    <Property Name="EDIT_USER" Type="uniqueidentifier" />
+    <Property Name="EDIT_DATE" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_HRM_AttendanceReason_HRM_ReasonType">
+    <End Role="HRM_ReasonType" Type="ERPSSL_MASTERModel.Store.HRM_ReasonType" Multiplicity="0..1" />
+    <End Role="HRM_AttendanceReason" Type="ERPSSL_MASTERModel.Store.HRM_AttendanceReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_ReasonType">
+        <PropertyRef Name="ReasonTypeId" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason">
+        <PropertyRef Name="ReasonTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_DEPARTMENTS">
+    <End Role="HRM_DEPARTMENTS" Type="ERPSSL_MASTERModel.Store.HRM_DEPARTMENTS" Multiplicity="0..1" />
+    <End Role="HRM_AttendanceReason_Individual" Type="ERPSSL_MASTERModel.Store.HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_DEPARTMENTS">
+        <PropertyRef Name="DPT_ID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_Office">
+    <End Role="HRM_Office" Type="ERPSSL_MASTERModel.Store.HRM_Office" Multiplicity="0..1" />
+    <End Role="HRM_AttendanceReason_Individual" Type="ERPSSL_MASTERModel.Store.HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Office">
+        <PropertyRef Name="OfficeID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="OfficeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_ReasonType">
+    <End Role="HRM_ReasonType" Type="ERPSSL_MASTERModel.Store.HRM_ReasonType" Multiplicity="0..1" />
+    <End Role="HRM_AttendanceReason_Individual" Type="ERPSSL_MASTERModel.Store.HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_ReasonType">
+        <PropertyRef Name="ReasonTypeId" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="ReasonTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HRM_AttendanceReason_Individual_HRM_Regions">
+    <End Role="HRM_Regions" Type="ERPSSL_MASTERModel.Store.HRM_Regions" Multiplicity="0..1" />
+    <End Role="HRM_AttendanceReason_Individual" Type="ERPSSL_MASTERModel.Store.HRM_AttendanceReason_Individual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HRM_Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="HRM_AttendanceReason_Individual">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Adp_GetModuleById" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Adp_GetPageList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ENTER_SERVICE_CONTRACT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EMP_ID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CONTRACT" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ENTER_SERVICE_CONTRACT_FILE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_TITLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_TYPE" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_PATH" Type="nvarchar" Mode="In" />
+    <Parameter Name="FILE_SIZE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDIT_USER" Type="nvarchar" Mode="In" />
+    <Parameter Name="EDIT_DATE" Type="datetime" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ERP_LogIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_EMPLOYEE_IMAGE_SP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GET_HRM_GET_Company_Logo_SP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+    <Parameter Name="CID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Get_Module" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetACDepreciationMathod" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetACDepreciationRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetCorporateTaxRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetOrderedQty" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrOrderNo" Type="varchar" Mode="In" />
+    <Parameter Name="BArcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTaxDepreciationMathod" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTaxDepreciationRate" ReturnType="float" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupCode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetTransactionName" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsAcquised" Type="bit" Mode="In" />
+    <Parameter Name="IsRevaliated" Type="bit" Mode="In" />
+    <Parameter Name="IsImpaired" Type="bit" Mode="In" />
+    <Parameter Name="IsDisposed" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="HRM_EmployesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetAnnualTakenLeaveByEid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetApplyLeaveListForApproveByEmployeeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetAssignToInfoByEmployeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetDeginationNameByDeginationId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetDepartmentNameByDepartmentId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetGradeNameBygradeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetLeaveInfoByEmployeeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetLeaveTypeByTypeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetNameByEId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetOfficeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetOfficeNameByOfficeId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetReprotingBossNameByEId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetResionNameByResionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSectionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSectionNameBySectionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSubSctionNameBySubSectionId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetSubSectionList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTakenLeaveByLeaveType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Eid" Type="nvarchar" Mode="In" />
+    <Parameter Name="LeaveType" Type="int" Mode="In" />
+    <Parameter Name="currentYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTimeShiftingBySchedulId" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_GetTransfered_Employees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_RPT_Evaluation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_SearchEmployesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+    <Parameter Name="searchText" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_Service_Contract_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CONTRACT" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_Service_Contract_Update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EID" Type="nvarchar" Mode="In" />
+    <Parameter Name="CONTRACT" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OCODE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HRM_Terminitated_Employees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ocode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="IsAvailable" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsExist" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="IsZero" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="value" Type="int" Mode="In" />
+    <Parameter Name="ReturnValue" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SALE_TaskSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DATE_FROM" Type="datetime" Mode="In" />
+    <Parameter Name="DATE_TO" Type="datetime" Mode="In" />
+    <Parameter Name="CLIENT_NAME" Type="nvarchar" Mode="In" />
+    <Parameter Name="RES_PERSON" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="TotalDayOfYear" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Date" Type="datetime" Mode="In" />
+  </Function>
+</Schema>

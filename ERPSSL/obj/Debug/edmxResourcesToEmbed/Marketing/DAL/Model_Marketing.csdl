@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model_Marketing" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ERPSSL_Marketing_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MRK_Stage" EntityType="Model_Marketing.MRK_Stage" />
+    <EntitySet Name="HRM_PersonalInformations" EntityType="Model_Marketing.HRM_PersonalInformations" />
+    <EntitySet Name="MRK_MarketingPerson" EntityType="Model_Marketing.MRK_MarketingPerson" />
+    <EntitySet Name="MRK_Transaction" EntityType="Model_Marketing.MRK_Transaction" />
+    <EntitySet Name="LC_InputType" EntityType="Model_Marketing.LC_InputType" />
+    <EntitySet Name="MRK_Task_Details" EntityType="Model_Marketing.MRK_Task_Details" />
+    <EntitySet Name="MRK_MarketingInfo" EntityType="Model_Marketing.MRK_MarketingInfo" />
+    <EntitySet Name="MRK_Reference" EntityType="Model_Marketing.MRK_Reference" />
+    <EntitySet Name="MRK_WorkOrder" EntityType="Model_Marketing.MRK_WorkOrder" />
+    <EntitySet Name="MRK_AMC" EntityType="Model_Marketing.MRK_AMC" />
+    <EntitySet Name="MRK_Project" EntityType="Model_Marketing.MRK_Project" />
+  </EntityContainer>
+  <EntityType Name="MRK_Stage">
+    <Key>
+      <PropertyRef Name="StageId" />
+    </Key>
+    <Property Name="StageId" Type="Int32" Nullable="false" />
+    <Property Name="StageName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Create_User" Type="Guid" />
+    <Property Name="Create_Date" Type="DateTime" Precision="3" />
+    <Property Name="Edit_User" Type="Guid" />
+    <Property Name="Edit_Date" Type="DateTime" Precision="3" />
+    <Property Name="OCODE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionsId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="SectionId" />
+    <Property Type="Int32" Name="SubSectionId" />
+    <Property Type="Int32" Name="DesginationId" />
+    <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+    <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Step" />
+    <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+    <Property Type="Boolean" Name="OTApplicable" />
+    <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+    <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+    <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+    <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+    <Property Type="Int32" Name="EmployeeType" />
+    <Property Type="Int32" Name="EmpCategoryId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+    <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Boolean" Name="EMP_Retired_Status" />
+    <Property Type="Boolean" Name="EMP_Resignation_Status" />
+    <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+    <Property Type="Boolean" Name="EMP_Died_Status" />
+    <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+    <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+    <Property Type="Boolean" Name="EMP_Other" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="A" />
+    <Property Type="Int32" Name="OT" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Time" Name="LateHour" Precision="7" />
+    <Property Type="Int32" Name="WH" />
+    <Property Type="Int32" Name="GV_H" />
+    <Property Type="Int32" Name="PV_H" />
+    <Property Type="Int32" Name="OH" />
+    <Property Type="Int32" Name="EX" />
+    <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+    <Property Type="Boolean" Name="Attendance_Bouns" />
+    <Property Type="Boolean" Name="Late_Applicable" />
+    <Property Type="Boolean" Name="Absence_Applicable" />
+    <Property Type="Boolean" Name="Tax_Applicable" />
+    <Property Type="Boolean" Name="PF_Applicable" />
+    <Property Type="Boolean" Name="On_Amount" />
+    <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_MarketingPerson">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Type="Int64" Name="EmpId" Nullable="false" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionsId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="SectionId" />
+    <Property Type="Int32" Name="SubSectionId" />
+    <Property Type="Int32" Name="DesginationId" />
+    <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+    <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Step" />
+    <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+    <Property Type="Boolean" Name="OTApplicable" />
+    <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+    <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+    <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+    <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+    <Property Type="Int32" Name="EmployeeType" />
+    <Property Type="Int32" Name="EmpCategoryId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+    <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Boolean" Name="EMP_Retired_Status" />
+    <Property Type="Boolean" Name="EMP_Resignation_Status" />
+    <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+    <Property Type="Boolean" Name="EMP_Died_Status" />
+    <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+    <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+    <Property Type="Boolean" Name="EMP_Other" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="A" />
+    <Property Type="Int32" Name="OT" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Time" Name="LateHour" Precision="7" />
+    <Property Type="Int32" Name="WH" />
+    <Property Type="Int32" Name="GV_H" />
+    <Property Type="Int32" Name="PV_H" />
+    <Property Type="Int32" Name="OH" />
+    <Property Type="Int32" Name="EX" />
+    <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+    <Property Type="Boolean" Name="Attendance_Bouns" />
+    <Property Type="Boolean" Name="Late_Applicable" />
+    <Property Type="Boolean" Name="Absence_Applicable" />
+    <Property Type="Boolean" Name="Tax_Applicable" />
+    <Property Type="Boolean" Name="PF_Applicable" />
+    <Property Type="Boolean" Name="On_Amount" />
+    <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Type="Int32" Name="TransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="WorkOrderId" />
+    <Property Type="DateTime" Name="CollectionDate" Precision="3" />
+    <Property Type="Decimal" Name="CollectionAmount" Precision="19" Scale="4" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_InputType">
+    <Key>
+      <PropertyRef Name="InputType_Id" />
+    </Key>
+    <Property Type="Int32" Name="InputType_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Use_Dept" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Input_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Sl_No" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_Task_Details">
+    <Key>
+      <PropertyRef Name="TaskDetails_Id" />
+    </Key>
+    <Property Type="Int32" Name="TaskDetails_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="WorkOrderId" />
+    <Property Type="String" Name="Task" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comments" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_MarketingInfo">
+    <Key>
+      <PropertyRef Name="MarketingInfoId" />
+    </Key>
+    <Property Type="Int32" Name="MarketingInfoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="VisitDate" Precision="3" />
+    <Property Type="String" Name="Client" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProjectId" />
+    <Property Type="String" Name="Module" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StageId" />
+    <Property Type="String" Name="MarketingPersonId" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ReferenceId" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_Reference">
+    <Key>
+      <PropertyRef Name="ReferenceId" />
+    </Key>
+    <Property Type="Int32" Name="ReferenceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ReferenceName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReferenceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_WorkOrder">
+    <Key>
+      <PropertyRef Name="WoID" />
+    </Key>
+    <Property Type="Int32" Name="WoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="MarketingInfoId" />
+    <Property Type="DateTime" Name="WorkOrderDate" Precision="3" />
+    <Property Type="String" Name="CompletionPeriod" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ProposedAmount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="SigningAmount" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="RemainingAmount" Precision="19" Scale="4" />
+    <Property Type="String" Name="PaymentCondition" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AMC_Condition" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DevelopmentDept" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="WarrantyPeriod" />
+    <Property Type="DateTime" Name="AMCDAte" Precision="3" />
+    <Property Type="Boolean" Name="HandoverStatus" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_AMC">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="WorkOrderId" />
+    <Property Type="String" Name="AMC_Condition" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AMC_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <Property Type="String" Name="BillingStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MRK_Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Type="Int32" Name="ProjectId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

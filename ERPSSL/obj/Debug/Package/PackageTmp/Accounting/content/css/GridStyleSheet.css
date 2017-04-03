@@ -1,0 +1,104 @@
+﻿/*....................................*/
+
+.Grid_Border {
+    border: 0px solid #ccc;
+    padding-left: 5px;
+}
+
+.Grid_Header {
+    border: 1px solid #eee;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 17px;
+    padding-left: 5px;
+    color: #fff;
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #258dc8; /* Old browsers */
+}
+
+.Grid_Footer {
+    border: 1px solid #eee;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 17px;
+    padding-left: 5px;
+    color: #fff;
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background: #b0c4de; /* Old browsers */
+}
+
+.Grid_RowStyle {
+    border: 1px solid #F7F6F3;
+    font-size: 11px;
+    height: 17px;
+    padding-left: 5px;
+    color: #153F67;
+    vertical-align: middle;
+    background: #F7F6F3;
+}
+
+/*..............................................*/
+
+
+.Grid_AltRowStyle {
+    border: 1px solid #EDEDED;
+    font-size: 11px;
+    height: 17px;
+    padding-left: 5px;
+    color: #153F67;
+    vertical-align: middle;
+    background: #EDEDED;
+}
+
+.float_but {
+    float: left;
+    display: inline-block;
+}
+
+.Color_Orange {
+    color: White;
+    background: Orange;
+}
+
+.Color_Green {
+    color: White;
+    background: #3dae5b;
+}
+
+.Color_purple {
+    color: White;
+    background: #8648a7;
+}
+
+.Color_Blue {
+    color: White;
+    background: #258dc8;
+}
+
+::-webkit-input-placeholder {
+    color: White;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: White;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: White;
+}
+
+:-ms-input-placeholder {
+    color: White;
+}
+
+input[placeholder],
+[placeholder],
+*[placeholder] {
+    /*color: White !important;*/
+}

@@ -1,0 +1,31 @@
+1. SpryMenuBarHorizontal.css
+
+ul.MenuBarHorizontal a {
+display: block;
+cursor: pointer;
+background-color: #979999;
+border-color: #D2D2D2;
+padding: 0.6em 0.75em;
+color: #fff;
+text-decoration: none;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border: 2px solid;
+
+border-bottom: none;
+
+
+2. Style.css
+footer {
+padding: 5px 0;
+background-color: #F1F1EA;
+position: relative;
+clear: both;
+bottom: 0;
+border-top: 2px solid #FA0811;
+}
+
+.span12 {
+width: 100%;
+margin-left: 0;
+background-color: #fff;

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERPSSL_HMSDataModelStoreContainer" CdmEntityContainer="ERPSSL_HMSEntities">
+    <EntitySetMapping Name="HMS_BillHead">
+      <EntityTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_BillHead">
+        <MappingFragment StoreEntitySet="HMS_BillHead">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Bill_Head_Name" ColumnName="Bill_Head_Name" />
+          <ScalarProperty Name="HMS_CategoryId" ColumnName="HMS_CategoryId" />
+          <ScalarProperty Name="HMS_Bill_Head_Id" ColumnName="HMS_Bill_Head_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HMS_GetBillHeadList" FunctionName="ERPSSL_HMSDataModel.Store.HMS_GetBillHeadList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_GetBillHeadList_Result">
+          <ScalarProperty Name="HMS_Bill_Head_Id" ColumnName="HMS_Bill_Head_Id" />
+          <ScalarProperty Name="Bill_Head_Name" ColumnName="Bill_Head_Name" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="HMS_PatientInfo">
+      <EntityTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_PatientInfo">
+        <MappingFragment StoreEntitySet="HMS_PatientInfo">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RefdBy" ColumnName="RefdBy" />
+          <ScalarProperty Name="Bed_CabinNo" ColumnName="Bed_CabinNo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="BillHeadId" ColumnName="BillHeadId" />
+          <ScalarProperty Name="BillCategoryId" ColumnName="BillCategoryId" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="GuardianContactNo" ColumnName="GuardianContactNo" />
+          <ScalarProperty Name="GuardianName" ColumnName="GuardianName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="M_Y_D" ColumnName="M_Y_D" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMS_BillCategory">
+      <EntityTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_BillCategory">
+        <MappingFragment StoreEntitySet="HMS_BillCategory">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="HMS_CategoryId" ColumnName="HMS_CategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMS_PatientBillInfo">
+      <EntityTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_PatientBillInfo">
+        <MappingFragment StoreEntitySet="HMS_PatientBillInfo">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="CollectionDate" ColumnName="CollectionDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Bill_Head_Id" ColumnName="Bill_Head_Id" />
+          <ScalarProperty Name="Bill_Category_Id" ColumnName="Bill_Category_Id" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMS_PatientCollectionSummary">
+      <EntityTypeMapping TypeName="ERPSSL_HMSDataModel.HMS_PatientCollectionSummary">
+        <MappingFragment StoreEntitySet="HMS_PatientCollectionSummary">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="DisChargeDate" ColumnName="DisChargeDate" />
+          <ScalarProperty Name="Discount_Percent" ColumnName="Discount_Percent" />
+          <ScalarProperty Name="ServiceCharge_Percent" ColumnName="ServiceCharge_Percent" />
+          <ScalarProperty Name="AdvanceAmount" ColumnName="AdvanceAmount" />
+          <ScalarProperty Name="CollectionAmount" ColumnName="CollectionAmount" />
+          <ScalarProperty Name="CollectionDate" ColumnName="CollectionDate" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

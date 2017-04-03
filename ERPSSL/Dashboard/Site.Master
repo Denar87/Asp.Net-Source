@@ -1,0 +1,179 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ERPSSL.Dashboard.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../content/manu/_styles.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet'
+        type='text/css'>
+    <!-- Main Styleshet -->
+    <link rel="stylesheet" href="../content/css/styles.css">
+    <!-- Responsive StyleSheet -->
+    <link href="../css/TabStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../css/ContentStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../content/css/responsive.css">
+    <link href="../css/ContentStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../css/GridStyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script src="../js/jquery.js"></script>
+    <link href="../sidenav/SideNav.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../content/DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../css/charisma-app.css" rel="stylesheet" />
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/jquery.history.js"></script>
+    <script src="../js/charisma.js"></script>
+
+    <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script>
+        (function ($) {
+            $(window).load(function () {
+
+                $("#content-1").mCustomScrollbar({
+                    autoHideScrollbar: true,
+                    theme: "light"
+                });
+
+            });
+        })(jQuery);
+    </script>
+    <script>
+        (function ($) {
+            $(window).load(function () {
+
+                $("#content-2").mCustomScrollbar({
+                    autoHideScrollbar: true,
+                    theme: "light"
+                });
+
+            });
+        })(jQuery);
+    </script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-inner container">
+                <div class="col-md-6 col-sm-6" style="margin: 6px 0;">
+                    <div class="row" style="">
+                        <a href="../Default.aspx">
+                            <img id="Img2" runat="server" src="~/content/image/Logo.png"  /></a>
+                    </div>
+                </div>
+                <div class="user-panel" style="padding-top: 0; margin-bottom: 0; height: 30px;">
+                    <div class="col-md-6 col-sm-6" style="padding: 6px 0;">
+                        <div class="row">
+                            <i class="fa fa-user fa-fw"></i>
+                            <span style="margin-right: 10px; font-weight: normal;">
+                                <asp:Label ID="lblUser" runat="server" CssClass=""></asp:Label>
+                            </span>
+                            <asp:LinkButton ID="lbtnLogout" runat="server" Style="" CssClass=""
+                                OnClick="lbtnLogout_Click">
+                            <i class="fa fa-sign-out fa-fw"></i>
+                            Logout
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--- END OF Header AREA-->
+
+
+        <div class="leftsidebar">
+            <div class="container">
+                <div class="col-sm-3 col-lg-2 sidebar content" id="content-2">
+                    <div class="sidebar-nav">
+                        <div class="nav-canvas">
+                            <div class="nav-sm nav nav-stacked">
+                            </div>
+                            <%--<li class="nav-header">Dashboard</li>--%>
+
+                            <asp:Repeater ID="reptManuList" runat="server">
+                                <ItemTemplate>
+                                    <ul class="nav nav-pills nav-stacked main-menu">
+                                        <li class="accordion">
+
+                                            <asp:HiddenField ID="hiddenCategoryID" runat="server" Value='<%#DataBinder.Eval(Container.DataItem, "categoryid") %>' />
+
+                                            <asp:HyperLink ID="url1" runat="server"><i class="fa fa-edit fa-fw"></i><span> 
+                                  <%# Eval("CategoryName")%>
+                                            </span></asp:HyperLink>
+
+                                            <asp:Repeater ID="reptPageList" runat="server">
+                                                <ItemTemplate>
+                                                    <ul class="nav nav-pills nav-stacked">
+                                                        <li></i><asp:HyperLink ID="ur" runat="server" NavigateUrl='<%# Eval("PageUrl") %>'>
+                                  <%# Eval("PageName")%>
+                                                        </asp:HyperLink></li>
+                                                    </ul>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+
+
+                                        </li>
+                                    </ul>
+                                </ItemTemplate>
+                            </asp:Repeater>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                    <div class="row">
+                       
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                       
+                    </div>
+                    <br />
+                    <br />
+                </div>
+                <!-- END BODY TABLE CONTENT-->
+            </div>
+        </div>
+        </div>
+        <div class="span12">
+        </div>
+        <!-- <link rel="stylesheet" href="dist/ladda-themeless.min.css">
+<script src="dist/spin.min.js"></script>
+<script src="dist/ladda.min.js"></script>-->
+        <link href="content/css/jquery.fancybox.css?v=2.1.0" rel="stylesheet" type="text/css"
+            media="screen" />
+        <!-- GO TO TOP-->
+        <div class="footer">
+            <div style="float: left;">
+                <p>
+                    &copy Subra Systems Ltd. 2015
+                </p>
+            </div>
+            <div style="float: right">
+                <p>
+                    <span style="float: right; margin-top: -13px; margin-left: -14px;"><a
+                        href="http://www.subrasystems.com/">
+                        <img src="img/subra.png"  alt="Subra System Limited" id="Img1" /></a></span>
+                </p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

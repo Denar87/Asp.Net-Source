@@ -1,0 +1,819 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1.2em;
+}
+h3 {
+	font-size: 1.0em;
+}
+h4 {
+	font-size: .8em;
+}
+.span11 h2{ margin: 30px 10px 10px 10px;
+	}
+legend{
+	padding:0px;
+	font-weight:bold;}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+/* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+ /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+.row {
+	margin-right: auto;
+	margin-left: auto;
+}
+.row:before, .row:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.sidebar1 {
+	float: left;
+	min-width: 113px;
+	background-color: #EDECE1;
+	padding-bottom: 10px;
+	background-image: url('../img/sbg.png');
+	background-repeat: repeat-y;
+}
+.content {
+	padding: 10px 0;
+	width: 100%;
+	background-color: #fff;
+	min-height: 487px;
+	display:block;
+}
+section {
+	margin-left: 113px
+}
+.content2 {
+	padding: 10px 0;
+	width: 100%;
+	float: left;
+	background: #EDECE1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	min-height: 580px;
+}
+
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+.container {
+	width: 100%;
+	clear:both;
+	background-color: #fff;
+	background-image: url('../img/bg.jpg');
+	background-repeat:no-repeat;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+.col1 {
+	display:block;
+	float:left;
+	width: 28%;
+	margin:1%;
+}
+fieldset {
+float: left;
+width: 100%;
+margin: 15px;
+border:none;
+padding:5px;
+}
+.content:before {
+	display: table;
+	content: "";
+}
+.content:after {
+clear: both;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0px 10px;
+	margin: 5px;
+}
+p {
+	font-size: 12px;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	text-decoration: none;
+	color: #42413C;/* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: underline;
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	background-color: none;
+}
+/* ~~ These are the columns for the layout. ~~ 
+
+
+*/
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+nav ul {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+nav a, nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 140px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+nav a:hover, nav a:active, nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #ADB96E;
+	color: #FFF;
+}
+/* ~~ The footer ~~ */
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, aside, article, figure {
+	display: block;
+}
+/*Page. */
+.page-nav {
+	width: 100%;
+	height: 32px;
+	border-bottom: 4px solid;
+	border-color: #FFF;
+}
+.recent {
+	width: 93px;
+	background-color: #00659D;
+	padding: 0.1em 0.5em;
+	color: #fff;
+	text-decoration: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 2px solid;
+	border-color: #309EF9;
+	border-bottom: none;
+	float: left;
+	height: 25px;
+	text-align: center;
+	margin-top: 2px;
+}
+.recent1 {
+	width: 7%;
+	background-color: #00659D;
+	padding: 0.51em 0.75em;
+	color: #fff;
+	text-decoration: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 2px solid;
+	border-color: #309EF9;
+	border-bottom: none;
+	float: left;
+	height: 12px;
+	text-align: center;
+	margin-top: 2px;
+}
+
+@media (max-width: 1355px) {
+.recent1 {
+	width: 3%;
+}
+}
+
+@media (max-width: 1340px) {
+.recent1 {
+	width: 2%;
+}
+}
+
+@media (max-width: 1322px) {
+.recent1 {
+	width: 1%;
+}
+}
+
+@media (max-width: 1314px) {
+.recent1 {
+	display: none;
+}
+}
+
+@media (max-width: 1120px) {
+.page-nav {
+	height: 68px;
+}
+}
+p.recent {
+	margin: 0;
+	padding: 2px !important;
+	list-style-type: none;
+	font-size: 100%;
+	float: left;
+}
+#content > div:nth-child(2) > a:nth-child(1) {
+	width: 120px;
+}
+.find {
+	background-image: url('../img/Find.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.new {
+	background-image: url('../img/new.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.mcrm {
+	background-image: url('../img/mcrm.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.tcrm {
+	background-image: url('../img/team.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.rep {
+	background-image: url('../img/rep.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.mar {
+	background-image: url('../img/mar.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.log {
+	background-image: url('../img/out.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 30px;
+	vertical-align: text-top;
+	width: 30px;
+}
+.top-block {
+	font-size: 11px;
+	text-align: center;
+	padding: 0px;
+	margin-bottom: 0px;
+	font-weight: bold;
+	position: relative;
+	display: block;
+	line-height: 22px;
+	text-shadow: 0 0 1px #DDD;
+}
+a.well.spane3.top-block {
+	height: 67px;
+	background-image: url('../img/ibg.png');
+	background-repeat: no-repeat;
+}
+[class^="icon-lock"], [class*=" icon-lock"] {
+	display: inline-block;
+	width: 21px;
+	height: 26px;
+	margin-top: 0px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("img/glyphicons_203_lock.png");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+/*login*/
+#log {
+	width: 98.5%;
+}
+.login {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 20px 20px;
+	margin-top: 5%;
+	width: 340px;
+	background: white;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.login:before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	z-index: -1;
+	background: rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+}
+.login h1 {
+	margin: -20px -20px 21px;
+	line-height: 40px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #555;
+	text-align: center;
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+	border-bottom: 1px solid #cfcfcf;
+	border-radius: 3px 3px 0 0;
+	background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+	-webkit-box-shadow: 0 1px whitesmoke;
+	box-shadow: 0 1px whitesmoke;
+}
+.login p {
+	margin: 15px 0 0;
+}
+.login p:first-child {
+	margin-top: 0;
+}
+.login input[type=text], .login input[type=password] {
+	width: 278px;
+}
+.login p.remember_me {
+	float: left;
+	line-height: 31px;
+}
+.login p.remember_me label {
+	font-size: 12px;
+	color: #777;
+	cursor: pointer;
+}
+.login p.remember_me input {
+	position: relative;
+	bottom: 1px;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+.login p.submit {
+	text-align: right;
+}
+.login-help {
+	margin: 20px 0;
+	font-size: 11px;
+	color: #777;
+	text-align: center;
+	text-shadow: 0 1px #B2B6B8;
+}
+.login-help a {
+	color: #00659D;
+	text-decoration: none;
+}
+.login-help a:hover {
+	text-decoration: underline;
+}
+
+
+/* Basic Grey */
+.basic-grey {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
+.basic-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+}
+.basic-grey h1>span {
+    display: block;
+    font-size: 11px;
+}
+.basic-grey label {
+    display: block;
+    margin: 0px;
+}
+.basic-grey label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #888;
+}
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey textarea{
+    padding: 5px 3px 3px 5px;
+}
+.basic-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right);
+    appearance:none;
+    -webkit-appearance:none; 
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+.basic-grey textarea{
+    height:100px;
+}
+.basic-grey .button {
+    background: #E27575;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;
+}
+.basic-grey .button:hover {
+    background: #CF7A7A
+}
+
+/*form*/
+fieldset input[type=text], textarea, select, span 
+{
+    font-size:13px;
+}
+.label{
+	display:inline-block;width:100px;
+	}
+label{
+	font-size:13px;}
+fieldset > div
+{
+    margin:5px 0px;    
+}
+fieldset > div.label
+{
+    margin-left:105px;    
+}
+label.inline {
+margin-left: 105px;
+}
+fieldset > div input[type=text]
+{
+    border: 1px solid #c4c4c4;
+    width: 190px;
+    height: 20px;
+    font-size: 13px;
+    padding: 0px 3px 3px 3px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+fieldset > div textarea
+{
+    border: 1px solid #c4c4c4;
+    width: 190px;
+    height: 40px;
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+fieldset > div input[type=image]
+{
+    margin-bottom:-7px;
+    border-width:0px;
+    width:24px;
+    height:24px;
+    box-shadow:none;    
+}
+
+fieldset > div input[type=image]:hover
+{
+    border-width:0px;
+    width:24px;
+    height:24px;
+    box-shadow:none;
+}
+
+fieldset > div input[type=image]:focus
+{
+    border-width:0px;
+    width:24px;
+    height:24px;
+    box-shadow:none;
+}
+
+fieldset > div select
+{
+    padding-top:2px;
+    padding-right:4px;
+    padding-bottom:2px;
+    outline: 5px solid #eff4f7;       
+    border: 1px solid #c4c4c4;
+    width: 200px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+	margin: 5px 5px 5px 5px;
+}
+fieldset >div input[type="date"] {
+	padding-top:2px;
+    padding-right:4px;
+    padding-bottom:2px;
+    outline: 5px solid #eff4f7;       
+    border: 1px solid #c4c4c4;
+    width: 190px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+	margin: 5px 5px 5px 5px;}
+fieldset > div select:focus
+{
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+fieldset > div select:hover
+{
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+fieldset > div input[type=text]:focus, textarea:focus 
+{
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+fieldset > div input[type=text]:hover, textarea:hover
+{
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+fieldset > div input[type=text]:watermark, textarea:watermark
+{
+    border: 1px solid #c4c4c4;
+    width: 200px;
+    height: 15px;            
+    font-family:Calibri;
+    font-size: 13px;
+    color:#717171;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+
+
+.form-horizontal .control-group:after {
+clear: both;
+}
+
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+display: inline-block;
+margin-bottom: 0;
+vertical-align: middle;
+}
+
+@media (min-width: 1200px)
+input, textarea, .uneditable-input {
+margin-left: 0;
+}
+/* main*/
+
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12{
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.col{
+  margin-left: 1.5%;
+}
+
+.col:first-child {
+  margin-left:0;
+}
+
+.span1{
+  width: 8.4%;
+  background-image: url('../img/sbg.png');
+background-repeat: repeat-y;
+background-size: 100%;
+  
+}
+.span2{
+  width: 15.4166666667%;
+  
+}
+.span3{
+  width: 23.875%;
+  
+}
+.span4{
+  width: 33%;
+  
+}
+.span5{
+  width: 40.7916666667%;
+  
+}
+.span6{
+  width: 49.25%;
+  
+}
+.span7{
+  width: 57.7083333333%;
+  
+}
+.span8{
+  width: 66.1666666667%;
+  
+}
+.span9{
+  width: 74.625%;
+  
+}
+.span10{
+  width: 83.0833333333%;
+  
+}
+.span11{
+  width: 91.6%;
+  
+}
+.span12{
+  width: 100%;
+  margin-left: 0;
+  background-color: #EDECE1;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Responsify Defaults */
+@media screen and (max-width: 1238px){
+	.recent { display:none}
+  nav .span4{
+    width: 100%;
+  }
+
+@media screen and (max-width: 768px){
+	.span1{
+		width:100%;
+		background-image: none;
+		margin:0 auto;
+	}
+.recent { display:none}
+  nav .span4{
+    width: 100%;
+  }
+  .span2, article{
+    width: 100%;
+  }
+
+  .span8, article{
+    width: 100%;
+  }
+
+  .span4, aside{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #container, .inner{
+    width: 90%;
+    padding: 0 5% 0 5%;
+  }
+  a.well.spane3.top-block {
+display: inline-block;
+
+}
+
+
+
+@media screen and (max-width: 0px) {
+ /* Add your styles for devices with a maximum width of  */
+}
+
+
+ /*  Micro Clearfix */
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+.EmpInfo_fieldset
+{
+    border: 1px solid #bbb;
+    width: 80% !important;
+    padding: 10px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+}
+
+span.label1 {
+display: inline;
+}
+
+
+

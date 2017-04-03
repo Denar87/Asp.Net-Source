@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BackUpHRMModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BackUpHRMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblprocessedDatas" EntityType="BackUpHRMModel.tblprocessedData" />
+  </EntityContainer>
+  <EntityType Name="tblprocessedData">
+    <Key>
+      <PropertyRef Name="EmpId" />
+      <PropertyRef Name="PunchDate" />
+    </Key>
+    <Property Name="EmpId" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="TimeIn" Type="DateTime" />
+    <Property Name="TimeOut" Type="DateTime" />
+    <Property Name="Lin" Type="DateTime" />
+    <Property Name="Lout" Type="DateTime" />
+    <Property Name="Llate" Type="DateTime" />
+    <Property Name="Late" Type="DateTime" />
+    <Property Name="PunchDate" Type="DateTime" Nullable="false" />
+    <Property Name="PunchShiftCode" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="RegHour" Type="DateTime" />
+    <Property Name="Sin" Type="DateTime" />
+    <Property Name="Sout" Type="DateTime" />
+    <Property Name="SReg" Type="DateTime" />
+    <Property Name="Slate" Type="DateTime" />
+    <Property Name="OTHour" Type="DateTime" />
+    <Property Name="Sts" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="NoPunch" Type="Byte" />
+    <Property Name="NShiftDesc" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="OTShiftDesc" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="SectIn" Type="DateTime" />
+    <Property Name="SectOut" Type="DateTime" />
+    <Property Name="BTime" Type="DateTime" />
+    <Property Name="Ramadan" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,115 @@
+ <link href="~/Scripts/FancyBox/jquery.fancybox.css" rel="stylesheet" />
+
+ <script src="~/Scripts/FancyBox/jquery.fancybox.js"></script>
+
+ 
+<script>
+
+    function GenerateReport( fileType )
+    {
+        var d = new Date();
+        var isin = $( '#isin' ).val();
+
+        if ( $( '#isin' ).val() =="")
+        {
+            toastr.error( "Please select Instrument" );
+            return;
+        }
+        var viewURL = "../../Ipo/Report/Report/?id=" + fileType + "&isin=" + isin;
+        FancyBox( viewURL );
+    }
+
+
+    function GenerateSummaryReport( fileType )
+    {
+        var d = new Date();
+        var isin = $( '#isin' ).val();
+
+        if ( $( '#isin' ).val() == "" )
+        {
+            toastr.error( "Please select Instrument" );
+            return;
+        }
+        var viewURL = "../../Ipo/Report/SummaryReport/?type=" + fileType + "&declarationid=" + isin;
+        FancyBox( viewURL );
+    }
+
+    function Loadtxt()
+    {
+        var isin = $( '#isin' ).val();
+
+        if ( $( '#isin' ).val() == "" )
+        {
+            toastr.error( "Please select Instrument" );
+            return;
+        }
+        $.ajax( {
+            type: "POST",
+            url: '@Url.Action("WritetxtFile", "Report")',
+            data: { declarationid: $( "#isin" ).val() },
+            dataType: "json",
+            success: function ( result )
+            {
+                //$( "#lnk" ).attr( 'href', result );;
+
+                //window.open( result, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400" );
+                FancyBox(result); 
+            },
+            error: function ( XMLHttpRequest, textStatus, errorThrown )
+            {
+                toastr.error( XMLHttpRequest + ": " + textStatus + ": " + errorThrown, 'Error!!!' );
+            }
+        } );
+    }
+
+
+    function FancyBox( viewURL )
+    {
+        $.fancybox.open(
+              {
+                  'title': 'Report Window',
+                  'type': 'iframe',
+                  //fitToView: false,
+                  //width: '90%',
+                  //height: '90%',
+                  //autoSize: false,
+                  'transitionIn': 'elastic',
+                  'transitionOut': 'elastic',
+                  'speedIn': 1000,
+                  'speedOut': 700,
+                  autoSize: true,
+                  closeClick: false,
+                  'href': viewURL
+              }
+          );
+    }
+
+    //CreatedBy Avishek Date:Mar-11-2015 for cascading dropdown
+    $( document ).ready( function ()
+    {
+        $( "#isin" ).change( function ()
+        {
+            $( "#application_last_date" ).empty();
+            $.ajax( {
+                type: 'POST',
+                url: '@Url.Action("GetApplicationlastDate")', 
+                dataType: 'json',
+                data: { declaratioId: $( "#isin" ).val() },
+                success: function ( data )
+                {
+                    $.each( data, function ( i, data )
+                    {
+                        $( "#application_last_date" ).append( '<option value="' + data.Value + '">' +
+                         data.Text + '</option>' );
+                    } );
+                    LoadTable();
+                }
+            } );
+            return false;
+        } )
+    } );
+
+    //End
+
+
+</script>

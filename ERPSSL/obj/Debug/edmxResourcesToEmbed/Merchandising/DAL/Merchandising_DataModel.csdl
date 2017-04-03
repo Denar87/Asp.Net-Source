@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_MerchandisingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ERPSSL_MerchandisingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Com_Accessories_Requirement" EntityType="ERPSSL_MerchandisingModel.Com_Accessories_Requirement" />
+    <EntitySet Name="LC_Color" EntityType="ERPSSL_MerchandisingModel.LC_Color" />
+    <EntitySet Name="LC_tbl_DateTemp" EntityType="ERPSSL_MerchandisingModel.LC_tbl_DateTemp" />
+    <EntitySet Name="Inv_Unit" EntityType="ERPSSL_MerchandisingModel.Inv_Unit" />
+    <EntitySet Name="LC_Season" EntityType="ERPSSL_MerchandisingModel.LC_Season" />
+    <EntitySet Name="LC_Style" EntityType="ERPSSL_MerchandisingModel.LC_Style" />
+    <EntitySet Name="LC_Yarn_Count" EntityType="ERPSSL_MerchandisingModel.LC_Yarn_Count" />
+    <EntitySet Name="LC_GmtItem" EntityType="ERPSSL_MerchandisingModel.LC_GmtItem" />
+    <EntitySet Name="HRM_PersonalInformations" EntityType="ERPSSL_MerchandisingModel.HRM_PersonalInformations" />
+    <EntitySet Name="Inv_ProductType" EntityType="ERPSSL_MerchandisingModel.Inv_ProductType" />
+    <EntitySet Name="Inv_Product" EntityType="ERPSSL_MerchandisingModel.Inv_Product" />
+    <EntitySet Name="Inv_ProductGroup" EntityType="ERPSSL_MerchandisingModel.Inv_ProductGroup" />
+    <EntitySet Name="HRM_Office" EntityType="ERPSSL_MerchandisingModel.HRM_Office" />
+    <EntitySet Name="LC_BuyerDepartment" EntityType="ERPSSL_MerchandisingModel.LC_BuyerDepartment" />
+    <EntitySet Name="LC_StyleCategor" EntityType="ERPSSL_MerchandisingModel.LC_StyleCategor" />
+    <EntitySet Name="Com_Buyer_Setup" EntityType="ERPSSL_MerchandisingModel.Com_Buyer_Setup" />
+    <EntitySet Name="LC_Composition" EntityType="ERPSSL_MerchandisingModel.LC_Composition" />
+    <EntitySet Name="LC_ConstructionType" EntityType="ERPSSL_MerchandisingModel.LC_ConstructionType" />
+    <EntitySet Name="LC_YarnCountType" EntityType="ERPSSL_MerchandisingModel.LC_YarnCountType" />
+    <EntitySet Name="LC_YarnDetermination" EntityType="ERPSSL_MerchandisingModel.LC_YarnDetermination" />
+    <EntitySet Name="LC_FabricNature" EntityType="ERPSSL_MerchandisingModel.LC_FabricNature" />
+    <EntitySet Name="LC_DeterminationCost" EntityType="ERPSSL_MerchandisingModel.LC_DeterminationCost" />
+    <EntitySet Name="LC_YarnDeterminationTemp" EntityType="ERPSSL_MerchandisingModel.LC_YarnDeterminationTemp" />
+    <EntitySet Name="LC_OrderEntry" EntityType="ERPSSL_MerchandisingModel.LC_OrderEntry" />
+    <EntitySet Name="LC_BodyPart" EntityType="ERPSSL_MerchandisingModel.LC_BodyPart" />
+    <EntitySet Name="LC_Size" EntityType="ERPSSL_MerchandisingModel.LC_Size" />
+    <EntitySet Name="LC_Size_Temp" EntityType="ERPSSL_MerchandisingModel.LC_Size_Temp" />
+  </EntityContainer>
+  <EntityType Name="Com_Accessories_Requirement">
+    <Key>
+      <PropertyRef Name="Acc_Req_ID" />
+    </Key>
+    <Property Type="Int32" Name="Acc_Req_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LC" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BatchNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StyleID" />
+    <Property Type="Double" Name="Qty" />
+    <Property Type="Decimal" Name="USDRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="BDTRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="USDValue" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="BDTValue" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="Item_Group" />
+    <Property Type="Int32" Name="Item" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Color">
+    <Key>
+      <PropertyRef Name="ColorId" />
+    </Key>
+    <Property Type="Int32" Name="ColorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ColorName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_tbl_DateTemp">
+    <Key>
+      <PropertyRef Name="tbl_ID" />
+    </Key>
+    <Property Type="Int32" Name="tbl_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Datetime" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Inv_Unit">
+    <Key>
+      <PropertyRef Name="UnitId" />
+    </Key>
+    <Property Type="Int32" Name="UnitId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UnitName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EditUser" />
+  </EntityType>
+  <EntityType Name="LC_Season">
+    <Key>
+      <PropertyRef Name="Season_Id" />
+    </Key>
+    <Property Type="Int32" Name="Season_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Season_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Style">
+    <Key>
+      <PropertyRef Name="StyleId" />
+    </Key>
+    <Property Type="Int32" Name="StyleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StyleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Specification" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HS_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CAT" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Style_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="MenLadies" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TopBottom" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductDescription" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fabrics" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Accessories" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CountryOfProduction" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Price" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Yarn_Count">
+    <Key>
+      <PropertyRef Name="YarnCount_ID" />
+    </Key>
+    <Property Type="Int32" Name="YarnCount_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Yarn_Count" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_GmtItem">
+    <Key>
+      <PropertyRef Name="GmtItem_Id" />
+    </Key>
+    <Property Type="Int32" Name="GmtItem_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Gmt_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HRM_PersonalInformations">
+    <Key>
+      <PropertyRef Name="EID" />
+    </Key>
+    <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RegionsId" />
+    <Property Type="Int32" Name="OfficeId" />
+    <Property Type="Int32" Name="DepartmentId" />
+    <Property Type="Int32" Name="SectionId" />
+    <Property Type="Int32" Name="SubSectionId" />
+    <Property Type="Int32" Name="DesginationId" />
+    <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+    <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Step" />
+    <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+    <Property Type="Boolean" Name="OTApplicable" />
+    <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+    <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+    <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+    <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+    <Property Type="Int32" Name="EmployeeType" />
+    <Property Type="Int32" Name="EmpCategoryId" />
+    <Property Type="Int32" Name="ShiftId" />
+    <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+    <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+    <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+    <Property Type="Boolean" Name="EMP_Retired_Status" />
+    <Property Type="Boolean" Name="EMP_Resignation_Status" />
+    <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+    <Property Type="Boolean" Name="EMP_Died_Status" />
+    <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+    <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+    <Property Type="Boolean" Name="EMP_Other" />
+    <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+    <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="P" />
+    <Property Type="Int32" Name="L" />
+    <Property Type="Int32" Name="A" />
+    <Property Type="Int32" Name="OT" />
+    <Property Type="Int32" Name="OT_Compliance" />
+    <Property Type="Int32" Name="OT_Extra" />
+    <Property Type="Time" Name="LateHour" Precision="7" />
+    <Property Type="Int32" Name="WH" />
+    <Property Type="Int32" Name="GV_H" />
+    <Property Type="Int32" Name="PV_H" />
+    <Property Type="Int32" Name="OH" />
+    <Property Type="Int32" Name="EX" />
+    <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+    <Property Type="Boolean" Name="Attendance_Bouns" />
+    <Property Type="Boolean" Name="Late_Applicable" />
+    <Property Type="Boolean" Name="Absence_Applicable" />
+    <Property Type="Boolean" Name="Tax_Applicable" />
+    <Property Type="Boolean" Name="PF_Applicable" />
+    <Property Type="Boolean" Name="On_Amount" />
+    <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Inv_ProductType">
+    <Key>
+      <PropertyRef Name="ProductTypeId" />
+    </Key>
+    <Property Type="Int32" Name="ProductTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProductType" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Inv_Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Type="Int32" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="GroupId" />
+    <Property Type="String" Name="GroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StyleAndSize" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UnitId" />
+    <Property Type="String" Name="UnitName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FloorName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="ReOrderQty" />
+    <Property Type="Int32" Name="ProductTypeId" />
+    <Property Type="String" Name="ProductType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="String" Name="ProjectCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="StoreID" />
+    <Property Type="Int32" Name="StoreUnitID" />
+  </EntityType>
+  <EntityType Name="Inv_ProductGroup">
+    <Key>
+      <PropertyRef Name="GroupId" />
+    </Key>
+    <Property Type="Int32" Name="GroupId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="GroupName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EditUser" />
+  </EntityType>
+  <EntityType Name="HRM_Office">
+    <Key>
+      <PropertyRef Name="OfficeID" />
+    </Key>
+    <Property Type="Int32" Name="OfficeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OfficeCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OfficeName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OfficeAddress" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RegionId" Nullable="false" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_BuyerDepartment">
+    <Key>
+      <PropertyRef Name="BuyerDepartment_Id" />
+    </Key>
+    <Property Type="Int32" Name="BuyerDepartment_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="BuyerDepartment_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_StyleCategor">
+    <Key>
+      <PropertyRef Name="Style_Category_Id" />
+    </Key>
+    <Property Type="Int32" Name="Style_Category_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Style_Category_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Com_Buyer_Setup">
+    <Key>
+      <PropertyRef Name="Buyer_ID" />
+    </Key>
+    <Property Type="Int32" Name="Buyer_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Buyer_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyingDepartment" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BuyingDepartmentId" />
+    <Property Type="String" Name="Contact_Person" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrincipalName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Counter" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Destination_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Buyer_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Land_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Sea_Address" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Status" />
+    <Property Type="String" Name="Type" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Consignee" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NotifyParty" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="EDIT_USER" />
+    <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Composition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Composition" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_ConstructionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ConstructionType" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_YarnCountType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="YarnCountType" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_YarnDetermination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="FebricNatureId" />
+    <Property Type="Int32" Name="ColorRangeId" />
+    <Property Type="Int32" Name="ConstructionId" />
+    <Property Type="String" Name="GSM" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompositionId" />
+    <Property Type="String" Name="Percentage" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="YarnCountId" />
+    <Property Type="Int32" Name="YarnCountTypeId" />
+    <Property Type="String" Name="StichLength" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProcessLoss" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="UnitId" />
+    <Property Type="Int32" Name="UniqueId" />
+  </EntityType>
+  <EntityType Name="LC_FabricNature">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FabricNature" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_DeterminationCost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DeterminationId" />
+    <Property Type="Decimal" Name="ConstructionFinishFebric" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="KnitingCost" />
+    <Property Type="String" Name="DryingCostOption" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DryingCost" />
+    <Property Type="Decimal" Name="TotalCost" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="UniqueId" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_YarnDeterminationTemp">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="FebricNatureId" />
+    <Property Type="Int32" Name="ColorRangeId" />
+    <Property Type="Int32" Name="ConstructionId" />
+    <Property Type="Int32" Name="ProductId" />
+    <Property Type="String" Name="GSM" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompositionId" />
+    <Property Type="String" Name="Percentage" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="YarnCountId" />
+    <Property Type="Int32" Name="YarnCountTypeId" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="UnitId" />
+    <Property Type="String" Name="StichLength" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProcessLoss" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_OrderEntry">
+    <Key>
+      <PropertyRef Name="OrderEntryID" />
+    </Key>
+    <Property Type="Int32" Name="OrderEntryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LCNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pre_OrderNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OrderNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OrderQuantity" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Style" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Article" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ColorSpecification" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="FobQty" />
+    <Property Type="Decimal" Name="UnitPrice" Precision="19" Scale="4" />
+    <Property Type="Double" Name="TotalQty" />
+    <Property Type="DateTime" Name="ShipmentDate" Precision="3" />
+    <Property Type="DateTime" Name="ExtendShipmentDate" Precision="3" />
+    <Property Type="DateTime" Name="CompShipmentDate" Precision="3" />
+    <Property Type="Boolean" Name="ShipmentStatus" />
+    <Property Type="String" Name="ShipmentCompStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Season" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SeasonId" />
+    <Property Type="String" Name="Buyer_Department" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Buyer_DepartmentId" />
+    <Property Type="String" Name="Supplier_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="OrderReceiveDate" Precision="3" />
+    <Property Type="Int32" Name="StyleId" />
+    <Property Type="String" Name="Comments" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Delivery_Date" Precision="3" />
+    <Property Type="String" Name="Yarn_Fabrication" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FOB_Port" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LC_Reveived_Date" Precision="3" />
+    <Property Type="DateTime" Name="Schedule_Date" Precision="3" />
+    <Property Type="String" Name="Shipment_Mode" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Merch_Dept_Id" />
+    <Property Type="Int32" Name="FactoryId" />
+    <Property Type="Int32" Name="Gender_Id" />
+    <Property Type="Int32" Name="Principal_Id" />
+    <Property Type="String" Name="Style_Description" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Trading" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Quotation_Terms" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Freight" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Payment_Terms" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Merchandiser_Id" />
+    <Property Type="String" Name="Countryof_Production" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Garments_Maker" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Style_Category_Id" />
+    <Property Type="String" Name="Currency" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Unit_Id" />
+    <Property Type="Double" Name="Total_Amount" />
+    <Property Type="String" Name="TimeOf_Delevery" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="CommissionPersent" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalCommission" Precision="19" Scale="4" />
+    <Property Type="String" Name="PlaceOf_DisPatchFrom" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PlaceOf_DisPatchTo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FiberContent1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FiberContent2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Office_ID" />
+    <Property Type="String" Name="Buyer_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Buyer_ID" />
+    <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SMV" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Efficiency" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_BodyPart">
+    <Key>
+      <PropertyRef Name="BPartId" />
+    </Key>
+    <Property Type="Int32" Name="BPartId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="BodyPart" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="Create_User" />
+    <Property Type="DateTime" Name="Create_Date" Precision="3" />
+    <Property Type="Guid" Name="Edit_User" />
+    <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+    <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Size">
+    <Key>
+      <PropertyRef Name="Size_Id" />
+    </Key>
+    <Property Type="Int32" Name="Size_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Order_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Style_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_From" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_To" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OrderNo" />
+    <Property Type="Int32" Name="StyleNo" />
+    <Property Type="Int32" Name="GMTItem" />
+    <Property Type="String" Name="Articale" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ColorID" />
+    <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Qty" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LC_Size_Temp">
+    <Key>
+      <PropertyRef Name="Size_Id" />
+    </Key>
+    <Property Type="Int32" Name="Size_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Order_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Style_No" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_From" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_To" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Size_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="OrderNo" />
+    <Property Type="Int32" Name="StyleNo" />
+    <Property Type="Int32" Name="GMTItem" />
+    <Property Type="String" Name="Articale" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ColorID" />
+    <Property Type="String" Name="Size" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Qty" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="19" Scale="4" />
+    <Property Type="Guid" Name="CreateUser" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="Guid" Name="EditUser" />
+    <Property Type="DateTime" Name="EditDate" Precision="3" />
+    <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

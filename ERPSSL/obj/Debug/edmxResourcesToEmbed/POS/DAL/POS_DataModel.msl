@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POS_DataModelStoreContainer" CdmEntityContainer="POS_Entities">
+    <EntitySetMapping Name="Tbl_Sales">
+      <EntityTypeMapping TypeName="POS_DataModel.Tbl_Sales">
+        <MappingFragment StoreEntitySet="Tbl_Sales">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TicketName" ColumnName="TicketName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+          <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Ticket">
+      <EntityTypeMapping TypeName="POS_DataModel.Tbl_Ticket">
+        <MappingFragment StoreEntitySet="Tbl_Ticket">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TicketName" ColumnName="TicketName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+          <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Tbl_CashReturn">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_CashReturn">
+        <MappingFragment StoreEntitySet="TR_Tbl_CashReturn">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CastReturnAmount" ColumnName="CastReturnAmount" />
+          <ScalarProperty Name="StateBalance" ColumnName="StateBalance" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Tbl_FoodSales">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_FoodSales">
+        <MappingFragment StoreEntitySet="TR_Tbl_FoodSales">
+          <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemQuantity" ColumnName="ItemQuantity" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Tbl_Invoice">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_Invoice">
+        <MappingFragment StoreEntitySet="TR_Tbl_Invoice">
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="InvoiceTotal" ColumnName="InvoiceTotal" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Tbl_Recharge">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_Recharge">
+        <MappingFragment StoreEntitySet="TR_Tbl_Recharge">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="RechargeAmount" ColumnName="RechargeAmount" />
+          <ScalarProperty Name="StateBalance" ColumnName="StateBalance" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Tbl_TicketSales">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Tbl_TicketSales">
+        <MappingFragment StoreEntitySet="TR_Tbl_TicketSales">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemQuantity" ColumnName="ItemQuantity" />
+          <ScalarProperty Name="ItemTotal" ColumnName="ItemTotal" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TR_Transaction_Master">
+      <EntityTypeMapping TypeName="POS_DataModel.TR_Transaction_Master">
+        <MappingFragment StoreEntitySet="TR_Transaction_Master">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerAccNo" ColumnName="CustomerAccNo" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="CashIn" ColumnName="CashIn" />
+          <ScalarProperty Name="CashOut" ColumnName="CashOut" />
+          <ScalarProperty Name="CurrentBalance" ColumnName="CurrentBalance" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Food">
+      <EntityTypeMapping TypeName="POS_DataModel.Tbl_Food">
+        <MappingFragment StoreEntitySet="Tbl_Food">
+          <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="TicketImage" ColumnName="TicketImage" />
+          <ScalarProperty Name="TicketDateTime" ColumnName="TicketDateTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_User">
+      <EntityTypeMapping TypeName="POS_DataModel.tbl_User">
+        <MappingFragment StoreEntitySet="tbl_User">
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Use_Email" ColumnName="Use_Email" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_PackageItemInfo">
+      <EntityTypeMapping TypeName="POS_DataModel.Tbl_PackageItemInfo">
+        <MappingFragment StoreEntitySet="Tbl_PackageItemInfo">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PackageItemName" ColumnName="PackageItemName" />
+          <ScalarProperty Name="PackageItemID" ColumnName="PackageItemID" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="PackageItemInfo_ID" ColumnName="PackageItemInfo_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_Product">
+      <EntityTypeMapping TypeName="POS_DataModel.Inv_Product">
+        <MappingFragment StoreEntitySet="Inv_Product">
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ReOrderQty" ColumnName="ReOrderQty" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="FloorName" ColumnName="FloorName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="StyleAndSize" ColumnName="StyleAndSize" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LU_Tbl_Item">
+      <EntityTypeMapping TypeName="POS_DataModel.LU_Tbl_Item">
+        <MappingFragment StoreEntitySet="LU_Tbl_Item">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InventoryItemID" ColumnName="InventoryItemID" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="FreeOffer" ColumnName="FreeOffer" />
+          <ScalarProperty Name="ItemGroupName" ColumnName="ItemGroupName" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_VisitorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_VisitorModelStoreContainer">
+    <EntitySet Name="Visitor_VisitorInfo" EntityType="ERPSSL_VisitorModel.Store.Visitor_VisitorInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Visitor_VisitorInfo">
+    <Key>
+      <PropertyRef Name="V_ID" />
+    </Key>
+    <Property Name="V_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VDate" Type="datetime" />
+    <Property Name="VisitorName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FromAddress" Type="nvarchar" MaxLength="150" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToWhom" Type="nvarchar" MaxLength="100" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="150" />
+    <Property Name="CardNo" Type="int" />
+    <Property Name="InTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="OutTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_User" Type="uniqueidentifier" />
+    <Property Name="Create_Date" Type="datetime" />
+    <Property Name="Edit_User" Type="uniqueidentifier" />
+    <Property Name="Edit_Date" Type="datetime" />
+    <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

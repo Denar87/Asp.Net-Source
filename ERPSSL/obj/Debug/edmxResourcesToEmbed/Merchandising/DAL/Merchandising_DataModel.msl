@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERPSSL_MerchandisingModelStoreContainer" CdmEntityContainer="ERPSSL_MerchandisingEntities">
+    <EntitySetMapping Name="Com_Accessories_Requirement">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Com_Accessories_Requirement">
+        <MappingFragment StoreEntitySet="Com_Accessories_Requirement">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Item_Group" ColumnName="Item_Group" />
+          <ScalarProperty Name="BDTValue" ColumnName="BDTValue" />
+          <ScalarProperty Name="USDValue" ColumnName="USDValue" />
+          <ScalarProperty Name="BDTRate" ColumnName="BDTRate" />
+          <ScalarProperty Name="USDRate" ColumnName="USDRate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="LC" ColumnName="LC" />
+          <ScalarProperty Name="Acc_Req_ID" ColumnName="Acc_Req_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Color">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Color">
+        <MappingFragment StoreEntitySet="LC_Color">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="ColorId" ColumnName="ColorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_tbl_DateTemp">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_tbl_DateTemp">
+        <MappingFragment StoreEntitySet="LC_tbl_DateTemp">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="tbl_ID" ColumnName="tbl_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_Unit">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_Unit">
+        <MappingFragment StoreEntitySet="Inv_Unit">
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Season">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Season">
+        <MappingFragment StoreEntitySet="LC_Season">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Season_Name" ColumnName="Season_Name" />
+          <ScalarProperty Name="Season_Id" ColumnName="Season_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Style">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Style">
+        <MappingFragment StoreEntitySet="LC_Style">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CountryOfProduction" ColumnName="CountryOfProduction" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="Fabrics" ColumnName="Fabrics" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="TopBottom" ColumnName="TopBottom" />
+          <ScalarProperty Name="MenLadies" ColumnName="MenLadies" />
+          <ScalarProperty Name="Style_Photo" ColumnName="Style_Photo" />
+          <ScalarProperty Name="CAT" ColumnName="CAT" />
+          <ScalarProperty Name="HS_Code" ColumnName="HS_Code" />
+          <ScalarProperty Name="Specification" ColumnName="Specification" />
+          <ScalarProperty Name="StyleName" ColumnName="StyleName" />
+          <ScalarProperty Name="StyleId" ColumnName="StyleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Yarn_Count">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Yarn_Count">
+        <MappingFragment StoreEntitySet="LC_Yarn_Count">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Yarn_Count" ColumnName="Yarn_Count" />
+          <ScalarProperty Name="YarnCount_ID" ColumnName="YarnCount_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_GmtItem">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_GmtItem">
+        <MappingFragment StoreEntitySet="LC_GmtItem">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Gmt_Name" ColumnName="Gmt_Name" />
+          <ScalarProperty Name="GmtItem_Id" ColumnName="GmtItem_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_PersonalInformations">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.HRM_PersonalInformations">
+        <MappingFragment StoreEntitySet="HRM_PersonalInformations">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+          <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+          <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+          <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+          <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+          <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+          <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+          <ScalarProperty Name="EffectiveSalaryStatus" ColumnName="EffectiveSalaryStatus" />
+          <ScalarProperty Name="EX" ColumnName="EX" />
+          <ScalarProperty Name="OH" ColumnName="OH" />
+          <ScalarProperty Name="PV_H" ColumnName="PV_H" />
+          <ScalarProperty Name="GV_H" ColumnName="GV_H" />
+          <ScalarProperty Name="WH" ColumnName="WH" />
+          <ScalarProperty Name="LateHour" ColumnName="LateHour" />
+          <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+          <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+          <ScalarProperty Name="OT" ColumnName="OT" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+          <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+          <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+          <ScalarProperty Name="EMP_Other" ColumnName="EMP_Other" />
+          <ScalarProperty Name="Seperation_Date" ColumnName="Seperation_Date" />
+          <ScalarProperty Name="EMP_Dis_Continution_Status" ColumnName="EMP_Dis_Continution_Status" />
+          <ScalarProperty Name="EMP_Died_Status" ColumnName="EMP_Died_Status" />
+          <ScalarProperty Name="EMP_Dismissal_Status" ColumnName="EMP_Dismissal_Status" />
+          <ScalarProperty Name="EMP_Resignation_Status" ColumnName="EMP_Resignation_Status" />
+          <ScalarProperty Name="EMP_Retired_Status" ColumnName="EMP_Retired_Status" />
+          <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+          <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+          <ScalarProperty Name="ContactPersonRelationName" ColumnName="ContactPersonRelationName" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+          <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+          <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+          <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+          <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+          <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="ConfiramtionDateStatus" ColumnName="ConfiramtionDateStatus" />
+          <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+          <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+          <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+          <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+          <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+          <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+          <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="EffectiveSlary" ColumnName="EffectiveSlary" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Step" ColumnName="Step" />
+          <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+          <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+          <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+          <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+          <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+          <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+          <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+          <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+          <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+          <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+          <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+          <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+          <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+          <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+          <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+          <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+          <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+          <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+          <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+          <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_ProductType">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_ProductType">
+        <MappingFragment StoreEntitySet="Inv_ProductType">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_Product">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_Product">
+        <MappingFragment StoreEntitySet="Inv_Product">
+          <ScalarProperty Name="StoreUnitID" ColumnName="StoreUnitID" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+          <ScalarProperty Name="ReOrderQty" ColumnName="ReOrderQty" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="FloorName" ColumnName="FloorName" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="StyleAndSize" ColumnName="StyleAndSize" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_ProductGroup">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Inv_ProductGroup">
+        <MappingFragment StoreEntitySet="Inv_ProductGroup">
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HRM_Office">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.HRM_Office">
+        <MappingFragment StoreEntitySet="HRM_Office">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+          <ScalarProperty Name="OfficeName" ColumnName="OfficeName" />
+          <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+          <ScalarProperty Name="OfficeID" ColumnName="OfficeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_BuyerDepartment">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_BuyerDepartment">
+        <MappingFragment StoreEntitySet="LC_BuyerDepartment">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="BuyerDepartment_Name" ColumnName="BuyerDepartment_Name" />
+          <ScalarProperty Name="BuyerDepartment_Id" ColumnName="BuyerDepartment_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_StyleCategor">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_StyleCategor">
+        <MappingFragment StoreEntitySet="LC_StyleCategor">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Style_Category_Name" ColumnName="Style_Category_Name" />
+          <ScalarProperty Name="Style_Category_Id" ColumnName="Style_Category_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Com_Buyer_Setup">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.Com_Buyer_Setup">
+        <MappingFragment StoreEntitySet="Com_Buyer_Setup">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="NotifyParty" ColumnName="NotifyParty" />
+          <ScalarProperty Name="Consignee" ColumnName="Consignee" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sea_Address" ColumnName="Sea_Address" />
+          <ScalarProperty Name="Land_Address" ColumnName="Land_Address" />
+          <ScalarProperty Name="Buyer_Address" ColumnName="Buyer_Address" />
+          <ScalarProperty Name="Destination_Address" ColumnName="Destination_Address" />
+          <ScalarProperty Name="Delivery_Address" ColumnName="Delivery_Address" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PrincipalName" ColumnName="PrincipalName" />
+          <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+          <ScalarProperty Name="BuyingDepartmentId" ColumnName="BuyingDepartmentId" />
+          <ScalarProperty Name="BuyingDepartment" ColumnName="BuyingDepartment" />
+          <ScalarProperty Name="Buyer_Name" ColumnName="Buyer_Name" />
+          <ScalarProperty Name="Buyer_ID" ColumnName="Buyer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Composition">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Composition">
+        <MappingFragment StoreEntitySet="LC_Composition">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="Composition" ColumnName="Composition" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_ConstructionType">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_ConstructionType">
+        <MappingFragment StoreEntitySet="LC_ConstructionType">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ConstructionType" ColumnName="ConstructionType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_YarnCountType">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnCountType">
+        <MappingFragment StoreEntitySet="LC_YarnCountType">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="YarnCountType" ColumnName="YarnCountType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_YarnDetermination">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnDetermination">
+        <MappingFragment StoreEntitySet="LC_YarnDetermination">
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ProcessLoss" ColumnName="ProcessLoss" />
+          <ScalarProperty Name="StichLength" ColumnName="StichLength" />
+          <ScalarProperty Name="YarnCountTypeId" ColumnName="YarnCountTypeId" />
+          <ScalarProperty Name="YarnCountId" ColumnName="YarnCountId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="CompositionId" ColumnName="CompositionId" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="ConstructionId" ColumnName="ConstructionId" />
+          <ScalarProperty Name="ColorRangeId" ColumnName="ColorRangeId" />
+          <ScalarProperty Name="FebricNatureId" ColumnName="FebricNatureId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_FabricNature">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_FabricNature">
+        <MappingFragment StoreEntitySet="LC_FabricNature">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="FabricNature" ColumnName="FabricNature" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_DeterminationCost">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_DeterminationCost">
+        <MappingFragment StoreEntitySet="LC_DeterminationCost">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="UniqueId" ColumnName="UniqueId" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="DryingCost" ColumnName="DryingCost" />
+          <ScalarProperty Name="DryingCostOption" ColumnName="DryingCostOption" />
+          <ScalarProperty Name="KnitingCost" ColumnName="KnitingCost" />
+          <ScalarProperty Name="ConstructionFinishFebric" ColumnName="ConstructionFinishFebric" />
+          <ScalarProperty Name="DeterminationId" ColumnName="DeterminationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_YarnDeterminationTemp">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_YarnDeterminationTemp">
+        <MappingFragment StoreEntitySet="LC_YarnDeterminationTemp">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="ProcessLoss" ColumnName="ProcessLoss" />
+          <ScalarProperty Name="StichLength" ColumnName="StichLength" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="YarnCountTypeId" ColumnName="YarnCountTypeId" />
+          <ScalarProperty Name="YarnCountId" ColumnName="YarnCountId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="CompositionId" ColumnName="CompositionId" />
+          <ScalarProperty Name="GSM" ColumnName="GSM" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ConstructionId" ColumnName="ConstructionId" />
+          <ScalarProperty Name="ColorRangeId" ColumnName="ColorRangeId" />
+          <ScalarProperty Name="FebricNatureId" ColumnName="FebricNatureId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_OrderEntry">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_OrderEntry">
+        <MappingFragment StoreEntitySet="LC_OrderEntry">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Efficiency" ColumnName="Efficiency" />
+          <ScalarProperty Name="SMV" ColumnName="SMV" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="Buyer_ID" ColumnName="Buyer_ID" />
+          <ScalarProperty Name="Buyer_Name" ColumnName="Buyer_Name" />
+          <ScalarProperty Name="Office_ID" ColumnName="Office_ID" />
+          <ScalarProperty Name="FiberContent2" ColumnName="FiberContent2" />
+          <ScalarProperty Name="FiberContent1" ColumnName="FiberContent1" />
+          <ScalarProperty Name="PlaceOf_DisPatchTo" ColumnName="PlaceOf_DisPatchTo" />
+          <ScalarProperty Name="PlaceOf_DisPatchFrom" ColumnName="PlaceOf_DisPatchFrom" />
+          <ScalarProperty Name="TotalCommission" ColumnName="TotalCommission" />
+          <ScalarProperty Name="CommissionPersent" ColumnName="CommissionPersent" />
+          <ScalarProperty Name="TimeOf_Delevery" ColumnName="TimeOf_Delevery" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit_Id" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Style_Category_Id" ColumnName="Style_Category_Id" />
+          <ScalarProperty Name="Garments_Maker" ColumnName="Garments_Maker" />
+          <ScalarProperty Name="Countryof_Production" ColumnName="Countryof_Production" />
+          <ScalarProperty Name="Merchandiser_Id" ColumnName="Merchandiser_Id" />
+          <ScalarProperty Name="Payment_Terms" ColumnName="Payment_Terms" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="Quotation_Terms" ColumnName="Quotation_Terms" />
+          <ScalarProperty Name="Trading" ColumnName="Trading" />
+          <ScalarProperty Name="Style_Description" ColumnName="Style_Description" />
+          <ScalarProperty Name="Principal_Id" ColumnName="Principal_Id" />
+          <ScalarProperty Name="Gender_Id" ColumnName="Gender_Id" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="Merch_Dept_Id" ColumnName="Merch_Dept_Id" />
+          <ScalarProperty Name="Shipment_Mode" ColumnName="Shipment_Mode" />
+          <ScalarProperty Name="Schedule_Date" ColumnName="Schedule_Date" />
+          <ScalarProperty Name="LC_Reveived_Date" ColumnName="LC_Reveived_Date" />
+          <ScalarProperty Name="FOB_Port" ColumnName="FOB_Port" />
+          <ScalarProperty Name="Yarn_Fabrication" ColumnName="Yarn_Fabrication" />
+          <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="StyleId" ColumnName="StyleId" />
+          <ScalarProperty Name="OrderReceiveDate" ColumnName="OrderReceiveDate" />
+          <ScalarProperty Name="Supplier_No" ColumnName="Supplier_No" />
+          <ScalarProperty Name="Buyer_DepartmentId" ColumnName="Buyer_DepartmentId" />
+          <ScalarProperty Name="Buyer_Department" ColumnName="Buyer_Department" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="Season" ColumnName="Season" />
+          <ScalarProperty Name="ShipmentCompStatus" ColumnName="ShipmentCompStatus" />
+          <ScalarProperty Name="ShipmentStatus" ColumnName="ShipmentStatus" />
+          <ScalarProperty Name="CompShipmentDate" ColumnName="CompShipmentDate" />
+          <ScalarProperty Name="ExtendShipmentDate" ColumnName="ExtendShipmentDate" />
+          <ScalarProperty Name="ShipmentDate" ColumnName="ShipmentDate" />
+          <ScalarProperty Name="TotalQty" ColumnName="TotalQty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="FobQty" ColumnName="FobQty" />
+          <ScalarProperty Name="ColorSpecification" ColumnName="ColorSpecification" />
+          <ScalarProperty Name="Article" ColumnName="Article" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Pre_OrderNo" ColumnName="Pre_OrderNo" />
+          <ScalarProperty Name="LCNo" ColumnName="LCNo" />
+          <ScalarProperty Name="OrderEntryID" ColumnName="OrderEntryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_BodyPart">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_BodyPart">
+        <MappingFragment StoreEntitySet="LC_BodyPart">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+          <ScalarProperty Name="BodyPart" ColumnName="BodyPart" />
+          <ScalarProperty Name="BPartId" ColumnName="BPartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Size">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Size">
+        <MappingFragment StoreEntitySet="LC_Size">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Articale" ColumnName="Articale" />
+          <ScalarProperty Name="GMTItem" ColumnName="GMTItem" />
+          <ScalarProperty Name="StyleNo" ColumnName="StyleNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Size_Type" ColumnName="Size_Type" />
+          <ScalarProperty Name="Size_To" ColumnName="Size_To" />
+          <ScalarProperty Name="Size_From" ColumnName="Size_From" />
+          <ScalarProperty Name="Style_No" ColumnName="Style_No" />
+          <ScalarProperty Name="Order_No" ColumnName="Order_No" />
+          <ScalarProperty Name="Size_Id" ColumnName="Size_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LC_Size_Temp">
+      <EntityTypeMapping TypeName="ERPSSL_MerchandisingModel.LC_Size_Temp">
+        <MappingFragment StoreEntitySet="LC_Size_Temp">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Articale" ColumnName="Articale" />
+          <ScalarProperty Name="GMTItem" ColumnName="GMTItem" />
+          <ScalarProperty Name="StyleNo" ColumnName="StyleNo" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Size_Type" ColumnName="Size_Type" />
+          <ScalarProperty Name="Size_To" ColumnName="Size_To" />
+          <ScalarProperty Name="Size_From" ColumnName="Size_From" />
+          <ScalarProperty Name="Style_No" ColumnName="Style_No" />
+          <ScalarProperty Name="Order_No" ColumnName="Order_No" />
+          <ScalarProperty Name="Size_Id" ColumnName="Size_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

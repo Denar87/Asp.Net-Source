@@ -1,0 +1,139 @@
+﻿.ajax__myTab .ajax__tab_header
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    height: 42.5px;
+    padding-left: 0px;
+    background-color:#f2f2f5;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+
+}
+.ajax__myTab .ajax__tab_header img
+{
+    margin:0px;
+    padding:0px;
+}
+
+/*---------------------------------------------*/
+.ajax__myTab .ajax__tab_outer
+{
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-right: 0px;
+
+    padding-top:7px;
+    padding-bottom:7px;
+    border-top:1px solid #f2f2f5;
+    border-left:0px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:0px solid #555;
+    
+    
+}
+.ajax__myTab .ajax__tab_inner
+{
+    padding-left: 15px;
+
+
+}
+/*---------------------------------------------*/
+.ajax__myTab .ajax__tab_tab
+{
+    padding: 5px;
+    margin: 0;
+    color: #000;
+    border: 0px;
+    
+}
+/*---------------------------------------------*/
+.ajax__myTab .ajax__tab_hover .ajax__tab_outer
+{
+    background: #fff;
+    color:#222;
+    border-top:1px solid #f2f2f5;
+    border-left:0px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:0px solid #555;
+}
+.ajax__myTab .ajax__tab_hover .ajax__tab_inner
+{
+    background: #fff;
+   color:#222;
+}
+.ajax__myTab .ajax__tab_hover .ajax__tab_tab
+{
+    background: #fff;
+    cursor: pointer;
+    color:#222;
+    
+}
+/*---------------------------------------------*/
+.ajax__myTab .ajax__tab_active .ajax__tab_outer
+{
+    background-color:#fff;
+    
+    border: 0px;
+    outline: 0;
+    color: #000;
+    border-top:1px solid #f2f2f5;
+    border-left:0px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:0px solid #555;
+}
+.ajax__myTab .ajax__tab_active .ajax__tab_inner
+{
+   background-color:#fff;
+
+    outline: 0;
+    border: 0px;
+    color: #000;
+
+}
+.ajax__myTab .ajax__tab_active .ajax__tab_tab
+{
+    background-color:#fff;
+
+    outline: 0;
+    cursor: inherit;
+    border: 0px;
+    color: #000;
+
+}
+/*---------------------------------------------*/
+.ajax__myTab .ajax__tab_body
+{
+    border-top:0px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    
+    padding: 15px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    display:table;
+    min-height:500px;
+   
+}
+.ajax__myTab .ajax__tab_disabled
+{
+    color: Gray;
+}
+.ajax__myTab h2
+{
+    border-bottom: 1px solid #eee;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    color: #222;
+}
+
+
+

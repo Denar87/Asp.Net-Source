@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BackUpHRMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BackUpHRMModelStoreContainer">
+    <EntitySet Name="tblprocessedData" EntityType="BackUpHRMModel.Store.tblprocessedData" store:Type="Tables" store:Schema="dbo" store:Name="tblprocessedData">
+      <DefiningQuery>SELECT 
+      [tblprocessedData].[EmpId] AS [EmpId], 
+      [tblprocessedData].[TimeIn] AS [TimeIn], 
+      [tblprocessedData].[TimeOut] AS [TimeOut], 
+      [tblprocessedData].[Lin] AS [Lin], 
+      [tblprocessedData].[Lout] AS [Lout], 
+      [tblprocessedData].[Llate] AS [Llate], 
+      [tblprocessedData].[Late] AS [Late], 
+      [tblprocessedData].[PunchDate] AS [PunchDate], 
+      [tblprocessedData].[PunchShiftCode] AS [PunchShiftCode], 
+      [tblprocessedData].[RegHour] AS [RegHour], 
+      [tblprocessedData].[Sin] AS [Sin], 
+      [tblprocessedData].[Sout] AS [Sout], 
+      [tblprocessedData].[SReg] AS [SReg], 
+      [tblprocessedData].[Slate] AS [Slate], 
+      [tblprocessedData].[OTHour] AS [OTHour], 
+      [tblprocessedData].[Sts] AS [Sts], 
+      [tblprocessedData].[NoPunch] AS [NoPunch], 
+      [tblprocessedData].[NShiftDesc] AS [NShiftDesc], 
+      [tblprocessedData].[OTShiftDesc] AS [OTShiftDesc], 
+      [tblprocessedData].[SectIn] AS [SectIn], 
+      [tblprocessedData].[SectOut] AS [SectOut], 
+      [tblprocessedData].[BTime] AS [BTime], 
+      [tblprocessedData].[Ramadan] AS [Ramadan], 
+      [tblprocessedData].[Status] AS [Status]
+      FROM [dbo].[tblprocessedData] AS [tblprocessedData]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'BackUpHRM.dbo.tblprocessedData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="tblprocessedData">
+    <Key>
+      <PropertyRef Name="EmpId" />
+      <PropertyRef Name="PunchDate" />
+    </Key>
+    <Property Name="EmpId" Type="nvarchar" Nullable="false" MaxLength="9" />
+    <Property Name="TimeIn" Type="datetime" />
+    <Property Name="TimeOut" Type="datetime" />
+    <Property Name="Lin" Type="datetime" />
+    <Property Name="Lout" Type="datetime" />
+    <Property Name="Llate" Type="datetime" />
+    <Property Name="Late" Type="datetime" />
+    <Property Name="PunchDate" Type="datetime" Nullable="false" />
+    <Property Name="PunchShiftCode" Type="nvarchar" MaxLength="6" />
+    <Property Name="RegHour" Type="datetime" />
+    <Property Name="Sin" Type="datetime" />
+    <Property Name="Sout" Type="datetime" />
+    <Property Name="SReg" Type="datetime" />
+    <Property Name="Slate" Type="datetime" />
+    <Property Name="OTHour" Type="datetime" />
+    <Property Name="Sts" Type="nvarchar" MaxLength="3" />
+    <Property Name="NoPunch" Type="tinyint" />
+    <Property Name="NShiftDesc" Type="nvarchar" MaxLength="40" />
+    <Property Name="OTShiftDesc" Type="nvarchar" MaxLength="40" />
+    <Property Name="SectIn" Type="datetime" />
+    <Property Name="SectOut" Type="datetime" />
+    <Property Name="BTime" Type="datetime" />
+    <Property Name="Ramadan" Type="nvarchar" MaxLength="1" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <Function Name="GetHrmAttendanceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OCODE" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

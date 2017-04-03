@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BackUpHRMModelStoreContainer" CdmEntityContainer="BackUpHRMEntities">
+    <EntitySetMapping Name="tblprocessedDatas">
+      <EntityTypeMapping TypeName="BackUpHRMModel.tblprocessedData">
+        <MappingFragment StoreEntitySet="tblprocessedData">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Lin" ColumnName="Lin" />
+          <ScalarProperty Name="Lout" ColumnName="Lout" />
+          <ScalarProperty Name="Llate" ColumnName="Llate" />
+          <ScalarProperty Name="Late" ColumnName="Late" />
+          <ScalarProperty Name="PunchDate" ColumnName="PunchDate" />
+          <ScalarProperty Name="PunchShiftCode" ColumnName="PunchShiftCode" />
+          <ScalarProperty Name="RegHour" ColumnName="RegHour" />
+          <ScalarProperty Name="Sin" ColumnName="Sin" />
+          <ScalarProperty Name="Sout" ColumnName="Sout" />
+          <ScalarProperty Name="SReg" ColumnName="SReg" />
+          <ScalarProperty Name="Slate" ColumnName="Slate" />
+          <ScalarProperty Name="OTHour" ColumnName="OTHour" />
+          <ScalarProperty Name="Sts" ColumnName="Sts" />
+          <ScalarProperty Name="NoPunch" ColumnName="NoPunch" />
+          <ScalarProperty Name="NShiftDesc" ColumnName="NShiftDesc" />
+          <ScalarProperty Name="OTShiftDesc" ColumnName="OTShiftDesc" />
+          <ScalarProperty Name="SectIn" ColumnName="SectIn" />
+          <ScalarProperty Name="SectOut" ColumnName="SectOut" />
+          <ScalarProperty Name="BTime" ColumnName="BTime" />
+          <ScalarProperty Name="Ramadan" ColumnName="Ramadan" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

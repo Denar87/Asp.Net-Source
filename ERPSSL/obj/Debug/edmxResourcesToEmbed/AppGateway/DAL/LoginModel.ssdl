@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERPSSL_LoginModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERPSSL_LoginModelStoreContainer">
+    <EntitySet Name="tbl_User" EntityType="ERPSSL_LoginModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserPassword" EntityType="ERPSSL_LoginModel.Store.tbl_UserPassword" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbl_UserRole" EntityType="ERPSSL_LoginModel.Store.tbl_UserRole" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="User_Level" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Use_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="BranchID" Type="nchar" MaxLength="4" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditUser" Type="uniqueidentifier" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="ParentCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_UserPassword">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_UserRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" Nullable="false" />
+    <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

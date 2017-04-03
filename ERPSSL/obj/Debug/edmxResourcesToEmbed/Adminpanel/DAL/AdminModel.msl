@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERPSSL_MASTERModelStoreContainer" CdmEntityContainer="ERPSSL_AdminEntities1">
+    <EntitySetMapping Name="tbl_Module">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_Module">
+        <MappingFragment StoreEntitySet="tbl_Module">
+          <ScalarProperty Name="ModuleOrder" ColumnName="ModuleOrder" />
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ModuleIcon" ColumnName="ModuleIcon" />
+          <ScalarProperty Name="ModuleURL" ColumnName="ModuleURL" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserRole">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_UserRole">
+        <MappingFragment StoreEntitySet="tbl_UserRole">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PagePermission">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_PagePermission">
+        <MappingFragment StoreEntitySet="tbl_PagePermission">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="CanExecute" ColumnName="CanExecute" />
+          <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="CanVisit" ColumnName="CanVisit" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_User">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_User">
+        <MappingFragment StoreEntitySet="tbl_User">
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="EID" ColumnName="EID" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Use_Email" ColumnName="Use_Email" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserAccess">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_UserAccess">
+        <MappingFragment StoreEntitySet="tbl_UserAccess">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="CanExecute" ColumnName="CanExecute" />
+          <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="CanVisit" ColumnName="CanVisit" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserAccessId" ColumnName="UserAccessId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Page">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_Page">
+        <MappingFragment StoreEntitySet="tbl_Page">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageOrder" ColumnName="PageOrder" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAC_leg_Ledgers">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblAC_leg_Ledgers">
+        <MappingFragment StoreEntitySet="tblAC_leg_Ledgers">
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="Super_ID" ColumnName="Super_ID" />
+          <ScalarProperty Name="Under_ID" ColumnName="Under_ID" />
+          <ScalarProperty Name="Closing_Nature" ColumnName="Closing_Nature" />
+          <ScalarProperty Name="Closing_Balance" ColumnName="Closing_Balance" />
+          <ScalarProperty Name="Opening_Nature" ColumnName="Opening_Nature" />
+          <ScalarProperty Name="Opening_Balance" ColumnName="Opening_Balance" />
+          <ScalarProperty Name="Ledger_Nature" ColumnName="Ledger_Nature" />
+          <ScalarProperty Name="Ledger_Name" ColumnName="Ledger_Name" />
+          <ScalarProperty Name="Ledger_Code" ColumnName="Ledger_Code" />
+          <ScalarProperty Name="Ledger_ID" ColumnName="Ledger_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAC_leg_LedgersTransaction_temp">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblAC_leg_LedgersTransaction_temp">
+        <MappingFragment StoreEntitySet="tblAC_leg_LedgersTransaction_temp">
+          <ScalarProperty Name="Pay_Type" ColumnName="Pay_Type" />
+          <ScalarProperty Name="IdentificationNo" ColumnName="IdentificationNo" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="IsChangable" ColumnName="IsChangable" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Transaction_Date" ColumnName="Transaction_Date" />
+          <ScalarProperty Name="Super_ID" ColumnName="Super_ID" />
+          <ScalarProperty Name="Under_ID" ColumnName="Under_ID" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="Nature" ColumnName="Nature" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="Voucher_Type" ColumnName="Voucher_Type" />
+          <ScalarProperty Name="Voucher_No" ColumnName="Voucher_No" />
+          <ScalarProperty Name="Transaction_Type" ColumnName="Transaction_Type" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="Ledger_Code" ColumnName="Ledger_Code" />
+          <ScalarProperty Name="Transaction_Code" ColumnName="Transaction_Code" />
+          <ScalarProperty Name="Transaction_ID" ColumnName="Transaction_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAC_vch_Voucher_Details">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblAC_vch_Voucher_Details">
+        <MappingFragment StoreEntitySet="tblAC_vch_Voucher_Details">
+          <ScalarProperty Name="IdentificationNo" ColumnName="IdentificationNo" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Voucher_Date" ColumnName="Voucher_Date" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="Voucher_Type" ColumnName="Voucher_Type" />
+          <ScalarProperty Name="Voucher_No" ColumnName="Voucher_No" />
+          <ScalarProperty Name="Nature" ColumnName="Nature" />
+          <ScalarProperty Name="Ledger_Code" ColumnName="Ledger_Code" />
+          <ScalarProperty Name="Voucher_Details_ID" ColumnName="Voucher_Details_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAC_vch_Voucher_Log">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblAC_vch_Voucher_Log">
+        <MappingFragment StoreEntitySet="tblAC_vch_Voucher_Log">
+          <ScalarProperty Name="IdentificationNo" ColumnName="IdentificationNo" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="Voucher_Date" ColumnName="Voucher_Date" />
+          <ScalarProperty Name="Voucher_Type" ColumnName="Voucher_Type" />
+          <ScalarProperty Name="Voucher_No" ColumnName="Voucher_No" />
+          <ScalarProperty Name="Voucher_ID" ColumnName="Voucher_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblConf_Module">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblConf_Module">
+        <MappingFragment StoreEntitySet="tblConf_Module">
+          <ScalarProperty Name="Pay_Type" ColumnName="Pay_Type" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="IsChangable" ColumnName="IsChangable" />
+          <ScalarProperty Name="Voucher_Type" ColumnName="Voucher_Type" />
+          <ScalarProperty Name="TransactionNature" ColumnName="TransactionNature" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="Ledger_Code" ColumnName="Ledger_Code" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Category">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_Category">
+        <MappingFragment StoreEntitySet="tbl_Category">
+          <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+          <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+          <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CategoryOrder" ColumnName="CategoryOrder" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_UserPassword">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tbl_UserPassword">
+        <MappingFragment StoreEntitySet="tbl_UserPassword">
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAC_cmp_Companys">
+      <EntityTypeMapping TypeName="ERPSSL_MASTERModel.tblAC_cmp_Companys">
+        <MappingFragment StoreEntitySet="tblAC_cmp_Companys">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+          <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+          <ScalarProperty Name="OCode" ColumnName="OCode" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Business_Type" ColumnName="Business_Type" />
+          <ScalarProperty Name="Book_Begning" ColumnName="Book_Begning" />
+          <ScalarProperty Name="Financial_Year" ColumnName="Financial_Year" />
+          <ScalarProperty Name="Company_Description" ColumnName="Company_Description" />
+          <ScalarProperty Name="Web_Site" ColumnName="Web_Site" />
+          <ScalarProperty Name="E_mail" ColumnName="E_mail" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+          <ScalarProperty Name="State_Region" ColumnName="State/Region" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street_2" ColumnName="Street_2" />
+          <ScalarProperty Name="Street_1" ColumnName="Street_1" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Company_ID" ColumnName="Company_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

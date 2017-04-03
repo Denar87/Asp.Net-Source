@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model_Marketing.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Model_MarketingStoreContainer">
+          <EntitySet Name="HRM_PersonalInformations" EntityType="Model_Marketing.Store.HRM_PersonalInformations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LC_InputType" EntityType="Model_Marketing.Store.LC_InputType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_AMC" EntityType="Model_Marketing.Store.MRK_AMC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_MarketingInfo" EntityType="Model_Marketing.Store.MRK_MarketingInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_MarketingPerson" EntityType="Model_Marketing.Store.MRK_MarketingPerson" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_Project" EntityType="Model_Marketing.Store.MRK_Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_Reference" EntityType="Model_Marketing.Store.MRK_Reference" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_Stage" EntityType="Model_Marketing.Store.MRK_Stage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_Task_Details" EntityType="Model_Marketing.Store.MRK_Task_Details" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_Transaction" EntityType="Model_Marketing.Store.MRK_Transaction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MRK_WorkOrder" EntityType="Model_Marketing.Store.MRK_WorkOrder" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="HRM_PersonalInformations">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionsId" Type="int" />
+          <Property Name="OfficeId" Type="int" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="SectionId" Type="int" />
+          <Property Name="SubSectionId" Type="int" />
+          <Property Name="DesginationId" Type="int" />
+          <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBrith" Type="date" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+          <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar(max)" />
+          <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+          <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="PresentAddress" Type="nvarchar(max)" />
+          <Property Name="PermanenAddress" Type="nvarchar(max)" />
+          <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Step" Type="int" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+          <Property Name="EffectiveSlary" Type="money" />
+          <Property Name="Salary" Type="money" />
+          <Property Name="GrossRate" Type="money" />
+          <Property Name="OldSalary" Type="money" />
+          <Property Name="SalaryUpdateDate" Type="datetime" />
+          <Property Name="OTApplicable" Type="bit" />
+          <Property Name="ProbationPeriodFrom" Type="datetime" />
+          <Property Name="ProbationPeriodTo" Type="datetime" />
+          <Property Name="ConfiramtionDate" Type="datetime" />
+          <Property Name="ConfiramtionDateStatus" Type="bit" />
+          <Property Name="EmployeeType" Type="int" />
+          <Property Name="EmpCategoryId" Type="int" />
+          <Property Name="ShiftId" Type="int" />
+          <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+          <Property Name="JoiningDate" Type="date" />
+          <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+          <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+          <Property Name="EMP_Retired_Status" Type="bit" />
+          <Property Name="EMP_Resignation_Status" Type="bit" />
+          <Property Name="EMP_Dismissal_Status" Type="bit" />
+          <Property Name="EMP_Died_Status" Type="bit" />
+          <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+          <Property Name="Seperation_Date" Type="datetime" />
+          <Property Name="EMP_Other" Type="bit" />
+          <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+          <Property Name="EMP_Singnature" Type="varbinary(max)" />
+          <Property Name="Nomine_Photo" Type="varbinary(max)" />
+          <Property Name="P" Type="int" />
+          <Property Name="L" Type="int" />
+          <Property Name="A" Type="int" />
+          <Property Name="OT" Type="int" />
+          <Property Name="OT_Compliance" Type="int" />
+          <Property Name="OT_Extra" Type="int" />
+          <Property Name="LateHour" Type="time" />
+          <Property Name="WH" Type="int" />
+          <Property Name="GV_H" Type="int" />
+          <Property Name="PV_H" Type="int" />
+          <Property Name="OH" Type="int" />
+          <Property Name="EX" Type="int" />
+          <Property Name="EffectiveSalaryStatus" Type="bit" />
+          <Property Name="Attendance_Bouns" Type="bit" />
+          <Property Name="Late_Applicable" Type="bit" />
+          <Property Name="Absence_Applicable" Type="bit" />
+          <Property Name="Tax_Applicable" Type="bit" />
+          <Property Name="PF_Applicable" Type="bit" />
+          <Property Name="On_Amount" Type="bit" />
+          <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LC_InputType">
+          <Key>
+            <PropertyRef Name="InputType_Id" />
+          </Key>
+          <Property Name="InputType_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Use_Dept" Type="nvarchar" MaxLength="50" />
+          <Property Name="Input_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sl_No" Type="int" />
+          <Property Name="CreateUser" Type="uniqueidentifier" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_AMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkOrderId" Type="int" />
+          <Property Name="AMC_Condition" Type="nvarchar(max)" />
+          <Property Name="AMC_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="BillingStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_MarketingInfo">
+          <Key>
+            <PropertyRef Name="MarketingInfoId" />
+          </Key>
+          <Property Name="MarketingInfoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VisitDate" Type="datetime" />
+          <Property Name="Client" Type="nvarchar" MaxLength="150" />
+          <Property Name="ContactPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="Module" Type="nvarchar" MaxLength="50" />
+          <Property Name="StageId" Type="int" />
+          <Property Name="MarketingPersonId" Type="nvarchar" MaxLength="250" />
+          <Property Name="ReferenceId" Type="int" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_MarketingPerson">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Name="EmpId" Type="bigint" Nullable="false" />
+          <Property Name="EID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BanFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionsId" Type="int" />
+          <Property Name="OfficeId" Type="int" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="SectionId" Type="int" />
+          <Property Name="SubSectionId" Type="int" />
+          <Property Name="DesginationId" Type="int" />
+          <Property Name="BIO_MATRIX_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBrith" Type="date" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="25" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="nvarchar" MaxLength="20" />
+          <Property Name="Religion" Type="nvarchar" MaxLength="20" />
+          <Property Name="NationalID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar(max)" />
+          <Property Name="EmergencyContactNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="EmergencyContactPerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmergencyAddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="FatherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="FatherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="MotherProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpouseAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="SpouseProfession" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumberOfChildren" Type="nvarchar" MaxLength="3" />
+          <Property Name="ChildrenNameRemark" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="30" />
+          <Property Name="PresentAddress" Type="nvarchar(max)" />
+          <Property Name="PermanenAddress" Type="nvarchar(max)" />
+          <Property Name="AlternativEmailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="NomineeAge" Type="nvarchar" MaxLength="3" />
+          <Property Name="NomineeRelation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Step" Type="int" />
+          <Property Name="Grade" Type="nvarchar" MaxLength="5" />
+          <Property Name="EffectiveSlary" Type="money" />
+          <Property Name="Salary" Type="money" />
+          <Property Name="GrossRate" Type="money" />
+          <Property Name="OldSalary" Type="money" />
+          <Property Name="SalaryUpdateDate" Type="datetime" />
+          <Property Name="OTApplicable" Type="bit" />
+          <Property Name="ProbationPeriodFrom" Type="datetime" />
+          <Property Name="ProbationPeriodTo" Type="datetime" />
+          <Property Name="ConfiramtionDate" Type="datetime" />
+          <Property Name="ConfiramtionDateStatus" Type="bit" />
+          <Property Name="EmployeeType" Type="int" />
+          <Property Name="EmpCategoryId" Type="int" />
+          <Property Name="ShiftId" Type="int" />
+          <Property Name="ShiftCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ThirdReportingBossId" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobResponsibility" Type="nvarchar" MaxLength="200" />
+          <Property Name="JoiningDate" Type="date" />
+          <Property Name="ContactPersonRelationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMP_TERMIN_STATUS" Type="bit" />
+          <Property Name="EMP_TRANSFER_STATUS" Type="bit" />
+          <Property Name="EMP_Retired_Status" Type="bit" />
+          <Property Name="EMP_Resignation_Status" Type="bit" />
+          <Property Name="EMP_Dismissal_Status" Type="bit" />
+          <Property Name="EMP_Died_Status" Type="bit" />
+          <Property Name="EMP_Dis_Continution_Status" Type="bit" />
+          <Property Name="Seperation_Date" Type="datetime" />
+          <Property Name="EMP_Other" Type="bit" />
+          <Property Name="EMP_PHOTO" Type="varbinary(max)" />
+          <Property Name="EMP_Singnature" Type="varbinary(max)" />
+          <Property Name="Nomine_Photo" Type="varbinary(max)" />
+          <Property Name="P" Type="int" />
+          <Property Name="L" Type="int" />
+          <Property Name="A" Type="int" />
+          <Property Name="OT" Type="int" />
+          <Property Name="OT_Compliance" Type="int" />
+          <Property Name="OT_Extra" Type="int" />
+          <Property Name="LateHour" Type="time" />
+          <Property Name="WH" Type="int" />
+          <Property Name="GV_H" Type="int" />
+          <Property Name="PV_H" Type="int" />
+          <Property Name="OH" Type="int" />
+          <Property Name="EX" Type="int" />
+          <Property Name="EffectiveSalaryStatus" Type="bit" />
+          <Property Name="Attendance_Bouns" Type="bit" />
+          <Property Name="Late_Applicable" Type="bit" />
+          <Property Name="Absence_Applicable" Type="bit" />
+          <Property Name="Tax_Applicable" Type="bit" />
+          <Property Name="PF_Applicable" Type="bit" />
+          <Property Name="On_Amount" Type="bit" />
+          <Property Name="Tax_Amount" Type="decimal" Scale="2" />
+          <Property Name="EDIT_USER" Type="uniqueidentifier" />
+          <Property Name="EDIT_DATE" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_Project">
+          <Key>
+            <PropertyRef Name="ProjectId" />
+          </Key>
+          <Property Name="ProjectId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_Reference">
+          <Key>
+            <PropertyRef Name="ReferenceId" />
+          </Key>
+          <Property Name="ReferenceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ReferenceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferenceNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_Stage">
+          <Key>
+            <PropertyRef Name="StageId" />
+          </Key>
+          <Property Name="StageId" Type="int" Nullable="false" />
+          <Property Name="StageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_Task_Details">
+          <Key>
+            <PropertyRef Name="TaskDetails_Id" />
+          </Key>
+          <Property Name="TaskDetails_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkOrderId" Type="int" />
+          <Property Name="Task" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="250" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_Transaction">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="WorkOrderId" Type="int" />
+          <Property Name="CollectionDate" Type="datetime" />
+          <Property Name="CollectionAmount" Type="money" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MRK_WorkOrder">
+          <Key>
+            <PropertyRef Name="WoID" />
+          </Key>
+          <Property Name="WoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MarketingInfoId" Type="int" />
+          <Property Name="WorkOrderDate" Type="datetime" />
+          <Property Name="CompletionPeriod" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProposedAmount" Type="money" />
+          <Property Name="SigningAmount" Type="money" />
+          <Property Name="RemainingAmount" Type="money" />
+          <Property Name="PaymentCondition" Type="nvarchar" MaxLength="250" />
+          <Property Name="AMC_Condition" Type="nvarchar" MaxLength="150" />
+          <Property Name="DevelopmentDept" Type="nvarchar" MaxLength="50" />
+          <Property Name="WarrantyPeriod" Type="int" />
+          <Property Name="AMCDAte" Type="datetime" />
+          <Property Name="HandoverStatus" Type="bit" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+          <Property Name="Create_User" Type="uniqueidentifier" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Edit_User" Type="uniqueidentifier" />
+          <Property Name="Edit_Date" Type="datetime" />
+          <Property Name="OCODE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model_Marketing" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ERPSSL_Marketing_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MRK_Stage" EntityType="Model_Marketing.MRK_Stage" />
+          <EntitySet Name="HRM_PersonalInformations" EntityType="Model_Marketing.HRM_PersonalInformations" />
+          <EntitySet Name="MRK_MarketingPerson" EntityType="Model_Marketing.MRK_MarketingPerson" />
+          <EntitySet Name="MRK_Transaction" EntityType="Model_Marketing.MRK_Transaction" />
+          <EntitySet Name="LC_InputType" EntityType="Model_Marketing.LC_InputType" />
+          <EntitySet Name="MRK_Task_Details" EntityType="Model_Marketing.MRK_Task_Details" />
+          <EntitySet Name="MRK_MarketingInfo" EntityType="Model_Marketing.MRK_MarketingInfo" />
+          <EntitySet Name="MRK_Reference" EntityType="Model_Marketing.MRK_Reference" />
+          <EntitySet Name="MRK_WorkOrder" EntityType="Model_Marketing.MRK_WorkOrder" />
+          <EntitySet Name="MRK_AMC" EntityType="Model_Marketing.MRK_AMC" />
+          <EntitySet Name="MRK_Project" EntityType="Model_Marketing.MRK_Project" />
+        </EntityContainer>
+        <EntityType Name="MRK_Stage">
+          <Key>
+            <PropertyRef Name="StageId" />
+          </Key>
+          <Property Name="StageId" Type="Int32" Nullable="false" />
+          <Property Name="StageName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Create_User" Type="Guid" />
+          <Property Name="Create_Date" Type="DateTime" Precision="3" />
+          <Property Name="Edit_User" Type="Guid" />
+          <Property Name="Edit_Date" Type="DateTime" Precision="3" />
+          <Property Name="OCODE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HRM_PersonalInformations">
+          <Key>
+            <PropertyRef Name="EID" />
+          </Key>
+          <Property Type="Int64" Name="EmpId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RegionsId" />
+          <Property Type="Int32" Name="OfficeId" />
+          <Property Type="Int32" Name="DepartmentId" />
+          <Property Type="Int32" Name="SectionId" />
+          <Property Type="Int32" Name="SubSectionId" />
+          <Property Type="Int32" Name="DesginationId" />
+          <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+          <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Step" />
+          <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+          <Property Type="Boolean" Name="OTApplicable" />
+          <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+          <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+          <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+          <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+          <Property Type="Int32" Name="EmployeeType" />
+          <Property Type="Int32" Name="EmpCategoryId" />
+          <Property Type="Int32" Name="ShiftId" />
+          <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+          <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+          <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+          <Property Type="Boolean" Name="EMP_Retired_Status" />
+          <Property Type="Boolean" Name="EMP_Resignation_Status" />
+          <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+          <Property Type="Boolean" Name="EMP_Died_Status" />
+          <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+          <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+          <Property Type="Boolean" Name="EMP_Other" />
+          <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="P" />
+          <Property Type="Int32" Name="L" />
+          <Property Type="Int32" Name="A" />
+          <Property Type="Int32" Name="OT" />
+          <Property Type="Int32" Name="OT_Compliance" />
+          <Property Type="Int32" Name="OT_Extra" />
+          <Property Type="Time" Name="LateHour" Precision="7" />
+          <Property Type="Int32" Name="WH" />
+          <Property Type="Int32" Name="GV_H" />
+          <Property Type="Int32" Name="PV_H" />
+          <Property Type="Int32" Name="OH" />
+          <Property Type="Int32" Name="EX" />
+          <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+          <Property Type="Boolean" Name="Attendance_Bouns" />
+          <Property Type="Boolean" Name="Late_Applicable" />
+          <Property Type="Boolean" Name="Absence_Applicable" />
+          <Property Type="Boolean" Name="Tax_Applicable" />
+          <Property Type="Boolean" Name="PF_Applicable" />
+          <Property Type="Boolean" Name="On_Amount" />
+          <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_MarketingPerson">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Type="Int64" Name="EmpId" Nullable="false" />
+          <Property Type="String" Name="EID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BanFullName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RegionsId" />
+          <Property Type="Int32" Name="OfficeId" />
+          <Property Type="Int32" Name="DepartmentId" />
+          <Property Type="Int32" Name="SectionId" />
+          <Property Type="Int32" Name="SubSectionId" />
+          <Property Type="Int32" Name="DesginationId" />
+          <Property Type="String" Name="BIO_MATRIX_ID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Gender" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateOfBrith" Precision="0" />
+          <Property Type="String" Name="BloodGroup" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MaritalStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Religion" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NationalID" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactNo" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EmergencyAddress" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpouseProfession" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NumberOfChildren" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChildrenNameRemark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PresentAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PermanenAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlternativEmailAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeAge" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NomineeRelation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Step" />
+          <Property Type="String" Name="Grade" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="EffectiveSlary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Salary" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="GrossRate" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="OldSalary" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="SalaryUpdateDate" Precision="3" />
+          <Property Type="Boolean" Name="OTApplicable" />
+          <Property Type="DateTime" Name="ProbationPeriodFrom" Precision="3" />
+          <Property Type="DateTime" Name="ProbationPeriodTo" Precision="3" />
+          <Property Type="DateTime" Name="ConfiramtionDate" Precision="3" />
+          <Property Type="Boolean" Name="ConfiramtionDateStatus" />
+          <Property Type="Int32" Name="EmployeeType" />
+          <Property Type="Int32" Name="EmpCategoryId" />
+          <Property Type="Int32" Name="ShiftId" />
+          <Property Type="String" Name="ShiftCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecondReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThirdReportingBossId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JobResponsibility" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="JoiningDate" Precision="0" />
+          <Property Type="String" Name="ContactPersonRelationName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="EMP_TERMIN_STATUS" />
+          <Property Type="Boolean" Name="EMP_TRANSFER_STATUS" />
+          <Property Type="Boolean" Name="EMP_Retired_Status" />
+          <Property Type="Boolean" Name="EMP_Resignation_Status" />
+          <Property Type="Boolean" Name="EMP_Dismissal_Status" />
+          <Property Type="Boolean" Name="EMP_Died_Status" />
+          <Property Type="Boolean" Name="EMP_Dis_Continution_Status" />
+          <Property Type="DateTime" Name="Seperation_Date" Precision="3" />
+          <Property Type="Boolean" Name="EMP_Other" />
+          <Property Type="Binary" Name="EMP_PHOTO" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="EMP_Singnature" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="Nomine_Photo" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="P" />
+          <Property Type="Int32" Name="L" />
+          <Property Type="Int32" Name="A" />
+          <Property Type="Int32" Name="OT" />
+          <Property Type="Int32" Name="OT_Compliance" />
+          <Property Type="Int32" Name="OT_Extra" />
+          <Property Type="Time" Name="LateHour" Precision="7" />
+          <Property Type="Int32" Name="WH" />
+          <Property Type="Int32" Name="GV_H" />
+          <Property Type="Int32" Name="PV_H" />
+          <Property Type="Int32" Name="OH" />
+          <Property Type="Int32" Name="EX" />
+          <Property Type="Boolean" Name="EffectiveSalaryStatus" />
+          <Property Type="Boolean" Name="Attendance_Bouns" />
+          <Property Type="Boolean" Name="Late_Applicable" />
+          <Property Type="Boolean" Name="Absence_Applicable" />
+          <Property Type="Boolean" Name="Tax_Applicable" />
+          <Property Type="Boolean" Name="PF_Applicable" />
+          <Property Type="Boolean" Name="On_Amount" />
+          <Property Type="Decimal" Name="Tax_Amount" Precision="18" Scale="2" />
+          <Property Type="Guid" Name="EDIT_USER" />
+          <Property Type="DateTime" Name="EDIT_DATE" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_Transaction">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Type="Int32" Name="TransactionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="WorkOrderId" />
+          <Property Type="DateTime" Name="CollectionDate" Precision="3" />
+          <Property Type="Decimal" Name="CollectionAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LC_InputType">
+          <Key>
+            <PropertyRef Name="InputType_Id" />
+          </Key>
+          <Property Type="Int32" Name="InputType_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Use_Dept" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Input_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sl_No" />
+          <Property Type="Guid" Name="CreateUser" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_Task_Details">
+          <Key>
+            <PropertyRef Name="TaskDetails_Id" />
+          </Key>
+          <Property Type="Int32" Name="TaskDetails_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="WorkOrderId" />
+          <Property Type="String" Name="Task" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comments" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" Precision="3" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_MarketingInfo">
+          <Key>
+            <PropertyRef Name="MarketingInfoId" />
+          </Key>
+          <Property Type="Int32" Name="MarketingInfoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="VisitDate" Precision="3" />
+          <Property Type="String" Name="Client" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactPerson" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Designation" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ProjectId" />
+          <Property Type="String" Name="Module" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="StageId" />
+          <Property Type="String" Name="MarketingPersonId" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ReferenceId" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_Reference">
+          <Key>
+            <PropertyRef Name="ReferenceId" />
+          </Key>
+          <Property Type="Int32" Name="ReferenceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ReferenceName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReferenceNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_WorkOrder">
+          <Key>
+            <PropertyRef Name="WoID" />
+          </Key>
+          <Property Type="Int32" Name="WoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MarketingInfoId" />
+          <Property Type="DateTime" Name="WorkOrderDate" Precision="3" />
+          <Property Type="String" Name="CompletionPeriod" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="ProposedAmount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="SigningAmount" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="RemainingAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="PaymentCondition" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AMC_Condition" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DevelopmentDept" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="WarrantyPeriod" />
+          <Property Type="DateTime" Name="AMCDAte" Precision="3" />
+          <Property Type="Boolean" Name="HandoverStatus" />
+          <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_AMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="WorkOrderId" />
+          <Property Type="String" Name="AMC_Condition" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AMC_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="EndDate" Precision="3" />
+          <Property Type="String" Name="BillingStatus" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MRK_Project">
+          <Key>
+            <PropertyRef Name="ProjectId" />
+          </Key>
+          <Property Type="Int32" Name="ProjectId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ProjectName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="Create_User" />
+          <Property Type="DateTime" Name="Create_Date" Precision="3" />
+          <Property Type="Guid" Name="Edit_User" />
+          <Property Type="DateTime" Name="Edit_Date" Precision="3" />
+          <Property Type="String" Name="OCODE" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model_MarketingStoreContainer" CdmEntityContainer="ERPSSL_Marketing_Entities">
+          <EntitySetMapping Name="MRK_Stage">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_Stage">
+              <MappingFragment StoreEntitySet="MRK_Stage">
+                <ScalarProperty Name="StageId" ColumnName="StageId" />
+                <ScalarProperty Name="StageName" ColumnName="StageName" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HRM_PersonalInformations">
+            <EntityTypeMapping TypeName="Model_Marketing.HRM_PersonalInformations">
+              <MappingFragment StoreEntitySet="HRM_PersonalInformations">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+                <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+                <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+                <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+                <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+                <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+                <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+                <ScalarProperty Name="EffectiveSalaryStatus" ColumnName="EffectiveSalaryStatus" />
+                <ScalarProperty Name="EX" ColumnName="EX" />
+                <ScalarProperty Name="OH" ColumnName="OH" />
+                <ScalarProperty Name="PV_H" ColumnName="PV_H" />
+                <ScalarProperty Name="GV_H" ColumnName="GV_H" />
+                <ScalarProperty Name="WH" ColumnName="WH" />
+                <ScalarProperty Name="LateHour" ColumnName="LateHour" />
+                <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+                <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="P" ColumnName="P" />
+                <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+                <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+                <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+                <ScalarProperty Name="EMP_Other" ColumnName="EMP_Other" />
+                <ScalarProperty Name="Seperation_Date" ColumnName="Seperation_Date" />
+                <ScalarProperty Name="EMP_Dis_Continution_Status" ColumnName="EMP_Dis_Continution_Status" />
+                <ScalarProperty Name="EMP_Died_Status" ColumnName="EMP_Died_Status" />
+                <ScalarProperty Name="EMP_Dismissal_Status" ColumnName="EMP_Dismissal_Status" />
+                <ScalarProperty Name="EMP_Resignation_Status" ColumnName="EMP_Resignation_Status" />
+                <ScalarProperty Name="EMP_Retired_Status" ColumnName="EMP_Retired_Status" />
+                <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+                <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+                <ScalarProperty Name="ContactPersonRelationName" ColumnName="ContactPersonRelationName" />
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+                <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+                <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+                <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+                <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+                <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="ConfiramtionDateStatus" ColumnName="ConfiramtionDateStatus" />
+                <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+                <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+                <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+                <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+                <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+                <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+                <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="EffectiveSlary" ColumnName="EffectiveSlary" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Step" ColumnName="Step" />
+                <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+                <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+                <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+                <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+                <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+                <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+                <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+                <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+                <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+                <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+                <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+                <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+                <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+                <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+                <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+                <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+                <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+                <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_MarketingPerson">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_MarketingPerson">
+              <MappingFragment StoreEntitySet="MRK_MarketingPerson">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="EDIT_DATE" ColumnName="EDIT_DATE" />
+                <ScalarProperty Name="EDIT_USER" ColumnName="EDIT_USER" />
+                <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+                <ScalarProperty Name="On_Amount" ColumnName="On_Amount" />
+                <ScalarProperty Name="PF_Applicable" ColumnName="PF_Applicable" />
+                <ScalarProperty Name="Tax_Applicable" ColumnName="Tax_Applicable" />
+                <ScalarProperty Name="Absence_Applicable" ColumnName="Absence_Applicable" />
+                <ScalarProperty Name="Late_Applicable" ColumnName="Late_Applicable" />
+                <ScalarProperty Name="Attendance_Bouns" ColumnName="Attendance_Bouns" />
+                <ScalarProperty Name="EffectiveSalaryStatus" ColumnName="EffectiveSalaryStatus" />
+                <ScalarProperty Name="EX" ColumnName="EX" />
+                <ScalarProperty Name="OH" ColumnName="OH" />
+                <ScalarProperty Name="PV_H" ColumnName="PV_H" />
+                <ScalarProperty Name="GV_H" ColumnName="GV_H" />
+                <ScalarProperty Name="WH" ColumnName="WH" />
+                <ScalarProperty Name="LateHour" ColumnName="LateHour" />
+                <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+                <ScalarProperty Name="OT_Compliance" ColumnName="OT_Compliance" />
+                <ScalarProperty Name="OT" ColumnName="OT" />
+                <ScalarProperty Name="A" ColumnName="A" />
+                <ScalarProperty Name="L" ColumnName="L" />
+                <ScalarProperty Name="P" ColumnName="P" />
+                <ScalarProperty Name="Nomine_Photo" ColumnName="Nomine_Photo" />
+                <ScalarProperty Name="EMP_Singnature" ColumnName="EMP_Singnature" />
+                <ScalarProperty Name="EMP_PHOTO" ColumnName="EMP_PHOTO" />
+                <ScalarProperty Name="EMP_Other" ColumnName="EMP_Other" />
+                <ScalarProperty Name="Seperation_Date" ColumnName="Seperation_Date" />
+                <ScalarProperty Name="EMP_Dis_Continution_Status" ColumnName="EMP_Dis_Continution_Status" />
+                <ScalarProperty Name="EMP_Died_Status" ColumnName="EMP_Died_Status" />
+                <ScalarProperty Name="EMP_Dismissal_Status" ColumnName="EMP_Dismissal_Status" />
+                <ScalarProperty Name="EMP_Resignation_Status" ColumnName="EMP_Resignation_Status" />
+                <ScalarProperty Name="EMP_Retired_Status" ColumnName="EMP_Retired_Status" />
+                <ScalarProperty Name="EMP_TRANSFER_STATUS" ColumnName="EMP_TRANSFER_STATUS" />
+                <ScalarProperty Name="EMP_TERMIN_STATUS" ColumnName="EMP_TERMIN_STATUS" />
+                <ScalarProperty Name="ContactPersonRelationName" ColumnName="ContactPersonRelationName" />
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="JobResponsibility" ColumnName="JobResponsibility" />
+                <ScalarProperty Name="ThirdReportingBossId" ColumnName="ThirdReportingBossId" />
+                <ScalarProperty Name="SecondReportingBossId" ColumnName="SecondReportingBossId" />
+                <ScalarProperty Name="ReportingBossId" ColumnName="ReportingBossId" />
+                <ScalarProperty Name="ShiftCode" ColumnName="ShiftCode" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+                <ScalarProperty Name="EmpCategoryId" ColumnName="EmpCategoryId" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="ConfiramtionDateStatus" ColumnName="ConfiramtionDateStatus" />
+                <ScalarProperty Name="ConfiramtionDate" ColumnName="ConfiramtionDate" />
+                <ScalarProperty Name="ProbationPeriodTo" ColumnName="ProbationPeriodTo" />
+                <ScalarProperty Name="ProbationPeriodFrom" ColumnName="ProbationPeriodFrom" />
+                <ScalarProperty Name="OTApplicable" ColumnName="OTApplicable" />
+                <ScalarProperty Name="SalaryUpdateDate" ColumnName="SalaryUpdateDate" />
+                <ScalarProperty Name="OldSalary" ColumnName="OldSalary" />
+                <ScalarProperty Name="GrossRate" ColumnName="GrossRate" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="EffectiveSlary" ColumnName="EffectiveSlary" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Step" ColumnName="Step" />
+                <ScalarProperty Name="NomineeRelation" ColumnName="NomineeRelation" />
+                <ScalarProperty Name="NomineeAge" ColumnName="NomineeAge" />
+                <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+                <ScalarProperty Name="AlternativEmailAddress" ColumnName="AlternativEmailAddress" />
+                <ScalarProperty Name="PermanenAddress" ColumnName="PermanenAddress" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ChildrenNameRemark" ColumnName="ChildrenNameRemark" />
+                <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+                <ScalarProperty Name="SpouseProfession" ColumnName="SpouseProfession" />
+                <ScalarProperty Name="SpouseAge" ColumnName="SpouseAge" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="MotherProfession" ColumnName="MotherProfession" />
+                <ScalarProperty Name="MotherAge" ColumnName="MotherAge" />
+                <ScalarProperty Name="FatherProfession" ColumnName="FatherProfession" />
+                <ScalarProperty Name="FatherAge" ColumnName="FatherAge" />
+                <ScalarProperty Name="EmergencyAddress" ColumnName="EmergencyAddress" />
+                <ScalarProperty Name="EmergencyContactPerson" ColumnName="EmergencyContactPerson" />
+                <ScalarProperty Name="EmergencyContactNo" ColumnName="EmergencyContactNo" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="NationalID" ColumnName="NationalID" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BIO_MATRIX_ID" ColumnName="BIO_MATRIX_ID" />
+                <ScalarProperty Name="DesginationId" ColumnName="DesginationId" />
+                <ScalarProperty Name="SubSectionId" ColumnName="SubSectionId" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="OfficeId" ColumnName="OfficeId" />
+                <ScalarProperty Name="RegionsId" ColumnName="RegionsId" />
+                <ScalarProperty Name="BanFullName" ColumnName="BanFullName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_Transaction">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_Transaction">
+              <MappingFragment StoreEntitySet="MRK_Transaction">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="CollectionAmount" ColumnName="CollectionAmount" />
+                <ScalarProperty Name="CollectionDate" ColumnName="CollectionDate" />
+                <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LC_InputType">
+            <EntityTypeMapping TypeName="Model_Marketing.LC_InputType">
+              <MappingFragment StoreEntitySet="LC_InputType">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="Sl_No" ColumnName="Sl_No" />
+                <ScalarProperty Name="Input_Name" ColumnName="Input_Name" />
+                <ScalarProperty Name="Use_Dept" ColumnName="Use_Dept" />
+                <ScalarProperty Name="InputType_Id" ColumnName="InputType_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_Task_Details">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_Task_Details">
+              <MappingFragment StoreEntitySet="MRK_Task_Details">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+                <ScalarProperty Name="TaskDetails_Id" ColumnName="TaskDetails_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_MarketingInfo">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_MarketingInfo">
+              <MappingFragment StoreEntitySet="MRK_MarketingInfo">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+                <ScalarProperty Name="MarketingPersonId" ColumnName="MarketingPersonId" />
+                <ScalarProperty Name="StageId" ColumnName="StageId" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+                <ScalarProperty Name="MarketingInfoId" ColumnName="MarketingInfoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_Reference">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_Reference">
+              <MappingFragment StoreEntitySet="MRK_Reference">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="ReferenceName" ColumnName="ReferenceName" />
+                <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_WorkOrder">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_WorkOrder">
+              <MappingFragment StoreEntitySet="MRK_WorkOrder">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="HandoverStatus" ColumnName="HandoverStatus" />
+                <ScalarProperty Name="AMCDAte" ColumnName="AMCDAte" />
+                <ScalarProperty Name="WarrantyPeriod" ColumnName="WarrantyPeriod" />
+                <ScalarProperty Name="DevelopmentDept" ColumnName="DevelopmentDept" />
+                <ScalarProperty Name="AMC_Condition" ColumnName="AMC_Condition" />
+                <ScalarProperty Name="PaymentCondition" ColumnName="PaymentCondition" />
+                <ScalarProperty Name="RemainingAmount" ColumnName="RemainingAmount" />
+                <ScalarProperty Name="SigningAmount" ColumnName="SigningAmount" />
+                <ScalarProperty Name="ProposedAmount" ColumnName="ProposedAmount" />
+                <ScalarProperty Name="CompletionPeriod" ColumnName="CompletionPeriod" />
+                <ScalarProperty Name="WorkOrderDate" ColumnName="WorkOrderDate" />
+                <ScalarProperty Name="MarketingInfoId" ColumnName="MarketingInfoId" />
+                <ScalarProperty Name="WoID" ColumnName="WoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_AMC">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_AMC">
+              <MappingFragment StoreEntitySet="MRK_AMC">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="BillingStatus" ColumnName="BillingStatus" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AMC_Type" ColumnName="AMC_Type" />
+                <ScalarProperty Name="AMC_Condition" ColumnName="AMC_Condition" />
+                <ScalarProperty Name="WorkOrderId" ColumnName="WorkOrderId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MRK_Project">
+            <EntityTypeMapping TypeName="Model_Marketing.MRK_Project">
+              <MappingFragment StoreEntitySet="MRK_Project">
+                <ScalarProperty Name="OCODE" ColumnName="OCODE" />
+                <ScalarProperty Name="Edit_Date" ColumnName="Edit_Date" />
+                <ScalarProperty Name="Edit_User" ColumnName="Edit_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model_Marketing" ZoomLevel="87">
+        <EntityTypeShape EntityType="Model_Marketing.MRK_Stage" Width="1.5" PointX="4.75" PointY="0.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model_Marketing.HRM_PersonalInformations" Width="1.5" PointX="6.625" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_MarketingPerson" Width="1.5" PointX="2.75" PointY="3.375" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_Transaction" Width="1.5" PointX="0.5" PointY="5.375" />
+        <EntityTypeShape EntityType="Model_Marketing.LC_InputType" Width="1.5" PointX="0.5" PointY="8.5" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_Task_Details" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_MarketingInfo" Width="1.5" PointX="0.5" PointY="12.5" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_Reference" Width="1.5" PointX="4.75" PointY="12.375" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_WorkOrder" Width="1.5" PointX="4.5" PointY="4.5" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_AMC" Width="1.5" PointX="4.75" PointY="15.125" />
+        <EntityTypeShape EntityType="Model_Marketing.MRK_Project" Width="1.5" PointX="2.6999211063142496" PointY="12.421558803143705" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

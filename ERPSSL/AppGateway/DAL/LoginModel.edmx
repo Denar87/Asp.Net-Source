@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ERPSSL_LoginModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ERPSSL_LoginModelStoreContainer">
+          <EntitySet Name="tbl_User" EntityType="ERPSSL_LoginModel.Store.tbl_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_UserPassword" EntityType="ERPSSL_LoginModel.Store.tbl_UserPassword" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_UserRole" EntityType="ERPSSL_LoginModel.Store.tbl_UserRole" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EID" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="User_Level" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFullName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Use_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="BranchID" Type="nchar" MaxLength="4" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EditUser" Type="uniqueidentifier" />
+          <Property Name="EditDate" Type="datetime" />
+          <Property Name="ParentCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Company_Code" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_UserPassword">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="EditUser" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EditDate" Type="datetime" Nullable="false" />
+          <Property Name="OCode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERPSSL_LoginModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ERPSSL_LoginEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_User" EntityType="ERPSSL_LoginModel.tbl_User" />
+          <EntitySet Name="tbl_UserPassword" EntityType="ERPSSL_LoginModel.tbl_UserPassword" />
+          <EntitySet Name="tbl_UserRole" EntityType="ERPSSL_LoginModel.tbl_UserRole" />
+        </EntityContainer>
+        <EntityType Name="tbl_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Guid" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="EID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoginName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="User_Level" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserFullName" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Use_Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="String" Name="BranchID" MaxLength="4" FixedLength="true" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" />
+          <Property Type="DateTime" Name="EditDate" Precision="3" />
+          <Property Type="String" Name="ParentCode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Company_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_UserPassword">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Guid" Name="UserID" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" Nullable="false" />
+          <Property Type="DateTime" Name="EditDate" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_UserRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Type="Int32" Name="RoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="EditUser" Nullable="false" />
+          <Property Type="DateTime" Name="EditDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="OCode" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERPSSL_LoginModelStoreContainer" CdmEntityContainer="ERPSSL_LoginEntities">
+          <EntitySetMapping Name="tbl_User">
+            <EntityTypeMapping TypeName="ERPSSL_LoginModel.tbl_User">
+              <MappingFragment StoreEntitySet="tbl_User">
+                <ScalarProperty Name="Company_Code" ColumnName="Company_Code" />
+                <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Use_Email" ColumnName="Use_Email" />
+                <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+                <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="EID" ColumnName="EID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserPassword">
+            <EntityTypeMapping TypeName="ERPSSL_LoginModel.tbl_UserPassword">
+              <MappingFragment StoreEntitySet="tbl_UserPassword">
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserRole">
+            <EntityTypeMapping TypeName="ERPSSL_LoginModel.tbl_UserRole">
+              <MappingFragment StoreEntitySet="tbl_UserRole">
+                <ScalarProperty Name="OCode" ColumnName="OCode" />
+                <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="LoginModel">
+        <EntityTypeShape EntityType="ERPSSL_LoginModel.tbl_User" Width="1.5" PointX="4.4473927134868658" PointY="31.561709269677152" />
+        <EntityTypeShape EntityType="ERPSSL_LoginModel.tbl_UserPassword" Width="1.5" PointX="3.5957127733136121" PointY="30.123545824607621" />
+        <EntityTypeShape EntityType="ERPSSL_LoginModel.tbl_UserRole" Width="1.5" PointX="0.17380290300296755" PointY="25.612779226905097" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
